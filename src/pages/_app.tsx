@@ -1,13 +1,15 @@
-import '@/styles/globals.css'
-import { GlobalStyles } from 'twin.macro'
+import { CacheProvider } from '@emotion/react'
 
-function MyApp({ Component, pageProps }) {
+import emotionCache from '@/utils/emotionCache'
+import GlobalStyles from '@/components/GlobalStyles'
+
+export default function MyApp({ Component, pageProps }) {
   return (
     <>
-      <GlobalStyles />
-      <Component {...pageProps} />
+      <CacheProvider value={emotionCache}>
+        <GlobalStyles />
+        <Component {...pageProps} />
+      </CacheProvider>
     </>
   )
 }
-
-export default MyApp

@@ -1,5 +1,8 @@
 import Document from 'next/document'
-import { extractCritical } from '@emotion/server'
+import createEmotionServer from '@emotion/server/create-instance'
+import emotionCache from '@/utils/emotionCache'
+
+const { extractCritical } = createEmotionServer(emotionCache)
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
