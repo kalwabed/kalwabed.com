@@ -9,6 +9,13 @@ interface NextLinkProps {
   isActive?: boolean
   variant?: Variants
   css?: Interpolation<Theme>
+  size?: keyof typeof Sizes
+}
+
+const Sizes = {
+  md: tw`text-base`,
+  lg: tw`text-lg`,
+  xl: tw`text-xl`
 }
 
 type Variants = 'header' | 'primary'
@@ -23,7 +30,7 @@ const isExternalIcon = (
 )
 
 const NextLink = (props: NextLinkProps) => {
-  const { href, label, isActive, variant = 'primary', css } = props
+  const { href, label, isActive, variant = 'primary', css, size = 'md' } = props
 
   const isExternal = href.startsWith('https://')
 
@@ -36,6 +43,7 @@ const NextLink = (props: NextLinkProps) => {
             css={[
               tw`font-medium tracking-wide text-gray-400 transition-colors duration-200 hover:text-slate`,
               isActive && tw`text-slate`,
+              Sizes[size],
               css
             ]}
           >
@@ -51,7 +59,7 @@ const NextLink = (props: NextLinkProps) => {
             title={href.replace('https://', '')}
             target="_black"
             rel="noopener noreferrer"
-            css={{ display: 'inline-flex', alignItems: 'center' }}
+            css={[{ display: 'inline-flex', alignItems: 'center' }, Sizes[size]]}
           >
             {label} {isExternalIcon}
           </TwLink>
@@ -59,7 +67,7 @@ const NextLink = (props: NextLinkProps) => {
       }
       return (
         <Link href={href} passHref>
-          <TwLink css={css} title={label}>
+          <TwLink css={[css, Sizes[size]]} title={label}>
             {label}
           </TwLink>
         </Link>

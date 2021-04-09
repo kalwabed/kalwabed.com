@@ -3,7 +3,7 @@ import NextLink from '../ui/NextLink'
 
 const Hero = () => {
   return (
-    <div tw="flex flex-col items-start px-4 md:(px-20) lg:(px-48) xl:(pl-80 pr-72)">
+    <div tw="flex flex-col items-start px-4 md:px-20 lg:px-48 xl:(pl-80 pr-72)">
       <div tw="leading-relaxed">
         <p tw="font-bold tracking-wider">Hello!</p>
         <h1 tw="font-bold tracking-wide text-3xl md:(text-5xl)">I'm Kalwabed Rizki</h1>
