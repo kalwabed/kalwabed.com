@@ -22,7 +22,7 @@ export default function Home() {
         </h1>
 
         <p tw="leading-6 text-2xl items-center">
-          Get started by editing <code tw="bg-gray-300 rounded text-lg p-3 font-mono">pages/index.js</code>
+          Get started by editing <code tw="bg-gray-300 rounded text-lg p-3">pages/index.js</code>
         </p>
 
         <div tw="flex items-center justify-center flex-wrap max-w-4xl mt-12 flex-col w-full md:(flex-row)">
