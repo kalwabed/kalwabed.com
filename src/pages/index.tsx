@@ -9,8 +9,11 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <NextLink href="#" label="Show more &gt;&gt;" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis{' '}
+        <NextLink href="https://ss.dd" label="Show more &gt;&gt;" /> temporibus quis ipsam commodi, numquam in adipisci
+        maxime dolores minima ipsa. Aperiam sit cumque voluptatibus vero quaerat vel delectus molestiae debitis!
+      </p>
     </div>
   )
 }
