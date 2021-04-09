@@ -1,4 +1,5 @@
 import { CacheProvider } from '@emotion/react'
+import Head from 'next/head'
 
 import emotionCache from '@/utils/emotionCache'
 import GlobalStyles from '@/components/GlobalStyles'
@@ -10,6 +11,10 @@ export default function MyApp({ Component, pageProps }) {
       <CacheProvider value={emotionCache}>
         <GlobalStyles />
         <Page>
+          <Head>
+            <title>Kalwabed</title>
+            <link rel="icon" href="/favicon.ico" />
+          </Head>
           <Component {...pageProps} />
         </Page>
       </CacheProvider>

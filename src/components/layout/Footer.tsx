@@ -1,4 +1,6 @@
 import 'twin.macro'
+
+import { LayoutWrapper } from '@/utils/styles'
 import NextLink from '../ui/NextLink'
 
 const footerLinks = [
@@ -18,7 +20,7 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <footer tw="max-w-xl mx-auto px-4 py-5 md:(max-w-full px-24) lg:(max-w-screen-xl px-8)">
+    <footer css={[LayoutWrapper]}>
       <div tw="flex justify-center items-center space-y-2 flex-col">
         <div tw="flex justify-between space-x-5">
           {footerLinks.map(route => (

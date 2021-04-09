@@ -1,12 +1,12 @@
 import 'twin.macro'
-
 import { useState } from 'react'
-import Link from 'next/link'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 import Logo from './Logo'
 import Routes from '@/config/Routes'
 import NextLink from '../ui/NextLink'
+import { LayoutWrapper } from '@/utils/styles'
 
 const navTotal = 4
 const XIcon = (
@@ -31,7 +31,7 @@ const Header = () => {
 
   return (
     <header>
-      <div tw="px-4 py-5 mx-auto max-w-xl md:(max-w-full px-24) lg:(max-w-screen-xl px-8)">
+      <div css={[LayoutWrapper]}>
         <div tw="relative flex items-center justify-between">
           <Link href="/" passHref>
             <a tw="inline-flex items-center" title="kalwabed.com Logo" aria-label="Logo">
@@ -48,6 +48,7 @@ const Header = () => {
                 )
             )}
           </ul>
+
           <div tw="md:hidden">
             <button
               tw="p-2 -mr-1 transition duration-200 rounded focus:(outline-none ring)"

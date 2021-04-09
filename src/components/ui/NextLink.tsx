@@ -34,8 +34,8 @@ const NextLink = (props: NextLinkProps) => {
           <a
             title={`${label} page`}
             css={[
-              tw`font-medium tracking-wide text-gray-500 transition duration-200 hover:(text-gray-800)`,
-              isActive && tw`text-gray-800`,
+              tw`font-medium tracking-wide text-gray-400 transition-colors duration-200 hover:text-slate`,
+              isActive && tw`text-slate`,
               css
             ]}
           >
@@ -48,8 +48,7 @@ const NextLink = (props: NextLinkProps) => {
       if (isExternal) {
         return (
           <TwLink
-            href={href}
-            title={label}
+            title={href.replace('https://', '')}
             target="_black"
             rel="noopener noreferrer"
             css={{ display: 'inline-flex', alignItems: 'center' }}
