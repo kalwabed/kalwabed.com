@@ -1,13 +1,12 @@
 import 'twin.macro'
 import Image from 'next/image'
 
-import { HomeContentWrapper } from '@/utils/styles'
 import NextLink from '../ui/NextLink'
-import SectionTitle from './module/SectionTitle'
+import { SectionTitle, ContentWrapper } from './module'
 
 const FeaturedProject = () => {
   return (
-    <section css={[HomeContentWrapper]}>
+    <ContentWrapper>
       <SectionTitle title="Featured project" />
 
       <div tw="relative rounded overflow-hidden border border-transparent bg-gray-100 shadow-lg hover:shadow-xl transition">
@@ -29,7 +28,7 @@ const FeaturedProject = () => {
       <div tw="flex justify-center items-center mx-auto">
         <NextLink label="More projects" href="/projects" />
       </div>
-    </section>
+    </ContentWrapper>
   )
 }
 

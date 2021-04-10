@@ -1,12 +1,11 @@
 import 'twin.macro'
 
-import { HomeContentWrapper } from '@/utils/styles'
 import NextLink from '../ui/NextLink'
-import SectionTitle from './module/SectionTitle'
+import { ContentWrapper, SectionTitle } from './module'
 
 const RecentPosts = () => {
   return (
-    <section css={[HomeContentWrapper]}>
+    <ContentWrapper>
       <SectionTitle title="Recent posts" />
       {[1, 2, 3].map(n => (
         <div tw="flex flex-col space-y-1 lg:pr-12" key={n}>
@@ -21,7 +20,7 @@ const RecentPosts = () => {
       <div tw="flex justify-center items-center mx-auto">
         <NextLink label="More posts" href="/posts" />
       </div>
-    </section>
+    </ContentWrapper>
   )
 }
 
