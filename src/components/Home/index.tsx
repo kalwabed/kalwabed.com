@@ -2,14 +2,14 @@ import 'twin.macro'
 
 import Hero from './Hero'
 import RecentPosts from './RecentPosts'
-import FeaturedProjects from './FeaturedProjects'
+import FeaturedProject from './FeaturedProject'
 
 const HomePageRenderer = () => {
   return (
     <div tw="space-y-16">
       <Hero />
       <RecentPosts />
-      <FeaturedProjects />
+      <FeaturedProject />
     </div>
   )
 }
