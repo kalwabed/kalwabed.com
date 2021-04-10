@@ -9,7 +9,7 @@ const RecentPosts = () => {
     <section css={[HomeContentWrapper]}>
       <SectionTitle title="Recent posts" />
       {[1, 2, 3].map(n => (
-        <div tw="flex flex-col space-y-1" key={n}>
+        <div tw="flex flex-col space-y-1 lg:pr-12" key={n}>
           <p>13 April 2002</p>
           <NextLink size="xl" href="/posts/a" label="While you can hear the code" />
           <p tw="text-sm">
