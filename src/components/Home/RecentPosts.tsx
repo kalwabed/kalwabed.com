@@ -1,13 +1,13 @@
+import { HomeContentWrapper, HomeWrapper } from '@/utils/styles'
 import 'twin.macro'
-import tw from 'twin.macro'
 import NextLink from '../ui/NextLink'
 
 const RecentPosts = () => {
   return (
-    <div tw="flex flex-col items-start px-4 md:px-14 lg:px-28 xl:px-64 space-y-2">
+    <section css={[HomeWrapper]}>
       <span tw="font-bold text-sm">Recent posts</span>
 
-      <div tw="px-1 md:px-6 lg:px-20 xl:px-16 flex flex-col space-y-5">
+      <div css={[HomeContentWrapper]}>
         {[1, 2, 3].map(n => (
           <div tw="flex flex-col space-y-1" key={n}>
             <p>13 April 2002</p>
@@ -22,7 +22,7 @@ const RecentPosts = () => {
           <NextLink label="More posts" href="/posts" />
         </div>
       </div>
-    </div>
+    </section>
   )
 }
 
