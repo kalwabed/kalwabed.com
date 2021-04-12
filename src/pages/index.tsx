@@ -5,7 +5,7 @@ import HomePageRenderer from '@/components/Home'
 
 export default function HomePage() {
   return (
-    <Wrapper>
+    <Wrapper pageTitle="Home">
       <HomePageRenderer />
     </Wrapper>
   )
