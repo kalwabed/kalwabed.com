@@ -1,7 +1,8 @@
 import 'twin.macro'
 
 import NextLink from '../ui/NextLink'
-import { ContentWrapper, MoreLink, SectionTitle } from './module'
+import ContentWrapper from '../ContentWrapper'
+import { MoreLink, SectionTitle } from './module'
 
 const RecentPosts = () => {
   return (

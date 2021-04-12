@@ -2,7 +2,8 @@ import 'twin.macro'
 import Image from 'next/image'
 
 import NextLink from '../ui/NextLink'
-import { SectionTitle, ContentWrapper, MoreLink } from './module'
+import { SectionTitle, MoreLink } from './module'
+import ContentWrapper from '../ContentWrapper'
 
 const FeaturedProject = () => {
   return (

@@ -1,8 +1,8 @@
-import Image from 'next/image'
 import tw from 'twin.macro'
 
 import NextLink from '../ui/NextLink'
-import { ContentWrapper, SectionTitle, MoreLink } from './module'
+import ContentWrapper from '../ContentWrapper'
+import { SectionTitle, MoreLink } from './module'
 
 const RecentBookmarks = () => {
   return (

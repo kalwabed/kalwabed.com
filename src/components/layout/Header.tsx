@@ -29,7 +29,7 @@ const Header = () => {
               (route, index) =>
                 index < navTotal && (
                   <li key={route.href}>
-                    <NextLink variant="header" isActive={route.href === asPath} href={route.href}>
+                    <NextLink variant="header" title={route.label} isActive={route.href === asPath} href={route.href}>
                       {route.label}
                     </NextLink>
                   </li>
@@ -78,7 +78,7 @@ const NavModal = ({ setIsMenuOpen, asPath }: { setIsMenuOpen: (arg0: boolean) =>
             (route, index) =>
               index < navTotal && (
                 <li key={route.href}>
-                  <NextLink variant="header" isActive={route.href === asPath} href={route.href}>
+                  <NextLink variant="header" title={route.label} isActive={route.href === asPath} href={route.href}>
                     {route.label}
                   </NextLink>
                 </li>
