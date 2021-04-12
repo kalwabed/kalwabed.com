@@ -1,8 +1,10 @@
 import 'twin.macro'
+import dynamic from 'next/dynamic'
 
 import Hero from './Hero'
 import RecentPosts from './RecentPosts'
-import FeaturedProject from './FeaturedProject'
+const FeaturedProject = dynamic(() => import('./FeaturedProject'))
+const RecentBookmarks = dynamic(() => import('./RecentBookmarks'))
 
 const HomePageRenderer = () => {
   return (
@@ -10,6 +12,7 @@ const HomePageRenderer = () => {
       <Hero />
       <RecentPosts />
       <FeaturedProject />
+      <RecentBookmarks />
     </div>
   )
 }

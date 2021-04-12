@@ -26,7 +26,7 @@ type Variants = 'header' | 'primary'
 const TwLink = tw.a`text-primary-500 hocus:(text-primary-400 underline) transition no-underline inline-flex items-center`
 
 const NextLink = (props: NextLinkProps) => {
-  const { href, label, isActive, variant = 'primary', css, size = 'md', withIcon } = props
+  const { href, label, isActive, variant = 'primary', css: externalCss, size = 'md', withIcon } = props
 
   const isExternal = href.startsWith('https://')
 
@@ -40,7 +40,7 @@ const NextLink = (props: NextLinkProps) => {
               tw`font-medium tracking-wide text-gray-400 transition-colors duration-200 hover:text-slate`,
               isActive && tw`text-slate`,
               Sizes[size],
-              css
+              externalCss
             ]}
           >
             {label}
@@ -52,10 +52,11 @@ const NextLink = (props: NextLinkProps) => {
       if (isExternal) {
         return (
           <TwLink
+            href={href}
             title={href.replace('https://', '')}
             target="_black"
             rel="noopener noreferrer"
-            css={[{ display: 'inline-flex', alignItems: 'center' }, Sizes[size], tw`space-x-1`]}
+            css={[tw`space-x-1 inline-flex items-center`, Sizes[size], externalCss]}
           >
             <span>{label}</span>
             <ExternalLink />
@@ -64,7 +65,7 @@ const NextLink = (props: NextLinkProps) => {
       }
       return (
         <Link href={href} passHref>
-          <TwLink css={[css, Sizes[size], tw`space-x-1 hover:space-x-2`]} title={label}>
+          <TwLink css={[Sizes[size], tw`space-x-1 hover:space-x-2`, externalCss]} title={label}>
             <span>{label}</span>
             {withIcon && <ArrowRight />}
           </TwLink>
