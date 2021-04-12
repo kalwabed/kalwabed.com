@@ -6,8 +6,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
-      mono: ['"JetBrains Mono"', ...defaultTheme.fontFamily.mono],
-      sans: ['Public Sans', ...defaultTheme.fontFamily.sans]
+      sans: ['Manrope', ...defaultTheme.fontFamily.sans]
     },
     extend: {
       colors: {
