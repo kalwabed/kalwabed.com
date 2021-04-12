@@ -29,7 +29,9 @@ const Header = () => {
               (route, index) =>
                 index < navTotal && (
                   <li key={route.href}>
-                    <NextLink variant="header" isActive={route.href === asPath} {...route} />
+                    <NextLink variant="header" isActive={route.href === asPath} href={route.href}>
+                      {route.label}
+                    </NextLink>
                   </li>
                 )
             )}
@@ -52,7 +54,7 @@ const Header = () => {
   )
 }
 
-const NavModal = ({ setIsMenuOpen, asPath }: { setIsMenuOpen: (boolean) => void; asPath: string }) => (
+const NavModal = ({ setIsMenuOpen, asPath }: { setIsMenuOpen: (arg0: boolean) => void; asPath: string }) => (
   <div tw="absolute top-0 left-0 w-full">
     <div tw="p-5 bg-white border rounded shadow-sm">
       <div tw="flex items-center justify-between mb-4">
@@ -76,7 +78,9 @@ const NavModal = ({ setIsMenuOpen, asPath }: { setIsMenuOpen: (boolean) => void;
             (route, index) =>
               index < navTotal && (
                 <li key={route.href}>
-                  <NextLink variant="header" isActive={route.href === asPath} {...route} />
+                  <NextLink variant="header" isActive={route.href === asPath} href={route.href}>
+                    {route.label}
+                  </NextLink>
                 </li>
               )
           )}

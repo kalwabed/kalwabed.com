@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import tw from 'twin.macro'
 import Link from 'next/link'
 import { Interpolation } from '@emotion/serialize'
@@ -7,12 +8,13 @@ import { ArrowRight, ExternalLink } from './Icons'
 
 interface NextLinkProps {
   href: string
-  label: string
+  title?: string
   isActive?: boolean
   variant?: Variants
   css?: Interpolation<Theme>
   size?: keyof typeof Sizes
   withIcon?: boolean
+  children: ReactNode
 }
 
 const Sizes = {
@@ -26,7 +28,7 @@ type Variants = 'header' | 'primary'
 const TwLink = tw.a`text-primary-500 hocus:(text-primary-400 underline) transition no-underline inline-flex items-center`
 
 const NextLink = (props: NextLinkProps) => {
-  const { href, label, isActive, variant = 'primary', css: externalCss, size = 'md', withIcon } = props
+  const { href, title, isActive, variant = 'primary', css: externalCss, size = 'md', withIcon, children } = props
 
   const isExternal = href.startsWith('https://')
 
@@ -35,7 +37,7 @@ const NextLink = (props: NextLinkProps) => {
       return (
         <Link href={href} passHref>
           <a
-            title={`${label} page`}
+            title={`${title} page`}
             css={[
               tw`font-medium tracking-wide text-gray-400 transition-colors duration-200 hover:text-slate`,
               isActive && tw`text-slate`,
@@ -43,7 +45,7 @@ const NextLink = (props: NextLinkProps) => {
               externalCss
             ]}
           >
-            {label}
+            {children}
           </a>
         </Link>
       )
@@ -53,20 +55,20 @@ const NextLink = (props: NextLinkProps) => {
         return (
           <TwLink
             href={href}
-            title={href.replace('https://', '')}
+            title={title || href.replace('https://', '')}
             target="_black"
             rel="noopener noreferrer"
             css={[tw`space-x-1 inline-flex items-center`, Sizes[size], externalCss]}
           >
-            <span>{label}</span>
+            <span>{children}</span>
             <ExternalLink />
           </TwLink>
         )
       }
       return (
         <Link href={href} passHref>
-          <TwLink css={[Sizes[size], tw`space-x-1 hover:space-x-2`, externalCss]} title={label}>
-            <span>{label}</span>
+          <TwLink css={[Sizes[size], tw`space-x-1 hover:space-x-2`, externalCss]} title={title || href}>
+            <span>{children}</span>
             {withIcon && <ArrowRight />}
           </TwLink>
         </Link>

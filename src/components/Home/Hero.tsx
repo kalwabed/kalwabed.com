@@ -15,7 +15,9 @@ const Hero = () => {
           Currently working as a frontend engineer at GoStartup.
         </p>
         <div>
-          <NextLink href="/about" label="Learn more about me" withIcon />
+          <NextLink href="/about" title="Learn more about me" withIcon>
+            Learn more about me
+          </NextLink>
         </div>
       </div>
     </div>

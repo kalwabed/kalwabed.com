@@ -24,7 +24,9 @@ const Footer = () => {
       <div tw="flex justify-center items-center space-y-2 flex-col">
         <div tw="flex justify-between space-x-5">
           {footerLinks.map(route => (
-            <NextLink {...route} key={route.href} />
+            <NextLink href={route.href} key={route.href}>
+              {route.label}
+            </NextLink>
           ))}
         </div>
         <p tw="text-sm tracking-wide leading-relaxed text-center">

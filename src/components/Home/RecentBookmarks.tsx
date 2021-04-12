@@ -1,7 +1,7 @@
 import tw from 'twin.macro'
 
 import NextLink from '../ui/NextLink'
-import { ContentWrapper, SectionTitle } from './module'
+import { ContentWrapper, SectionTitle, MoreLink } from './module'
 
 const RecentBookmarks = () => {
   return (
@@ -14,7 +14,9 @@ const RecentBookmarks = () => {
               <div css={[tw`flex space-x-3 py-3`, key > 1 && tw`border-t`]} key={key}>
                 <img src="/static/aku.jpg" alt="" tw="object-cover h-10 w-10 md:(h-12 w-12) rounded-full" />
                 <div tw="flex flex-col">
-                  <NextLink label="Lorem ipsum is not lorem" href="https://sds,com" css={[tw`text-lg md:text-xl`]} />
+                  <NextLink title="Lorem ipsum is not lorem" href="https://sds,com" css={[tw`text-lg md:text-xl`]}>
+                    Lorem ipsum is not lorem
+                  </NextLink>
                   <small tw="text-sm text-gray-500">css-tricks.com</small>
                   <p tw="text-sm tracking-wide">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex quia sed similique facilis doloribus.
@@ -25,9 +27,8 @@ const RecentBookmarks = () => {
           </div>
         </div>
       </div>
-      <div tw="flex justify-center items-baseline mx-auto">
-        <NextLink label="More bookmarks" href="/bookmarks" />
-      </div>
+
+      <MoreLink type="bookmarks" />
     </ContentWrapper>
   )
 }

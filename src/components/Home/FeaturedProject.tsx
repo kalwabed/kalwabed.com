@@ -2,7 +2,7 @@ import 'twin.macro'
 import Image from 'next/image'
 
 import NextLink from '../ui/NextLink'
-import { SectionTitle, ContentWrapper } from './module'
+import { SectionTitle, ContentWrapper, MoreLink } from './module'
 
 const FeaturedProject = () => {
   return (
@@ -20,14 +20,14 @@ const FeaturedProject = () => {
             sunt. Facilis, quos?
           </p>
           <div>
-            <NextLink size="lg" href="/projects" label="Visit project" withIcon />
+            <NextLink size="lg" href="/projects" title="Visit project" withIcon>
+              Visit project
+            </NextLink>
           </div>
         </div>
       </div>
 
-      <div tw="flex justify-center items-center mx-auto">
-        <NextLink label="More projects" href="/projects" />
-      </div>
+      <MoreLink type="projects" />
     </ContentWrapper>
   )
 }
