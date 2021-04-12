@@ -1,7 +1,12 @@
-import Wrapper from '@/components/layout/Wrapper'
+import AboutPageRenderer from '@/components/About'
+import PageWrapper from '@/components/layout/PageWrapper'
 
 const AboutPage = () => {
-  return <Wrapper pageTitle="About">the</Wrapper>
+  return (
+    <PageWrapper pageTitle="About">
+      <AboutPageRenderer />
+    </PageWrapper>
+  )
 }
 
 export default AboutPage

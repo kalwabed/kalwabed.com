@@ -1,12 +1,12 @@
 import 'twin.macro'
 
-import Wrapper from '@/components/layout/Wrapper'
+import PageWrapper from '@/components/layout/PageWrapper'
 import HomePageRenderer from '@/components/Home'
 
 export default function HomePage() {
   return (
-    <Wrapper pageTitle="Home">
+    <PageWrapper pageTitle="Home">
       <HomePageRenderer />
-    </Wrapper>
+    </PageWrapper>
   )
 }

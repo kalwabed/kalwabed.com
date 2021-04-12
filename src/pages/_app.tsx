@@ -2,7 +2,7 @@ import { CacheProvider } from '@emotion/react'
 
 import emotionCache from '@/utils/emotionCache'
 import GlobalStyles from '@/components/GlobalStyles'
-import Page from '@/components/layout/Page'
+import PageRoot from '@/components/layout/PageRoot'
 import { DefaultSEO } from '@/components/SEO'
 
 export default function MyApp({ Component, pageProps }) {
@@ -11,9 +11,9 @@ export default function MyApp({ Component, pageProps }) {
       <CacheProvider value={emotionCache}>
         <GlobalStyles />
         <DefaultSEO />
-        <Page>
+        <PageRoot>
           <Component {...pageProps} />
-        </Page>
+        </PageRoot>
       </CacheProvider>
     </>
   )

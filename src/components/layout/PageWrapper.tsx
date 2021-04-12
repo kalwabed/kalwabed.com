@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 import SEO, { ogImgExtract } from '../SEO'
 import app from '@/config/app'
 
-const Wrapper = ({ children, pageTitle }) => {
+const PageWrapper = ({ children, pageTitle }) => {
   const { asPath } = useRouter()
 
   return (
@@ -24,4 +24,4 @@ const Wrapper = ({ children, pageTitle }) => {
   )
 }
 
-export default Wrapper
+export default PageWrapper

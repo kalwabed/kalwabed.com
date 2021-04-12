@@ -2,7 +2,7 @@ import 'twin.macro'
 import Footer from './Footer'
 import Header from './Header'
 
-const Page = ({ children }) => {
+const PageRoot = ({ children }) => {
   return (
     <>
       <Header />
@@ -12,4 +12,4 @@ const Page = ({ children }) => {
   )
 }
 
-export default Page
+export default PageRoot
