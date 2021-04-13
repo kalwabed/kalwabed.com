@@ -15,7 +15,7 @@ w-72
 h-80
 md:w-80
 m-auto
-bg-white
+bg-gray-100
 `
 
 const Card = () => {
