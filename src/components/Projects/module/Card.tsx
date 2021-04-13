@@ -7,13 +7,12 @@ const Wrapper = tw.div`
 overflow-hidden
 shadow-md
 hover:shadow-lg
-transition-shadow
+transition-all
 duration-200
 ease-in-out
 rounded
-w-72
+w-80
 h-80
-md:w-80
 m-auto
 bg-gray-100
 `
@@ -26,7 +25,7 @@ const Card = () => {
         <div tw="p-4 space-y-2">
           <Link href="/projects">
             <a>
-              <h4 tw="text-xl font-medium hocus:underline">Tuantanah</h4>
+              <h3 tw="text-2xl font-bold transition hocus:(text-primary-500)">Tuantanah</h3>
             </a>
           </Link>
 
