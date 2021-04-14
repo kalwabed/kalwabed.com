@@ -1,4 +1,5 @@
 import { NextSeo, NextSeoProps, DefaultSeo } from 'next-seo'
+import { useRouter } from 'next/router'
 
 import app from '@/config/app'
 
@@ -53,8 +54,24 @@ export const DefaultSEO = () => {
   return <DefaultSeo {...defaultSeoConfig} />
 }
 
-const SEO = (props: NextSeoProps) => {
-  return <NextSeo {...props} />
+const titlePrefix = ' @kalwabed'
+
+const SEO = (props: NextSeoProps, title: string) => {
+  const { asPath } = useRouter()
+  const url = app.siteUrl + asPath
+
+  return (
+    <NextSeo
+      title={title}
+      canonical={url}
+      openGraph={{
+        url,
+        title: title + titlePrefix,
+        images: [{ url: ogImgExtract(title), alt: title }]
+      }}
+      {...props}
+    />
+  )
 }
 
 export default SEO

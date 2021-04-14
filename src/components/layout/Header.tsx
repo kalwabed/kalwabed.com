@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 import Logo from './Logo'
 import Routes from '@/config/Routes'
 import NextLink from '../ui/NextLink'
-import { LayoutWrapper } from '@/utils/styles'
+import { Container } from '@/utils/styles'
 import { Hamburger, XClose } from '../ui/Icons'
 import useHeaderVisible from '@/hooks/useHeaderVisible'
 
@@ -33,7 +33,7 @@ const Header = () => {
       animate={isVisible ? 'initial' : 'hidden'}
       transition={{ duration: 0.3 }}
     >
-      <div css={[LayoutWrapper, tw`flex items-center justify-between w-auto`]}>
+      <div css={[Container, tw`flex items-center justify-between w-auto`]}>
         <Link href="/" passHref>
           <a tw="inline-flex items-center" title="kalwabed.com Logo" aria-label="Logo">
             <Logo />

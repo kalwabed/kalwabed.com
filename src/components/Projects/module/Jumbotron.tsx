@@ -1,10 +1,16 @@
 import tw from 'twin.macro'
 import Image from 'next/image'
 
-import PageWrapper from '@/components/layout/PageWrapper'
 import Button from '@/components/ui/Button'
 import { TechBadge } from '.'
 import { GithubIcon, LiveIcon } from '@/components/ui/Icons'
+
+const JumbotronWrapper = tw.section`
+py-4
+max-w-full
+flex
+flex-col
+`
 
 const Card = tw.div`
 border
@@ -45,11 +51,11 @@ focus:(ring-offset-gray-300 ring-gray-200)
 
 const Jumbotron = () => {
   return (
-    <PageWrapper pageTitle="Tuantanah" isFluid>
+    <JumbotronWrapper>
       <div tw="flex flex-col justify-center items-center">
-        <div tw="w-full h-full md:h-52 lg:h-80 overflow-hidden">
+        <div tw="w-full h-full md:h-52 lg:h-80 overflow-hidden bg-gray-800">
           <Image
-            tw="opacity-80 hover:opacity-100 transition"
+            tw="opacity-50 hover:opacity-100 transition bg-gray-300"
             alt="tuantanah"
             src="/static/tuantanah.png"
             height={640}
@@ -75,7 +81,7 @@ const Jumbotron = () => {
           </CardCol>
         </Card>
       </div>
-    </PageWrapper>
+    </JumbotronWrapper>
   )
 }
 
