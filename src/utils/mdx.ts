@@ -28,7 +28,7 @@ export async function getDataBySlug(type: string, slug: string) {
 export async function getAllMetaData(type: TypeData) {
   const files = fs.readdirSync(path.join(root, type))
 
-  return files.reduce((allData, slug) => {
+  const data = files.reduce((allData, slug) => {
     const source = fs.readFileSync(path.join(root, type, slug), 'utf-8')
 
     const { data } = matter(source)
@@ -41,4 +41,6 @@ export async function getAllMetaData(type: TypeData) {
       ...allData
     ]
   }, [])
+
+  return data.sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1))
 }

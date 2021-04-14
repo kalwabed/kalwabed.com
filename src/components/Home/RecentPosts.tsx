@@ -6,10 +6,12 @@ import { MoreLink, SectionTitle } from './module'
 import { Post } from '@/types'
 
 const RecentPosts = ({ posts }: { posts: Post[] }) => {
+  const threeRecentPosts = posts.slice(0, 3)
+
   return (
     <ContentWrapper>
       <SectionTitle title="Recent posts" />
-      {posts?.map(post => (
+      {threeRecentPosts?.map(post => (
         <div tw="flex flex-col space-y-1 lg:pr-12" key={post.slug}>
           <p>{post.publishedAt}</p>
           <NextLink size="xl" href={'/posts/' + post.slug} title={post.title}>
