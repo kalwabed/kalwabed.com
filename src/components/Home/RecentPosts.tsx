@@ -3,20 +3,19 @@ import 'twin.macro'
 import NextLink from '../ui/NextLink'
 import ContentWrapper from '../ContentWrapper'
 import { MoreLink, SectionTitle } from './module'
+import { Post } from '@/types'
 
-const RecentPosts = () => {
+const RecentPosts = ({ posts }: { posts: Post[] }) => {
   return (
     <ContentWrapper>
       <SectionTitle title="Recent posts" />
-      {[1, 2, 3].map(n => (
-        <div tw="flex flex-col space-y-1 lg:pr-12" key={n}>
-          <p>13 April 2002</p>
-          <NextLink size="xl" href="/posts/a" title="While you can hear the code">
-            While we can see you
+      {posts?.map(post => (
+        <div tw="flex flex-col space-y-1 lg:pr-12" key={post.slug}>
+          <p>{post.publishedAt}</p>
+          <NextLink size="xl" href={'/posts/' + post.slug} title={post.title}>
+            {post.title}
           </NextLink>
-          <p tw="text-sm">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto omnis blanditiis quo ullam.
-          </p>
+          <p tw="text-sm">{post.summary}</p>
         </div>
       ))}
 
