@@ -6,7 +6,8 @@ import { TechBadge } from '.'
 import { GithubIcon, LiveIcon } from '@/components/ui/Icons'
 
 const JumbotronWrapper = tw.section`
-py-4
+pt-1
+pb-4
 max-w-full
 flex
 flex-col
