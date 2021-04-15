@@ -1,15 +1,16 @@
-import 'twin.macro'
+import tw from 'twin.macro'
 import Link from 'next/link'
 
+import { CardStyle } from '@/utils/styles'
 import NextLink from '@/components/ui/NextLink'
 
 const Card = () => {
   return (
-    <div tw="w-full h-full lg:h-60 p-8 border transition shadow-md bg-gray-100 hover:(bg-gray-50 shadow-lg)">
+    <div css={[CardStyle, tw`w-full h-full lg:h-60 p-8`]}>
       <div tw="flex flex-col space-y-6">
         <Link href="/posts/test">
           <a>
-            <h1 tw="text-3xl font-bold hover:underline transition">Title not for title, yet</h1>
+            <h1 tw="text-3xl font-bold hocus:text-primary-400 transition">Title not for title, yet</h1>
           </a>
         </Link>
         <p tw="text-gray-500 tracking-wide">
