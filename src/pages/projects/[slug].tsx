@@ -1,5 +1,3 @@
-import 'twin.macro'
-
 import { ProjectBySlugRenderer } from '@/components/Projects'
 
 const ProjectPage = () => {

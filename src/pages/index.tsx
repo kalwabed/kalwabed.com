@@ -1,5 +1,4 @@
-import 'twin.macro'
-import { GetStaticProps } from 'next'
+import type { GetStaticProps } from 'next'
 
 import PageWrapper from '@/components/layout/PageWrapper'
 import HomePageRenderer from '@/components/Home'

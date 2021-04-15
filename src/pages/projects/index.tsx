@@ -1,4 +1,4 @@
-import { GetStaticProps } from 'next'
+import type { GetStaticProps } from 'next'
 
 import PageWrapper from '@/components/layout/PageWrapper'
 import { ProjectsPageRenderer } from '@/components/Projects'

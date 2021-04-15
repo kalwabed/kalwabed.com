@@ -1,10 +1,11 @@
 module.exports = {
   reactStrictMode: true,
+  i18n: {
+    locales: ['en-US'],
+    defaultLocale: 'en-US'
+  },
   experimental: {
     optimizeCss: true
-  },
-  future: {
-    strictPostcssConfiguration: true
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {

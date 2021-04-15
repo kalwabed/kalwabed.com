@@ -1,5 +1,6 @@
 import Document from 'next/document'
 import createEmotionServer from '@emotion/server/create-instance'
+
 import emotionCache from '@/utils/emotionCache'
 
 const { extractCritical } = createEmotionServer(emotionCache)
