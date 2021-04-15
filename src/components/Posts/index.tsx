@@ -9,6 +9,7 @@ import Article from './Article'
 import PostHeader from './PostHeader'
 import PostList from './PostList'
 import PostsHeader from './PostsHeader'
+import PostFooter from './PostFooter'
 
 export const PostsPageRenderer = ({ posts }: { posts: Post[] }) => {
   const [searchValue, setSearchValue] = useState('')
@@ -28,6 +29,7 @@ export const PostBySlugRenderer = ({ post }: { post: PostWithMdx }) => {
       <ContentWrapper>
         <PostHeader publishedAt={post.publishedAt} title={post.title} />
         <Article content={post.mdxSource} />
+        <PostFooter githubRepository={post.githubRepository} updatedAt={post.updatedAt} />
       </ContentWrapper>
     </PageWrapper>
   )
