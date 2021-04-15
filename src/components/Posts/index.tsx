@@ -3,11 +3,13 @@ import ContentWrapper from '../ContentWrapper'
 import PageWrapper from '../layout/PageWrapper'
 import SEO from '../SEO'
 import PostList from './PostList'
+import PostsHeader from './PostsHeader'
 
 export const PostsPageRenderer = () => {
   return (
     <section css={[Container]}>
       <SEO title="Posts" />
+      <PostsHeader />
       <PostList />
     </section>
   )
