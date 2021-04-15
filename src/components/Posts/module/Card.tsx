@@ -11,9 +11,9 @@ const Card = (props: Post) => {
   return (
     <div css={[CardStyle, tw`w-full h-full lg:h-60 p-8`]}>
       <div tw="flex flex-col space-y-6">
-        <Link href={'/posts/'.concat(slug)}>
-          <a>
-            <h1 tw="text-3xl font-bold hocus:text-primary-400 transition">{title}</h1>
+        <Link href={'/posts/'.concat(slug)} passHref>
+          <a tw="hocus:text-primary-400">
+            <h1 tw="text-3xl font-bold transition">{title}</h1>
           </a>
         </Link>
         <p tw="text-gray-500 tracking-wide">{summary}</p>

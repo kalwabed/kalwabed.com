@@ -1,5 +1,7 @@
 import tw from 'twin.macro'
 
+import { SearchProps } from '../PostsHeader'
+
 const Input = tw.input`
 rounded
 flex-1
@@ -14,10 +16,17 @@ transition
 focus:(outline-none ring-2 ring-primary-400 border-transparent)
 `
 
-const SearchPost = () => {
+const SearchPost = (props: SearchProps) => {
+  const { searchValue, setSearchValue } = props
+
   return (
     <div tw="relative">
-      <Input type="text" placeholder="Search post by title" />
+      <Input
+        onChange={e => setSearchValue(e.target.value)}
+        type="text"
+        placeholder="Search post by title"
+        value={searchValue}
+      />
     </div>
   )
 }
