@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next'
 
 import PageWrapper from '@/components/layout/PageWrapper'
-import ProjectsPageRenderer from '@/components/Projects'
+import { ProjectsPageRenderer } from '@/components/Projects'
 
 const ProjectsPage = ({ projects }) => {
   return (

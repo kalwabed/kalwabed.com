@@ -1,8 +1,12 @@
+import { Container } from '@/utils/styles'
 import ContentWrapper from '../ContentWrapper'
 import PageSectionTitle from '../PageSectionTitle'
+import SEO from '../SEO'
+import Jumbotron from './Jumbotron'
+import { Contents, ProjectTitle } from './module'
 import ProjectList from './ProjectList'
 
-const ProjectsPageRenderer = () => {
+export const ProjectsPageRenderer = () => {
   return (
     <>
       <ContentWrapper>
@@ -13,4 +17,15 @@ const ProjectsPageRenderer = () => {
   )
 }
 
-export default ProjectsPageRenderer
+export const ProjectBySlugRenderer = () => {
+  return (
+    <>
+      <SEO title="TuanTanah" />
+      <Jumbotron />
+      <section css={[Container]}>
+        <ProjectTitle />
+        <Contents />
+      </section>
+    </>
+  )
+}

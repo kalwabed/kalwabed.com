@@ -2,7 +2,7 @@ import tw from 'twin.macro'
 import Image from 'next/image'
 
 import Button from '@/components/ui/Button'
-import { TechBadge } from '.'
+import { TechBadge } from './module'
 import { GithubIcon, LiveIcon } from '@/components/ui/Icons'
 
 const JumbotronWrapper = tw.section`

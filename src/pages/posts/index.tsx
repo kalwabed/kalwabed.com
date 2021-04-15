@@ -1,4 +1,4 @@
-import PostsPageRenderer from '@/components/Posts'
+import { PostsPageRenderer } from '@/components/Posts'
 
 const PostsPage = () => {
   return <PostsPageRenderer />
