@@ -7,11 +7,11 @@ const root = process.cwd()
 
 type TypeData = '_projects' | '_posts'
 
-export function getFiles(type: TypeData) {
-  return fs.readdirSync(path.join(root, type))
+export const getSlugs = (type: TypeData) => {
+  return fs.readdirSync(path.join(root, type), 'utf-8').map(slug => ({ params: { slug: slug.replace('.mdx', '') } }))
 }
 
-export async function getDataBySlug(type: string, slug: string) {
+export async function getDataBySlug(type: TypeData, slug: string) {
   const source = fs.readFileSync(path.join(root, type, `${slug}.mdx`), 'utf-8')
 
   const { content, data } = matter(source)
@@ -19,13 +19,11 @@ export async function getDataBySlug(type: string, slug: string) {
 
   return {
     mdxSource,
-    meta: {
-      ...data
-    }
+    ...data
   }
 }
 
-export async function getAllMetaData(type: TypeData) {
+export function getAllMetaData(type: TypeData) {
   const files = fs.readdirSync(path.join(root, type))
 
   const data = files.reduce((allData, slug) => {

@@ -1,7 +1,24 @@
-import { PostBySlugRenderer } from '@/components/Posts'
+import type { GetStaticPaths, GetStaticProps } from 'next'
 
-const PostPage = () => {
-  return <PostBySlugRenderer />
+import { PostBySlugRenderer } from '@/components/Posts'
+import { PostWithMdx } from '@/types'
+import { getDataBySlug, getSlugs } from '@/utils/mdx'
+
+const PostPage = ({ post }: { post: PostWithMdx }) => {
+  return <PostBySlugRenderer post={post} />
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = getSlugs('_posts')
+
+  return { paths, fallback: false }
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const slug = params.slug as string
+  const post = await getDataBySlug('_posts', slug)
+
+  return { props: { post } }
 }
 
 export default PostPage

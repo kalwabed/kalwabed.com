@@ -15,7 +15,7 @@ export default function HomePage(props: { posts: Post[] }) {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getAllMetaData('_posts')
+  const posts = getAllMetaData('_posts')
 
   console.log(posts)
   return { props: { posts } }

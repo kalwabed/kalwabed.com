@@ -6,3 +6,7 @@ export interface Post {
   publishedAt: string
   updatedAt: string
 }
+
+export interface PostWithMdx extends Post {
+  mdxSource: string
+}

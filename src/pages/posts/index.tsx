@@ -1,7 +1,17 @@
-import { PostsPageRenderer } from '@/components/Posts'
+import type { GetStaticProps } from 'next'
 
-const PostsPage = () => {
-  return <PostsPageRenderer />
+import { PostsPageRenderer } from '@/components/Posts'
+import { getAllMetaData } from '@/utils/mdx'
+import { Post } from '@/types'
+
+const PostsPage = ({ posts }: { posts: Post[] }) => {
+  return <PostsPageRenderer posts={posts} />
 }
 
 export default PostsPage
+
+export const getStaticProps: GetStaticProps = async () => {
+  const posts = getAllMetaData('_posts')
+
+  return { props: { posts } }
+}

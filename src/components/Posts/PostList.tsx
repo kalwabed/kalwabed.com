@@ -1,12 +1,13 @@
 import 'twin.macro'
 
+import { Post } from '@/types'
 import { Card } from './module'
 
-const PostList = () => {
+const PostList = ({ posts }: { posts: Post[] }) => {
   return (
     <div tw="grid grid-cols-1 lg:grid-cols-2 gap-12">
-      {[1, 2, 3].map(key => (
-        <Card key={key} />
+      {posts.map(post => (
+        <Card key={post.slug} {...post} />
       ))}
     </div>
   )

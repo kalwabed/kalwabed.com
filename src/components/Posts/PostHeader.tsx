@@ -3,17 +3,19 @@ import tw from 'twin.macro'
 const Wrapper = tw.div`
 my-12
 md:(mt-24 mb-16)
-flex flex-col
+flex
+flex-col
 justify-center
 items-center
 space-y-3
+w-full
 `
 
-const PostHeader = () => {
+const PostHeader = ({ publishedAt, title }) => {
   return (
     <Wrapper>
-      <time>13 04 02</time>
-      <h1 tw="font-bold text-4xl">Life is more relative than we know</h1>
+      <time>{publishedAt}</time>
+      <h1 tw="font-bold text-4xl">{title}</h1>
     </Wrapper>
   )
 }

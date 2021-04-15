@@ -3,21 +3,21 @@ import Link from 'next/link'
 
 import { CardStyle } from '@/utils/styles'
 import NextLink from '@/components/ui/NextLink'
+import { Post } from '@/types'
 
-const Card = () => {
+const Card = (props: Post) => {
+  const { slug, summary, title } = props
+
   return (
     <div css={[CardStyle, tw`w-full h-full lg:h-60 p-8`]}>
       <div tw="flex flex-col space-y-6">
-        <Link href="/posts/test">
+        <Link href={'/posts/'.concat(slug)}>
           <a>
-            <h1 tw="text-3xl font-bold hocus:text-primary-400 transition">Title not for title, yet</h1>
+            <h1 tw="text-3xl font-bold hocus:text-primary-400 transition">{title}</h1>
           </a>
         </Link>
-        <p tw="text-gray-500 tracking-wide">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, reprehenderit! Praesentium atque labore
-          distinctio. distinctio. distinctio. distinctio.
-        </p>
-        <NextLink withIcon href="/posts/test" title="Read more">
+        <p tw="text-gray-500 tracking-wide">{summary}</p>
+        <NextLink withIcon href={'/posts/'.concat(slug)} title="Read more">
           Read more
         </NextLink>
       </div>
