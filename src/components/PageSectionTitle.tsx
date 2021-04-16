@@ -13,7 +13,27 @@ text-4xl
 font-bold
 `
 
-const PageSectionTitle = ({ text }) => {
+const Description = tw.small`
+text-sm
+text-gray-500
+tracking-wide
+`
+
+interface Props {
+  text: string
+  description?: string
+}
+
+const PageSectionTitle = ({ text, description }: Props) => {
+  if (description) {
+    return (
+      <Wrapper css={[tw`flex-col space-y-2`]}>
+        <H1>{text}</H1>
+        <Description>{description}</Description>
+      </Wrapper>
+    )
+  }
+
   return (
     <Wrapper>
       <H1>{text}</H1>
