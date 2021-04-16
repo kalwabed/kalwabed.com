@@ -25,7 +25,23 @@ const Sizes = {
 
 type Variants = 'header' | 'primary'
 
-const TwLink = tw.a`text-primary-500 hocus:(text-primary-400 underline) transition no-underline inline-flex items-center`
+const HeadLink = tw.a`
+font-medium
+tracking-wide
+text-gray-400
+transition
+duration-200
+hover:text-slate
+focus:(ring-2 ring-offset-2 ring-gray-500 outline-none)
+`
+
+const TwLink = tw.a`
+text-primary-500
+hocus:(text-primary-400 underline text-underline-offset[3px] outline-none)
+focus:(ring-2 ring-offset-2 ring-primary-300 no-underline )
+transition
+inline-flex
+items-center`
 
 const NextLink = (props: NextLinkProps) => {
   const { href, title, isActive, variant = 'primary', css: externalCss, size = 'md', withIcon, children } = props
@@ -36,17 +52,9 @@ const NextLink = (props: NextLinkProps) => {
     case 'header':
       return (
         <Link href={href} passHref>
-          <a
-            title={`${title} page`}
-            css={[
-              tw`font-medium tracking-wide text-gray-400 transition-colors duration-200 hover:text-slate`,
-              isActive && tw`text-slate`,
-              Sizes[size],
-              externalCss
-            ]}
-          >
+          <HeadLink title={`${title} page`} css={[isActive && tw`text-slate`, Sizes[size], externalCss]}>
             {children}
-          </a>
+          </HeadLink>
         </Link>
       )
 
@@ -65,6 +73,7 @@ const NextLink = (props: NextLinkProps) => {
           </TwLink>
         )
       }
+
       return (
         <Link href={href} passHref>
           <TwLink css={[Sizes[size], tw`space-x-1 hover:space-x-2`, externalCss]} title={title || href}>
