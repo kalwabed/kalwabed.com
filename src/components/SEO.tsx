@@ -1,4 +1,4 @@
-import { NextSeo, NextSeoProps, DefaultSeo } from 'next-seo'
+import { NextSeo, NextSeoProps, DefaultSeo, ArticleJsonLd, SocialProfileJsonLd } from 'next-seo'
 import { useRouter } from 'next/router'
 
 import app from '@/config/app'
@@ -24,7 +24,7 @@ const defaultSeoConfig: NextSeoProps = {
   ],
   openGraph: {
     description: app.description,
-    locale: 'en_US',
+    locale: 'en-US',
     site_name: 'kalwabed.com',
     url: app.siteUrl,
     title: 'Home @kalwabed',
@@ -56,21 +56,51 @@ export const DefaultSEO = () => {
 
 const titlePrefix = ' @kalwabed'
 
-const SEO = (props: NextSeoProps, title: string) => {
+interface SEOProps extends NextSeoProps {
+  isPost?: boolean
+}
+
+const SEO = (props: SEOProps) => {
   const { asPath } = useRouter()
+  const { title, isPost } = props
   const url = app.siteUrl + asPath
 
   return (
-    <NextSeo
-      title={title}
-      canonical={url}
-      openGraph={{
-        url,
-        title: title + titlePrefix,
-        images: [{ url: ogImgExtract(title), alt: title }]
-      }}
-      {...props}
-    />
+    <>
+      <NextSeo
+        title={title}
+        canonical={url}
+        openGraph={{
+          url,
+          title: title + titlePrefix,
+          images: [{ url: ogImgExtract(title), alt: title }],
+          profile: { firstName: 'Kalwabed', lastName: 'Rizki', gender: 'male', username: 'kalwabed' },
+          ...props.openGraph
+        }}
+        {...props}
+      />
+
+      {isPost ? (
+        <ArticleJsonLd
+          url={url}
+          authorName="Kalwabed Rizki"
+          datePublished={props.openGraph.article.publishedTime}
+          description={props.openGraph.description}
+          images={[ogImgExtract(title)]}
+          title={title}
+          dateModified={props.openGraph.article.modifiedTime}
+          publisherName="kalwabed.com"
+          publisherLogo={app.siteUrl.concat('/static/web/icon.svg')}
+        />
+      ) : (
+        <SocialProfileJsonLd
+          name="Kalwabed Rizki"
+          sameAs={Object.values(app.socials)}
+          type="Person"
+          url={app.siteUrl.concat('/about')}
+        />
+      )}
+    </>
   )
 }
 

@@ -4,12 +4,14 @@ import type { Post, PostWithMdx } from '@/types'
 import { Container } from '@/utils/styles'
 import ContentWrapper from '../ContentWrapper'
 import PageWrapper from '../layout/PageWrapper'
-import SEO from '../SEO'
+import SEO, { ogImgExtract } from '../SEO'
 import Article from './Article'
 import PostHeader from './PostHeader'
 import PostList from './PostList'
 import PostsHeader from './PostsHeader'
 import PostFooter from './PostFooter'
+import dateFormatter from '@/utils/dateFormatter'
+import app from '@/config/app'
 
 export const PostsPageRenderer = ({ posts }: { posts: Post[] }) => {
   const [searchValue, setSearchValue] = useState('')
@@ -24,12 +26,32 @@ export const PostsPageRenderer = ({ posts }: { posts: Post[] }) => {
 }
 
 export const PostBySlugRenderer = ({ post }: { post: PostWithMdx }) => {
+  const { publishedAt, updatedAt, title, mdxSource, githubRepository, summary } = post
+
   return (
-    <PageWrapper pageTitle="TuanTanah">
+    <PageWrapper withSEO={false}>
+      <SEO
+        isPost
+        title={title}
+        description={summary}
+        openGraph={{
+          title: title.concat(' @kalwabed'),
+          description: summary,
+          images: [{ url: ogImgExtract(title), alt: title.concat(' Og image') }],
+          type: 'article',
+          article: {
+            authors: [app.socials.Twitter],
+            publishedTime: dateFormatter(publishedAt).ISO,
+            modifiedTime: dateFormatter(updatedAt).ISO,
+            section: 'Tech',
+            tags: ['Tech', 'Blog', 'News', 'Story', 'Javascript']
+          }
+        }}
+      />
       <ContentWrapper>
-        <PostHeader publishedAt={post.publishedAt} title={post.title} />
-        <Article content={post.mdxSource} />
-        <PostFooter githubRepository={post.githubRepository} updatedAt={post.updatedAt} />
+        <PostHeader publishedAt={publishedAt} title={title} />
+        <Article content={mdxSource} />
+        <PostFooter githubRepository={githubRepository} updatedAt={updatedAt} />
       </ContentWrapper>
     </PageWrapper>
   )

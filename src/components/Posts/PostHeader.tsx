@@ -1,5 +1,7 @@
 import tw from 'twin.macro'
 
+import dateFormatter from '@/utils/dateFormatter'
+
 const Wrapper = tw.div`
 my-12
 md:(mt-24 mb-16)
@@ -14,7 +16,7 @@ w-full
 const PostHeader = ({ publishedAt, title }) => {
   return (
     <Wrapper>
-      <time>{publishedAt}</time>
+      <time dateTime={dateFormatter(publishedAt).ISO}>{dateFormatter(publishedAt).formatted}</time>
       <h1 tw="font-bold text-4xl">{title}</h1>
     </Wrapper>
   )
