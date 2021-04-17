@@ -1,5 +1,6 @@
 import { NextSeo, NextSeoProps, DefaultSeo, ArticleJsonLd, SocialProfileJsonLd } from 'next-seo'
 import { useRouter } from 'next/router'
+import { memo } from 'react'
 
 import app from '@/config/app'
 
@@ -104,4 +105,4 @@ const SEO = (props: SEOProps) => {
   )
 }
 
-export default SEO
+export default memo(SEO)

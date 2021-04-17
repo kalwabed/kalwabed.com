@@ -1,5 +1,6 @@
-import app from '@/config/app'
 import 'twin.macro'
+
+import app from '@/config/app'
 import Card from './module/Card'
 
 export interface SocialProps {

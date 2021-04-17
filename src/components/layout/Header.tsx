@@ -1,5 +1,5 @@
 import tw from 'twin.macro'
-import { useState } from 'react'
+import { memo, useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -8,7 +8,7 @@ import Logo from './Logo'
 import Routes from '@/config/Routes'
 import NextLink from '../ui/NextLink'
 import { Container } from '@/utils/styles'
-import { Hamburger, XClose } from '../ui/Icons'
+import { HamburgerIcon, XCloseIcon } from '../ui/Icons'
 import useHeaderVisible from '@/hooks/useHeaderVisible'
 
 const navTotal = 4
@@ -59,7 +59,7 @@ const Header = () => {
             title="Open menu"
             onClick={() => setIsMenuOpen(true)}
           >
-            <Hamburger />
+            <HamburgerIcon />
           </button>
           {isMenuOpen && <NavModal setIsMenuOpen={setIsMenuOpen} asPath={asPath} />}
         </div>
@@ -68,7 +68,7 @@ const Header = () => {
   )
 }
 
-const NavModal = ({ setIsMenuOpen, asPath }: { setIsMenuOpen: (arg0: boolean) => void; asPath: string }) => (
+const NavModal = memo(({ setIsMenuOpen, asPath }: { setIsMenuOpen: (arg0: boolean) => void; asPath: string }) => (
   <div tw="absolute top-0 left-0 w-full">
     <div tw="p-5 bg-white border rounded shadow-sm">
       <div tw="flex items-center justify-between mb-4">
@@ -83,7 +83,7 @@ const NavModal = ({ setIsMenuOpen, asPath }: { setIsMenuOpen: (arg0: boolean) =>
           title="Close menu"
           onClick={() => setIsMenuOpen(false)}
         >
-          <XClose />
+          <XCloseIcon />
         </button>
       </div>
       <nav>
@@ -102,6 +102,6 @@ const NavModal = ({ setIsMenuOpen, asPath }: { setIsMenuOpen: (arg0: boolean) =>
       </nav>
     </div>
   </div>
-)
+))
 
-export default Header
+export default memo(Header)

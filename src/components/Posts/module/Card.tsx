@@ -1,5 +1,6 @@
 import tw from 'twin.macro'
 import Link from 'next/link'
+import { memo } from 'react'
 
 import { CardStyle } from '@/utils/styles'
 import NextLink from '@/components/ui/NextLink'
@@ -25,4 +26,4 @@ const Card = (props: Post) => {
   )
 }
 
-export default Card
+export default memo(Card)

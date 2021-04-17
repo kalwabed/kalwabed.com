@@ -1,10 +1,10 @@
-import type { ReactNode } from 'react'
+import { memo, ReactNode } from 'react'
 import tw from 'twin.macro'
 import Link from 'next/link'
 import { Interpolation } from '@emotion/serialize'
 import { Theme } from '@emotion/react'
 
-import { ArrowRight, ExternalLink } from './Icons'
+import { ArrowRightIcon, ExternalLinkIcon } from './Icons'
 
 interface NextLinkProps {
   href: string
@@ -69,7 +69,7 @@ const NextLink = (props: NextLinkProps) => {
             css={[tw`space-x-1 inline-flex items-center`, Sizes[size], externalCss]}
           >
             <span>{children}</span>
-            <ExternalLink />
+            <ExternalLinkIcon />
           </TwLink>
         )
       }
@@ -78,7 +78,7 @@ const NextLink = (props: NextLinkProps) => {
         <Link href={href} passHref>
           <TwLink css={[Sizes[size], tw`space-x-1 hocus:space-x-2`, externalCss]} title={title || href}>
             <span>{children}</span>
-            {withIcon && <ArrowRight />}
+            {withIcon && <ArrowRightIcon />}
           </TwLink>
         </Link>
       )
@@ -87,4 +87,4 @@ const NextLink = (props: NextLinkProps) => {
   }
 }
 
-export default NextLink
+export default memo(NextLink)

@@ -1,3 +1,4 @@
+import { memo } from 'react'
 import tw from 'twin.macro'
 
 const Wrapper = tw.div`
@@ -41,4 +42,4 @@ const PageSectionTitle = ({ text, description }: Props) => {
   )
 }
 
-export default PageSectionTitle
+export default memo(PageSectionTitle)
