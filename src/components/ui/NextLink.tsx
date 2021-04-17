@@ -76,7 +76,7 @@ const NextLink = (props: NextLinkProps) => {
 
       return (
         <Link href={href} passHref>
-          <TwLink css={[Sizes[size], tw`space-x-1 hover:space-x-2`, externalCss]} title={title || href}>
+          <TwLink css={[Sizes[size], tw`space-x-1 hocus:space-x-2`, externalCss]} title={title || href}>
             <span>{children}</span>
             {withIcon && <ArrowRight />}
           </TwLink>
