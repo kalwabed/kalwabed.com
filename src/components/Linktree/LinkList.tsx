@@ -1,11 +1,11 @@
-import 'twin.macro'
+import tw from 'twin.macro'
 
 import app from '@/config/app'
 import Card from './module/Card'
 
 export interface SocialProps {
   href: string
-  type: 'twitter' | 'github' | 'linkedIn' | 'instagram' | 'email'
+  type: 'twitter' | 'github' | 'linkedIn' | 'instagram' | 'email' | 'website'
 }
 
 const socials: SocialProps[] = [
@@ -28,16 +28,29 @@ const socials: SocialProps[] = [
   {
     type: 'email',
     href: app.email
+  },
+  {
+    type: 'website',
+    href: app.siteUrl
   }
 ]
 
+const CardWrapper = tw.div`
+w-full
+space-y-2
+py-3
+h-full
+bg-white
+background-image[url(/static/web/polygon-scatter-haikei.svg)]
+`
+
 const LinkList = () => {
   return (
-    <div tw="w-full space-y-2 py-3 h-full bg-white background-image[url(/static/web/polygon-scatter-haikei.svg)]">
+    <CardWrapper>
       {socials.map(social => (
         <Card key={social.type} href={social.href} type={social.type} />
       ))}
-    </div>
+    </CardWrapper>
   )
 }
 

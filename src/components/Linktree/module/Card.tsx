@@ -1,6 +1,6 @@
 import tw from 'twin.macro'
 
-import { EmailIcon, GithubIcon, InstagramIcon, LinkedInIcon, TwitterIcon } from '@/components/ui/Icons'
+import { EmailIcon, GithubIcon, InstagramIcon, LinkedInIcon, TwitterIcon, WebsiteIcon } from '@/components/ui/Icons'
 import { SocialProps } from '../LinkList'
 
 const Link = tw.a`
@@ -18,11 +18,20 @@ transition
 focus:(ring outline-none ring-primary-400)
 `
 
+const LinkWrapper = tw.div`
+flex
+flex-col
+justify-center
+items-center
+space-y-4
+pt-2
+`
+
 const Card = ({ href, type }: SocialProps) => {
   switch (type) {
     case 'github':
       return (
-        <div tw="flex flex-col justify-center items-center space-y-4 pt-2">
+        <LinkWrapper>
           <Link
             href={href}
             target="_blank"
@@ -32,12 +41,12 @@ const Card = ({ href, type }: SocialProps) => {
           >
             <GithubIcon /> <p tw="font-medium capitalize">{type}</p>
           </Link>
-        </div>
+        </LinkWrapper>
       )
 
     case 'instagram':
       return (
-        <div tw="flex flex-col justify-center items-center space-y-4 pt-2">
+        <LinkWrapper>
           <Link
             href={href}
             target="_blank"
@@ -47,12 +56,12 @@ const Card = ({ href, type }: SocialProps) => {
           >
             <InstagramIcon /> <p tw="font-medium capitalize">{type}</p>
           </Link>
-        </div>
+        </LinkWrapper>
       )
 
     case 'linkedIn':
       return (
-        <div tw="flex flex-col justify-center items-center space-y-4 pt-2">
+        <LinkWrapper>
           <Link
             href={href}
             target="_blank"
@@ -62,12 +71,12 @@ const Card = ({ href, type }: SocialProps) => {
           >
             <LinkedInIcon /> <p tw="font-medium capitalize">{type}</p>
           </Link>
-        </div>
+        </LinkWrapper>
       )
 
     case 'twitter':
       return (
-        <div tw="flex flex-col justify-center items-center space-y-4 pt-2">
+        <LinkWrapper>
           <Link
             href={href}
             target="_blank"
@@ -77,23 +86,39 @@ const Card = ({ href, type }: SocialProps) => {
           >
             <TwitterIcon /> <p tw="font-medium capitalize">{type}</p>
           </Link>
-        </div>
+        </LinkWrapper>
       )
 
     case 'email':
       return (
-        <div tw="flex flex-col justify-center items-center space-y-4 pt-2">
+        <LinkWrapper>
           <Link
             href={`mailto:${href}`}
             target="_blank"
             rel="noopener noreferrer"
-            title="Twitter profile"
+            title="Email"
             css={[tw`bg-gray-500 hocus:bg-gray-400`]}
           >
             <EmailIcon /> <p tw="font-medium capitalize">{type}</p>
           </Link>
-        </div>
+        </LinkWrapper>
       )
+
+    case 'website':
+      return (
+        <LinkWrapper>
+          <Link
+            href={`mailto:${href}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="My website"
+            css={[tw`bg-primary-500 hocus:bg-primary-400`]}
+          >
+            <WebsiteIcon /> <p tw="font-medium capitalize">{type}</p>
+          </Link>
+        </LinkWrapper>
+      )
+
     default:
       return <div></div>
   }
