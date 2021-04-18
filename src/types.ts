@@ -10,3 +10,11 @@ export interface Post {
 export interface PostWithMdx extends Post {
   mdxSource: string
 }
+
+export interface Bookmarks {
+  id: string
+  noFavicon: boolean
+  url: string
+  description: string
+  title: string
+}
