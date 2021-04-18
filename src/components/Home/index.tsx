@@ -3,12 +3,13 @@ import dynamic from 'next/dynamic'
 
 import Hero from './Hero'
 import RecentPosts from './RecentPosts'
-import { Post } from '@/types'
+import { Bookmarks, Post } from '@/types'
 const FeaturedProject = dynamic(() => import('./FeaturedProject'))
 const RecentBookmarks = dynamic(() => import('./RecentBookmarks'))
 
 interface Props {
   posts: Post[]
+  bookmarks: Bookmarks[]
 }
 
 const HomePageRenderer = (props: Props) => {
@@ -17,7 +18,7 @@ const HomePageRenderer = (props: Props) => {
       <Hero />
       <RecentPosts posts={props.posts} />
       <FeaturedProject />
-      <RecentBookmarks />
+      <RecentBookmarks bookmarks={props.bookmarks} />
     </div>
   )
 }
