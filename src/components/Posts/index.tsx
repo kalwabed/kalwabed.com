@@ -13,6 +13,7 @@ import PostsHeader from './PostsHeader'
 import PostFooter from './PostFooter'
 import dateFormatter from '@/utils/dateFormatter'
 import app from '@/config/app'
+import tw from 'twin.macro'
 
 export const PostsPageRenderer = ({ posts }: { posts: Post[] }) => {
   const [searchValue, setSearchValue] = useState('')
@@ -49,11 +50,15 @@ export const PostBySlugRenderer = ({ post }: { post: PostWithMdx }) => {
           }
         }}
       />
-      <ContentWrapper tw="px-0">
+      <ContentWrapper>
         <PostHeader publishedAt={publishedAt} title={title} />
-        <Article content={mdxSource} />
-        <PostFooter githubRepository={githubRepository} updatedAt={updatedAt} />
       </ContentWrapper>
+      <Article content={mdxSource} />
+
+      <div tw="flex items-start px-0 md:px-0 lg:px-64 mt-6">
+        <PostFooter githubRepository={githubRepository} updatedAt={updatedAt} />
+      </div>
+      {/* <ContentWrapper tw="px-0 md:px-0 lg:px-40 xl:px-64"></ContentWrapper> */}
     </PageWrapper>
   )
 }

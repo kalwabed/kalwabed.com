@@ -6,13 +6,24 @@ px-4 py-4 mx-auto max-w-2xl lg:(max-w-screen-xl px-16)
 
 export const CardStyle = tw`border transition shadow-md hover:(shadow-lg bg-gray-50) bg-gray-100 overflow-hidden rounded`
 
-export const SyntaxCss = css`
+export const PostStyle = css`
+  p > code {
+    ${tw`p-0.5 border text-white border-gray-500 font-medium rounded-md background-color[#282c34]`}
+  }
+
   pre {
     ${tw`overflow-x-auto text-sm mb-7 p-3`}
   }
 
+  a {
+    ${tw`no-underline text-primary-500
+    hocus:(text-primary-400 underline text-underline-offset[3px] outline-none)
+    focus:(ring-2 ring-offset-2 ring-primary-300 no-underline )
+    transition`}
+  }
+
   .remark-code-title {
-    ${tw`mt-7 px-3 py-3 border border-b-0 border-gray-500 rounded-t text-sm font-bold text-gray-200 background-color[#282c34]`}
+    ${tw`mt-7 px-3 py-3 border border-b-0 border-gray-500 rounded-md text-sm font-bold text-gray-200 background-color[#282c34]`}
   }
 
   .remark-code-title + pre {
@@ -20,7 +31,6 @@ export const SyntaxCss = css`
   }
 
   .prose img {
-    /* Don't apply styles to next/image */
     margin: 0;
   }
 

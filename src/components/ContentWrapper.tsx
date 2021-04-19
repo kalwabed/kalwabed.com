@@ -1,6 +1,6 @@
 import tw from 'twin.macro'
 
-const ContentWrap = tw.section`
+const ContentWrapper = tw.section`
 flex
 flex-col
 w-full
@@ -11,9 +11,5 @@ lg:px-48
 xl:px-64
 space-y-6
 `
-
-const ContentWrapper = ({ children }) => {
-  return <ContentWrap>{children}</ContentWrap>
-}
 
 export default ContentWrapper
