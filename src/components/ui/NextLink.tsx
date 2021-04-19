@@ -35,7 +35,7 @@ hover:text-slate
 focus:(ring-2 ring-offset-2 ring-gray-500 outline-none)
 `
 
-const TwLink = tw.a`
+export const TwLink = tw.a`
 text-primary-500
 hocus:(text-primary-400 underline text-underline-offset[3px] outline-none)
 focus:(ring-2 ring-offset-2 ring-primary-300 no-underline )

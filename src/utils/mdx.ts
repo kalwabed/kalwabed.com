@@ -2,6 +2,12 @@ import renderToString from 'next-mdx-remote/render-to-string'
 import fs from 'fs'
 import matter from 'gray-matter'
 import path from 'path'
+import autoLink from 'remark-autolink-headings'
+import codeTitles from 'remark-code-titles'
+import reSlug from 'remark-slug'
+import reParse from 'remark-parse'
+import mdxPrism from 'mdx-prism'
+import MDXComponents from '@/components/MDXComponents'
 
 const root = process.cwd()
 
@@ -15,7 +21,13 @@ export async function getDataBySlug(type: TypeData, slug: string) {
   const source = fs.readFileSync(path.join(root, type, `${slug}.mdx`), 'utf-8')
 
   const { content, data } = matter(source)
-  const mdxSource = await renderToString(content)
+  const mdxSource = await renderToString(content, {
+    components: MDXComponents,
+    mdxOptions: {
+      remarkPlugins: [reParse, reSlug, autoLink, codeTitles],
+      rehypePlugins: [mdxPrism]
+    }
+  })
 
   return {
     mdxSource,

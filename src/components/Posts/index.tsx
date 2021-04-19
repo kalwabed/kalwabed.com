@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import 'twin.macro'
 
 import type { Post, PostWithMdx } from '@/types'
 import { Container } from '@/utils/styles'
@@ -48,7 +49,7 @@ export const PostBySlugRenderer = ({ post }: { post: PostWithMdx }) => {
           }
         }}
       />
-      <ContentWrapper>
+      <ContentWrapper tw="px-0">
         <PostHeader publishedAt={publishedAt} title={title} />
         <Article content={mdxSource} />
         <PostFooter githubRepository={githubRepository} updatedAt={updatedAt} />

@@ -11,7 +11,7 @@ const BookmarksPage = ({ bookmarks }: { bookmarks: Bookmarks[] }) => {
 export const getStaticProps: GetStaticProps = async () => {
   const bookmarks = await bookmarkProvider()
 
-  return { props: { bookmarks }, revalidate: 10 }
+  return { props: { bookmarks }, revalidate: 5 }
 }
 
 export default BookmarksPage

@@ -8,6 +8,7 @@ md:(mt-24 mb-16)
 flex
 flex-col
 justify-center
+mx-auto
 items-center
 space-y-3
 w-full
