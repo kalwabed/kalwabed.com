@@ -15,7 +15,7 @@ w-10 h-10 md:(w-12 h-12)
 const BookmarkCard = (props: Bookmarks) => {
   const { description, title, url, noFavicon } = props
 
-  const imgFallback = `https://picsum.photos/seed/${encodeURI(title)}/50/50.webp`
+  const imgFallback = `https://cdn.statically.io/avatar/shape=rounded/${encodeURI(title)}`
 
   const { origin } = new URL(url)
 
