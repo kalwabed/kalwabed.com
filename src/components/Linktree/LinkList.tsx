@@ -41,7 +41,7 @@ space-y-2
 py-3
 h-full
 bg-white
-background-image[url(/static/web/polygon-scatter-haikei.svg)]
+background-image[url(/static/polygon-scatter-haikei.svg)]
 `
 
 const LinkList = () => {

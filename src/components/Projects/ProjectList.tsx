@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic'
 import tw from 'twin.macro'
 
 const Card = dynamic(() => import('./module/Card'))
+import projects from './projects'
 
 const Wrapper = tw.div`
 mt-10
@@ -23,8 +24,8 @@ const ProjectList = () => {
   return (
     <Wrapper>
       <Grid>
-        {[1, 2, 3, 4, 5, 6, 7].map(key => (
-          <Card key={key} />
+        {projects.map(project => (
+          <Card key={project.slug} {...project} />
         ))}
       </Grid>
     </Wrapper>

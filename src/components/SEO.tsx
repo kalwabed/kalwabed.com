@@ -19,8 +19,8 @@ const defaultSeoConfig: NextSeoProps = {
   canonical: app.siteUrl,
   additionalLinkTags: [
     { rel: 'icon', href: '/favicon.ico' },
-    { rel: 'icon', href: '/static/web/icon.svg', type: 'image/svg+xml' },
-    { rel: 'apple-touch-icon', href: '/static/web/apple-touch-icon.png' },
+    { rel: 'icon', href: '/static/icon.svg', type: 'image/svg+xml' },
+    { rel: 'apple-touch-icon', href: '/static/apple-touch-icon.png' },
     { rel: 'manifest', href: '/manifest.webmanifest' }
   ],
   openGraph: {
@@ -91,7 +91,7 @@ const SEO = (props: SEOProps) => {
           title={title}
           dateModified={props.openGraph.article.modifiedTime}
           publisherName="kalwabed.com"
-          publisherLogo={app.siteUrl.concat('/static/web/icon.svg')}
+          publisherLogo={app.siteUrl.concat('/static/icon.svg')}
         />
       ) : (
         <SocialProfileJsonLd

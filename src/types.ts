@@ -25,5 +25,7 @@ export interface ProjectMeta {
   description: string
   techs: string[]
   liveUrl?: string
+  shortDescription?: string
+  slug?: string
   githubRepo?: string
 }

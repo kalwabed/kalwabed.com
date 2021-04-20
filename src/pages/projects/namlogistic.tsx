@@ -2,19 +2,19 @@ import { Content, ContentWithImage } from '@/components/Projects/Contents'
 import ProjectBySlugRenderer from '@/components/Projects/ProjectBySlugRenderer'
 import { ProjectMeta } from '@/types'
 
-const tuantanah: ProjectMeta = {
-  title: 'TuanTanah',
-  banner: '/static/projects/tuantanah/banner.png',
-  liveUrl: 'https://tuantanah.kawari.space',
-  githubRepo: 'https://github.com/kalwabed/tuantanah-website-v2',
+const namLogistic: ProjectMeta = {
+  title: 'Nam Logistic',
+  banner: '/static/projects/namlogistic/banner.png',
+  liveUrl: 'https://namlogistic.co.id',
+  githubRepo: '',
   techs: ['React', 'Next.js'],
   description:
     'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat porro ea libero, cupiditate et neque necessitatibus vero modi voluptatem expedita in nemo adipisci exercitationem ipsam magnam laboriosam iure corporis dolore?'
 }
 
-const TuantanahProject = () => {
+const NamLogisticProject = () => {
   return (
-    <ProjectBySlugRenderer {...tuantanah}>
+    <ProjectBySlugRenderer {...namLogistic}>
       <Content heading="Head 1">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab id dolores accusantium. Facere odit itaque deleniti
         accusantium perferendis deserunt similique laborum molestiae assumenda eaque sequi a quasi repellat, aut enim?
@@ -27,4 +27,4 @@ const TuantanahProject = () => {
   )
 }
 
-export default TuantanahProject
+export default NamLogisticProject

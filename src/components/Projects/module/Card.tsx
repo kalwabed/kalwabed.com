@@ -1,27 +1,31 @@
+import { memo } from 'react'
 import tw from 'twin.macro'
 import Image from 'next/image'
 import Link from 'next/link'
 
 import NextLink from '@/components/ui/NextLink'
 import { CardStyle } from '@/utils/styles'
+import { ProjectMeta } from '@/types'
 
-const Card = () => {
+interface Props extends Partial<ProjectMeta> {}
+
+const Card = (props: Props) => {
+  const { banner, shortDescription, slug, title } = props
+
   return (
     <div css={[CardStyle, tw`w-80 h-80 m-auto`]}>
       <div tw="flex flex-col w-full h-full">
-        <Image src="/static/tuantanah.png" width={320} height={150} alt="tuantanah" />
+        <Image src={banner} width={320} height={150} alt={slug} />
         <div tw="p-4 space-y-2">
-          <Link href="/projects/tuantanah" passHref>
+          <Link href={`/projects/${slug}`} passHref>
             <a tw="hocus:text-primary-400">
-              <h3 tw="text-2xl font-bold transition ">Tuantanah</h3>
+              <h3 tw="text-2xl font-bold transition ">{title}</h3>
             </a>
           </Link>
 
-          <p tw="font-light text-gray-500 tracking-wide">
-            Lorem ipsum dolor sit adipisicing elit. consectetur, adipisicing elit.
-          </p>
+          <p tw="font-light text-gray-500 tracking-wide">{shortDescription}</p>
 
-          <NextLink href="/projects/tuantanah" title="My project" withIcon>
+          <NextLink href={`/projects/${slug}`} title="Project page" withIcon>
             Visit project
           </NextLink>
         </div>
@@ -30,4 +34,4 @@ const Card = () => {
   )
 }
 
-export default Card
+export default memo(Card)
