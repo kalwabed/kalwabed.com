@@ -18,3 +18,12 @@ export interface Bookmarks {
   description: string
   title: string
 }
+
+export interface ProjectMeta {
+  title: string
+  banner: string
+  description: string
+  techs: string[]
+  liveUrl?: string
+  githubRepo?: string
+}

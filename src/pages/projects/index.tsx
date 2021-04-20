@@ -1,7 +1,7 @@
 import type { GetStaticProps } from 'next'
 
 import PageWrapper from '@/components/layout/PageWrapper'
-import { ProjectsPageRenderer } from '@/components/Projects'
+import ProjectsPageRenderer from '@/components/Projects'
 
 const ProjectsPage = ({ projects }) => {
   return (
@@ -11,6 +11,7 @@ const ProjectsPage = ({ projects }) => {
   )
 }
 
+// get from json data or any (or from notion instead)
 export const getStaticProps: GetStaticProps = async () => {
   return { props: {} }
 }

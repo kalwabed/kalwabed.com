@@ -50,34 +50,53 @@ p-4
 focus:(ring-offset-gray-300 ring-gray-200)
 `
 
-const Jumbotron = () => {
+interface JumbotronProps {
+  banner: string
+  title: string
+  techs: string[]
+  liveUrl?: string
+  githubRepo?: string
+}
+
+const Jumbotron = (props: JumbotronProps) => {
+  const { banner, techs, title, githubRepo, liveUrl } = props
+
   return (
     <JumbotronWrapper>
       <div tw="flex flex-col justify-center items-center">
         <div tw="w-full h-full md:h-52 lg:h-80 overflow-hidden bg-gray-800">
           <Image
             tw="opacity-50 hover:opacity-100 transition bg-gray-300"
-            alt="tuantanah"
-            src="/static/tuantanah.png"
+            alt={`Banner image for ${title}`}
+            src={banner}
             height={640}
             width={1368}
           />
         </div>
         <Card>
           <CardCol>
-            <h1 tw="text-3xl font-bold">TuanTanah</h1>
+            <h1 tw="text-3xl font-bold">{title}</h1>
             <div tw="inline-flex space-x-2">
-              {[1, 2, 3].map(key => (
-                <TechBadge key={key} text="React" />
+              {techs.map(tech => (
+                <TechBadge key={tech} tech={tech} />
               ))}
             </div>
             <div tw="inline-flex space-x-4">
-              <LiveButton>
-                <LiveIcon /> <span>Live</span>
-              </LiveButton>
-              <GithubButton>
-                <GithubIcon /> <span>Github</span>
-              </GithubButton>
+              {liveUrl && (
+                <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+                  <LiveButton title="Live url">
+                    <LiveIcon /> <span>Live</span>
+                  </LiveButton>
+                </a>
+              )}
+
+              {githubRepo && (
+                <a href={githubRepo} target="_blank" rel="noopener noreferrer">
+                  <GithubButton title="Project Github repository">
+                    <GithubIcon /> <span>Github</span>
+                  </GithubButton>
+                </a>
+              )}
             </div>
           </CardCol>
         </Card>

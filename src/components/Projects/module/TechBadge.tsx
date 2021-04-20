@@ -7,11 +7,11 @@ font-medium
 text-sm
 rounded-full
 text-white
-bg-blue-600
+bg-slate
 `
 
-const TechBadge = ({ text }) => {
-  return <Badge>{text}</Badge>
+const TechBadge = ({ tech }) => {
+  return <Badge>{tech}</Badge>
 }
 
 export default TechBadge
