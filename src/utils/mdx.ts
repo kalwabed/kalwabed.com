@@ -7,6 +7,7 @@ import codeTitles from 'remark-code-titles'
 import reSlug from 'remark-slug'
 import reParse from 'remark-parse'
 import mdxPrism from 'mdx-prism'
+
 import MDXComponents from '@/components/MDXComponents'
 
 const root = process.cwd()
@@ -35,7 +36,7 @@ export async function getDataBySlug(type: TypeData, slug: string) {
   }
 }
 
-export function getAllMetaData(type: TypeData) {
+export function getAllFrontMatters(type: TypeData) {
   const files = fs.readdirSync(path.join(root, type))
 
   const data = files.reduce((allData, slug) => {

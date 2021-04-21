@@ -1,7 +1,7 @@
 import type { GetStaticProps } from 'next'
 
 import { PostsPageRenderer } from '@/components/Posts'
-import { getAllMetaData } from '@/utils/mdx'
+import { getAllFrontMatters } from '@/utils/mdx'
 import { Post } from '@/types'
 
 const PostsPage = ({ posts }: { posts: Post[] }) => {
@@ -11,7 +11,7 @@ const PostsPage = ({ posts }: { posts: Post[] }) => {
 export default PostsPage
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = getAllMetaData('_posts')
+  const posts = getAllFrontMatters('_posts')
 
   return { props: { posts } }
 }
