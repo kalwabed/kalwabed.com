@@ -11,10 +11,10 @@ export const Content = (props: ContentProps) => {
   const { heading, children } = props
 
   return (
-    <div tw="w-full md:w-3/4 space-y-3">
+    <section tw="w-full md:w-3/4 lg:w-3/5 space-y-3">
       <h1 tw="text-4xl font-bold">{heading}</h1>
-      <p tw="leading-relaxed tracking-wider text-gray-500">{children}</p>
-    </div>
+      <div tw="leading-relaxed tracking-wider text-gray-500 space-y-3">{children}</div>
+    </section>
   )
 }
 
@@ -37,11 +37,11 @@ export const ContentWithImage = (props: ContentWithImageProps) => {
   return (
     <WithImageWrapper>
       <div tw="w-full lg:w-1/2 overflow-hidden">
-        <Image src={image} alt="aku" width={500} height={412} tw="rounded bg-slate" />
+        <Image src={image} alt={heading} width={500} height={412} quality={90} tw="rounded bg-slate w-full" />
       </div>
       <div tw="w-full lg:w-1/2 space-y-3">
         <h1 tw="text-4xl font-bold">{heading}</h1>
-        <p tw="leading-relaxed tracking-wider text-gray-500">{children}</p>
+        <div tw="leading-relaxed tracking-wider text-gray-500 space-y-3">{children}</div>
       </div>
     </WithImageWrapper>
   )

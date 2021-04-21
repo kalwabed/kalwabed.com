@@ -76,7 +76,7 @@ const Jumbotron = (props: JumbotronProps) => {
         <Card>
           <CardCol>
             <h1 tw="text-3xl font-bold">{title}</h1>
-            <div tw="inline-flex space-x-2">
+            <div tw="grid grid-cols-2 gap-2 xl:(flex flex-row space-x-2 gap-0)">
               {techs.map(tech => (
                 <TechBadge key={tech} tech={tech} />
               ))}

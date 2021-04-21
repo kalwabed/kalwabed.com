@@ -6,6 +6,7 @@ py-1
 font-medium
 text-sm
 rounded-full
+text-center
 text-white
 bg-slate
 `

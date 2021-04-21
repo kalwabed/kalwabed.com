@@ -7,21 +7,34 @@ const tuantanah: ProjectMeta = {
   banner: '/static/projects/tuantanah/banner.png',
   liveUrl: 'https://tuantanah.kawari.space',
   githubRepo: 'https://github.com/kalwabed/tuantanah-website-v2',
-  techs: ['React', 'Next.js'],
+  techs: ['Bootstrap 4', 'Next.js', 'Express.js', 'Mongo DB'],
   description:
-    'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat porro ea libero, cupiditate et neque necessitatibus vero modi voluptatem expedita in nemo adipisci exercitationem ipsam magnam laboriosam iure corporis dolore?'
+    "TuanTanah is our final school assignment before graduating to measure the extent to which students' ability to master the material. Here I am as a developer; which takes care of things on the web, from the design stage to the now accessible website. Assisted by my colleagues who helped organize documents and site surveys. TuanTanah allows property providers to advertise their properties here."
 }
 
 const TuantanahProject = () => {
   return (
     <ProjectBySlugRenderer {...tuantanah}>
-      <Content heading="Head 1">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab id dolores accusantium. Facere odit itaque deleniti
-        accusantium perferendis deserunt similique laborum molestiae assumenda eaque sequi a quasi repellat, aut enim?
+      <Content heading="Project purpose and goal">
+        <p>
+          Starting from my anxiety where I often find properties that are sold but not easily accessible to many people.
+        </p>
+        <p>
+          So we tried to build this website with the hope that property providers can advertise their properties easily
+          and property seekers can easily find their ideal property.
+        </p>
       </Content>
-      <ContentWithImage heading="Head 2" image="/static/projects/aku.jpg">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est iure expedita eaque sapiente recusandae neque nam,
-        ipsam veritatis. Alias, excepturi ea natus ipsa molestiae earum blanditiis eius sint atque inventore?
+      <ContentWithImage heading="Tech stack and explanation" image="/static/projects/tuantanah/tuantanah stack.png">
+        <p>
+          Creating a user interface using Bootstrap, then we use React and Nextjs for matters related to Javascript, I
+          think that's enough. Nextjs is especially helpful for data-driven websites like this. Then we leave the
+          display affairs to old-school Bootstrap, to speed up the processing process.
+        </p>
+
+        <p>
+          In the data processing and API, we rely on Expressjs. In addition, we also use it to create an admin page
+          where our admin will work later.
+        </p>
       </ContentWithImage>
     </ProjectBySlugRenderer>
   )
