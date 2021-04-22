@@ -1,17 +1,12 @@
-import { ReactNode } from 'react'
-
-import { ProjectMeta } from '@/types'
+import { ProjectWithMdx } from '@/types'
 import { Container } from '@/utils/styles'
 import SEO from '../SEO'
 import Jumbotron from './Jumbotron'
 import { ProjectDescription } from './module'
+import Article from './Article'
 
-interface Props extends ProjectMeta {
-  children: ReactNode
-}
-
-const ProjectBySlugRenderer = (props: Props) => {
-  const { children, description, title } = props
+const ProjectBySlugRenderer = (props: ProjectWithMdx) => {
+  const { description, title, mdxSource } = props
 
   return (
     <>
@@ -19,7 +14,7 @@ const ProjectBySlugRenderer = (props: Props) => {
       <Jumbotron {...props} />
       <section css={[Container]}>
         <ProjectDescription description={description} />
-        {children}
+        <Article mdxSource={mdxSource} />
       </section>
     </>
   )

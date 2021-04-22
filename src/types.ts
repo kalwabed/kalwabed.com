@@ -1,3 +1,5 @@
+import { MdxRemote } from 'next-mdx-remote/types'
+
 export interface Post {
   title: string
   slug: string
@@ -8,7 +10,7 @@ export interface Post {
 }
 
 export interface PostWithMdx extends Post {
-  mdxSource: string
+  mdxSource: MdxRemote.Source
 }
 
 export interface Bookmarks {
@@ -28,4 +30,8 @@ export interface ProjectMeta {
   shortDescription?: string
   slug?: string
   githubRepo?: string
+}
+
+export interface ProjectWithMdx extends ProjectMeta {
+  mdxSource: MdxRemote.Source
 }

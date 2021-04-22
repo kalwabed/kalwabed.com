@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Button from '@/components/ui/Button'
 import { TechBadge } from './module'
 import { GithubIcon, LiveIcon } from '@/components/ui/Icons'
+import { memo } from 'react'
 
 const JumbotronWrapper = tw.section`
 pt-1
@@ -105,4 +106,4 @@ const Jumbotron = (props: JumbotronProps) => {
   )
 }
 
-export default Jumbotron
+export default memo(Jumbotron)
