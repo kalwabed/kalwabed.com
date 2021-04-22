@@ -55,3 +55,7 @@ export function getAllFrontMatters(type: TypeData) {
 
   return data.sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1))
 }
+
+export function getFeaturedProject() {
+  return getAllFrontMatters('_projects').find(project => project.isFeatured)
+}

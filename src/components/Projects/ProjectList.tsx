@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic'
 import tw from 'twin.macro'
 
 const Card = dynamic(() => import('./module/Card'))
-import { ProjectMeta } from '@/types'
+import { Project } from '@/types'
 
 const Wrapper = tw.div`
 mt-10
@@ -20,7 +20,7 @@ lg:grid-cols-3
 gap-10
 `
 
-const ProjectList = ({ projects }: { projects: ProjectMeta[] }) => {
+const ProjectList = ({ projects }: { projects: Project[] }) => {
   return (
     <Wrapper>
       <Grid>

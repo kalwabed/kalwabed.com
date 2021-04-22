@@ -2,10 +2,10 @@ import type { GetStaticProps } from 'next'
 
 import PageWrapper from '@/components/layout/PageWrapper'
 import ProjectsPageRenderer from '@/components/Projects'
-import { ProjectMeta } from '@/types'
+import { Project } from '@/types'
 import { getAllFrontMatters } from '@/utils/mdx'
 
-const ProjectsPage = ({ projects }: { projects: ProjectMeta[] }) => {
+const ProjectsPage = ({ projects }: { projects: Project[] }) => {
   return (
     <PageWrapper pageTitle="Projects">
       <ProjectsPageRenderer projects={projects} />

@@ -5,9 +5,9 @@ import Link from 'next/link'
 
 import NextLink from '@/components/ui/NextLink'
 import { CardStyle } from '@/utils/styles'
-import { ProjectMeta } from '@/types'
+import { Project } from '@/types'
 
-interface Props extends Partial<ProjectMeta> {}
+interface Props extends Partial<Project> {}
 
 const Card = (props: Props) => {
   const { banner, shortDescription, slug, title } = props

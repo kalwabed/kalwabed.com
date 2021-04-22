@@ -21,17 +21,19 @@ export interface Bookmarks {
   title: string
 }
 
-export interface ProjectMeta {
+export interface Project {
   title: string
   banner: string
   description: string
   techs: string[]
-  liveUrl?: string
-  shortDescription?: string
-  slug?: string
-  githubRepo?: string
+  liveUrl: string
+  shortDescription: string
+  slug: string
+  githubRepo: string
+  isFeatured: boolean
+  publishedAt: string
 }
 
-export interface ProjectWithMdx extends ProjectMeta {
+export interface ProjectWithMdx extends Project {
   mdxSource: MdxRemote.Source
 }

@@ -1,9 +1,9 @@
-import { ProjectMeta } from '@/types'
+import { Project } from '@/types'
 import ContentWrapper from '../ContentWrapper'
 import PageSectionTitle from '../PageSectionTitle'
 import ProjectList from './ProjectList'
 
-const ProjectsPageRenderer = ({ projects }: { projects: ProjectMeta[] }) => {
+const ProjectsPageRenderer = ({ projects }: { projects: Project[] }) => {
   return (
     <>
       <ContentWrapper>
