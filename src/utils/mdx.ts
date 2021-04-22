@@ -9,6 +9,7 @@ import reParse from 'remark-parse'
 import mdxPrism from 'mdx-prism'
 
 import MDXComponents from '@/components/MDXComponents'
+import MyFeed from '@/scripts/generate-rss'
 
 const root = process.cwd()
 
@@ -52,6 +53,11 @@ export function getAllFrontMatters(type: TypeData) {
       ...allData
     ]
   }, [])
+
+  // generate RSS for post type
+  if (type === '_posts' && data.length !== 0) {
+    MyFeed({ posts: data })
+  }
 
   return data.sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1))
 }
