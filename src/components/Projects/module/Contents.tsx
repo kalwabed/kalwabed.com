@@ -1,6 +1,6 @@
 import tw from 'twin.macro'
 import Image from 'next/image'
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 interface ContentProps {
   heading: string
@@ -44,5 +44,33 @@ export const ContentWithImage = (props: ContentWithImageProps) => {
         <div tw="leading-relaxed tracking-wider text-gray-500 space-y-3">{children}</div>
       </div>
     </WithImageWrapper>
+  )
+}
+
+interface JustImagesProps {
+  images?: string[]
+  label: string
+  children?: ReactNode
+}
+
+export const JustImages = (props: JustImagesProps) => {
+  const { images, label } = props
+
+  return (
+    <section tw="flex mx-auto justify-center items-center flex-col my-24">
+      <div tw="w-full overflow-hidden">
+        {images?.length === 1 && (
+          <Image
+            src={images[0]}
+            alt={label || 'image'}
+            width={1200}
+            height={560}
+            quality={95}
+            tw="rounded bg-slate w-full"
+          />
+        )}
+      </div>
+      <p tw="text-sm">{label}</p>
+    </section>
   )
 }
