@@ -23,7 +23,6 @@ flex flex-col
 justify-center
 lg:flex-row
 items-center
-my-24
 space-y-2
 `
 
@@ -49,28 +48,53 @@ export const ContentWithImage = (props: ContentWithImageProps) => {
 
 interface JustImagesProps {
   images?: string[]
-  label: string
   children?: ReactNode
+  label?: string
 }
+
+const JustImageWrapper = tw.section`
+flex flex-col
+mx-auto
+justify-center
+items-center
+space-y-1
+`
 
 export const JustImages = (props: JustImagesProps) => {
   const { images, label } = props
 
-  return (
-    <section tw="flex mx-auto justify-center items-center flex-col my-24">
-      <div tw="w-full overflow-hidden">
-        {images?.length === 1 && (
+  if (images?.length === 1) {
+    return (
+      <JustImageWrapper>
+        <div tw="w-full overflow-hidden">
           <Image
             src={images[0]}
             alt={label || 'image'}
             width={1200}
             height={560}
-            quality={95}
+            quality={100}
             tw="rounded bg-slate w-full"
           />
-        )}
-      </div>
-      <p tw="text-sm">{label}</p>
-    </section>
+        </div>
+        <p tw="text-sm">{label}</p>
+      </JustImageWrapper>
+    )
+  }
+
+  return (
+    <JustImageWrapper css={[tw`grid grid-cols-1 lg:grid-cols-2 gap-2`]}>
+      {images?.map(image => (
+        <div tw="w-full overflow-hidden">
+          <Image
+            src={image}
+            alt={label || 'image'}
+            width={600}
+            height={580}
+            quality={90}
+            tw="rounded bg-slate w-full shadow"
+          />
+        </div>
+      ))}
+    </JustImageWrapper>
   )
 }
