@@ -18,8 +18,8 @@ const Card = (props: Props) => {
         <Image src={banner} width={320} height={150} alt={slug} />
         <div tw="p-4 space-y-2">
           <Link href={`/projects/${slug}`} passHref>
-            <a tw="hocus:text-primary-400">
-              <h3 tw="text-2xl font-bold transition ">{title}</h3>
+            <a tw="hocus:text-primary-400 transition">
+              <h3 tw="text-2xl font-bold">{title}</h3>
             </a>
           </Link>
 

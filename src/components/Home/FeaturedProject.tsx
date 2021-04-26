@@ -1,4 +1,5 @@
 import tw from 'twin.macro'
+import Link from 'next/link'
 import Image from 'next/image'
 
 import NextLink from '../ui/NextLink'
@@ -27,7 +28,11 @@ const FeaturedProject = ({ project }: { project: Project }) => {
         <Image src={banner} alt={title} height={310} width={638} quality={95} />
 
         <div tw="px-5 pt-3 pb-5 space-y-2">
-          <p tw="font-bold text-2xl md:text-3xl">{title}</p>
+          <Link href={`/projects/${slug}`} passHref>
+            <a tw="hocus:text-primary-400 transition">
+              <h3 tw="font-bold text-2xl md:text-3xl">{title}</h3>
+            </a>
+          </Link>
           <p tw="text-gray-500 text-sm tracking-wide">{shortDescription}</p>
           <div>
             <NextLink size="lg" href={`/projects/${slug}`} title="Visit project" withIcon>
