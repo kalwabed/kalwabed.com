@@ -84,7 +84,7 @@ export const JustImages = (props: JustImagesProps) => {
   return (
     <JustImageWrapper css={[tw`grid grid-cols-1 lg:grid-cols-2 gap-2`]}>
       {images?.map(image => (
-        <div tw="w-full overflow-hidden">
+        <div tw="w-full overflow-hidden" key={image.replace('/static/projects', '')}>
           <Image
             src={image}
             alt={label || 'image'}
