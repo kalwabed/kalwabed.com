@@ -2,8 +2,6 @@ import { Global, css } from '@emotion/react'
 import tw, { theme, GlobalStyles as BaseStyles } from 'twin.macro'
 
 const CustomStyle = css`
-  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
-
   * {
     scroll-behavior: smooth;
   }
