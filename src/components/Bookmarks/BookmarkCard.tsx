@@ -21,7 +21,7 @@ const BookmarkCard = (props: Bookmarks) => {
 
   return (
     <div tw="flex space-x-3 py-3 border-b" key={title}>
-      <Img src={noFavicon ? imgFallback : `${origin}/favicon.ico`} alt={title} />
+      <Img width={10} height={10} src={noFavicon ? imgFallback : `${origin}/favicon.ico`} alt={title} />
       <div tw="flex flex-col">
         <NextLink title={url} href={url} css={[tw`text-lg md:text-xl`]}>
           {title}

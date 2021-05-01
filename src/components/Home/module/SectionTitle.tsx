@@ -1,7 +1,7 @@
 import 'twin.macro'
 
 const SectionTitle = ({ title }) => {
-  return <h3 tw="font-bold text-4xl">{title}</h3>
+  return <h2 tw="font-bold text-4xl">{title}</h2>
 }
 
 export default SectionTitle

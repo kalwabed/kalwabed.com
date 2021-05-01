@@ -4574,10 +4574,10 @@ tty-browserify@0.0.1:
   resolved "https://registry.yarnpkg.com/tty-browserify/-/tty-browserify-0.0.1.tgz#3f05251ee17904dfd0677546670db9651682b811"
   integrity sha512-C3TaO7K81YvjCgQH9Q1S3R3P3BtN3RIM8n+OvX4il1K1zgE8ZhI0op7kClgkxtutIE8hQrcrHBXvIheqKUUCxw==
 
-twin.macro@^2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/twin.macro/-/twin.macro-2.4.0.tgz#ec78a7ce844d94f6a6001be233a8903c2dd523da"
-  integrity sha512-1iRIn/cKvsyGkZclyeRKVP+UaDIqCPcQrT5nLjIB+4ZxumY3CRRA1Q3QYBu3Mpo2+HrnjThJcJk9iurpa05XQg==
+twin.macro@^2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/twin.macro/-/twin.macro-2.4.1.tgz#0a82f4a9747f38fa7f4bee5e5ebb998614785f6d"
+  integrity sha512-HaEY2R4e41QvL59oTqye3+959R6YRFtLRAvGIB4sLj48Ye+01CnEgQHF1PrM9Jkmlr8ngc6wffbVUWEbju2NVQ==
   dependencies:
     "@babel/parser" "^7.12.5"
     autoprefixer "^10.2.5"

@@ -38,7 +38,7 @@
     "next-sitemap": "^1.6.25",
     "rehype": "^11.0.0",
     "tailwindcss": "^2.1.1",
-    "twin.macro": "^2.4.0",
+    "twin.macro": "^2.4.1",
     "typescript": "^4.2.4"
   }
 }
