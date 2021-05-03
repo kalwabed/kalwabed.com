@@ -1,21 +1,45 @@
 ---
 isFeatured: false
-title: 'Nam Logistic'
+title: 'NAM Logistic'
 banner: '/static/projects/namlogistic/banner.png'
 liveUrl: 'https://namlogistic.co.id'
 githubRepo: ''
 publishedAt: '2020-12-30'
 techs: ['React', 'Next.js', 'Chakra UI']
 shortDescription: 'A web application that is intended as a meeting place between land sellers and potential buyers.'
-description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat porro ea libero, cupiditate et neque necessitatibus vero modi voluptatem expedita in nemo adipisci exercitationem ipsam magnam laboriosam iure corporis dolore?'
+description: 'NAM Logistic is a project ordered by a logistics service company to answer problems, such as: seeing cost estimates, and travel routes. In addition, to improve the quality of service and customer trust with an official website.'
 ---
 
-<Content heading="Head 1">
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab id dolores accusantium. Facere odit itaque deleniti
-  accusantium perferendis deserunt similique laborum molestiae assumenda eaque sequi a quasi repellat, aut enim?
+<Content heading="Project purpose and goal">
+
+NAM Logistics comes with the hope that prospective customers can easily access route data and cost estimates via the website.
+
+We also include a company profile that will add an elegant and professional impression to get customers' trust in using our logistics services.
+
 </Content>
 
-<ContentWithImage heading="Head 2" image="/static/projects/aku.jpg">
-  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est iure expedita eaque sapiente recusandae neque nam, ipsam
-  veritatis. Alias, excepturi ea natus ipsa molestiae earum blanditiis eius sint atque inventore?
+<ContentWithImage heading="Tech stack and explanation" image="/static/projects/namlogistic/namlogistic-stack.png">
+
+I really like how vast the Reactjs ecosystem is, so Nextjs (React framework) I think is a pretty ideal choice. Features such as: Context, and State, are enough to answer my needs for data flow between components.
+
+To speed up the development process, Chakra UI is an option. With its base component model which is easy to customize, it not only speeds up but also gives a professional look to it.
+
 </ContentWithImage>
+
+<JustImages images={['/static/projects/namlogistic/estimate.png']} label="Estimation check" />
+
+<JustImages images={['/static/projects/namlogistic/data.png']} label="Estimation/route data" />
+
+<Content heading='Problems and thought process'>
+
+Since I will be playing with data that can change one day, I am thinking of using a headless CMS to organize data by the company later. So I put together a data structure for it in a headless CMS. I finally realized that the data provided by the company is quite abstract, because the differences in attributes from one city to another can be very different, which is quite difficult in the compilation and sorting process.
+
+In the end, I made use of Typescript on data, so that the resulting data remains in accordance with what has been defined previously.
+
+</Content>
+
+<Content heading="Lessons learned">
+
+What I get a lot from here is how to manage a lot of data and abstract a logistics service; create an attractive and simple design using Chakra UI. And then I try to optimize data processing so that when rendering data faster and lighter.
+
+</Content>

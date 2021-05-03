@@ -79,7 +79,7 @@ const NextLink = (props: NextLinkProps) => {
           <TwLink css={[Sizes[size], tw`space-x-1`, externalCss]} className="group" title={title || href}>
             <span>{children}</span>
             {withIcon && (
-              <span tw="text-primary-200 group-hover:text-primary-400">
+              <span tw="text-primary-200 group-hocus:text-primary-400">
                 <ArrowRightIcon />
               </span>
             )}
