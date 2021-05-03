@@ -11,10 +11,7 @@ export default function MyApp({ Component, pageProps }) {
     <>
       <CacheProvider value={emotionCache}>
         <Head>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet"
-          />
+          <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700" rel="stylesheet" />
         </Head>
         <GlobalStyles />
         <DefaultSEO />
