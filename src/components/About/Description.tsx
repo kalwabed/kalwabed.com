@@ -2,15 +2,10 @@ import 'twin.macro'
 
 const Description = () => {
   return (
-    <div tw="leading-relaxed tracking-wider space-y-4">
+    <div tw="leading-relaxed tracking-wider space-y-3">
       <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt quibusdam corrupti odit magni! Sed cum
-        voluptas tempora rem tenetur vero quos culpa numquam, modi voluptatem, fuga laborum reiciendis fugiat sapiente!
-      </p>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit aperiam illum provident harum quam
-        possimus! Nihil excepturi doloribus, accusantium recusandae quam eum mollitia fugit, natus minima incidunt atque
-        asperiores placeat?
+        My name is <b>Kalwabed Rizki</b>, I'm a student as well as a software engineer based in Indonesia. I'm currently
+        exploring modern website development using Javascript/Typescript.
       </p>
     </div>
   )
