@@ -20,7 +20,7 @@ const Header = () => {
 
   return (
     <motion.header
-      tw="fixed z-20 w-full bg-white opacity-90"
+      tw="fixed z-20 w-full backdrop-filter[saturate(180%) blur(10px)]"
       initial="initial"
       variants={{
         initial: {
