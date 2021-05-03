@@ -25,5 +25,5 @@ export const getStaticProps: GetStaticProps = async () => {
   const featuredProject = getFeaturedProject() as Project
   const bookmarks = await bookmarkProvider()
 
-  return { props: { posts, bookmarks, featuredProject } }
+  return { props: { posts, bookmarks, featuredProject }, revalidate: 3 }
 }
