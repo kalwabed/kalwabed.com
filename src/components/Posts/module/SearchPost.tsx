@@ -26,6 +26,7 @@ const SearchPost = (props: SearchProps) => {
         type="text"
         placeholder="Search post by title"
         value={searchValue}
+        className="umami--focus--search-posts"
       />
     </div>
   )

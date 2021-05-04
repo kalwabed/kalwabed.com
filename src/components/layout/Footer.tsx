@@ -27,7 +27,12 @@ const Footer = () => {
       <div tw="flex justify-center items-center space-y-2 flex-col">
         <div tw="flex justify-between space-x-5">
           {footerLinks.map(route => (
-            <NextLink href={route.href} key={route.href} title={route.title}>
+            <NextLink
+              href={route.href}
+              className={`umami--click--FOOTER-${route.label}`}
+              key={route.href}
+              title={route.title}
+            >
               {route.label}
             </NextLink>
           ))}

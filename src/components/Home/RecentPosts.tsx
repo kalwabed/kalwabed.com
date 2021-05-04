@@ -15,7 +15,12 @@ const RecentPosts = ({ posts }: { posts: Post[] }) => {
       {threeRecentPosts?.map(post => (
         <div tw="flex flex-col space-y-1 lg:pr-12" key={post.slug}>
           <time dateTime={dateFormatter(post.publishedAt).ISO}>{dateFormatter(post.publishedAt).formatted}</time>
-          <NextLink size="xl" href={'/posts/' + post.slug} title={post.title}>
+          <NextLink
+            size="xl"
+            href={'/posts/' + post.slug}
+            className={`umami--click--recentPost-${post.slug}`}
+            title={post.title}
+          >
             {post.title}
           </NextLink>
           <p tw="text-sm">{post.summary}</p>

@@ -1,10 +1,11 @@
 import tw from 'twin.macro'
 import Image from 'next/image'
+import { memo } from 'react'
 
 import Button from '@/components/ui/Button'
 import { TechBadge } from './module'
 import { GithubIcon, LiveIcon } from '@/components/ui/Icons'
-import { memo } from 'react'
+import toKebabCase from '@/utils/toKebabCase'
 
 const JumbotronWrapper = tw.section`
 pt-1
@@ -84,7 +85,12 @@ const Jumbotron = (props: JumbotronProps) => {
             </div>
             <div tw="inline-flex space-x-4">
               {liveUrl && (
-                <a href={liveUrl} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`umami--click--liveProject-${toKebabCase(title)}`}
+                >
                   <LiveButton title="Live url">
                     <LiveIcon /> <span>Live</span>
                   </LiveButton>
@@ -92,7 +98,12 @@ const Jumbotron = (props: JumbotronProps) => {
               )}
 
               {githubRepo && (
-                <a href={githubRepo} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={githubRepo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`umami--click--githubProject-${toKebabCase(title)}`}
+                >
                   <GithubButton title="Project Github repository">
                     <GithubIcon /> <span>Github</span>
                   </GithubButton>

@@ -35,7 +35,12 @@ const Header = () => {
     >
       <div css={[Container, tw`flex items-center justify-between w-auto`]}>
         <Link href="/" passHref>
-          <a tw="inline-flex items-center" title="kalwabed.xyz Logo" aria-label="Logo">
+          <a
+            tw="inline-flex items-center"
+            title="kalwabed.xyz Logo"
+            aria-label="Logo"
+            className="umami--click--headerLogo"
+          >
             <Logo />
           </a>
         </Link>
@@ -44,7 +49,13 @@ const Header = () => {
             (route, index) =>
               index < navTotal && (
                 <li key={route.href}>
-                  <NextLink variant="header" title={route.label} isActive={route.href === asPath} href={route.href}>
+                  <NextLink
+                    variant="header"
+                    className={`umami--click--NAV-${route.label}`}
+                    title={route.label}
+                    isActive={route.href === asPath}
+                    href={route.href}
+                  >
                     {route.label}
                   </NextLink>
                 </li>
@@ -73,7 +84,7 @@ const NavModal = memo(({ setIsMenuOpen, asPath }: { setIsMenuOpen: (arg0: boolea
     <div tw="p-5 bg-white border rounded shadow-sm">
       <div tw="flex items-center justify-between mb-4">
         <Link href="/" passHref>
-          <a tw="inline-flex items-center">
+          <a tw="inline-flex items-center" className="umami--click--headerLogo">
             <Logo />
           </a>
         </Link>
@@ -92,7 +103,13 @@ const NavModal = memo(({ setIsMenuOpen, asPath }: { setIsMenuOpen: (arg0: boolea
             (route, index) =>
               index < navTotal && (
                 <li key={route.href}>
-                  <NextLink variant="header" title={route.label} isActive={route.href === asPath} href={route.href}>
+                  <NextLink
+                    variant="header"
+                    title={route.label}
+                    isActive={route.href === asPath}
+                    href={route.href}
+                    className={`umami--click--NAV-${route.label}`}
+                  >
                     {route.label}
                   </NextLink>
                 </li>

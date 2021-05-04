@@ -23,7 +23,7 @@ const Links = () => {
           <Header>Linktree</Header>
           <Description>Places where you can find me on the internet</Description>
         </div>
-        <NextLink withIcon href="/linktree" title="My personal Linktree page">
+        <NextLink className="umami--click--about-linktree" withIcon href="/linktree" title="My personal Linktree page">
           View my Linktree here
         </NextLink>
       </Wrapper>
@@ -33,7 +33,12 @@ const Links = () => {
           <Header>Bookmarks</Header>
           <Description>List of my personal recommendations</Description>
         </div>
-        <NextLink withIcon href="/bookmarks" title="My personal Bookmark page">
+        <NextLink
+          withIcon
+          href="/bookmarks"
+          className="umami--click--about-bookmarks"
+          title="My personal Bookmark page"
+        >
           View my bookmarks here
         </NextLink>
       </Wrapper>

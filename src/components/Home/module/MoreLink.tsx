@@ -11,7 +11,7 @@ const MoreLink = (props: MoreLinkProps) => {
     case 'posts':
       return (
         <div tw="flex justify-center items-center mx-auto">
-          <NextLink title="More posts" href="/posts">
+          <NextLink className="umami--click--more-posts" title="More posts" href="/posts">
             More posts
           </NextLink>
         </div>
@@ -20,7 +20,7 @@ const MoreLink = (props: MoreLinkProps) => {
     case 'projects':
       return (
         <div tw="flex justify-center items-center mx-auto">
-          <NextLink title="More projects" href="/projects">
+          <NextLink className="umami--click--more-projects" title="More projects" href="/projects">
             More projects
           </NextLink>
         </div>
@@ -29,7 +29,7 @@ const MoreLink = (props: MoreLinkProps) => {
     case 'bookmarks':
       return (
         <div tw="flex justify-center items-center mx-auto">
-          <NextLink title="More bookmarks" href="/bookmarks">
+          <NextLink className="umami--click--more-bookmarks" title="More bookmarks" href="/bookmarks">
             More bookmarks
           </NextLink>
         </div>

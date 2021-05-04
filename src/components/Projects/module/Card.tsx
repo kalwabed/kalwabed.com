@@ -18,14 +18,19 @@ const Card = (props: Props) => {
         <Image src={banner} width={320} height={150} alt={slug} />
         <div tw="p-4 space-y-2">
           <Link href={`/projects/${slug}`} passHref>
-            <a tw="hocus:text-primary-400 transition">
+            <a tw="hocus:text-primary-400 transition" className={`umami--click--projectsPage-${slug}`}>
               <h3 tw="text-2xl font-bold">{title}</h3>
             </a>
           </Link>
 
           <p tw="font-light text-gray-500 tracking-wide">{shortDescription}</p>
 
-          <NextLink href={`/projects/${slug}`} title="Project page" withIcon>
+          <NextLink
+            href={`/projects/${slug}`}
+            title="Project page"
+            className={`umami--click--projectsPage-${slug}`}
+            withIcon
+          >
             Visit project
           </NextLink>
         </div>

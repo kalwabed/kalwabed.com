@@ -2,6 +2,7 @@ import tw from 'twin.macro'
 
 import NextLink from '@/components/ui/NextLink'
 import { Bookmarks } from '@/types'
+import toKebabCase from '@/utils/toKebabCase'
 
 const Img = tw.img`
 object-cover
@@ -23,7 +24,12 @@ const BookmarkCard = (props: Bookmarks) => {
     <div tw="flex space-x-3 py-3 border-b" key={title}>
       <Img width={10} height={10} src={noFavicon ? imgFallback : `${origin}/favicon.ico`} alt={title} />
       <div tw="flex flex-col">
-        <NextLink title={url} href={url} css={[tw`text-lg md:text-xl`]}>
+        <NextLink
+          title={url}
+          href={url}
+          css={[tw`text-lg md:text-xl`]}
+          className={`umami--click--bookmarks-${toKebabCase(title)}`}
+        >
           {title}
         </NextLink>
         <small tw="text-sm text-gray-500">{origin.replace('https://', '')}</small>

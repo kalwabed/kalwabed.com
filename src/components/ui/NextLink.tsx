@@ -15,6 +15,7 @@ interface NextLinkProps {
   size?: keyof typeof Sizes
   withIcon?: boolean
   children: ReactNode
+  className?: string
 }
 
 const Sizes = {
@@ -44,7 +45,17 @@ inline-flex
 items-center`
 
 const NextLink = (props: NextLinkProps) => {
-  const { href, title, isActive, variant = 'primary', css: externalCss, size = 'md', withIcon, children } = props
+  const {
+    href,
+    title,
+    isActive,
+    variant = 'primary',
+    css: externalCss,
+    size = 'md',
+    withIcon,
+    children,
+    className
+  } = props
 
   const isExternal = href.startsWith('https://')
 
@@ -52,7 +63,11 @@ const NextLink = (props: NextLinkProps) => {
     case 'header':
       return (
         <Link href={href} passHref>
-          <HeadLink title={`${title} page`} css={[isActive && tw`text-slate`, Sizes[size], externalCss]}>
+          <HeadLink
+            title={`${title} page`}
+            className={className}
+            css={[isActive && tw`text-slate`, Sizes[size], externalCss]}
+          >
             {children}
           </HeadLink>
         </Link>
@@ -66,6 +81,7 @@ const NextLink = (props: NextLinkProps) => {
             title={title || href.replace('https://', '')}
             target="_black"
             rel="noopener noreferrer"
+            className={className ?? ''}
             css={[tw`space-x-1 inline-flex items-center`, Sizes[size], externalCss]}
           >
             <span>{children}</span>
@@ -76,7 +92,11 @@ const NextLink = (props: NextLinkProps) => {
 
       return (
         <Link href={href} passHref>
-          <TwLink css={[Sizes[size], tw`space-x-1`, externalCss]} className="group" title={title || href}>
+          <TwLink
+            css={[Sizes[size], tw`space-x-1`, externalCss]}
+            className={`group ${className ?? ''}`}
+            title={title || href}
+          >
             <span>{children}</span>
             {withIcon && (
               <span tw="text-primary-200 group-hocus:text-primary-400">

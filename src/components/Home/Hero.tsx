@@ -15,7 +15,7 @@ const Hero = () => {
           development using Javascript/Typescript.
         </p>
         <div>
-          <NextLink href="/about" title="Learn more about me" withIcon>
+          <NextLink className="umami--click--learn-more-about-me" href="/about" title="Learn more about me" withIcon>
             Learn more about me
           </NextLink>
         </div>
