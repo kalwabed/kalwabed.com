@@ -26,15 +26,15 @@ const defaultSeoConfig: NextSeoProps = {
   openGraph: {
     description: app.description,
     locale: 'en-US',
-    site_name: 'kalwabed.com',
+    site_name: 'kalwabed.xyz',
     url: app.siteUrl,
     title: 'Home @kalwabed',
     type: 'website',
     images: [
       {
         url:
-          'https://og-image.wzulfikar.com/i/**kalwabed.com**.png?theme=custom&md=1&fontSize=150px&customBackground=%23000&customForeground=%23fff&customRadial=dimgray&backgroundImage=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1617642171314-276bb7641536%3Fixid%3DMXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%253D%26ixlib%3Drb-1.2.1%26auto%3Dformat%26fit%3Dcrop%26w%3D1400%26q%3D80&images=',
-        alt: 'kalwabed.com default og-image'
+          'https://og-image.wzulfikar.com/i/**kalwabed.xyz**.png?theme=custom&md=1&fontSize=150px&customBackground=%23000&customForeground=%23fff&customRadial=dimgray&backgroundImage=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1617642171314-276bb7641536%3Fixid%3DMXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%253D%26ixlib%3Drb-1.2.1%26auto%3Dformat%26fit%3Dcrop%26w%3D1400%26q%3D80&images=',
+        alt: 'kalwabed.xyz default og-image'
       }
     ],
     profile: {
@@ -90,7 +90,7 @@ const SEO = (props: SEOProps) => {
           images={[ogImgExtract(title)]}
           title={title}
           dateModified={props.openGraph.article.modifiedTime}
-          publisherName="kalwabed.com"
+          publisherName="kalwabed.xyz"
           publisherLogo={app.siteUrl.concat('/static/icon.svg')}
         />
       ) : (

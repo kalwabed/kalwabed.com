@@ -35,7 +35,7 @@ const Header = () => {
     >
       <div css={[Container, tw`flex items-center justify-between w-auto`]}>
         <Link href="/" passHref>
-          <a tw="inline-flex items-center" title="kalwabed.com Logo" aria-label="Logo">
+          <a tw="inline-flex items-center" title="kalwabed.xyz Logo" aria-label="Logo">
             <Logo />
           </a>
         </Link>
