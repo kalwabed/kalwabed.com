@@ -33,7 +33,7 @@ const FeaturedProject = ({ project }: { project: Project }) => {
               <h3 tw="font-bold text-2xl md:text-3xl">{title}</h3>
             </a>
           </Link>
-          <p tw="text-gray-500 text-sm tracking-wide">{shortDescription}</p>
+          <p tw="text-gray-600 text-sm tracking-wide">{shortDescription}</p>
           <div>
             <NextLink size="lg" href={`/projects/${slug}`} title="Visit project" withIcon>
               Visit project
