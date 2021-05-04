@@ -50,6 +50,8 @@ interface JustImagesProps {
   images?: string[]
   children?: ReactNode
   label?: string
+  height?: number
+  width?: number
 }
 
 const JustImageWrapper = tw.section`
@@ -61,7 +63,7 @@ space-y-1
 `
 
 export const JustImages = (props: JustImagesProps) => {
-  const { images, label } = props
+  const { images, label, height, width } = props
 
   if (images?.length === 1) {
     return (
@@ -70,8 +72,8 @@ export const JustImages = (props: JustImagesProps) => {
           <Image
             src={images[0]}
             alt={label || 'image'}
-            width={1200}
-            height={560}
+            width={width || 1200}
+            height={height || 560}
             quality={100}
             tw="rounded bg-slate w-full"
           />

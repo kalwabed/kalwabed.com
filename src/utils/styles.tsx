@@ -8,7 +8,7 @@ export const CardStyle = tw`border transition shadow-md hover:(shadow-lg bg-gray
 
 export const PostStyle = css`
   p > code {
-    ${tw`p-0.5 border text-white border-gray-500 font-medium rounded-md background-color[#282c34]`}
+    ${tw`p-0.5 break-words border text-white border-gray-500 font-medium rounded-md background-color[#282c34]`}
   }
 
   pre {
@@ -38,7 +38,7 @@ export const PostStyle = css`
   .token.prolog,
   .token.doctype,
   .token.cdata {
-    ${tw`text-gray-700`}
+    ${tw`text-gray-500`}
   }
 
   .token.punctuation {
