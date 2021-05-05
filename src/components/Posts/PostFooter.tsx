@@ -4,7 +4,9 @@ import dateFormatter from '@/utils/dateFormatter'
 import NextLink from '../ui/NextLink'
 import toKebabCase from '@/utils/toKebabCase'
 
-const PostFooter = ({ githubRepository, updatedAt, title }) => {
+const baseRepo = 'https://github.com/kalwabed/kalwabed.xyz/blob/main/_posts/'
+
+const PostFooter = ({ slug, updatedAt, title }) => {
   return (
     <div tw="w-full">
       <div tw="flex flex-col space-y-3">
@@ -14,7 +16,7 @@ const PostFooter = ({ githubRepository, updatedAt, title }) => {
         </div>
 
         <NextLink
-          href={githubRepository}
+          href={baseRepo.concat(slug, '.mdx')}
           title="Github repo"
           className={`umami--click--editOnGithub-${toKebabCase(title)}`}
         >

@@ -5,12 +5,8 @@ import { memo } from 'react'
 import app from '@/config/app'
 
 const twitterUsername = '@' + app.socials.Twitter.split('/')[3]
-
-export const ogImgExtract = (text: string) => {
-  const newText = encodeURI(text)
-
-  return `https://og-image.wzulfikar.com/i/**${newText}**.png?theme=custom&md=1&fontSize=150px&customBackground=%23000&customForeground=%23fff&customRadial=dimgray&backgroundImage=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1617642171314-276bb7641536%3Fixid%3DMXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%253D%26ixlib%3Drb-1.2.1%26auto%3Dformat%26fit%3Dcrop%26w%3D1400%26q%3D80&images=`
-}
+const defaultOgImg =
+  'https://og-image.wzulfikar.com/i/.png?theme=custom&md=1&fontSize=100px&customBackground=%23000000&customForeground=%23ffffff&customRadial=dimgray&backgroundImage=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1576676830693-65730a608573%3Fixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26ixlib%3Drb-1.2.1%26auto%3Dformat%26fit%3Dcrop%26w%3D750%26q%3D80&images=https%3A%2F%2Fraw.githubusercontent.com%2Fkalwabed%2Fkalwabed.xyz%2Fmain%2Fpublic%2Fstatic%2Flogo-white.svg'
 
 const defaultSeoConfig: NextSeoProps = {
   defaultTitle: 'Home',
@@ -32,8 +28,7 @@ const defaultSeoConfig: NextSeoProps = {
     type: 'website',
     images: [
       {
-        url:
-          'https://og-image.wzulfikar.com/i/**kalwabed.xyz**.png?theme=custom&md=1&fontSize=150px&customBackground=%23000&customForeground=%23fff&customRadial=dimgray&backgroundImage=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1617642171314-276bb7641536%3Fixid%3DMXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%253D%26ixlib%3Drb-1.2.1%26auto%3Dformat%26fit%3Dcrop%26w%3D1400%26q%3D80&images=',
+        url: defaultOgImg,
         alt: 'kalwabed.xyz default og-image'
       }
     ],
@@ -74,7 +69,7 @@ const SEO = (props: SEOProps) => {
         openGraph={{
           url,
           title: title + titlePrefix,
-          images: [{ url: ogImgExtract(title), alt: title }],
+          images: [{ url: defaultOgImg, alt: title }],
           profile: { firstName: 'Kalwabed', lastName: 'Rizki', gender: 'male', username: 'kalwabed' },
           ...props.openGraph
         }}
@@ -87,7 +82,7 @@ const SEO = (props: SEOProps) => {
           authorName="Kalwabed Rizki"
           datePublished={props.openGraph.article.publishedTime}
           description={props.openGraph.description}
-          images={[ogImgExtract(title)]}
+          images={[defaultOgImg]}
           title={title}
           dateModified={props.openGraph.article.modifiedTime}
           publisherName="kalwabed.xyz"

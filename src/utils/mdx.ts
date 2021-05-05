@@ -33,6 +33,7 @@ export async function getDataBySlug(type: TypeData, slug: string) {
 
   return {
     mdxSource,
+    slug,
     ...data
   }
 }

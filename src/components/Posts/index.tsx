@@ -5,7 +5,7 @@ import type { Post, PostWithMdx } from '@/types'
 import { Container } from '@/utils/styles'
 import ContentWrapper from '../ContentWrapper'
 import PageWrapper from '../layout/PageWrapper'
-import SEO, { ogImgExtract } from '../SEO'
+import SEO from '../SEO'
 import Article from './Article'
 import PostHeader from './PostHeader'
 import PostList from './PostList'
@@ -27,7 +27,7 @@ export const PostsPageRenderer = ({ posts }: { posts: Post[] }) => {
 }
 
 export const PostBySlugRenderer = ({ post }: { post: PostWithMdx }) => {
-  const { publishedAt, updatedAt, title, mdxSource, githubRepository, summary } = post
+  const { publishedAt, updatedAt, title, mdxSource, slug, summary } = post
 
   return (
     <PageWrapper withSEO={false}>
@@ -38,7 +38,6 @@ export const PostBySlugRenderer = ({ post }: { post: PostWithMdx }) => {
         openGraph={{
           title: title.concat(' @kalwabed'),
           description: summary,
-          images: [{ url: ogImgExtract(title), alt: title.concat(' Og image') }],
           type: 'article',
           article: {
             authors: [app.socials.Twitter],
@@ -55,9 +54,8 @@ export const PostBySlugRenderer = ({ post }: { post: PostWithMdx }) => {
       <Article content={mdxSource} />
 
       <div tw="flex items-start px-0 md:px-0 lg:px-64 mt-6">
-        <PostFooter title={title} githubRepository={githubRepository} updatedAt={updatedAt} />
+        <PostFooter title={title} slug={slug} updatedAt={updatedAt} />
       </div>
-      {/* <ContentWrapper tw="px-0 md:px-0 lg:px-40 xl:px-64"></ContentWrapper> */}
     </PageWrapper>
   )
 }
