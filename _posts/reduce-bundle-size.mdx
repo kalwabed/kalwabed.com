@@ -1,0 +1,43 @@
+---
+title: 'How do I reduce the bundle size in my Nextjs app'
+summary: 'Because speed and lightness are also important'
+githubRepository: ''
+publishedAt: '2021-05-04'
+updatedAt: '2021-05-04'
+---
+
+> I recommend using this technique for mid-low websites, such as: personal blogs, portfolios, etc. Due to this technique replacing React with Preact might fail in some applications.
+
+1. Install Preact `yarn add preact`
+2. In the next.config.js file add the following code:
+
+```jsx
+module.exports = {
+  // ...other config
+
+  webpack: (config, { isServer, dev }) => {
+    // Replace React with Preact only in client production build
+    if (!dev && !isServer) {
+      Object.assign(config.resolve.alias, {
+        react: 'preact/compat',
+        'react-dom/test-utils': 'preact/test-utils',
+        'react-dom': 'preact/compat'
+      })
+    }
+
+    return config
+  }
+}
+```
+
+We will replace React with Preact only when building the client on the production side, which of course reduces the bundle size that users have to download by up to 30%!
+
+Good examples on this website:
+
+Before
+
+<JustImages height={850} images={['/static/posts/reduce-bundle-size/before.png']} label="Vercel deploy" />
+
+After
+
+<JustImages height={850} images={['/static/posts/reduce-bundle-size/after.png']} label="Vercel deploy" />

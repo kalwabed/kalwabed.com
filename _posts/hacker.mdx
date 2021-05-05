@@ -1,0 +1,126 @@
+---
+title: 'Hacker'
+summary: 'Not a hacker, in the end'
+githubRepository: ''
+publishedAt: '2020-12-30'
+updatedAt: '2020-12-30'
+---
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [What Is A Hacker](#what-is-a-hacker)
+- [Capture The Flag](#capture-the-flag)
+- [Introduction to CTF](#introduction-to-ctf)
+- [Advanced CTF](#advanced-ctf)
+- [Conclusion](#conclusion)
+
+## Introduction
+
+We often hear that hackers may think, _"oh, he's the one who messes with people's social media"_, or, _"he's the one whose hobby is getting into the system and taking the data in it"_, and so on.
+
+<!-- my_flag{y00u_c4n_s3e_m_eE_81sV} -->
+
+In fact, it is true, because what we often hear is probably a crime committed by someone who calls himself a hacker. This action is usually classified as a [black hat](https://www.kaspersky.com/resource-center/threats/black-hat-hacker) hacker.
+
+We already know quite a bit about 'black hat' hackers. Maybe there will be questions like, _"If there are black hat hackers, then there are [white hat](https://techjury.net/blog/what-is-a-white-hat-hacker/) hackers against them?"_ The answer is yes, and that will be the topic of discussion this time.
+
+## What Is A Hacker
+
+Talking about hackers, so what are hackers? referring to [Wikipedia](https://en.wikipedia.org/wiki/Hacker), _a hacker is a computer expert who uses his technical knowledge to achieve a goal or overcome a problem, in a computerized system in a non-standard way._
+
+In practice, hacking can use any means; it doesn't matter whether it's legal or illegal. Hackers, in this 'white hat' group, prefer to use legal (but non-standard) means to get into the target system without destroying the system until _down_, retrieving unauthorized data, etc. This technique is called _[ethical-hacking](https://www.secjuice.com/ethical-hacking-a-brief-overview/)_.
+
+So it can be an analogy like: _A stranger comes to the house, then someone wants to enter the house. Because the front door is locked, the person's job is to enter without taking action that could harm the home owner. So the person tried to find out the combination of the locks on the door, and after a few tries the door was finally successfully opened and the person, because of the 'white hat', just left a 'message' to the owner of the house and told him that he got in and how to solve it. After that, he closed the door and locked it again, leaving the house without the owner's property with him_.
+
+To know more clearly how a hacker's step-by-step process works, there is a competition called Capture The Flag.
+
+## Capture the flag
+
+Capture The Flag (CTF) is a special type of information security competition (from: [https://ctftime.org/ctf-wtf](https://ctftime.org/ctf-wtf)). The point is that we are asked to find and collect a special writing format, commonly called a _flag_, to add points and win in this competition.
+
+In this competition the participants are divided into teams of 1-3 people. In other cases it could be more. The material tested can also be various, usually: cryptography, stego, binary analysis, reverse engineering, web security, etc.
+
+To find the _flag_ we are required to solve a problem, ranging from easy to complex, which has been prepared in advance by the jury. _Flag_ will generally be encountered in a format like: `the_flag {eas_Y_t0Find_m3_8922}`.
+
+Now that we know what **Capture the flag** is, let's give it a try now.
+
+## Introduction to CTF
+
+_I assume you are using a pc / laptop in this process. If not, then please listen to it and save it for later._
+
+Okay, please open [inspect element](https://www.lifewire.com/get-inspect-element-tool-for-browser-756549), then search for _flag_ by (still in element inspection) Ctrl + F, then type the keyword `my_flag`, if true it will be found, and that's your first _flag_.
+
+What's next? Just leave it, or _Flag_ can be submitted in the comments column below, or it's up to you to put it where.
+
+Next there is an encrypted string with [base64](https://en.wikipedia.org/wiki/Base64) `bXlfZmxhZ3toZXJlX3RoM19zM0Nvbl9kX2ZsQV85XzFzSmkyfQ==`. The _flag_ keyword is: there is something called base64 decode.
+
+If you can already figure out the contents, then that is your second _flag_. Great.
+
+_That is it? very easy, huh_. Eitss in practice is much more complicated. We still come to the introductory part, not the 'real' one, which is more challenging.
+
+## Advanced CTF
+
+We're going to get into a slightly more complicated problem which we will solve together.
+
+Please visit [https://2019shell1.picoctf.com/problem/12284](https://2019shell1.picoctf.com/problem/12284/).
+
+When you visit that page, do you think something is strange?
+
+Please enter with your username & password up to you. Once logged in we will be presented with the `home` page:
+
+![advanced-home](https://cdn.statically.io/img/kawari.space/f=auto/assets/posts/hacker/advanced-home.png)
+
+Do you feel something strange now? If so, maybe questions will arise in our minds, _"how do you get in?"_ From here we have to start to be suspicious of the question maker. Successfully logged in but how come there's no _flag_ for us? Let's explore together the source of the problem.
+
+First, we have to make sure there is no 'mystery box' that we have to solve first on the start page.
+
+![checked-login](https://cdn.statically.io/img/kawari.space/f=auto/assets/posts/hacker/checked-login.png)
+
+Second, pay attention to the behavior of the page when it is successfully logged in without any input validation, warning, or anything else from the browser.
+
+![two-circles](https://cdn.statically.io/img/kawari.space/f=auto/assets/posts/hacker/two-circles.png)
+
+In circle number 1 we are told that we did it successfully and _flag_ is actually already here but not visible to us.
+
+In circle number 2 the question maker seems to signal to us that the _flag_ we are looking for is not on this page, not at the moment. We are asked to manipulate something to bring up the _flag_, and that we may have realized when we saw the two interrelated circles. Indirectly, the question maker invites us to identify the content of the current page.
+
+So what we first explored were the `elements` in HTML.
+
+![elements](https://cdn.statically.io/img/kawari.space/f=auto/assets/posts/hacker/elements.png)
+
+Is there something strange? Did the creator leave a message or something? Hm ... I don't think it's odd.
+
+The next step, we will check [browser cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies), to see if the question maker left _clue_ or whatever helps.
+
+![application](https://cdn.statically.io/img/kawari.space/f=auto/assets/posts/hacker/application.png)
+
+In the `application`, open the Cookies section, and click the url address that is there.
+
+Look at the picture below
+
+![cookie](https://cdn.statically.io/img/kawari.space/f=auto/assets/posts/hacker/cookie-url.png)
+
+Bright dots began to appear. The question creator has given us _clue_ to get the _flag_ we are looking for.
+
+Are you aware or not the username and password that we entered was in there (username & password)? Then we are also 'told' by the creator that we are not admins, correct? So if we are not admin and the _flag_ is here then we need admin access to make the _flag_ appear. So the easiest way to allow us to have admin access is to change the _value_ of the admin which was previously False to ~~true~~ True.
+
+![admin](https://cdn.statically.io/img/kawari.space/f=auto/assets/posts/hacker/admin-true.png)
+
+_"Already changed the page, how come it still shows the same?"_ Because we change it in the _[client](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs)_ section then we have to notify _[server](https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Introduction#What_is_server-side_website_programming)_ if we have changed the _value_ of admin and let _server_ process requests us by refreshing the page.
+
+By refreshing the page, _client_ will send Cookies to _server_, then the _server_ will read us as admin (because we changed the _value_ from admin) and if successful then the _server_ will send the _flag_ we are looking for to _client_, and _client_ will display it to us .
+
+The result:
+
+![picoctf](https://cdn.statically.io/img/kawari.space/f=auto/assets/posts/hacker/picoctf.png)
+
+## Conclusion
+
+Now that we know a little of how those hackers work, and how we position ourselves as 'hackers' with a little bit of CTF play we just finished together. Hopefully this will provide us with new insights that can help us get to know and be more careful with hacking, and how _feel_ becomes a hacker via CTF.
+
+_To beat a hacker you have to think like one._
+
+If you are interested in practicing or learning CTF, like the example we completed above, you can visit [https://2019game.picoctf.com](https://2019game.picoctf.com/?ref=kawari.space), or [https://www.geeksforgeeks.org/top-10-cyber-hacking-competitions-capture-the-flag-ctf/](https://www.geeksforgeeks.org/top-10-cyber-hacking-competitions-capture-the-flag-ctf/?ref=kawari.space).
+
+Thanks.

@@ -1,0 +1,14 @@
+{
+  "name": "Kalwabed Rizki: personal website",
+  "short_name": "Kalwabed",
+  "start_url": ".",
+  "orientation": "portrait",
+  "display": "standalone",
+  "theme_color": "#fff",
+  "background_color": "#fff",
+  "description": "Kalwabed Rizki personal website.",
+  "icons": [
+    { "src": "/static/192.png", "type": "image/png", "sizes": "192x192" },
+    { "src": "/static/512.png", "type": "image/png", "sizes": "512x512" }
+  ]
+}

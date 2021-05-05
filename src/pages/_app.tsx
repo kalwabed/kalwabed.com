@@ -1,8 +1,33 @@
-import '@/styles/tailwind.css'
-import '@/styles/globals.css'
+import { CacheProvider } from '@emotion/react'
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+import emotionCache from '@/utils/emotionCache'
+import GlobalStyles from '@/components/GlobalStyles'
+import PageRoot from '@/components/layout/PageRoot'
+import { DefaultSEO } from '@/components/SEO'
+import Head from 'next/head'
+
+export default function MyApp({ Component, pageProps }) {
+  return (
+    <>
+      <CacheProvider value={emotionCache}>
+        <Head>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+          />
+          <script
+            async
+            defer
+            data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
+            src={process.env.NEXT_PUBLIC_UMAMI_URL}
+          />
+        </Head>
+        <GlobalStyles />
+        <DefaultSEO />
+        <PageRoot>
+          <Component {...pageProps} />
+        </PageRoot>
+      </CacheProvider>
+    </>
+  )
 }
-
-export default MyApp
