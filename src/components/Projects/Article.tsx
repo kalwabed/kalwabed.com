@@ -1,14 +1,16 @@
 import 'twin.macro'
-import hydrate from 'next-mdx-remote/hydrate'
-import type { MdxRemote } from 'next-mdx-remote/types'
+import { MDXRemote } from 'next-mdx-remote'
+import type { MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { memo } from 'react'
 
 import MDXComponents from '../MDXComponents'
 
-const Article = ({ mdxSource }: { mdxSource: MdxRemote.Source }) => {
-  const hydratedContent = hydrate(mdxSource, { components: MDXComponents })
-
-  return <article tw="space-y-24">{hydratedContent}</article>
+const Article = ({ mdxSource }: { mdxSource: MDXRemoteSerializeResult }) => {
+  return (
+    <article tw="space-y-24">
+      <MDXRemote {...mdxSource} components={MDXComponents} />
+    </article>
+  )
 }
 
 export default memo(Article)

@@ -1,4 +1,4 @@
-import { MdxRemote } from 'next-mdx-remote/types'
+import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 
 export interface Post {
   title: string
@@ -9,7 +9,7 @@ export interface Post {
 }
 
 export interface PostWithMdx extends Post {
-  mdxSource: MdxRemote.Source
+  mdxSource: MDXRemoteSerializeResult
 }
 
 export interface Bookmarks {
@@ -34,5 +34,5 @@ export interface Project {
 }
 
 export interface ProjectWithMdx extends Project {
-  mdxSource: MdxRemote.Source
+  mdxSource: MDXRemoteSerializeResult
 }
