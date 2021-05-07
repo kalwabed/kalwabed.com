@@ -1,5 +1,5 @@
 export default {
-  siteUrl: 'https://kalwabed-com.vercel.app',
+  siteUrl: 'https://kalwabed.xyz',
   description: 'Kalwabed Rizki personal website',
   email: 'kalwabedrzk@pm.me',
   socials: {
