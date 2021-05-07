@@ -113,7 +113,7 @@ const Card = ({ href, type }: SocialProps) => {
       return (
         <LinkWrapper>
           <Link
-            href={`mailto:${href}`}
+            href={href}
             target="_blank"
             rel="noopener noreferrer"
             title="My website"
