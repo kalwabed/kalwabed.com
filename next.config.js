@@ -8,9 +8,6 @@ module.exports = {
   future: {
     webpack5: true
   },
-  experimental: {
-    optimizeCss: true
-  },
   async headers() {
     return [
       {
