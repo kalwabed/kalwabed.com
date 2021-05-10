@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
       ...initialProps,
       styles: [
         initialProps.styles,
-        <style key="emotion-css" data-emotion-css={ids.join(' ')} dangerouslySetInnerHTML={{ __html: css }} />
+        <style key="emotion-css" data-emotion={ids.join(' ')} dangerouslySetInnerHTML={{ __html: css }} />
       ]
     }
   }
