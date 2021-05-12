@@ -1,5 +1,5 @@
 import tw from 'twin.macro'
-import { memo, useCallback, useState } from 'react'
+import { memo, useCallback, useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
@@ -19,7 +19,12 @@ const Header = () => {
   const { asPath } = useRouter()
   const { setTheme, theme } = useTheme()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
   const isVisible = useHeaderVisible()
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   const switchTheme = useCallback(() => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
@@ -69,6 +74,7 @@ const Header = () => {
               )
           )}
           <Button
+            hidden={!isMounted}
             tw="p-3.5 py-4 bg-transparent text-gray-400 focus:(ring-0 ring-offset-0) hocus:bg-transparent dark:hover:text-gray-300 hover:text-slate"
             title="Theme toggle"
             onClick={switchTheme}

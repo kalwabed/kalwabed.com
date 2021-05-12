@@ -39,7 +39,8 @@ focus:(ring-2 ring-offset-2 ring-gray-500 dark:(ring-gray-700 ring-offset-black)
 
 export const TwLink = tw.a`
 text-primary-500
-hocus:(text-primary-400 underline text-underline-offset[3px] outline-none)
+dark:text-primary-400
+hocus:(text-primary-400 dark:text-primary-300 underline text-underline-offset[3px] outline-none)
 focus:(ring-2 ring-offset-2 ring-primary-300 no-underline )
 transition
 inline-flex
@@ -100,7 +101,7 @@ const NextLink = (props: NextLinkProps) => {
           >
             <span>{children}</span>
             {withIcon && (
-              <span tw="text-primary-200 group-hocus:text-primary-400">
+              <span tw="text-primary-200 group-hocus:(text-primary-400 dark:text-primary-300)">
                 <ArrowRightIcon />
               </span>
             )}

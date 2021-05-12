@@ -25,7 +25,7 @@ export default function MyApp({ Component, pageProps }) {
         </Head>
         <GlobalStyles />
         <DefaultSEO />
-        <ThemeProvider attribute="class">
+        <ThemeProvider attribute="class" defaultTheme="system">
           <PageRoot>
             <Component {...pageProps} />
           </PageRoot>
