@@ -33,7 +33,8 @@ text-gray-400
 transition
 duration-200
 hover:text-slate
-focus:(ring-2 ring-offset-2 ring-gray-500 outline-none)
+dark:hover:text-gray-300
+focus:(ring-2 ring-offset-2 ring-gray-500 dark:(ring-gray-700 ring-offset-black) outline-none)
 `
 
 export const TwLink = tw.a`
@@ -66,7 +67,7 @@ const NextLink = (props: NextLinkProps) => {
           <HeadLink
             title={`${title} page`}
             className={className}
-            css={[isActive && tw`text-slate`, Sizes[size], externalCss]}
+            css={[isActive && tw`text-slate dark:text-primary-600`, Sizes[size], externalCss]}
           >
             {children}
           </HeadLink>

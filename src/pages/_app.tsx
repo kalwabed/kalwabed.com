@@ -5,6 +5,7 @@ import GlobalStyles from '@/components/GlobalStyles'
 import PageRoot from '@/components/layout/PageRoot'
 import { DefaultSEO } from '@/components/SEO'
 import Head from 'next/head'
+import { ThemeProvider } from 'next-themes'
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -24,9 +25,11 @@ export default function MyApp({ Component, pageProps }) {
         </Head>
         <GlobalStyles />
         <DefaultSEO />
-        <PageRoot>
-          <Component {...pageProps} />
-        </PageRoot>
+        <ThemeProvider attribute="class">
+          <PageRoot>
+            <Component {...pageProps} />
+          </PageRoot>
+        </ThemeProvider>
       </CacheProvider>
     </>
   )

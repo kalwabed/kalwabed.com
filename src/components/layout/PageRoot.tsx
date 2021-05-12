@@ -6,7 +6,7 @@ const PageRoot = ({ children }) => {
   return (
     <>
       <Header />
-      <main tw="relative flex-auto pt-16">{children}</main>
+      <main tw="relative flex-auto pt-16 dark:text-white">{children}</main>
       <Footer />
     </>
   )

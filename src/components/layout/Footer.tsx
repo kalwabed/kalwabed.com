@@ -23,7 +23,7 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <footer css={[Container, tw`mt-4 border-t`]}>
+    <footer css={[Container, tw`mt-4 border-t dark:border-gray-400`]}>
       <div tw="flex justify-center items-center space-y-2 flex-col">
         <div tw="flex justify-between space-x-5">
           {footerLinks.map(route => (
@@ -37,7 +37,7 @@ const Footer = () => {
             </NextLink>
           ))}
         </div>
-        <p tw="text-sm tracking-wide leading-relaxed text-center">
+        <p tw="text-sm tracking-wide leading-relaxed text-center text-gray-400">
           © 2021-present Kalwabed Rizki. <br tw="md:hidden" /> All rights reserved.
         </p>
       </div>
