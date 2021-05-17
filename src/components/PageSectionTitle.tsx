@@ -16,7 +16,7 @@ font-bold
 
 const Description = tw.small`
 text-sm
-text-gray-500
+text-gray-500 dark:text-gray-400
 tracking-wide
 `
 

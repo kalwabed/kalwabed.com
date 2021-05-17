@@ -34,14 +34,14 @@ transition
 duration-200
 hover:text-slate
 dark:hover:text-gray-300
-focus:(ring-2 ring-offset-2 ring-gray-500 dark:(ring-gray-700 ring-offset-black) outline-none)
+focus:(ring-2 ring-offset-2 ring-gray-500 dark:(ring-primary-500 ring-offset-primary-800) outline-none)
 `
 
 export const TwLink = tw.a`
 text-primary-500
 dark:text-primary-400
 hocus:(text-primary-400 dark:text-primary-300 underline text-underline-offset[3px] outline-none)
-focus:(ring-2 ring-offset-2 ring-primary-300 no-underline )
+focus:(ring-2 ring-offset-2 dark:(ring-primary-500 ring-offset-primary-600) ring-primary-300 no-underline )
 transition
 inline-flex
 items-center`

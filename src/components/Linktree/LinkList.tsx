@@ -1,7 +1,7 @@
 import tw from 'twin.macro'
 
 import app from '@/config/app'
-import Card from './module/Card'
+import Card from './modules/Card'
 
 export interface SocialProps {
   href: string
@@ -40,7 +40,7 @@ w-full
 space-y-2
 py-3
 h-full
-bg-white
+bg-white dark:bg-dark
 background-image[url(/static/polygon-scatter-haikei.svg)]
 `
 

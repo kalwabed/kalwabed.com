@@ -17,7 +17,7 @@ const Card = (props: Post) => {
             <h1 tw="text-3xl font-bold transition">{title}</h1>
           </a>
         </Link>
-        <p tw="text-gray-500 tracking-wide">{summary}</p>
+        <p tw="text-gray-500 dark:text-gray-300 tracking-wide">{summary}</p>
         <NextLink
           withIcon
           href={'/posts/'.concat(slug)}

@@ -7,13 +7,20 @@ interface ContentProps {
   children: ReactNode
 }
 
+const ParagraphWrapper = tw.div`
+leading-relaxed
+tracking-wider
+text-gray-500 dark:text-gray-300
+space-y-3
+`
+
 export const Content = (props: ContentProps) => {
   const { heading, children } = props
 
   return (
     <section tw="w-full md:w-3/4 lg:w-3/5 space-y-3">
       <h1 tw="text-4xl font-bold">{heading}</h1>
-      <div tw="leading-relaxed tracking-wider text-gray-500 space-y-3">{children}</div>
+      <ParagraphWrapper>{children}</ParagraphWrapper>
     </section>
   )
 }
@@ -40,7 +47,7 @@ export const ContentWithImage = (props: ContentWithImageProps) => {
       </div>
       <div tw="w-full lg:w-1/2 space-y-3">
         <h1 tw="text-4xl font-bold">{heading}</h1>
-        <div tw="leading-relaxed tracking-wider text-gray-500 space-y-3">{children}</div>
+        <ParagraphWrapper>{children}</ParagraphWrapper>
       </div>
     </WithImageWrapper>
   )

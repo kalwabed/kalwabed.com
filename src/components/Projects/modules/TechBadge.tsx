@@ -8,7 +8,7 @@ text-sm
 rounded-full
 text-center
 text-white
-bg-slate
+bg-slate dark:bg-gray-600
 `
 
 const TechBadge = ({ tech }) => {

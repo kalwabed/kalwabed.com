@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import NextLink from '../ui/NextLink'
-import { SectionTitle, MoreLink } from './module'
+import { SectionTitle, MoreLink } from './modules'
 import ContentWrapper from '../ContentWrapper'
 import { Project } from '@/types'
 
