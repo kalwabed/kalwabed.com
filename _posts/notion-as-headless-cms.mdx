@@ -37,19 +37,15 @@ Create a new page (anywhere) and then we will make it a table to store our data 
 
 Look at figures 1.1 and 1.2 below.
 
-<JustImages height={850} images={['/static/posts/notion-as-headless/table-init.png']} label="1.1" />
+<PostImage image={'/static/posts/notion-as-headless/table-init.png'} label="1.1" />
 
-<JustImages height={850} images={['/static/posts/notion-as-headless/table-structure.png']} label="1.2" />
+<PostImage image={'/static/posts/notion-as-headless/table-structure.png'} label="1.2" />
 
 ### Step 2
 
 We initial the data.
 
-<JustImages
-  height={850}
-  images={['/static/posts/notion-as-headless/table-initial-data.png']}
-  label="Three preliminary data"
-/>
+<PostImage image={'/static/posts/notion-as-headless/table-initial-data.png'} label="Three preliminary data" />
 
 ### Step 3
 
@@ -59,7 +55,7 @@ The way it works is very easy, we only need the Id of our Notion page.
 
 To get it, we just need to take the share link and then take our page Id. Pay attention to the image instructions below:
 
-<JustImages height={850} images={['/static/posts/notion-as-headless/share-link.png']} label="How to share link" />
+<PostImage image={'/static/posts/notion-as-headless/share-link.png'} label="How to share link" />
 
 ### Step 4
 
@@ -71,11 +67,7 @@ To test whether it is correct or not, please visit: `https://notion-api.splitbee
 
 If there are no problems, then the results in the browser will be as shown below:
 
-<JustImages
-  height={850}
-  images={['/static/posts/notion-as-headless/browser-result.png']}
-  label="Json results in the browser"
-/>
+<PostImage image={'/static/posts/notion-as-headless/browser-result.png'} label="Json results in the browser" />
 
 > If an error occurs, make sure the page id and url you entered are correct, then try again.
 
@@ -98,7 +90,7 @@ export async function getServerSideProps() {
 
 So, the end result is:
 
-<JustImages height={850} images={['/static/posts/notion-as-headless/api-result.png']} label="Result from SSR" />
+<PostImage image={'/static/posts/notion-as-headless/api-result.png'} label="Result from SSR" />
 
 Look at [Codesandbox](https://codesandbox.io/s/notion-as-cms-3v90g?file=/pages/index.js:0-269)
 

@@ -30,7 +30,7 @@ export const PostStyle = css`
     ${tw`mt-0 rounded-t-none`}
   }
 
-  .prose img {
+  img {
     margin: 0;
   }
 

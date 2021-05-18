@@ -15,7 +15,6 @@
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "@tailwindcss/typography": "^0.4.0",
-    "critters": "^0.0.10",
     "feed": "^4.2.2",
     "framer-motion": "^4.1.13",
     "gray-matter": "^4.0.3",

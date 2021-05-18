@@ -75,16 +75,16 @@ export const JustImages = (props: JustImagesProps) => {
   if (images?.length === 1) {
     return (
       <JustImageWrapper>
-        <div tw="w-full overflow-hidden">
+        <a href={images[0]} tw="w-full overflow-hidden" rel="noopener noreferrer" target="_blank">
           <Image
             src={images[0]}
             alt={label || 'image'}
             width={width || 1200}
             height={height || 560}
-            quality={100}
+            quality={90}
             tw="rounded bg-slate w-full"
           />
-        </div>
+        </a>
         <p tw="text-sm">{label}</p>
       </JustImageWrapper>
     )
@@ -93,7 +93,13 @@ export const JustImages = (props: JustImagesProps) => {
   return (
     <JustImageWrapper css={[tw`grid grid-cols-1 lg:grid-cols-2 gap-2`]}>
       {images?.map(image => (
-        <div tw="w-full overflow-hidden" key={image.replace('/static/projects', '')}>
+        <a
+          href={image}
+          tw="w-full overflow-hidden"
+          key={image.replace('/static/projects', '')}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <Image
             src={image}
             alt={label || 'image'}
@@ -102,7 +108,7 @@ export const JustImages = (props: JustImagesProps) => {
             quality={90}
             tw="rounded bg-slate w-full shadow"
           />
-        </div>
+        </a>
       ))}
     </JustImageWrapper>
   )
