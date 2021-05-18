@@ -22,6 +22,7 @@ overflow-hidden
 outline-none
 hover:ring-2
 transition
+shadow
 rounded
 `
 
