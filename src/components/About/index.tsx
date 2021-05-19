@@ -13,9 +13,11 @@ flex
 justify-center
 items-center
 mx-auto
-shadow-2xl
+rounded-full
 bg-slate
-rounded-xl
+transition duration-200
+ring-4 dark:ring-gray-600 ring-gray-500
+ring-offset-2 dark:ring-offset-dark ring-offset-white
 `
 
 const AboutPageRenderer = () => {
@@ -23,7 +25,7 @@ const AboutPageRenderer = () => {
     <ContentWrapper>
       <PageSectionTitle text="About" />
       <ImgWrapper>
-        <Image src="/static/me.jpg" width={100} height={120} tw="rounded-xl" alt="My picture" />
+        <Image src="/static/me bw.jpg" width={150} height={150} tw="rounded-full" alt="My picture" />
       </ImgWrapper>
       <Description />
       <Links />
