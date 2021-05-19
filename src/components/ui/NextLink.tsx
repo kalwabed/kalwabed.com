@@ -16,6 +16,7 @@ interface NextLinkProps {
   withIcon?: boolean
   children: ReactNode
   className?: string
+  onClick?: () => void
 }
 
 const Sizes = {
@@ -56,6 +57,7 @@ const NextLink = (props: NextLinkProps) => {
     size = 'md',
     withIcon,
     children,
+    onClick,
     className
   } = props
 
@@ -68,6 +70,7 @@ const NextLink = (props: NextLinkProps) => {
           <HeadLink
             title={`${title} page`}
             className={className}
+            onClick={onClick}
             css={[isActive && tw`text-slate dark:text-primary-600`, Sizes[size], externalCss]}
           >
             {children}

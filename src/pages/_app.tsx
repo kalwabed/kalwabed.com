@@ -1,13 +1,22 @@
+import Head from 'next/head'
+import { ThemeProvider } from 'next-themes'
+import { useEffect, useState } from 'react'
 import { CacheProvider } from '@emotion/react'
 
 import emotionCache from '@/utils/emotionCache'
 import GlobalStyles from '@/components/GlobalStyles'
 import PageRoot from '@/components/layout/PageRoot'
 import { DefaultSEO } from '@/components/SEO'
-import Head from 'next/head'
-import { ThemeProvider } from 'next-themes'
 
 export default function MyApp({ Component, pageProps }) {
+  const [isMounted, setIsMounted] = useState(false)
+  useEffect(() => {
+    if (localStorage.getItem('theme') === 'null' || null) localStorage.setItem('theme', 'light')
+    setIsMounted(true)
+  }, [])
+
+  if (!isMounted) return null
+
   return (
     <>
       <CacheProvider value={emotionCache}>
@@ -25,7 +34,7 @@ export default function MyApp({ Component, pageProps }) {
         </Head>
         <GlobalStyles />
         <DefaultSEO />
-        <ThemeProvider attribute="class" defaultTheme="system">
+        <ThemeProvider attribute="class">
           <PageRoot>
             <Component {...pageProps} />
           </PageRoot>
