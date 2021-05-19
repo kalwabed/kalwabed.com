@@ -7,10 +7,11 @@ import ButtonThemeSwitcher from '../ui/ButtonThemeSwitcher'
 import { XCloseIcon } from '../ui/Icons'
 import NextLink from '../ui/NextLink'
 import Logo from './Logo'
+import { motion } from 'framer-motion'
 
-const Wrapper = tw.div`
+const Wrapper = tw`
 fixed
-z-30
+z-20
 flex
 items-center
 justify-center
@@ -38,41 +39,65 @@ justify-items-center
 items-center
 `
 
-const NavModal = ({ setIsMenuOpen, asPath }: { setIsMenuOpen: (arg0: boolean) => void; asPath: string }) => (
-  <Wrapper>
-    <nav>
-      <div tw="grid grid-rows-2 gap-4 mb-4">
-        <Link href="/" passHref>
-          <a tw="inline-flex items-center" className="umami--click--headerLogo" onClick={() => setIsMenuOpen(false)}>
-            <Logo />
-          </a>
-        </Link>
-        <ButtonClose aria-label="Close menu" title="Close menu" onClick={() => setIsMenuOpen(false)}>
-          <XCloseIcon />
-        </ButtonClose>
-      </div>
-      <RouteItems>
-        {Routes.map(
-          (route, index) =>
-            index < NAV_TOTAL && (
-              <li key={route.href}>
-                <NextLink
-                  variant="header"
-                  onClick={() => setIsMenuOpen(false)}
-                  title={route.label}
-                  isActive={route.href === asPath}
-                  href={route.href}
-                  className={`umami--click--NAV-${route.label}`}
-                >
-                  {route.label}
-                </NextLink>
-              </li>
-            )
-        )}
-        <ButtonThemeSwitcher />
-      </RouteItems>
-    </nav>
-  </Wrapper>
-)
+type NavModalProps = {
+  setIsMenuOpen: (arg: boolean) => void
+  isMenuOpen: boolean
+  asPath: string
+}
+
+const NavModal = ({ setIsMenuOpen, asPath, isMenuOpen }: NavModalProps) => {
+  return (
+    <motion.div
+      css={Wrapper}
+      initial="initial"
+      variants={{
+        initial: {
+          opacity: 1
+          // top: 0
+        },
+        hidden: {
+          // top: -120,
+          opacity: 0,
+          display: 'none'
+        }
+      }}
+      animate={isMenuOpen ? 'initial' : 'hidden'}
+      transition={{ duration: 0.4 }}
+    >
+      <nav>
+        <div tw="grid grid-rows-2 gap-4 mb-4">
+          <Link href="/" passHref>
+            <a tw="inline-flex items-center" className="umami--click--headerLogo" onClick={() => setIsMenuOpen(false)}>
+              <Logo />
+            </a>
+          </Link>
+          <ButtonClose aria-label="Close menu" title="Close menu" onClick={() => setIsMenuOpen(false)}>
+            <XCloseIcon />
+          </ButtonClose>
+        </div>
+        <RouteItems>
+          {Routes.map(
+            (route, index) =>
+              index < NAV_TOTAL && (
+                <li key={route.href}>
+                  <NextLink
+                    variant="header"
+                    onClick={() => setIsMenuOpen(false)}
+                    title={route.label}
+                    isActive={route.href === asPath}
+                    href={route.href}
+                    className={`umami--click--NAV-${route.label}`}
+                  >
+                    {route.label}
+                  </NextLink>
+                </li>
+              )
+          )}
+          <ButtonThemeSwitcher />
+        </RouteItems>
+      </nav>
+    </motion.div>
+  )
+}
 
 export default memo(NavModal)

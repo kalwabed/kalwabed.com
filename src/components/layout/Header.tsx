@@ -77,7 +77,7 @@ const Header = () => {
           </div>
         </div>
       </motion.header>
-      {isMenuOpen && <NavModal setIsMenuOpen={setIsMenuOpen} asPath={asPath} />}
+      <NavModal setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} asPath={asPath} />
     </>
   )
 }
