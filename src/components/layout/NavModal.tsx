@@ -7,28 +7,14 @@ import ButtonThemeSwitcher from '../ui/ButtonThemeSwitcher'
 import { XCloseIcon } from '../ui/Icons'
 import NextLink from '../ui/NextLink'
 import Logo from './Logo'
-import { motion } from 'framer-motion'
-
-const Wrapper = tw`
-fixed
-z-20
-flex
-items-center
-justify-center
-right-0 left-0 bottom-0 top-0
-bg-white
-dark:(bg-dark border-primary-500)
-border
-rounded
-`
+import NavTransition from './NavTransition'
 
 const ButtonClose = tw.button`
 p-2
 mx-auto
 transition
 rounded
-hocus:(bg-gray-200 dark:bg-slate)
-focus:(outline-none ring)
+focus:(outline-none)
 `
 
 const RouteItems = tw.ul`
@@ -47,23 +33,7 @@ type NavModalProps = {
 
 const NavModal = ({ setIsMenuOpen, asPath, isMenuOpen }: NavModalProps) => {
   return (
-    <motion.div
-      css={Wrapper}
-      initial="initial"
-      variants={{
-        initial: {
-          opacity: 1
-          // top: 0
-        },
-        hidden: {
-          // top: -120,
-          opacity: 0,
-          display: 'none'
-        }
-      }}
-      animate={isMenuOpen ? 'initial' : 'hidden'}
-      transition={{ duration: 0.4 }}
-    >
+    <NavTransition isMenuOpen={isMenuOpen}>
       <nav>
         <div tw="grid grid-rows-2 gap-4 mb-4">
           <Link href="/" passHref>
@@ -96,7 +66,7 @@ const NavModal = ({ setIsMenuOpen, asPath, isMenuOpen }: NavModalProps) => {
           <ButtonThemeSwitcher />
         </RouteItems>
       </nav>
-    </motion.div>
+    </NavTransition>
   )
 }
 

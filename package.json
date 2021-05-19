@@ -14,6 +14,7 @@
     "@emotion/react": "^11.4.0",
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.3.0",
+    "@headlessui/react": "^1.2.0",
     "@tailwindcss/typography": "^0.4.0",
     "feed": "^4.2.2",
     "framer-motion": "^4.1.13",
