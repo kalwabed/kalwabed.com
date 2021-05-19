@@ -2,7 +2,6 @@ import tw from 'twin.macro'
 import { memo, useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
 
 import Logo from './Logo'
 import Routes, { NAV_TOTAL } from '@/config/Routes'
@@ -11,7 +10,8 @@ import { Container } from '@/utils/styles'
 import { HamburgerIcon } from '../ui/Icons'
 import useHeaderVisible from '@/hooks/useHeaderVisible'
 import ButtonThemeSwitcher from '../ui/ButtonThemeSwitcher'
-import NavModal from './NavModal'
+import NavMobile from './NavMobile'
+import NavTransition from './NavTransition'
 
 const Header = () => {
   const { asPath } = useRouter()
@@ -20,20 +20,7 @@ const Header = () => {
 
   return (
     <>
-      <motion.header
-        tw="fixed z-20 w-full backdrop-filter[saturate(180%) blur(10px)]"
-        initial="initial"
-        variants={{
-          initial: {
-            top: 0
-          },
-          hidden: {
-            top: -120
-          }
-        }}
-        animate={isVisible ? 'initial' : 'hidden'}
-        transition={{ duration: 0.3 }}
-      >
+      <NavTransition isVisible={isVisible}>
         <div css={[Container, tw`flex items-center justify-between w-auto`]}>
           <Link href="/" passHref>
             <a
@@ -76,8 +63,8 @@ const Header = () => {
             </button>
           </div>
         </div>
-      </motion.header>
-      <NavModal setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} asPath={asPath} />
+      </NavTransition>
+      <NavMobile setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} asPath={asPath} />
     </>
   )
 }

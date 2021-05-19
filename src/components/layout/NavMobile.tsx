@@ -25,15 +25,15 @@ justify-items-center
 items-center
 `
 
-type NavModalProps = {
+type NavMobileProps = {
   setIsMenuOpen: (arg: boolean) => void
   isMenuOpen: boolean
   asPath: string
 }
 
-const NavModal = ({ setIsMenuOpen, asPath, isMenuOpen }: NavModalProps) => {
+const NavMobile = ({ setIsMenuOpen, asPath, isMenuOpen }: NavMobileProps) => {
   return (
-    <NavTransition isMenuOpen={isMenuOpen}>
+    <NavTransition isMobile isVisible={isMenuOpen}>
       <nav>
         <div tw="grid grid-rows-2 gap-4 mb-4">
           <Link href="/" passHref>
@@ -71,4 +71,4 @@ const NavModal = ({ setIsMenuOpen, asPath, isMenuOpen }: NavModalProps) => {
   )
 }
 
-export default memo(NavModal)
+export default memo(NavMobile)
