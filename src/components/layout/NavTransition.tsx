@@ -15,6 +15,8 @@ border
 rounded
 `
 
+// ref: https://github.com/ben-rogerson/twin.macro/issues/349
+
 const NavTransition = ({ children, isMenuOpen = false }) => {
   return (
     <ClassNames>
