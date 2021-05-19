@@ -7,7 +7,7 @@ interface PostImageProps {
   label?: string
 }
 
-const PostImageWrapper = tw.section`
+const PostImageWrapper = tw.figure`
 flex flex-col
 mx-auto
 justify-center
@@ -41,7 +41,7 @@ export const PostImage = (props: PostImageProps) => {
           tw="rounded w-full bg-slate"
         />
       </ImgLink>
-      <p tw="text-sm">{label}</p>
+      <caption tw="text-sm">{label}</caption>
     </PostImageWrapper>
   )
 }

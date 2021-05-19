@@ -61,7 +61,7 @@ interface JustImagesProps {
   width?: number
 }
 
-const JustImageWrapper = tw.section`
+const JustImageWrapper = tw.figure`
 flex flex-col
 mx-auto
 justify-center
@@ -85,7 +85,7 @@ export const JustImages = (props: JustImagesProps) => {
             tw="rounded bg-slate w-full"
           />
         </a>
-        <p tw="text-sm">{label}</p>
+        <caption tw="text-sm">{label}</caption>
       </JustImageWrapper>
     )
   }

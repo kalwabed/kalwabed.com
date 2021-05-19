@@ -16,7 +16,7 @@ export const PostStyle = css`
   }
 
   a {
-    ${tw`no-underline text-primary-500
+    ${tw`no-underline text-primary-500 break-words
     hocus:(text-primary-400 underline text-underline-offset[3px] outline-none)
     focus:(ring-2 ring-offset-2 ring-primary-300 no-underline )
     transition`}
