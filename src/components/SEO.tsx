@@ -10,7 +10,7 @@ const defaultOgImg =
 
 const defaultSeoConfig: NextSeoProps = {
   defaultTitle: 'Home',
-  titleTemplate: '%s @kalwabed',
+  titleTemplate: '%s | Kalwabed',
   description: app.description,
   canonical: app.siteUrl,
   additionalLinkTags: [
@@ -24,7 +24,7 @@ const defaultSeoConfig: NextSeoProps = {
     locale: 'en-US',
     site_name: 'kalwabed.xyz',
     url: app.siteUrl,
-    title: 'Home @kalwabed',
+    title: 'Home | Kalwabed',
     type: 'website',
     images: [
       {
@@ -50,7 +50,7 @@ export const DefaultSEO = () => {
   return <DefaultSeo {...defaultSeoConfig} />
 }
 
-const titlePrefix = ' @kalwabed'
+const titlePrefix = ' | Kalwabed'
 
 interface SEOProps extends NextSeoProps {
   isPost?: boolean

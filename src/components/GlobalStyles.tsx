@@ -7,7 +7,7 @@ const CustomStyle = css`
   }
 
   body {
-    -webkit-tap-highlight-color: ${theme`colors.gray.50`};
+    -webkit-tap-highlight-color: ${theme`colors.transparent`};
     ${tw`antialiased`}
   }
 

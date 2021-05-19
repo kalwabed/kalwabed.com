@@ -1,4 +1,5 @@
-import Document from 'next/document'
+import 'twin.macro'
+import Document, { Html, Head, Main, NextScript } from 'next/document'
 import createEmotionServer from '@emotion/server/create-instance'
 
 import emotionCache from '@/utils/emotionCache'
@@ -16,5 +17,17 @@ export default class MyDocument extends Document {
         <style key="emotion-css" data-emotion={ids.join(' ')} dangerouslySetInnerHTML={{ __html: css }} />
       ]
     }
+  }
+
+  render() {
+    return (
+      <Html lang="en">
+        <Head />
+        <body tw="bg-white dark:bg-dark">
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
   }
 }

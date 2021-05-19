@@ -36,7 +36,7 @@ export const PostBySlugRenderer = ({ post }: { post: PostWithMdx }) => {
         title={title}
         description={summary}
         openGraph={{
-          title: title.concat(' @kalwabed'),
+          title: title.concat(' | Kalwabed'),
           description: summary,
           type: 'article',
           article: {

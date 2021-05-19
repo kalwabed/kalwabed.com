@@ -2,7 +2,7 @@ import 'twin.macro'
 
 import NextLink from '../ui/NextLink'
 import ContentWrapper from '../ContentWrapper'
-import { MoreLink, SectionTitle } from './module'
+import { MoreLink, SectionTitle } from './modules'
 import { Post } from '@/types'
 import dateFormatter from '@/utils/dateFormatter'
 

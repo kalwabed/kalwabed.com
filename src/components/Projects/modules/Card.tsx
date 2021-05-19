@@ -23,7 +23,7 @@ const Card = (props: Props) => {
             </a>
           </Link>
 
-          <p tw="font-light text-gray-500 tracking-wide">{shortDescription}</p>
+          <p tw="font-light text-gray-500 dark:text-gray-300 tracking-wide">{shortDescription}</p>
 
           <NextLink
             href={`/projects/${slug}`}

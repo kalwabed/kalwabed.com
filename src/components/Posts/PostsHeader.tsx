@@ -1,6 +1,6 @@
 import 'twin.macro'
 import PageSectionTitle from '../PageSectionTitle'
-import { SearchPost } from './module'
+import { SearchPost } from './modules'
 
 export interface SearchProps {
   setSearchValue: (searchValue: string) => void

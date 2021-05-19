@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import NextLink from '../ui/NextLink'
-import { SectionTitle, MoreLink } from './module'
+import { SectionTitle, MoreLink } from './modules'
 import ContentWrapper from '../ContentWrapper'
 import { Project } from '@/types'
 
@@ -12,7 +12,7 @@ relative
 rounded
 overflow-hidden
 border border-transparent
-bg-gray-100
+bg-gray-100 dark:bg-slate
 shadow-lg hover:shadow-xl
 transition
 `
@@ -33,7 +33,7 @@ const FeaturedProject = ({ project }: { project: Project }) => {
               <h3 tw="font-bold text-2xl md:text-3xl">{title}</h3>
             </a>
           </Link>
-          <p tw="text-gray-600 text-sm tracking-wide">{shortDescription}</p>
+          <p tw="text-gray-600 dark:text-gray-300 text-sm tracking-wide">{shortDescription}</p>
           <div>
             <NextLink
               className="umami--click--featured-project"

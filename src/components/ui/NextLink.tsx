@@ -16,6 +16,7 @@ interface NextLinkProps {
   withIcon?: boolean
   children: ReactNode
   className?: string
+  onClick?: () => void
 }
 
 const Sizes = {
@@ -33,13 +34,15 @@ text-gray-400
 transition
 duration-200
 hover:text-slate
-focus:(ring-2 ring-offset-2 ring-gray-500 outline-none)
+dark:hover:text-gray-300
+focus:(ring-2 ring-offset-2 ring-gray-500 dark:(ring-primary-500 ring-offset-primary-800) outline-none)
 `
 
 export const TwLink = tw.a`
 text-primary-500
-hocus:(text-primary-400 underline text-underline-offset[3px] outline-none)
-focus:(ring-2 ring-offset-2 ring-primary-300 no-underline )
+dark:text-primary-400
+hocus:(text-primary-400 dark:text-primary-300 underline text-underline-offset[3px] outline-none)
+focus:(ring-2 ring-offset-2 dark:(ring-primary-500 ring-offset-primary-600) ring-primary-300 no-underline )
 transition
 inline-flex
 items-center`
@@ -54,6 +57,7 @@ const NextLink = (props: NextLinkProps) => {
     size = 'md',
     withIcon,
     children,
+    onClick,
     className
   } = props
 
@@ -66,7 +70,8 @@ const NextLink = (props: NextLinkProps) => {
           <HeadLink
             title={`${title} page`}
             className={className}
-            css={[isActive && tw`text-slate`, Sizes[size], externalCss]}
+            onClick={onClick}
+            css={[isActive && tw`text-slate dark:text-primary-600`, Sizes[size], externalCss]}
           >
             {children}
           </HeadLink>
@@ -99,7 +104,7 @@ const NextLink = (props: NextLinkProps) => {
           >
             <span>{children}</span>
             {withIcon && (
-              <span tw="text-primary-200 group-hocus:text-primary-400">
+              <span tw="text-primary-200 group-hocus:(text-primary-400 dark:text-primary-300)">
                 <ArrowRightIcon />
               </span>
             )}

@@ -2,7 +2,7 @@ import { ProjectWithMdx } from '@/types'
 import { Container } from '@/utils/styles'
 import SEO from '../SEO'
 import Jumbotron from './Jumbotron'
-import { ProjectDescription } from './module'
+import { ProjectDescription } from './modules'
 import Article from './Article'
 import tw from 'twin.macro'
 

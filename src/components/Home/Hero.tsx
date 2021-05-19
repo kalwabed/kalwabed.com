@@ -10,8 +10,8 @@ const Hero = () => {
       </div>
       <div tw="space-y-5 lg:pr-12">
         <p tw="tracking-wide text-lg">Self-taught web developer based in Banyuwangi, Indonesia</p>
-        <p tw="text-gray-600 tracking-wide">
-          I'm a student as well as a software engineer based in Indonesia. I'm currently exploring modern website
+        <p tw="text-gray-600 dark:text-gray-400 tracking-wide">
+          A student as well as a software engineer based in Indonesia. I'm currently exploring modern website
           development using Javascript/Typescript.
         </p>
         <div>

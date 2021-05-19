@@ -21,7 +21,7 @@ const BookmarkCard = (props: Bookmarks) => {
   const { origin } = new URL(url)
 
   return (
-    <div tw="flex space-x-3 py-3 border-b" key={title}>
+    <div tw="flex space-x-3 py-3 border-b dark:border-gray-700" key={title}>
       <Img width={10} height={10} src={noFavicon ? imgFallback : `${origin}/favicon.ico`} alt={title} />
       <div tw="flex flex-col">
         <NextLink
@@ -32,7 +32,7 @@ const BookmarkCard = (props: Bookmarks) => {
         >
           {title}
         </NextLink>
-        <small tw="text-sm text-gray-500">{origin.replace('https://', '')}</small>
+        <small tw="text-sm text-gray-500 dark:text-gray-400">{origin.replace('https://', '')}</small>
         <p tw="text-sm tracking-wide">{description}</p>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import 'twin.macro'
 
 import ContentWrapper from '../ContentWrapper'
-import { SectionTitle, MoreLink } from './module'
+import { SectionTitle, MoreLink } from './modules'
 import BookmarkFrame from '../Bookmarks/Frame'
 import { Bookmarks } from '@/types'
 

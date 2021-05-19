@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic'
 import tw from 'twin.macro'
 
-const Card = dynamic(() => import('./module/Card'))
+const Card = dynamic(() => import('./modules/Card'))
 import { Project } from '@/types'
 
 const Wrapper = tw.div`

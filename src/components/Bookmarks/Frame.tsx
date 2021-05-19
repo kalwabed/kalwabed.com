@@ -4,8 +4,8 @@ import { Bookmarks } from '@/types'
 import BookmarkCard from './BookmarkCard'
 
 const CardWrapper = tw.div`
-bg-white
-border
+bg-white dark:bg-slate
+border dark:border-gray-800
 w-full
 top-2
 left-2
@@ -26,7 +26,7 @@ const BookmarkFrame = ({ limit = null, bookmarks }: Props) => {
 
   return (
     <div tw="flex w-full h-full">
-      <div tw="bg-gray-100 shadow border w-full rounded-sm">
+      <div tw="bg-gray-100 dark:(bg-gray-800 border-gray-800) shadow border w-full rounded-sm">
         <CardWrapper>
           {formattedBookmarks.map(bookmark => (
             <BookmarkCard {...bookmark} key={bookmark.url} />

@@ -2,7 +2,7 @@ import 'twin.macro'
 import dynamic from 'next/dynamic'
 
 import { Post } from '@/types'
-const Card = dynamic(() => import('./module/Card'))
+const Card = dynamic(() => import('./modules/Card'))
 
 interface Props {
   posts: Post[]

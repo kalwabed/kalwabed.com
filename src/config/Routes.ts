@@ -21,4 +21,6 @@ const Routes = [
   }
 ]
 
+export const NAV_TOTAL = 4
+
 export default Routes

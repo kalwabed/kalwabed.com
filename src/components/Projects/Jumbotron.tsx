@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { memo } from 'react'
 
 import Button from '@/components/ui/Button'
-import { TechBadge } from './module'
+import { TechBadge } from './modules'
 import { GithubIcon, LiveIcon } from '@/components/ui/Icons'
 import toKebabCase from '@/utils/toKebabCase'
 
@@ -17,8 +17,8 @@ flex-col
 
 const Card = tw.div`
 border
-border-gray-300
-bg-white
+border-gray-300 dark:border-gray-500
+bg-white dark:bg-slate
 rounded-md
 relative
 p-6

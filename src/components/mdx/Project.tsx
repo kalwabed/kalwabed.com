@@ -7,13 +7,20 @@ interface ContentProps {
   children: ReactNode
 }
 
+const ParagraphWrapper = tw.div`
+leading-relaxed
+tracking-wider
+text-gray-500 dark:text-gray-300
+space-y-3
+`
+
 export const Content = (props: ContentProps) => {
   const { heading, children } = props
 
   return (
     <section tw="w-full md:w-3/4 lg:w-3/5 space-y-3">
       <h1 tw="text-4xl font-bold">{heading}</h1>
-      <div tw="leading-relaxed tracking-wider text-gray-500 space-y-3">{children}</div>
+      <ParagraphWrapper>{children}</ParagraphWrapper>
     </section>
   )
 }
@@ -40,7 +47,7 @@ export const ContentWithImage = (props: ContentWithImageProps) => {
       </div>
       <div tw="w-full lg:w-1/2 space-y-3">
         <h1 tw="text-4xl font-bold">{heading}</h1>
-        <div tw="leading-relaxed tracking-wider text-gray-500 space-y-3">{children}</div>
+        <ParagraphWrapper>{children}</ParagraphWrapper>
       </div>
     </WithImageWrapper>
   )
@@ -68,16 +75,16 @@ export const JustImages = (props: JustImagesProps) => {
   if (images?.length === 1) {
     return (
       <JustImageWrapper>
-        <div tw="w-full overflow-hidden">
+        <a href={images[0]} tw="w-full overflow-hidden" rel="noopener noreferrer" target="_blank">
           <Image
             src={images[0]}
             alt={label || 'image'}
             width={width || 1200}
             height={height || 560}
-            quality={100}
+            quality={90}
             tw="rounded bg-slate w-full"
           />
-        </div>
+        </a>
         <p tw="text-sm">{label}</p>
       </JustImageWrapper>
     )
@@ -86,7 +93,13 @@ export const JustImages = (props: JustImagesProps) => {
   return (
     <JustImageWrapper css={[tw`grid grid-cols-1 lg:grid-cols-2 gap-2`]}>
       {images?.map(image => (
-        <div tw="w-full overflow-hidden" key={image.replace('/static/projects', '')}>
+        <a
+          href={image}
+          tw="w-full overflow-hidden"
+          key={image.replace('/static/projects', '')}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <Image
             src={image}
             alt={label || 'image'}
@@ -95,7 +108,7 @@ export const JustImages = (props: JustImagesProps) => {
             quality={90}
             tw="rounded bg-slate w-full shadow"
           />
-        </div>
+        </a>
       ))}
     </JustImageWrapper>
   )
