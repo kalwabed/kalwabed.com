@@ -11,6 +11,7 @@ justify-center
 mx-auto
 items-center
 space-y-3
+text-center
 w-full
 `
 
