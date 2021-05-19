@@ -11,7 +11,8 @@ import { DefaultSEO } from '@/components/SEO'
 export default function MyApp({ Component, pageProps }) {
   const [isMounted, setIsMounted] = useState(false)
   useEffect(() => {
-    if (localStorage.getItem('theme') === 'null' || null) localStorage.setItem('theme', 'light')
+    if (!localStorage.getItem('theme')) localStorage.setItem('theme', 'light')
+    if (localStorage.getItem('theme') === 'null') localStorage.setItem('theme', 'light')
     setIsMounted(true)
   }, [])
 

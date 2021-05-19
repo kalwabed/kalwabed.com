@@ -52,6 +52,7 @@ const NavModal = ({ setIsMenuOpen, asPath, isMenuOpen }: NavModalProps) => {
                 <li key={route.href}>
                   <NextLink
                     variant="header"
+                    css={tw`focus:(ring-0 ring-offset-0)`}
                     onClick={() => setIsMenuOpen(false)}
                     title={route.label}
                     isActive={route.href === asPath}
