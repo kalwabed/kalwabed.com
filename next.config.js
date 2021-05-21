@@ -1,5 +1,12 @@
 module.exports = {
   reactStrictMode: true,
+  experimental: {
+    // enableBlurryPlaceholder: true,
+    eslint: {
+      dev: true,
+      build: true
+    }
+  },
   future: {
     webpack5: true
   },
