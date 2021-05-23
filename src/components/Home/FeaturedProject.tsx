@@ -29,7 +29,7 @@ const FeaturedProject = ({ project }: { project: Project }) => {
 
         <div tw="px-5 pt-3 pb-5 space-y-2">
           <Link href={`/projects/${slug}`} passHref>
-            <a tw="hocus:text-primary-400 transition" className="umami--click--featured-project">
+            <a tw="hocus:text-brand-400 transition" className="umami--click--featured-project">
               <h3 tw="font-bold text-2xl md:text-3xl">{title}</h3>
             </a>
           </Link>

@@ -11,6 +11,11 @@ const CustomStyle = css`
     ${tw`antialiased`}
   }
 
+  *::selection {
+    background-color: #61f4b0;
+    color: ${theme`colors.dark`};
+  }
+
   #__next {
     min-height: 100vh;
     display: flex;

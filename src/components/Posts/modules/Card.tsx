@@ -13,7 +13,7 @@ const Card = (props: Post) => {
     <div css={[CardStyle, tw`w-full h-full lg:h-60 p-8`]}>
       <div tw="flex flex-col space-y-6">
         <Link href={'/posts/'.concat(slug)} passHref>
-          <a tw="hocus:text-primary-400" className={`umami--click--postsPage-${slug}`}>
+          <a tw="hocus:text-brand-400" className={`umami--click--postsPage-${slug}`}>
             <h1 tw="text-3xl font-bold transition">{title}</h1>
           </a>
         </Link>

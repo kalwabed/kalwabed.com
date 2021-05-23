@@ -37,11 +37,11 @@ space-y-4
 `
 
 const LiveButton = tw(Button)`
-bg-secondary-600
-hocus:bg-secondary-500
+bg-cyan-600
+hocus:bg-cyan-500
 space-x-1
 p-4
-focus:(ring-offset-secondary-300 ring-secondary-200)
+focus:(ring-offset-cyan-300 ring-cyan-200)
 `
 
 const GithubButton = tw(Button)`
