@@ -570,10 +570,10 @@
   resolved "https://registry.yarnpkg.com/@next/env/-/env-10.2.1.tgz#f8b088db5b071d7b817bce200c2a0b51195e8bba"
   integrity sha512-mvUCIrwxFfyQa24iTbYAW1fbToC7cW4cGW5oiR3AyE6clfGK6fzwbkdODtjfaHGmCCS4K0epsy/XgV6DJS/EIw==
 
-"@next/eslint-plugin-next@^10.1.3":
-  version "10.2.1"
-  resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-10.2.1.tgz#92be15ae81137637da1f0c299571551f4d17f098"
-  integrity sha512-aj0Hgiz7E6vXeUvqt6sUD5A8SMIdwWb9s/ASFWW/aXGinMFQKdKKUj86H0O8R6/wJye+3hDplGeJgoF21KHBeA==
+"@next/eslint-plugin-next@10.2.2":
+  version "10.2.2"
+  resolved "https://registry.yarnpkg.com/@next/eslint-plugin-next/-/eslint-plugin-next-10.2.2.tgz#e6835ed2687078976369b5b5819f8a3b9cbe22fd"
+  integrity sha512-VuESoMro0DrwChhTH1BiML1cyFaIMpxOlLHZpk8kXO4/+hQ2CPJCfmyKLkY9TaV1j4ZeLrTL1LSOj9zr5KMc9Q==
 
 "@next/polyfill-module@10.2.1":
   version "10.2.1"
@@ -1765,12 +1765,12 @@ escape-string-regexp@^4.0.0:
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz#14ba83a5d373e3d311e5afca29cf5bfad965bf34"
   integrity sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA==
 
-eslint-config-next@^10.2.1:
-  version "10.2.1"
-  resolved "https://registry.yarnpkg.com/eslint-config-next/-/eslint-config-next-10.2.1.tgz#e24c7a4f4b4044a296b509ac7fd29d33d3c3f77d"
-  integrity sha512-defjoH0Y0vs2pzEJnmWwaxOspGleZkkDtGCqe95sQMWojJ/mhhIzsNU71dejKeV+mOaavSoJ7qXT21GzcpyMAQ==
+eslint-config-next@^10.2.2:
+  version "10.2.2"
+  resolved "https://registry.yarnpkg.com/eslint-config-next/-/eslint-config-next-10.2.2.tgz#0e294412855d4f75bec9898128018b6a9f4569b6"
+  integrity sha512-SzB5eUKPTQBTpbNe5onfxrbf8I7EOTSiiTOSvsDJQdz1Wl5KTr+2exHS2IreK0gyoy9R7zafz/v8fav9RSXpkg==
   dependencies:
-    "@next/eslint-plugin-next" "^10.1.3"
+    "@next/eslint-plugin-next" "10.2.2"
     "@rushstack/eslint-patch" "^1.0.6"
     "@typescript-eslint/parser" "^4.20.0"
     eslint-import-resolver-node "^0.3.4"
