@@ -22,7 +22,15 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <link href="https://fonts.googleapis.com/css2?family=Manrope&display=optional" rel="stylesheet" />
+          <script
+            async
+            defer
+            data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
+            src={process.env.NEXT_PUBLIC_UMAMI_URL}
+          />
+        </Head>
         <body tw="bg-white dark:bg-dark">
           <Main />
           <NextScript />

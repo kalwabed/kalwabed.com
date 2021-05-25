@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import { ThemeProvider } from 'next-themes'
 import { useEffect, useState } from 'react'
 import { CacheProvider } from '@emotion/react'
@@ -21,18 +20,6 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <CacheProvider value={emotionCache}>
-        <Head>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap"
-            rel="stylesheet"
-          />
-          <script
-            async
-            defer
-            data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
-            src={process.env.NEXT_PUBLIC_UMAMI_URL}
-          />
-        </Head>
         <GlobalStyles />
         <DefaultSEO />
         <ThemeProvider attribute="class">
