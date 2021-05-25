@@ -23,7 +23,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <link href="https://fonts.googleapis.com/css2?family=Manrope&display=optional" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet" />
           <script
             async
             defer
