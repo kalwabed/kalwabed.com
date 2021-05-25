@@ -29,7 +29,7 @@ const BookmarkFrame = ({ limit = null, bookmarks }: Props) => {
       <div tw="bg-gray-100 dark:(bg-gray-800 border-gray-800) shadow border w-full rounded-sm">
         <CardWrapper>
           {formattedBookmarks.map(bookmark => (
-            <BookmarkCard {...bookmark} key={bookmark.url} />
+            <BookmarkCard {...bookmark} key={bookmark.url.url} />
           ))}
         </CardWrapper>
       </div>

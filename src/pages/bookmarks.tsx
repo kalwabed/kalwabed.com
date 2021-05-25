@@ -2,14 +2,14 @@ import type { GetStaticProps } from 'next'
 
 import BookmarksPageRenderer from '@/components/Bookmarks'
 import { Bookmarks } from '@/types'
-import bookmarkProvider from '@/utils/bookmarkProvider'
+import { getDatabases } from '@/lib/notion'
 
 const BookmarksPage = ({ bookmarks }: { bookmarks: Bookmarks[] }) => {
   return <BookmarksPageRenderer bookmarks={bookmarks} />
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const bookmarks = await bookmarkProvider()
+  const bookmarks = await getDatabases()
 
   return { props: { bookmarks }, revalidate: 3 }
 }

@@ -13,11 +13,11 @@ export interface PostWithMdx extends Post {
 }
 
 export interface Bookmarks {
-  id: string
-  noFavicon: boolean
-  url: string
-  description: string
-  title: string
+  createdAt: { created_time: Date }
+  noFavicon: { checkbox: boolean }
+  url: { url: string }
+  description: { rich_text: { plain_text: string }[] }
+  title: { title: { plain_text: string }[] }
 }
 
 export interface Project {

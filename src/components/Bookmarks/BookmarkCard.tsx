@@ -14,26 +14,35 @@ w-10 h-10 md:(w-12 h-12)
 `
 
 const BookmarkCard = (props: Bookmarks) => {
-  const { description, title, url, noFavicon } = props
+  const {
+    description,
+    title,
+    url,
+    noFavicon: { checkbox }
+  } = props
 
-  const imgFallback = `https://cdn.statically.io/avatar/shape=rounded/${encodeURI(title)}`
+  const wellDescription = description.rich_text[0].plain_text
+  const wellTitle = title.title[0].plain_text
+  const wellUrl = url.url
 
-  const { origin } = new URL(url)
+  const imgFallback = `https://cdn.statically.io/avatar/shape=rounded/${encodeURI(wellTitle)}`
+
+  const { origin } = new URL(wellUrl)
 
   return (
-    <div tw="flex space-x-3 py-3 border-b dark:border-gray-700" key={title}>
-      <Img width={10} height={10} src={noFavicon ? imgFallback : `${origin}/favicon.ico`} alt={title} />
+    <div tw="flex space-x-3 py-3 border-b dark:border-gray-700" key={wellTitle}>
+      <Img width={10} height={10} src={checkbox ? imgFallback : `${origin}/favicon.ico`} alt={wellTitle} />
       <div tw="flex flex-col">
         <NextLink
-          title={url}
-          href={url}
+          title={wellUrl}
+          href={wellUrl}
           css={[tw`text-lg md:text-xl`]}
-          className={`umami--click--bookmarks-${toKebabCase(title)}`}
+          className={`umami--click--bookmarks-${toKebabCase(wellTitle)}`}
         >
-          {title}
+          {wellTitle}
         </NextLink>
         <small tw="text-sm text-gray-500 dark:text-gray-400">{origin.replace('https://', '')}</small>
-        <p tw="text-sm tracking-wide">{description}</p>
+        <p tw="text-sm tracking-wide">{wellDescription}</p>
       </div>
     </div>
   )
