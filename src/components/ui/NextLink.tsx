@@ -35,14 +35,14 @@ transition
 duration-200
 hover:text-slate
 dark:hover:text-gray-300
-focus:(ring-2 ring-offset-2 ring-gray-500 dark:(ring-primary-500 ring-offset-primary-800) outline-none)
+focus:(ring-2 ring-offset-2 ring-gray-500 dark:(ring-brand-500 ring-offset-brand-800) outline-none)
 `
 
 export const TwLink = tw.a`
-text-primary-500
-dark:text-primary-400
-hocus:(text-primary-400 dark:text-primary-300 underline text-underline-offset[3px] outline-none)
-focus:(ring-2 ring-offset-2 dark:(ring-primary-500 ring-offset-primary-600) ring-primary-300 no-underline )
+text-brand-500
+dark:text-brand-400
+hocus:(text-brand-400 dark:text-brand-300 underline text-underline-offset[3px] outline-none)
+focus:(ring-2 ring-offset-2 dark:(ring-brand-500 ring-offset-brand-600) ring-brand-300 no-underline )
 transition
 inline-flex
 items-center`
@@ -71,7 +71,7 @@ const NextLink = (props: NextLinkProps) => {
             title={`${title} page`}
             className={className}
             onClick={onClick}
-            css={[isActive && tw`text-slate dark:text-primary-600`, Sizes[size], externalCss]}
+            css={[isActive && tw`text-slate dark:text-brand-600`, Sizes[size], externalCss]}
           >
             {children}
           </HeadLink>
@@ -104,7 +104,7 @@ const NextLink = (props: NextLinkProps) => {
           >
             <span>{children}</span>
             {withIcon && (
-              <span tw="text-primary-200 group-hocus:(text-primary-400 dark:text-primary-300)">
+              <span tw="text-brand-200 group-hocus:(text-brand-400 dark:text-brand-300)">
                 <ArrowRightIcon />
               </span>
             )}

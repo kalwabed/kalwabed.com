@@ -15,7 +15,7 @@ items-center
 hocus:shadow-lg
 shadow-md
 transition
-focus:(ring outline-none ring-primary-400)
+focus:(ring outline-none ring-brand-400)
 `
 
 const LinkWrapper = tw.div`
@@ -118,7 +118,7 @@ const Card = ({ href, type }: SocialProps) => {
             rel="noopener noreferrer"
             title="My website"
             className="umami--click--linktree-website"
-            css={[tw`bg-primary-600 hocus:bg-primary-500`]}
+            css={[tw`bg-brand-600 hocus:bg-brand-500`]}
           >
             <WebsiteIcon /> <p tw="font-medium capitalize">{type}</p>
           </Link>

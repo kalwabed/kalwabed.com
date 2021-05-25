@@ -14,7 +14,7 @@ placeholder-gray-400
 shadow-sm
 transition
 dark:(border-gray-500 text-gray-300 bg-slate)
-focus:(outline-none ring-2 ring-primary-400 border-transparent)
+focus:(outline-none ring-2 ring-brand-400 border-transparent)
 `
 
 const SearchPost = (props: SearchProps) => {

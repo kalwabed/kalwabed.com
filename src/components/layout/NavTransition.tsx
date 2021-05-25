@@ -11,7 +11,7 @@ items-center
 justify-center
 right-0 left-0 bottom-0 top-0
 bg-white
-dark:(bg-dark border-primary-500)
+dark:(bg-dark border-brand-500)
 border
 rounded
 `

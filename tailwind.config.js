@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
+const colors = require('tailwindcss/colors')
 
 module.exports = {
   purge: ['./src/**/*.tsx'],
@@ -11,29 +12,18 @@ module.exports = {
       colors: {
         slate: '#293845',
         dark: '#151515',
-        primary: {
-          50: '#dcf3ff',
-          100: '#aedaff',
-          200: '#7cc0ff',
-          300: '#4aa7ff',
-          400: '#1a8eff',
-          500: '#0074e6',
-          600: '#005ab4',
-          700: '#004182',
-          800: '#002751',
-          900: '#000e21'
-        },
-        secondary: {
-          50: '#daffff',
-          100: '#b3f9f7',
-          200: '#88f2f0',
-          300: '#5cece9',
-          400: '#32e6e3',
-          500: '#19cdc9',
-          600: '#059f9d',
-          700: '#007371',
-          800: '#004544',
-          900: '#001918'
+        cyan: colors.cyan,
+        brand: {
+          50: '#ffe2f6',
+          100: '#ffb1db',
+          200: '#ff7fc1',
+          300: '#ff4da8',
+          400: '#fe1e90',
+          500: '#e50776',
+          600: '#b3005c',
+          700: '#810042',
+          800: '#4f0027',
+          900: '#1f000f'
         }
       },
       typography: theme => ({
