@@ -6,12 +6,13 @@ import SEO from '../SEO'
 import PageSectionTitle from '../PageSectionTitle'
 import BookmarkFrame from './Frame'
 import { Bookmarks } from '@/types'
+import app from '@/config/app'
 
 const BookmarksPageRenderer = ({ bookmarks }: { bookmarks: Bookmarks[] }) => {
   return (
     <section css={[Container]}>
       <PageSectionTitle text="Bookmarks" description="List of my personal recommendations" />
-      <SEO title="Bookmarks" />
+      <SEO title={app.pageMeta.bookmarks.pageTitle} description={app.pageMeta.bookmarks.pageDescription} />
       <div tw="w-full h-full py-4">
         <ContentWrapper>
           <BookmarkFrame bookmarks={bookmarks} />

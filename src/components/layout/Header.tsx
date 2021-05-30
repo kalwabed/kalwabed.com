@@ -12,9 +12,11 @@ import useHeaderVisible from '@/hooks/useHeaderVisible'
 import ButtonThemeSwitcher from '../ui/ButtonThemeSwitcher'
 import NavMobile from './NavMobile'
 import NavTransition from './NavTransition'
+import { useAppContext } from '@/AppContext'
 
 const Header = () => {
   const { asPath } = useRouter()
+  const { isMounted } = useAppContext()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const isVisible = useHeaderVisible()
 
@@ -29,7 +31,7 @@ const Header = () => {
               aria-label="Logo"
               className="umami--click--headerLogo"
             >
-              <Logo />
+              {isMounted && <Logo />}
             </a>
           </Link>
           <ul tw="hidden md:flex items-center space-x-8">
@@ -49,7 +51,7 @@ const Header = () => {
                   </li>
                 )
             )}
-            <ButtonThemeSwitcher />
+            {isMounted && <ButtonThemeSwitcher />}
           </ul>
 
           <div tw="md:hidden">

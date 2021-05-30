@@ -1,21 +1,19 @@
 import { ThemeProvider } from 'next-themes'
-import { useEffect, useState } from 'react'
 import { CacheProvider } from '@emotion/react'
+import { useEffect } from 'react'
 
 import emotionCache from '@/utils/emotionCache'
 import GlobalStyles from '@/components/GlobalStyles'
 import PageRoot from '@/components/layout/PageRoot'
 import { DefaultSEO } from '@/components/SEO'
+import AppContext from '@/AppContext'
 
 export default function MyApp({ Component, pageProps }) {
-  const [isMounted, setIsMounted] = useState(false)
   useEffect(() => {
+    // set default theme to light if theme are not initialize yet
     if (!localStorage.getItem('theme')) localStorage.setItem('theme', 'light')
     if (localStorage.getItem('theme') === 'null') localStorage.setItem('theme', 'light')
-    setIsMounted(true)
   }, [])
-
-  if (!isMounted) return null
 
   return (
     <>
@@ -23,9 +21,11 @@ export default function MyApp({ Component, pageProps }) {
         <GlobalStyles />
         <DefaultSEO />
         <ThemeProvider attribute="class">
-          <PageRoot>
-            <Component {...pageProps} />
-          </PageRoot>
+          <AppContext.Provider>
+            <PageRoot>
+              <Component {...pageProps} />
+            </PageRoot>
+          </AppContext.Provider>
         </ThemeProvider>
       </CacheProvider>
     </>

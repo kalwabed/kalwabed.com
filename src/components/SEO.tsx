@@ -13,6 +13,7 @@ const defaultSeoConfig: NextSeoProps = {
   titleTemplate: '%s | Kalwabed',
   description: app.description,
   canonical: app.siteUrl,
+  additionalMetaTags: [{ name: 'keywords', content: 'kalwabed rizki, kalwabed, rizki, portfolio, blog, developer' }],
   additionalLinkTags: [
     { rel: 'icon', href: '/favicon.ico' },
     { rel: 'icon', href: '/static/icon.svg', type: 'image/svg+xml' },
@@ -29,6 +30,8 @@ const defaultSeoConfig: NextSeoProps = {
     images: [
       {
         url: defaultOgImg,
+        width: 1200,
+        height: 628,
         alt: 'kalwabed.xyz default og-image'
       }
     ],

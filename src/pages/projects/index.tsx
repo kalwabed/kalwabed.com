@@ -4,10 +4,11 @@ import PageWrapper from '@/components/layout/PageWrapper'
 import ProjectsPageRenderer from '@/components/Projects'
 import { Project } from '@/types'
 import { getAllFrontMatters } from '@/utils/mdx'
+import app from '@/config/app'
 
 const ProjectsPage = ({ projects }: { projects: Project[] }) => {
   return (
-    <PageWrapper pageTitle="Projects">
+    <PageWrapper {...app.pageMeta.projects}>
       <ProjectsPageRenderer projects={projects} />
     </PageWrapper>
   )

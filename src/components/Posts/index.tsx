@@ -19,7 +19,7 @@ export const PostsPageRenderer = ({ posts }: { posts: Post[] }) => {
 
   return (
     <section css={[Container]}>
-      <SEO title="Posts" />
+      <SEO title={app.pageMeta.posts.pageTitle} description={app.pageMeta.posts.pageDescription} />
       <PostsHeader searchValue={searchValue} setSearchValue={setSearchValue} />
       <PostList posts={posts} searchValue={searchValue} />
     </section>
