@@ -85,7 +85,7 @@ export const JustImages = (props: JustImagesProps) => {
             tw="rounded bg-slate w-full"
           />
         </a>
-        <caption tw="text-sm">{label}</caption>
+        <figcaption tw="text-sm">{label}</figcaption>
       </JustImageWrapper>
     )
   }

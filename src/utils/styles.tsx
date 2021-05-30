@@ -4,7 +4,7 @@ export const Container = tw`
 px-4 py-4 mx-auto max-w-2xl lg:(max-w-screen-xl px-16)
 `
 
-export const CardStyle = tw`border transition shadow-md hocus:(shadow-lg bg-gray-50 dark:bg-gray-800) bg-gray-100 dark:(bg-slate border-gray-700) overflow-hidden rounded`
+export const CardStyle = tw`border-2 transition duration-300 shadow-md hocus:(shadow-lg border-brand-500 dark:border-brand-500) bg-gray-100 dark:(bg-slate border-gray-700) overflow-hidden rounded`
 
 export const PostStyle = css`
   p > code {

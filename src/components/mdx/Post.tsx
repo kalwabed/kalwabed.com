@@ -41,7 +41,7 @@ export const PostImage = (props: PostImageProps) => {
           tw="rounded w-full bg-slate"
         />
       </ImgLink>
-      <caption tw="text-sm">{label}</caption>
+      <figcaption tw="text-sm">{label}</figcaption>
     </PostImageWrapper>
   )
 }
