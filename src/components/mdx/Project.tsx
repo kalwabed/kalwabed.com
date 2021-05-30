@@ -1,6 +1,7 @@
 import tw from 'twin.macro'
 import Image from 'next/image'
 import type { ReactNode } from 'react'
+import { TwLink } from '../ui/NextLink'
 
 interface ContentProps {
   heading: string
@@ -112,4 +113,8 @@ export const JustImages = (props: JustImagesProps) => {
       ))}
     </JustImageWrapper>
   )
+}
+
+export const Link = ({ text, href, children }) => {
+  return <TwLink href={href}>{text}</TwLink>
 }
