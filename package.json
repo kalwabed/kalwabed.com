@@ -43,7 +43,7 @@
     "rehype": "^11.0.0",
     "tailwindcss": "^2.1.2",
     "twin.macro": "^2.4.2",
-    "typescript": "^4.2.4"
+    "typescript": "^4.3.2"
   },
   "eslintConfig": {
     "extends": "next",
