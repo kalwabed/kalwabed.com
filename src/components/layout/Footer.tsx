@@ -32,12 +32,13 @@ const Footer = () => {
               className={`umami--click--FOOTER-${route.label}`}
               key={route.href}
               title={route.title}
+              css={[tw`text-gray-500 dark:text-gray-500 hocus:text-brand-500`]}
             >
               {route.label}
             </NextLink>
           ))}
         </div>
-        <p tw="text-sm tracking-wide leading-relaxed text-center text-gray-400">
+        <p tw="text-sm tracking-wide leading-relaxed text-center text-gray-500">
           © 2021-present Kalwabed Rizki. <br tw="md:hidden" /> All rights reserved.
         </p>
       </div>

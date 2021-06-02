@@ -41,9 +41,8 @@ focus:(ring-2 ring-offset-2 ring-gray-500 dark:(ring-brand-500 ring-offset-brand
 export const TwLink = tw.a`
 text-brand-500
 dark:text-brand-400
-hocus:(underline text-underline-offset[3px] outline-none)
-focus:(ring-2 ring-offset-2 dark:(ring-brand-500 ring-offset-brand-600) ring-brand-300 no-underline )
-transition
+hocus:(underline transition text-underline-offset[3px] outline-none)
+focus:(ring-2 ring-brand-300 no-underline ring-offset-2 dark:(ring-brand-500 ring-offset-brand-600))
 inline-flex
 items-center`
 

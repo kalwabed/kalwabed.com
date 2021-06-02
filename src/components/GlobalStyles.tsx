@@ -12,8 +12,8 @@ const CustomStyle = css`
   }
 
   *::selection {
-    background-color: #61f4b0;
-    color: ${theme`colors.dark`};
+    background-color: #e50776;
+    color: ${theme`colors.white`};
   }
 
   #__next {

@@ -16,10 +16,7 @@ export const PostStyle = css`
   }
 
   a {
-    ${tw`no-underline text-brand-500 break-words
-    hocus:(text-brand-400 underline text-underline-offset[3px] outline-none)
-    focus:(ring-2 ring-offset-2 ring-brand-300 no-underline )
-    transition`}
+    ${tw`text-brand-500 dark:text-brand-400 no-underline hocus:(underline transition text-underline-offset[3px] outline-none) focus:(ring-2 ring-brand-300 no-underline ring-offset-2 dark:(ring-brand-500 ring-offset-brand-600)) inline-flex items-center`}
   }
 
   .remark-code-title {
