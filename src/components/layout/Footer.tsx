@@ -23,7 +23,7 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <footer css={[Container, tw`mt-4 border-t dark:border-gray-400`]}>
+    <footer css={[Container, tw`mt-4 border-t dark:border-gray-700`]}>
       <div tw="flex justify-center items-center space-y-2 flex-col">
         <div tw="flex justify-between space-x-5">
           {footerLinks.map(route => (
