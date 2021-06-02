@@ -5,11 +5,11 @@ import { useCallback } from 'react'
 import Button from './Button'
 
 const ButtonThemeSwitcher = () => {
-  const { setTheme, theme } = useTheme()
+  const { setTheme, resolvedTheme } = useTheme()
 
   const switchTheme = useCallback(() => {
-    setTheme(theme === 'dark' ? 'light' : 'dark')
-  }, [theme])
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
+  }, [resolvedTheme])
 
   return (
     <Button
@@ -17,7 +17,7 @@ const ButtonThemeSwitcher = () => {
       title="Theme toggle"
       onClick={switchTheme}
     >
-      {theme && theme === 'light' ? (
+      {resolvedTheme && resolvedTheme === 'light' ? (
         <svg tw="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
         </svg>

@@ -8,6 +8,7 @@ import { XCloseIcon } from '../ui/Icons'
 import NextLink from '../ui/NextLink'
 import Logo from './Logo'
 import NavTransition from './NavTransition'
+import { useAppContext } from '@/AppContext'
 
 const ButtonClose = tw.button`
 p-2
@@ -32,6 +33,7 @@ type NavMobileProps = {
 }
 
 const NavMobile = ({ setIsMenuOpen, asPath, isMenuOpen }: NavMobileProps) => {
+  const { isMounted } = useAppContext()
   return (
     <NavTransition isMobile isVisible={isMenuOpen}>
       <nav>
@@ -64,7 +66,7 @@ const NavMobile = ({ setIsMenuOpen, asPath, isMenuOpen }: NavMobileProps) => {
                 </li>
               )
           )}
-          <ButtonThemeSwitcher />
+          {isMounted && <ButtonThemeSwitcher />}
         </RouteItems>
       </nav>
     </NavTransition>
