@@ -16,7 +16,7 @@ export const PostStyle = css`
   }
 
   a {
-    ${tw`text-brand-500 dark:text-brand-400 no-underline hocus:(underline transition text-underline-offset[3px] outline-none) focus:(ring-2 ring-brand-300 no-underline ring-offset-2 dark:(ring-brand-500 ring-offset-brand-600)) inline-flex items-center`}
+    ${tw`text-brand-500 dark:text-brand-400 break-all inline-flex items-center no-underline hocus:(underline transition text-underline-offset[3px] outline-none) focus:(ring-2 ring-brand-300 no-underline ring-offset-2 dark:(ring-brand-500 ring-offset-brand-600))`}
   }
 
   .remark-code-title {
