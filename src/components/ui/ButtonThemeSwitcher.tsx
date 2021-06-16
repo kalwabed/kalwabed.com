@@ -9,7 +9,7 @@ const ButtonThemeSwitcher = () => {
 
   const switchTheme = useCallback(() => {
     setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')
-  }, [resolvedTheme])
+  }, [resolvedTheme, setTheme])
 
   return (
     <Button

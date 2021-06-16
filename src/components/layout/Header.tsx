@@ -1,3 +1,4 @@
+import dynamic from 'next/dynamic'
 import tw from 'twin.macro'
 import { memo, useState } from 'react'
 import { useRouter } from 'next/router'
@@ -10,9 +11,10 @@ import { Container } from '@/utils/styles'
 import { HamburgerIcon } from '../ui/Icons'
 import useHeaderVisible from '@/hooks/useHeaderVisible'
 import ButtonThemeSwitcher from '../ui/ButtonThemeSwitcher'
-import NavMobile from './NavMobile'
 import NavTransition from './NavTransition'
 import { useAppContext } from '@/AppContext'
+
+const NavMobile = dynamic(() => import('./NavMobile'))
 
 const Header = () => {
   const { asPath } = useRouter()

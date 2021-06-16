@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "postbuild": "next-sitemap",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@emotion/cache": "^11.4.0",
@@ -49,7 +50,8 @@
     "extends": "next",
     "rules": {
       "react/prop-types": 0,
-      "react/no-unescaped-entities": 0
+      "react/no-unescaped-entities": 0,
+      "@next/next/no-img-element": 0
     }
   }
 }

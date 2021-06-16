@@ -1,12 +1,5 @@
 module.exports = {
   reactStrictMode: true,
-  experimental: {
-    // enableBlurryPlaceholder: true,
-    eslint: {
-      dev: true,
-      build: true
-    }
-  },
   async headers() {
     return [
       {
