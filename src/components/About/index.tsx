@@ -2,6 +2,7 @@ import tw from 'twin.macro'
 import Image from 'next/image'
 
 import ContentWrapper from '@/components/ContentWrapper'
+import MyPicture from '@/assets/about-me.jpg'
 import Description from './Description'
 import Links from './Links'
 import PageSectionTitle from '../PageSectionTitle'
@@ -25,7 +26,7 @@ const AboutPageRenderer = () => {
     <ContentWrapper>
       <PageSectionTitle text="About" />
       <ImgWrapper>
-        <Image src="/static/me bw.jpg" width={150} height={150} tw="rounded-full" alt="My picture" />
+        <Image src={MyPicture} tw="rounded-full" placeholder="blur" alt="My picture" />
       </ImgWrapper>
       <Description />
       <Links />

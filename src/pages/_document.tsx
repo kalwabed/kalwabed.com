@@ -24,12 +24,6 @@ export default class MyDocument extends Document {
       <Html lang="en">
         <Head>
           <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet" />
-          <script
-            async
-            defer
-            data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
-            src={process.env.NEXT_PUBLIC_UMAMI_URL}
-          />
         </Head>
         <body tw="bg-white dark:bg-dark">
           <Main />

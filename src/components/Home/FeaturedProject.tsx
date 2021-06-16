@@ -25,7 +25,7 @@ const FeaturedProject = ({ project }: { project: Project }) => {
       <SectionTitle title="Featured project" />
 
       <Wrapper>
-        <Image src={banner} alt={title} height={310} width={638} quality={95} />
+        <Image src={banner} height={310} width={638} quality={95} alt={title} />
 
         <div tw="px-5 pt-3 pb-5 space-y-2">
           <Link href={`/projects/${slug}`} passHref>

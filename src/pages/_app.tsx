@@ -1,4 +1,5 @@
 import { ThemeProvider } from 'next-themes'
+import Script from 'next/script'
 import { CacheProvider } from '@emotion/react'
 
 import emotionCache from '@/utils/emotionCache'
@@ -11,6 +12,11 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <CacheProvider value={emotionCache}>
+        <Script
+          strategy="afterInteractive"
+          src={process.env.NEXT_PUBLIC_UMAMI_URL}
+          data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
+        />
         <GlobalStyles />
         <DefaultSEO />
         <ThemeProvider attribute="class">

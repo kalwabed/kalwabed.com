@@ -7,9 +7,6 @@ module.exports = {
       build: true
     }
   },
-  future: {
-    webpack5: true
-  },
   async headers() {
     return [
       {
