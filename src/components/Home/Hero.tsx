@@ -9,9 +9,7 @@ const Hero = () => {
         <h1 tw="font-bold tracking-wide text-3xl md:(text-5xl)">I'm Kalwabed Rizki</h1>
       </div>
       <div tw="space-y-5 lg:pr-12">
-        <p tw="tracking-wide text-lg text-gray-600 dark:text-gray-400">
-          Self-taught web developer based in Banyuwangi, Indonesia
-        </p>
+        <p tw="tracking-wide text-lg">Self-taught web developer based in Banyuwangi, Indonesia</p>
         <p tw="tracking-wide text-gray-600 dark:text-gray-400">
           Tinkering-as-a-hobby. Currently exploring modern website development using Javascript/Typescript.
         </p>

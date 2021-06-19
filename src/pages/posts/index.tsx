@@ -1,7 +1,7 @@
 import type { GetStaticProps } from 'next'
 
 import PostsPageRenderer from '@/components/Posts'
-import { getAllFrontMatters } from '@/utils/mdx'
+import { getAllFrontMatters } from '@/lib/mdx'
 import { Post } from '@/types'
 
 const PostsPage = ({ posts }: { posts: Post[] }) => {

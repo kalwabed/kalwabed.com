@@ -2,7 +2,7 @@ import type { GetStaticPaths, GetStaticProps } from 'next'
 
 import PostBySlugRenderer from '@/components/Posts/PostBySlugRenderer'
 import { PostWithMdx } from '@/types'
-import { getDataBySlug, getSlugs } from '@/utils/mdx'
+import { getDataBySlug, getSlugs } from '@/lib/mdx'
 
 const PostPage = ({ post }: { post: PostWithMdx }) => {
   return <PostBySlugRenderer post={post} />

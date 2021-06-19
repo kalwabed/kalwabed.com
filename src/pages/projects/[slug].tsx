@@ -2,7 +2,7 @@ import type { GetStaticPaths, GetStaticProps } from 'next'
 
 import ProjectBySlugRenderer from '@/components/Projects/ProjectBySlugRenderer'
 import { ProjectWithMdx } from '@/types'
-import { getDataBySlug, getSlugs } from '@/utils/mdx'
+import { getDataBySlug, getSlugs } from '@/lib/mdx'
 
 const ProjectBySlugPage = ({ project }: { project: ProjectWithMdx }) => {
   return <ProjectBySlugRenderer {...project} />

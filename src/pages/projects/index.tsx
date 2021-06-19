@@ -3,7 +3,7 @@ import type { GetStaticProps } from 'next'
 import PageWrapper from '@/components/layout/PageWrapper'
 import ProjectsPageRenderer from '@/components/Projects'
 import { Project } from '@/types'
-import { getAllFrontMatters } from '@/utils/mdx'
+import { getAllFrontMatters } from '@/lib/mdx'
 import app from '@/config/app'
 
 const ProjectsPage = ({ projects }: { projects: Project[] }) => {
