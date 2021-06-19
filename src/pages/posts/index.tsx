@@ -1,6 +1,6 @@
 import type { GetStaticProps } from 'next'
 
-import { PostsPageRenderer } from '@/components/Posts'
+import PostsPageRenderer from '@/components/Posts'
 import { getAllFrontMatters } from '@/utils/mdx'
 import { Post } from '@/types'
 
