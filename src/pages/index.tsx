@@ -3,12 +3,12 @@ import type { GetStaticProps } from 'next'
 import PageWrapper from '@/components/layout/PageWrapper'
 import HomePageRenderer from '@/components/Home'
 import { getAllFrontMatters, getFeaturedProject } from '@/lib/mdx'
-import { Bookmarks, Post, Project } from '@/types'
+import { Bookmark, Post, Project } from '@/types'
 import { getDatabases } from '@/lib/notion'
 
 export interface HomePageProps {
   posts: Post[]
-  bookmarks: Bookmarks[]
+  bookmarks: Bookmark[]
   featuredProject: Project
 }
 

@@ -1,10 +1,9 @@
 import { memo, ReactNode } from 'react'
 import tw from 'twin.macro'
 import Link from 'next/link'
+import { HiArrowNarrowRight, HiOutlineExternalLink } from 'react-icons/hi'
 import { Interpolation } from '@emotion/serialize'
 import { Theme } from '@emotion/react'
-
-import { ArrowRightIcon, ExternalLinkIcon } from './Icons'
 
 interface NextLinkProps {
   href: string
@@ -95,7 +94,7 @@ const NextLink = (props: NextLinkProps) => {
             css={[tw`space-x-1 inline-flex items-center`, Sizes[size], externalCss]}
           >
             <span>{children}</span>
-            <ExternalLinkIcon />
+            <HiOutlineExternalLink tw="w-3 h-3" />
           </TwLink>
         )
       }
@@ -110,7 +109,7 @@ const NextLink = (props: NextLinkProps) => {
             <span>{children}</span>
             {withIcon && (
               <IconWrapper>
-                <ArrowRightIcon />
+                <HiArrowNarrowRight />
               </IconWrapper>
             )}
           </TwLink>

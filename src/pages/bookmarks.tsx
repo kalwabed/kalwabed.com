@@ -1,10 +1,10 @@
 import type { GetStaticProps } from 'next'
 
 import BookmarksPageRenderer from '@/components/Bookmarks'
-import { Bookmarks } from '@/types'
+import { Bookmark } from '@/types'
 import { getDatabases } from '@/lib/notion'
 
-const BookmarksPage = ({ bookmarks }: { bookmarks: Bookmarks[] }) => {
+const BookmarksPage = ({ bookmarks }: { bookmarks: Bookmark[] }) => {
   return <BookmarksPageRenderer bookmarks={bookmarks} />
 }
 

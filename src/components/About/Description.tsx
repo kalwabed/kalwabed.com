@@ -13,7 +13,7 @@ const Description = () => {
       <p>
         Feel free to reach out if you're looking for a developer, have a question, or just want to connect.{' '}
         <NextLink href={`mailto:${app.email}`} title="My email">
-          kalwabedrzk@pm.me
+          {app.email}
         </NextLink>
       </p>
     </div>

@@ -2,13 +2,13 @@ import dynamic from 'next/dynamic'
 import tw from 'twin.macro'
 import { memo, useState } from 'react'
 import { useRouter } from 'next/router'
+import { HiOutlineMenu } from 'react-icons/hi'
 import Link from 'next/link'
 
 import Logo from './Logo'
 import Routes, { NAV_TOTAL } from '@/config/Routes'
 import NextLink from '../ui/NextLink'
 import { Container } from '@/utils/styles'
-import { HamburgerIcon } from '../ui/Icons'
 import useHeaderVisible from '@/hooks/useHeaderVisible'
 import ButtonThemeSwitcher from '../ui/ButtonThemeSwitcher'
 import NavTransition from './NavTransition'
@@ -63,7 +63,7 @@ const Header = () => {
               title="Open menu"
               onClick={() => setIsMenuOpen(prev => !prev)}
             >
-              <HamburgerIcon />
+              <HiOutlineMenu tw="w-5 h-5" />
             </button>
           </div>
         </div>

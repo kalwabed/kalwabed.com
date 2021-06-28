@@ -1,6 +1,6 @@
 import tw from 'twin.macro'
+import { FiGithub, FiInbox, FiLinkedin, FiTwitter, FiInstagram, FiGlobe } from 'react-icons/fi'
 
-import { EmailIcon, GithubIcon, InstagramIcon, LinkedInIcon, TwitterIcon, WebsiteIcon } from '@/components/ui/Icons'
 import { SocialProps } from '../LinkList'
 
 const Link = tw.a`
@@ -40,7 +40,7 @@ const Card = ({ href, type }: SocialProps) => {
             className="umami--click--linktree-github"
             css={[tw`bg-gray-700 hocus:bg-gray-600`]}
           >
-            <GithubIcon /> <p tw="font-medium capitalize">{type}</p>
+            <FiGithub /> <p tw="font-medium capitalize">{type}</p>
           </Link>
         </LinkWrapper>
       )
@@ -56,7 +56,7 @@ const Card = ({ href, type }: SocialProps) => {
             className="umami--click--linktree-instagram"
             css={[tw`bg-pink-500 hocus:bg-pink-400`]}
           >
-            <InstagramIcon /> <p tw="font-medium capitalize">{type}</p>
+            <FiInstagram /> <p tw="font-medium capitalize">{type}</p>
           </Link>
         </LinkWrapper>
       )
@@ -72,7 +72,7 @@ const Card = ({ href, type }: SocialProps) => {
             className="umami--click--linktree-linkedIn"
             css={[tw`bg-blue-500 hocus:bg-blue-400`]}
           >
-            <LinkedInIcon /> <p tw="font-medium capitalize">{type}</p>
+            <FiLinkedin /> <p tw="font-medium capitalize">{type}</p>
           </Link>
         </LinkWrapper>
       )
@@ -88,7 +88,7 @@ const Card = ({ href, type }: SocialProps) => {
             className="umami--click--linktree-twitter"
             css={[tw`bg-blue-600 hocus:bg-blue-500`]}
           >
-            <TwitterIcon /> <p tw="font-medium capitalize">{type}</p>
+            <FiTwitter /> <p tw="font-medium capitalize">{type}</p>
           </Link>
         </LinkWrapper>
       )
@@ -104,7 +104,7 @@ const Card = ({ href, type }: SocialProps) => {
             className="umami--click--linktree-email"
             css={[tw`bg-gray-500 hocus:bg-gray-400`]}
           >
-            <EmailIcon /> <p tw="font-medium capitalize">{type}</p>
+            <FiInbox /> <p tw="font-medium capitalize">{type}</p>
           </Link>
         </LinkWrapper>
       )
@@ -120,7 +120,7 @@ const Card = ({ href, type }: SocialProps) => {
             className="umami--click--linktree-website"
             css={[tw`bg-brand-600 hocus:bg-brand-500`]}
           >
-            <WebsiteIcon /> <p tw="font-medium capitalize">{type}</p>
+            <FiGlobe /> <p tw="font-medium capitalize">{type}</p>
           </Link>
         </LinkWrapper>
       )

@@ -1,6 +1,6 @@
 import tw from 'twin.macro'
 
-import { Bookmarks } from '@/types'
+import { Bookmark } from '@/types'
 import BookmarkCard from './BookmarkCard'
 
 const CardWrapper = tw.div`
@@ -17,7 +17,7 @@ relative
 `
 
 interface Props {
-  bookmarks: Bookmarks[]
+  bookmarks: Bookmark[]
   limit?: number
 }
 

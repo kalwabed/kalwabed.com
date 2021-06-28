@@ -1,7 +1,7 @@
 import tw from 'twin.macro'
 
 import NextLink from '@/components/ui/NextLink'
-import { Bookmarks } from '@/types'
+import { Bookmark } from '@/types'
 import toKebabCase from '@/utils/toKebabCase'
 
 const Img = tw.img`
@@ -13,7 +13,7 @@ rounded-full
 w-10 h-10 md:(w-12 h-12)
 `
 
-const BookmarkCard = (props: Bookmarks) => {
+const BookmarkCard = (props: Bookmark) => {
   const {
     description,
     title,

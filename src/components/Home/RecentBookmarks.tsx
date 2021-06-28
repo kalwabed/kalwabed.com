@@ -3,9 +3,9 @@ import 'twin.macro'
 import ContentWrapper from '../ContentWrapper'
 import { SectionTitle, MoreLink } from './modules'
 import BookmarkFrame from '../Bookmarks/Frame'
-import { Bookmarks } from '@/types'
+import { Bookmark } from '@/types'
 
-const RecentBookmarks = ({ bookmarks }: { bookmarks: Bookmarks[] }) => {
+const RecentBookmarks = ({ bookmarks }: { bookmarks: Bookmark[] }) => {
   return (
     <ContentWrapper>
       <SectionTitle title="Recent bookmarks" />

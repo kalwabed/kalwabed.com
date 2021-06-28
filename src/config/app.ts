@@ -1,7 +1,7 @@
 export default {
   siteUrl: 'https://kalwabed.xyz',
   description: 'Kalwabed Rizki personal website',
-  email: 'kalwabedrzk@pm.me',
+  email: 'kalwabedrzk@protonmail.com',
   socials: {
     Twitter: 'https://twitter.com/kalwabedrzk',
     Github: 'https://github.com/kalwabed',

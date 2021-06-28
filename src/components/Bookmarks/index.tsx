@@ -5,10 +5,10 @@ import ContentWrapper from '../ContentWrapper'
 import SEO from '../SEO'
 import PageSectionTitle from '../PageSectionTitle'
 import BookmarkFrame from './Frame'
-import { Bookmarks } from '@/types'
+import { Bookmark } from '@/types'
 import app from '@/config/app'
 
-const BookmarksPageRenderer = ({ bookmarks }: { bookmarks: Bookmarks[] }) => {
+const BookmarksPageRenderer = ({ bookmarks }: { bookmarks: Bookmark[] }) => {
   return (
     <section css={[Container]}>
       <PageSectionTitle text="Bookmarks" description="List of my personal recommendations" />

@@ -12,7 +12,7 @@ export interface PostWithMdx extends Post {
   mdxSource: MDXRemoteSerializeResult
 }
 
-export interface Bookmarks {
+export interface Bookmark {
   createdAt: { created_time: Date }
   noFavicon: { checkbox: boolean }
   url: { url: string }

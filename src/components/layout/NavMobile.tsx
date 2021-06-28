@@ -1,10 +1,10 @@
 import tw from 'twin.macro'
 import Link from 'next/link'
 import { memo } from 'react'
+import { HiX } from 'react-icons/hi'
 
 import Routes, { NAV_TOTAL } from '@/config/Routes'
 import ButtonThemeSwitcher from '../ui/ButtonThemeSwitcher'
-import { XCloseIcon } from '../ui/Icons'
 import NextLink from '../ui/NextLink'
 import Logo from './Logo'
 import NavTransition from './NavTransition'
@@ -44,7 +44,7 @@ const NavMobile = ({ setIsMenuOpen, asPath, isMenuOpen }: NavMobileProps) => {
             </a>
           </Link>
           <ButtonClose aria-label="Close menu" title="Close menu" onClick={() => setIsMenuOpen(false)}>
-            <XCloseIcon />
+            <HiX />
           </ButtonClose>
         </div>
         <RouteItems>
