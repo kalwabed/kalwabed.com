@@ -1,5 +1,5 @@
 import tw from 'twin.macro'
-import { FiGithub, FiInbox, FiLinkedin, FiTwitter, FiInstagram, FiGlobe } from 'react-icons/fi'
+import { FiGithub, FiMail, FiLinkedin, FiTwitter, FiInstagram, FiGlobe } from 'react-icons/fi'
 
 import { SocialProps } from '../LinkList'
 
@@ -104,7 +104,7 @@ const Card = ({ href, type }: SocialProps) => {
             className="umami--click--linktree-email"
             css={[tw`bg-gray-500 hocus:bg-gray-400`]}
           >
-            <FiInbox /> <p tw="font-medium capitalize">{type}</p>
+            <FiMail /> <p tw="font-medium capitalize">{type}</p>
           </Link>
         </LinkWrapper>
       )

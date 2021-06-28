@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         slate: '#293845',
         dark: '#151515',
+        iconBg: '#F0F1EC',
         cyan: colors.cyan,
         brand: {
           50: '#ffe2f6',
