@@ -29,6 +29,7 @@ const AboutPageRenderer = () => {
         <Image src={MyPicture} tw="rounded-full" placeholder="blur" alt="My picture" />
       </ImgWrapper>
       <Description />
+      <div aria-label="Divider" tw="w-16 h-0.5 rounded bg-slate opacity-20 dark:opacity-50 mx-auto"></div>
       <Links />
     </ContentWrapper>
   )
