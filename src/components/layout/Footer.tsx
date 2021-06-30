@@ -2,7 +2,7 @@ import tw from 'twin.macro'
 
 import { Container } from '@/utils/styles'
 import NextLink from '../ui/NextLink'
-import MyConnectCard from '@/components/MyConnectCard'
+import CollaborationSection from '@/components/layout/CollaborationSection'
 
 const footerLinks = [
   {
@@ -24,9 +24,9 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <>
-      <MyConnectCard />
-      <footer css={[Container, tw`mt-4 border-t dark:border-gray-700`]}>
+    <footer tw="background-color[#151718] mt-20">
+      <CollaborationSection />
+      <div css={[Container, tw`mt-4 `]}>
         <div tw="flex justify-center items-center space-y-2 flex-col">
           <div tw="flex justify-between space-x-5">
             {footerLinks.map(route => (
@@ -45,8 +45,8 @@ const Footer = () => {
             © 2021-present Kalwabed Rizki. <br tw="md:hidden" /> All rights reserved.
           </p>
         </div>
-      </footer>
-    </>
+      </div>
+    </footer>
   )
 }
 
