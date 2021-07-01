@@ -5,9 +5,11 @@ import app from '@/config/app'
 
 const MyConnectCard = () => {
   return (
-    <section tw="md:max-w-2xl lg:max-w-4xl my-20 mx-auto p-6 rounded color[#ECEDEE]">
-      <div tw="flex flex-col space-y-2">
-        <h1 tw="text-5xl font-semibold leading-normal lg:leading-loose">Let's build something together</h1>
+    <div tw="md:max-w-2xl lg:max-w-4xl my-20 mx-auto p-6 rounded color[#ECEDEE]">
+      <section tw="flex flex-col space-y-2">
+        <h1 tw="text-5xl lg:text-6xl font-semibold leading-normal lg:leading-relaxed">
+          Let's build something together
+        </h1>
         <p tw="text-2xl leading-relaxed">
           Feel free to reach out if you're looking for a developer, have a question, or just want to connect.
         </p>
@@ -40,8 +42,8 @@ const MyConnectCard = () => {
             <FiLinkedin tw="w-6 h-6" />
           </a>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   )
 }
 

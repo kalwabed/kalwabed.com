@@ -1,8 +1,10 @@
 import tw from 'twin.macro'
+import Image from 'next/image'
 
 import { Container } from '@/utils/styles'
 import NextLink from '../ui/NextLink'
 import CollaborationSection from '@/components/layout/CollaborationSection'
+import Wave from '@/assets/wave-haikei.svg'
 
 const footerLinks = [
   {
@@ -35,7 +37,7 @@ const Footer = () => {
                 className={`umami--click--FOOTER-${route.label}`}
                 key={route.href}
                 title={route.title}
-                css={[tw`text-gray-500 dark:text-gray-500 hocus:text-brand-500`]}
+                css={[tw`text-gray-500 dark:text-gray-500 hocus:text-opacity-60`]}
               >
                 {route.label}
               </NextLink>
