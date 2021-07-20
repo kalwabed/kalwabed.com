@@ -18,12 +18,7 @@ const Card = (props: Post) => {
           </a>
         </Link>
         <p tw="text-gray-500 dark:text-gray-300 tracking-wide">{summary}</p>
-        <NextLink
-          withIcon
-          href={'/posts/'.concat(slug)}
-          title="Read more"
-          className={`umami--click--postsPage-${slug}`}
-        >
+        <NextLink href={'/posts/'.concat(slug)} title="Read more" className={`umami--click--postsPage-${slug}`}>
           Read more
         </NextLink>
       </div>

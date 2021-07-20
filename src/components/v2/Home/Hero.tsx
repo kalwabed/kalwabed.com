@@ -1,9 +1,10 @@
 import 'twin.macro'
-import NextLink from '../v2/shared/NextLink'
+
+import NextLink from '../shared/NextLink'
 
 const Hero = () => {
   return (
-    <div tw="flex flex-col items-start px-4 md:px-20 lg:px-48 xl:px-64">
+    <div tw="flex flex-col items-start bg-subtleAppBg px-4 ">
       <div tw="leading-relaxed">
         <p tw="font-bold tracking-wider">Hello!</p>
         <h1 tw="font-bold tracking-wide text-3xl md:text-5xl">I'm Kalwabed Rizki</h1>

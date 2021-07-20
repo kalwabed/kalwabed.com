@@ -1,8 +1,7 @@
-import tw from 'twin.macro'
+import 'twin.macro'
+import Link from 'next/link'
 
-import { Container } from '@/utils/styles'
-import NextLink from '../ui/NextLink'
-import CollaborationSection from '@/components/layout/CollaborationSection'
+import CollaborationSection from '@components/v2/layout/CollaborationSection'
 
 const footerLinks = [
   {
@@ -22,23 +21,23 @@ const footerLinks = [
   }
 ]
 
-const Footer = () => {
+const PageFooter = () => {
   return (
     <footer tw="background-color[#151718] mt-20">
       <CollaborationSection />
-      <div css={[Container, tw`mt-4 `]}>
+      <div tw="mt-4">
         <div tw="flex justify-center items-center space-y-2 flex-col">
           <div tw="flex justify-between space-x-5">
             {footerLinks.map(route => (
-              <NextLink
-                href={route.href}
-                className={`umami--click--FOOTER-${route.label}`}
-                key={route.href}
-                title={route.title}
-                css={[tw`text-gray-500 dark:text-gray-500 hocus:text-opacity-60`]}
-              >
-                {route.label}
-              </NextLink>
+              <Link href={route.href} key={route.href}>
+                <a
+                  tw="text-gray-500 dark:text-gray-500 hocus:text-opacity-60"
+                  className={`umami--click--FOOTER-${route.label}`}
+                  title={route.title}
+                >
+                  {route.label}
+                </a>
+              </Link>
             ))}
           </div>
           <p tw="text-sm tracking-wide leading-relaxed text-center text-gray-500">
@@ -50,4 +49,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default PageFooter

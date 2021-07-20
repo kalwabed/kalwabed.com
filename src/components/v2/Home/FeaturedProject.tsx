@@ -2,9 +2,9 @@ import tw from 'twin.macro'
 import Link from 'next/link'
 import Image from 'next/image'
 
-import NextLink from '../ui/NextLink'
+import NextLink from '../shared/NextLink'
 import { SectionTitle, MoreLink } from './modules'
-import ContentWrapper from '../ContentWrapper'
+import ContentWrapper from '@components/ContentWrapper'
 import { Project } from '@/types'
 
 const Wrapper = tw.div`

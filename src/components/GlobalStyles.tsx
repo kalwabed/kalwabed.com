@@ -12,15 +12,15 @@ const CustomStyle = css`
   }
 
   *::selection {
-    background-color: #e50776;
-    color: ${theme`colors.white`};
+    background-color: #01dda21e;
+    color: ${theme`colors.highContrast`};
   }
 
   #__next {
     min-height: 100vh;
+    width: '100%';
     display: flex;
     flex-direction: column;
-    color: ${theme`colors.slate`};
   }
 `
 

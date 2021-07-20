@@ -7,6 +7,7 @@ import GlobalStyles from '@/components/GlobalStyles'
 import PageRoot from '@/components/layout/PageRoot'
 import { DefaultSEO } from '@/components/SEO'
 import AppContext from '@/AppContext'
+import LayoutRoot from '@/components/v2/layout/LayoutRoot'
 
 export default function MyApp({ Component, pageProps }) {
   return (
@@ -21,9 +22,9 @@ export default function MyApp({ Component, pageProps }) {
         <DefaultSEO />
         <ThemeProvider attribute="class">
           <AppContext.Provider>
-            <PageRoot>
+            <LayoutRoot>
               <Component {...pageProps} />
-            </PageRoot>
+            </LayoutRoot>
           </AppContext.Provider>
         </ThemeProvider>
       </CacheProvider>

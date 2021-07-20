@@ -25,12 +25,7 @@ const Card = (props: Props) => {
 
           <p tw="font-light text-gray-500 dark:text-gray-300 tracking-wide">{shortDescription}</p>
 
-          <NextLink
-            href={`/projects/${slug}`}
-            title="Project page"
-            className={`umami--click--projectsPage-${slug}`}
-            withIcon
-          >
+          <NextLink href={`/projects/${slug}`} title="Project page" className={`umami--click--projectsPage-${slug}`}>
             Visit project
           </NextLink>
         </div>

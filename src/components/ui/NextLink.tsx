@@ -29,19 +29,24 @@ type Variants = 'header' | 'primary'
 const HeadLink = tw.a`
 font-medium
 tracking-wide
-text-gray-400
+no-underline
+text-highContrast
 transition
 duration-200
+outline-none
 hover:text-slate
-dark:hover:text-gray-300
-focus:(ring-2 ring-offset-2 ring-gray-500 dark:(ring-brand-500 ring-offset-brand-800) outline-none)
+dark:hover:text-lowContrast
+focus:(ring-2 ring-offset-2 ring-gray-500 dark:(ring-brand-500 ring-offset-brand-800))
 `
 
 export const TwLink = tw.a`
 text-brand-500
-dark:text-brand-400
-hocus:(underline transition text-underline-offset[3px] outline-none)
-focus:(ring-2 ring-brand-300 no-underline ring-offset-2 dark:(ring-brand-500 ring-offset-brand-600))
+dark:text-link
+border-bottom-width[3px] border-transparent
+outline-none
+no-underline
+hover:text-highContrast
+hocus:(transition border-link)
 inline-flex
 items-center`
 
