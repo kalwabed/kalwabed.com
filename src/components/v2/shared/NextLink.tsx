@@ -34,10 +34,10 @@ const TwTextLink = tw.a`
 text-link
 font-bold
 border-bottom-width[3px] border-transparent
-outline-none
 no-underline
-hover:text-highContrast
-hocus:(transition border-link)
+transition
+hover:(text-highContrast border-link)
+focus:(ring ring-link)
 inline-flex
 items-center
 `
@@ -53,7 +53,7 @@ const NextLink = (props: NextLinkProps) => {
 
   return (
     <Link {...props.link} href={props.href} passHref>
-      <TwTextLink>{props.children}</TwTextLink>
+      <TwTextLink {...props}>{props.children}</TwTextLink>
     </Link>
   )
 }

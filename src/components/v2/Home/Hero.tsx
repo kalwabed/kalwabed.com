@@ -1,22 +1,20 @@
 import 'twin.macro'
 
-import NextLink from '../shared/NextLink'
+import NextLink from '@components/v2/shared/NextLink'
 
 const Hero = () => {
   return (
-    <div tw="flex flex-col items-start bg-subtleAppBg px-4 ">
-      <div tw="leading-relaxed">
-        <p tw="font-bold tracking-wider">Hello!</p>
-        <h1 tw="font-bold tracking-wide text-3xl md:text-5xl">I'm Kalwabed Rizki</h1>
-      </div>
-      <div tw="space-y-5 lg:pr-12">
-        <p tw="tracking-wide text-lg">Self-taught web developer based in Banyuwangi, Indonesia</p>
-        <p tw="tracking-wide text-gray-600 dark:text-lowContrast">
-          Tinkering-as-a-hobby. Currently exploring modern website development using Javascript/Typescript.
-        </p>
-        <NextLink type="text" className="umami--click--learn-more-about-me" href="/" title="About me">
-          Learn more about me
-        </NextLink>
+    <div tw="bg-subtleAppBg w-full py-5">
+      <div tw="flex flex-col items-start mx-auto px-4 md:px-0 py-12 max-w-2xl lg:max-w-screen-lg">
+        <section tw="leading-relaxed space-y-5 lg:w-3/4">
+          <h1 tw="font-bold tracking-wide text-3xl md:text-5xl">I'm Kalwabed.</h1>
+          <p tw="tracking-wide text-2xl md:text-3xl dark:text-lowContrast">
+            Software engineer interested in modern software development architecture.
+          </p>
+          <NextLink type="text" className="umami--click--learn-more-about-me" href="/about" aria-label="About me">
+            Learn more about me
+          </NextLink>
+        </section>
       </div>
     </div>
   )
