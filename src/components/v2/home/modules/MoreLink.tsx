@@ -1,4 +1,4 @@
-import NextLink from '@/components/ui/NextLink'
+import NextLink from '@/components/v2/shared/NextLink'
 import 'twin.macro'
 
 interface MoreLinkProps {
@@ -11,7 +11,7 @@ const MoreLink = (props: MoreLinkProps) => {
     case 'posts':
       return (
         <div tw="flex justify-center items-center mx-auto">
-          <NextLink className="umami--click--more-posts" title="More posts" href="/posts">
+          <NextLink className="umami--click--more-posts" title="More posts" href="/posts" type="button">
             More posts
           </NextLink>
         </div>

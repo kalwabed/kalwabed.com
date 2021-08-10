@@ -19,6 +19,7 @@
     "@notionhq/client": "^0.2.2",
     "@tailwindcss/typography": "^0.4.1",
     "cors": "^2.8.5",
+    "date-fns": "^2.23.0",
     "feed": "^4.2.2",
     "gray-matter": "^4.0.3",
     "mdx-prism": "^0.3.3",

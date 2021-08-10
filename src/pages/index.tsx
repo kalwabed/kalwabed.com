@@ -1,7 +1,6 @@
 import type { GetStaticProps } from 'next'
 
-import PageWrapper from '@/components/layout/PageWrapper'
-import HomePageRenderer from '@components/v2/Home'
+import HomePageRenderer from '@components/v2/home'
 import { getAllFrontMatters, getFeaturedProject } from '@/lib/mdx'
 import { Bookmark, Post, Project } from '@/types'
 import { getDatabases } from '@/lib/notion'

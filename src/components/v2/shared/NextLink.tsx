@@ -1,16 +1,7 @@
 import { ReactNode } from 'react'
 import tw from 'twin.macro'
 import Link, { LinkProps } from 'next/link'
-
-interface NextLinkProps {
-  link?: LinkProps
-  type: 'button' | 'text'
-  variant?: 'solid' | 'outline'
-  className?: string
-  title?: string
-  href: string
-  children: ReactNode
-}
+import { Interpolation, Theme } from '@emotion/react'
 
 const TwButtonLink = tw.a`
 text-lowContrast
@@ -23,7 +14,7 @@ hover:(bg-v2-hover border-v2-borderHover)
 focus:(ring ring-v2-borderIdle bg-v2-active)
 inline-flex
 py-1
-px-1.5
+px-4
 rounded
 items-center
 no-underline
@@ -42,8 +33,21 @@ inline-flex
 items-center
 `
 
+interface NextLinkProps {
+  link?: LinkProps
+  type?: 'button' | 'text'
+  variant?: 'solid' | 'outline'
+  className?: string
+  title?: string
+  href: string
+  children: ReactNode
+  styles?: Interpolation<Theme>
+}
+
 const NextLink = (props: NextLinkProps) => {
-  if (props.type === 'button') {
+  const { type = 'text' } = props
+
+  if (type === 'button') {
     return (
       <Link {...props.link} href={props.href} passHref>
         <TwButtonLink>{props.children}</TwButtonLink>
@@ -53,7 +57,9 @@ const NextLink = (props: NextLinkProps) => {
 
   return (
     <Link {...props.link} href={props.href} passHref>
-      <TwTextLink {...props}>{props.children}</TwTextLink>
+      <TwTextLink {...props} css={props.styles}>
+        {props.children}
+      </TwTextLink>
     </Link>
   )
 }

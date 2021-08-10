@@ -1,7 +1,7 @@
 import 'twin.macro'
 import dynamic from 'next/dynamic'
 
-import Hero from '@/components/v2/Home/Hero'
+import Hero from '@components/v2/home/Hero'
 import RecentPosts from './RecentPosts'
 import { HomePageProps } from '@/pages'
 const FeaturedProject = dynamic(() => import('./FeaturedProject'))
