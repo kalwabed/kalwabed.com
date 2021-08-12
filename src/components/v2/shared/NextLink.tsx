@@ -28,7 +28,7 @@ border-bottom-width[3px] border-transparent
 no-underline
 transition
 hover:(text-highContrast border-link)
-focus:(ring ring-link)
+focus:(ring ring-link outline-none)
 inline-flex
 items-center
 `
