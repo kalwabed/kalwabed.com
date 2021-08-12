@@ -8,7 +8,26 @@ const CustomStyle = css`
 
   body {
     -webkit-tap-highlight-color: ${theme`colors.transparent`};
+    scrollbar-width: thin;
+    scrollbar-color: ${theme`colors.subtleAppBg`} ${theme`colors.appBorder`};
     ${tw`antialiased`}
+  }
+
+  body::-webkit-scrollbar {
+    width: 11px;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    ${tw`bg-appBorder`}
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    ${tw`bg-link`}
+  }
+
+  body::-webkit-scrollbar-track {
+    background-color: ${theme`colors.subtleAppBg`};
+    border: 1px solid ${theme`colors.appBorder`};
   }
 
   *::selection {

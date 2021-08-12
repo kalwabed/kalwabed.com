@@ -6,6 +6,7 @@ import { Container } from '../shared/Container'
 import { SectionTitle } from './modules'
 import FeaturedBanner from '@components/v2/home/assets/featured-project-banner.png'
 import NextLink from '../shared/NextLink'
+import { Project } from '@/types'
 
 const _Wrapper = tw.div`
 w-full
@@ -18,7 +19,7 @@ rounded-lg
 shadow
 `
 
-const FeaturedProject = ({ project }) => {
+const FeaturedProject: React.FC<{ project: Project }> = ({ project }) => {
   return (
     <section css={[Container]}>
       <SectionTitle title="Featured project" />
