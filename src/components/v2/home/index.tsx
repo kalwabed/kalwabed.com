@@ -5,17 +5,15 @@ import Hero from './Hero'
 import RecentPosts from './recent-posts'
 import { HomePageProps } from '@/pages'
 const FeaturedProject = dynamic(() => import('./featured-project'))
-const RecentBookmarks = dynamic(() => import('./RecentBookmarks'))
 
 const HomePageRenderer = (props: HomePageProps) => {
-  const { bookmarks, featuredProject, posts } = props
+  const { featuredProject, posts } = props
 
   return (
     <div tw="space-y-16">
       <Hero />
       <RecentPosts posts={posts} />
       <FeaturedProject project={featuredProject} />
-      <RecentBookmarks bookmarks={bookmarks} />
     </div>
   )
 }
