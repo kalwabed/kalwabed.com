@@ -31,8 +31,8 @@ transition
 py-2
 px-2.5
 rounded
-hover:(bg-v2-hover)
-focus:(outline-none ring ring-appBorder bg-v2-active)
+hocus:(text-highContrast)
+focus:(outline-none ring ring-appBorder)
 `
 
 const TopNavigation = () => {
