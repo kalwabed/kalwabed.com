@@ -1,22 +1,9 @@
-import type { GetStaticProps } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
 
 import HomePageRenderer from '@components/v2/home'
 import { getAllFrontMatters, getFeaturedProject } from '@/lib/mdx'
 import { Post, Project } from '@/types'
 import Page from '@components/v2/layout/page'
-
-export interface HomePageProps {
-  posts: Post[]
-  featuredProject: Project
-}
-
-export default function HomePage(props: HomePageProps) {
-  return (
-    <Page>
-      <HomePageRenderer {...props} />
-    </Page>
-  )
-}
 
 export const getStaticProps: GetStaticProps = async () => {
   const posts = getAllFrontMatters('_posts')
@@ -24,3 +11,18 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return { props: { posts, featuredProject } }
 }
+
+export interface HomePageProps {
+  posts: Post[]
+  featuredProject: Project
+}
+
+const HomePage: NextPage<HomePageProps> = props => {
+  return (
+    <Page>
+      <HomePageRenderer {...props} />
+    </Page>
+  )
+}
+
+export default HomePage

@@ -11,8 +11,8 @@ import NavMobile from '@components/layout/NavMobile'
 
 const routes = [
   {
-    href: '/posts',
-    label: 'Posts'
+    href: '/blog',
+    label: 'Blog'
   },
   {
     href: '/projects',
