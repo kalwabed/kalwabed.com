@@ -2,7 +2,7 @@ import 'twin.macro'
 import { FiMail, FiLinkedin, FiTwitter } from 'react-icons/fi'
 
 import app from '@/config/app'
-import { Container } from '../shared/Container'
+import { Container } from '../shared/container'
 
 const CollaborationSection = () => {
   return (

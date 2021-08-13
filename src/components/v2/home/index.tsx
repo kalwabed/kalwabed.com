@@ -1,9 +1,10 @@
 import 'twin.macro'
 import dynamic from 'next/dynamic'
 
-import Hero from './Hero'
+import Hero from './hero'
 import RecentPosts from './recent-posts'
 import { HomePageProps } from '@/pages'
+
 const FeaturedProject = dynamic(() => import('./featured-project'))
 
 const HomePageRenderer = (props: HomePageProps) => {

@@ -3,7 +3,7 @@ import type { GetStaticProps } from 'next'
 import HomePageRenderer from '@components/v2/home'
 import { getAllFrontMatters, getFeaturedProject } from '@/lib/mdx'
 import { Post, Project } from '@/types'
-import Page from '@/components/v2/layout/Page'
+import Page from '@components/v2/layout/page'
 
 export interface HomePageProps {
   posts: Post[]

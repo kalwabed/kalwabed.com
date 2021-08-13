@@ -1,6 +1,6 @@
 import 'twin.macro'
 
-import NextLink from '@components/v2/shared/NextLink'
+import TextLink from '@components/v2/shared/text-link'
 
 const Hero = () => {
   return (
@@ -11,9 +11,9 @@ const Hero = () => {
           <p tw="tracking-wide text-2xl md:text-3xl dark:text-lowContrast">
             Software engineer interested in modern software development architecture.
           </p>
-          <NextLink className="umami--click--learn-more-about-me" href="/about" aria-label="About me">
+          <TextLink className="umami--click--learn-more-about-me" href="/about" aria-label="About me">
             Learn more about me
-          </NextLink>
+          </TextLink>
         </section>
       </div>
     </div>

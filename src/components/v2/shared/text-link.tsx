@@ -24,7 +24,7 @@ interface NextLinkProps {
   styles?: Interpolation<Theme>
 }
 
-const NextLink = (props: NextLinkProps) => {
+const TextLink = (props: NextLinkProps) => {
   return (
     <Link {...props.link} href={props.href} passHref>
       <TwTextLink {...props} css={props.styles}>
@@ -34,4 +34,4 @@ const NextLink = (props: NextLinkProps) => {
   )
 }
 
-export default NextLink
+export default TextLink

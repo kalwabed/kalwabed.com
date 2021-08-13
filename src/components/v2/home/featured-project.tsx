@@ -2,10 +2,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 import tw from 'twin.macro'
 
-import { Container } from '../shared/Container'
+import { Container } from '../shared/container'
 import { SectionTitle } from './modules'
 import FeaturedBanner from '@components/v2/home/assets/featured-project-banner.png'
-import NextLink from '../shared/NextLink'
+import TextLink from '../shared/text-link'
 import { Project } from '@/types'
 
 const _Wrapper = tw.div`
@@ -37,7 +37,7 @@ const FeaturedProject: React.FC<{ project: Project }> = ({ project }) => {
             A web application that is intended as a meeting place between land sellers and potential buyers.
           </p>
           <div tw="mt-6 lg:mt-auto">
-            <NextLink href="/project/tuantanah">More detail</NextLink>
+            <TextLink href="/project/tuantanah">More detail</TextLink>
           </div>
         </section>
       </_Wrapper>

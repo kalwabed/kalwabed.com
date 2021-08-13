@@ -1,7 +1,8 @@
 import 'twin.macro'
 import Link from 'next/link'
 
-import CollaborationSection from '@components/v2/layout/CollaborationSection'
+import CollaborationSection from '@components/v2/layout/collaboration-section'
+import Divider from '../shared/divider'
 
 const footerLinks = [
   {
@@ -27,7 +28,7 @@ const PageFooter = () => {
       <CollaborationSection />
       <div tw="mt-4">
         <div tw="flex justify-center items-center space-y-10 flex-col">
-          <div tw="h-0.5 w-16 bg-appBorder" />
+          <Divider />
           <div tw="flex justify-between space-x-5">
             {footerLinks.map(route => (
               <Link href={route.href} key={route.href} passHref>

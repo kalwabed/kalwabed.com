@@ -1,12 +1,11 @@
-import AboutPageRenderer from '@/components/About'
-import PageWrapper from '@/components/layout/PageWrapper'
-import app from '@/config/app'
+import AboutPageRenderer from '@components/v2/about'
+import Page from '@components/v2/layout/page'
 
 const AboutPage = () => {
   return (
-    <PageWrapper {...app.pageMeta.about}>
+    <Page>
       <AboutPageRenderer />
-    </PageWrapper>
+    </Page>
   )
 }
 

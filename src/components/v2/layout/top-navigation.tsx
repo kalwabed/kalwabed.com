@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 
 import { useAppContext } from '@/AppContext'
 import Logo from '@components/layout/Logo'
-import ThemeSwitcher from './ThemeSwitcher'
+import ThemeSwitcher from './theme-switcher'
 import NavMobile from '@components/layout/NavMobile'
 
 const routes = [
