@@ -10,7 +10,7 @@ const HomePageRenderer = (props: HomePageProps) => {
   const { featuredProject, posts } = props
 
   return (
-    <div tw="space-y-16">
+    <div tw="space-y-20">
       <Hero />
       <RecentPosts posts={posts} />
       <FeaturedProject project={featuredProject} />

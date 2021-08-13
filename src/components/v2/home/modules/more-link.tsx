@@ -1,5 +1,6 @@
-import NextLink from '@/components/v2/shared/NextLink'
 import 'twin.macro'
+
+import ButtonLink from '@components/v2/shared/button-link'
 
 interface MoreLinkProps {
   type: 'projects' | 'bookmarks' | 'posts'
@@ -11,27 +12,27 @@ const MoreLink = (props: MoreLinkProps) => {
     case 'posts':
       return (
         <div tw="flex justify-center items-center mx-auto">
-          <NextLink className="umami--click--more-posts" title="More posts" href="/posts" type="button">
+          <ButtonLink className="umami--click--more-posts" title="More posts" href="/posts">
             More posts
-          </NextLink>
+          </ButtonLink>
         </div>
       )
 
     case 'projects':
       return (
         <div tw="flex justify-center items-center mx-auto">
-          <NextLink className="umami--click--more-projects" title="More projects" href="/projects">
+          <ButtonLink className="umami--click--more-projects" title="More projects" href="/projects">
             More projects
-          </NextLink>
+          </ButtonLink>
         </div>
       )
 
     case 'bookmarks':
       return (
         <div tw="flex justify-center items-center mx-auto">
-          <NextLink className="umami--click--more-bookmarks" title="More bookmarks" href="/bookmarks">
+          <ButtonLink className="umami--click--more-bookmarks" title="More bookmarks" href="/bookmarks">
             More bookmarks
-          </NextLink>
+          </ButtonLink>
         </div>
       )
 
