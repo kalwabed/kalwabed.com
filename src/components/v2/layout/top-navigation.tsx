@@ -9,7 +9,7 @@ import Logo from '@components/layout/Logo'
 import ThemeSwitcher from './theme-switcher'
 import NavMobile from '@components/layout/NavMobile'
 
-const routes = [
+export const routes = [
   {
     href: '/blog',
     label: 'Blog'
@@ -27,7 +27,12 @@ const routes = [
 const NavLink = tw.a`
 font-medium
 text-lowContrast
-hocus:(transition duration-200 text-highContrast)
+transition
+py-2
+px-2.5
+rounded
+hover:(bg-v2-hover)
+focus:(outline-none ring ring-appBorder bg-v2-active)
 `
 
 const TopNavigation = () => {
@@ -44,7 +49,7 @@ const TopNavigation = () => {
               {isMounted && <Logo />}
             </a>
           </Link>
-          <ul tw="hidden md:flex items-center space-x-8">
+          <ul tw="hidden md:flex items-center space-x-3">
             {routes.map(route => (
               <li key={route.href}>
                 <Link href={route.href} passHref>

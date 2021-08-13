@@ -1,23 +1,23 @@
-import type { GetStaticProps } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
 
-import PageWrapper from '@/components/layout/PageWrapper'
-import ProjectsPageRenderer from '@/components/Projects'
 import { Project } from '@/types'
 import { getAllFrontMatters } from '@/lib/mdx'
 import app from '@/config/app'
+import Page from '@components/v2/layout/page'
+import ProjectsPageRenderer from '@components/v2/projects'
 
-const ProjectsPage = ({ projects }: { projects: Project[] }) => {
+// export const getStaticProps: GetStaticProps = async () => {
+//   const projects = getAllFrontMatters('_projects')
+
+//   return { props: { projects } }
+// }
+
+const ProjectsPage: NextPage<{ projects: Project[] }> = ({ projects }) => {
   return (
-    <PageWrapper {...app.pageMeta.projects}>
-      <ProjectsPageRenderer projects={projects} />
-    </PageWrapper>
+    <Page>
+      <ProjectsPageRenderer />
+    </Page>
   )
-}
-
-export const getStaticProps: GetStaticProps = async () => {
-  const projects = getAllFrontMatters('_projects')
-
-  return { props: { projects } }
 }
 
 export default ProjectsPage
