@@ -3,7 +3,7 @@ import Link from 'next/link'
 import tw from 'twin.macro'
 
 import { Container } from '../shared/container'
-import { SectionTitle } from './modules'
+import { MoreLink, SectionTitle } from './modules'
 import FeaturedBanner from '@components/v2/home/assets/featured-project-banner.png'
 import TextLink from '../shared/text-link'
 import { Project } from '@/types'
@@ -41,6 +41,7 @@ const FeaturedProject: React.FC<{ project: Project }> = ({ project }) => {
           </div>
         </section>
       </_Wrapper>
+      <MoreLink type="projects" />
     </section>
   )
 }
