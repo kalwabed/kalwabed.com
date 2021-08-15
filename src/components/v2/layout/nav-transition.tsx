@@ -3,14 +3,16 @@ import { Transition as _Transition } from '@headlessui/react'
 import { ClassNames } from '@emotion/react'
 import { ReactNode } from 'react'
 
-const MobileWrapper = tw`
-
-`
-
-const DesktopWrapper = tw`fixed
+const WrapperStyle = tw`
+fixed
 z-20
-w-full
-backdrop-filter[saturate(180%) blur(10px)]`
+flex
+items-center
+justify-center
+inset-0
+bg-white
+dark:(bg-subtleAppBg)
+`
 
 interface NavProps {
   children: ReactNode
@@ -26,7 +28,7 @@ const NavTransition = ({ children, isVisible }: NavProps) => {
         // @ts-ignore
         <_Transition
           show={isVisible}
-          css={MobileWrapper}
+          css={WrapperStyle}
           enter={css(tw`transition-opacity duration-200`)}
           enterFrom={css(tw`opacity-0`)}
           enterTo={css(tw`opacity-100`)}

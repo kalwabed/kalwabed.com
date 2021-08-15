@@ -25,6 +25,7 @@ interface NextLinkProps {
   children: ReactNode
   styles?: Interpolation<Theme>
   variant?: 'primary' | 'ghost'
+  onClick?: () => void
 }
 
 const TextLink = (props: NextLinkProps) => {

@@ -2,12 +2,11 @@ import tw from 'twin.macro'
 import Link from 'next/link'
 import { useState } from 'react'
 import { HiOutlineMenu } from 'react-icons/hi'
-import { useRouter } from 'next/router'
 
 import { useAppContext } from '@/AppContext'
 import Logo from '@components/layout/Logo'
 import ThemeSwitcher from './theme-switcher'
-import NavMobile from '@components/layout/NavMobile'
+import MobileNav from './mobile-navigation'
 
 export const routes = [
   {
@@ -35,15 +34,26 @@ hocus:(text-highContrast)
 focus:(outline-none ring ring-appBorder)
 `
 
+const _Container = tw.div`
+z-50
+backdrop-blur-md
+backdrop-filter
+bg-appBg
+bg-opacity-60
+sticky
+inset-0
+border-b
+border-appBorder
+`
+
 const TopNavigation = () => {
-  const { asPath } = useRouter()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { isMounted } = useAppContext()
 
   return (
     <>
-      <div tw="backdrop-blur-md backdrop-filter bg-appBg bg-opacity-60  sticky inset-0 border-b border-appBorder z-50">
-        <div tw="flex items-center justify-between py-4 px-4 md:px-0 w-full mx-auto max-w-2xl lg:(max-w-screen-lg)">
+      <_Container>
+        <div tw="flex items-center justify-between py-4 px-4 w-full mx-auto max-w-2xl md:px-0 lg:max-w-screen-lg">
           <Link href="/" passHref>
             <a tw="inline-flex items-center" title="Kalwabed" aria-label="Logo" className="umami--click--headerLogo">
               {isMounted && <Logo />}
@@ -64,7 +74,7 @@ const TopNavigation = () => {
 
           <div tw="md:hidden">
             <button
-              tw="p-2 -mr-1 transition duration-200 rounded focus:(ring outline-none )"
+              tw="p-2 -mr-1 transition duration-200 rounded focus:(ring ring-appBorder outline-none )"
               aria-label="Open menu"
               title="Open menu"
               onClick={() => setIsMenuOpen(prev => !prev)}
@@ -73,8 +83,8 @@ const TopNavigation = () => {
             </button>
           </div>
         </div>
-      </div>
-      <NavMobile setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} asPath={asPath} />
+      </_Container>
+      <MobileNav setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
     </>
   )
 }

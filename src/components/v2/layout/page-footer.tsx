@@ -24,7 +24,7 @@ const footerLinks = [
 
 const PageFooter = () => {
   return (
-    <footer tw="bg-subtleAppBg mt-20 pb-10">
+    <footer tw="bg-subtleAppBg mt-20 pb-10 border-t border-appBorder">
       <CollaborationSection />
       <div tw="mt-4">
         <div tw="flex justify-center items-center space-y-10 flex-col">

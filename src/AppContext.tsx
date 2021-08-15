@@ -12,6 +12,7 @@ export const useAppContext = (): AppCtx => {
 
 const Provider = ({ children }) => {
   const [isMounted, setIsMounted] = useState(false)
+
   useEffect(() => {
     setIsMounted(true)
   }, [])

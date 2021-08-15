@@ -1,14 +1,12 @@
 import tw from 'twin.macro'
-import Link from 'next/link'
 import { memo } from 'react'
 import { HiX } from 'react-icons/hi'
 
-import ButtonThemeSwitcher from '../ui/ButtonThemeSwitcher'
-import NextLink from '../ui/NextLink'
-import Logo from './Logo'
-import NavTransition from './NavTransition'
+import NavTransition from '@components/v2/layout/nav-transition'
 import { useAppContext } from '@/AppContext'
 import { routes } from '@components/v2/layout/top-navigation'
+import ButtonThemeSwitcher from '../shared/theme-switcher'
+import TextLink from '../shared/text-link'
 
 const ButtonClose = tw.button`
 p-2
@@ -29,20 +27,15 @@ items-center
 type NavMobileProps = {
   setIsMenuOpen: (arg: boolean) => void
   isMenuOpen: boolean
-  asPath: string
 }
 
-const NavMobile = ({ setIsMenuOpen, asPath, isMenuOpen }: NavMobileProps) => {
+const MobileNav = ({ setIsMenuOpen, isMenuOpen }: NavMobileProps) => {
   const { isMounted } = useAppContext()
+
   return (
     <NavTransition isVisible={isMenuOpen}>
-      <nav>
-        <div tw="grid grid-rows-2 gap-4 mb-4">
-          <Link href="/" passHref>
-            <a tw="inline-flex items-center" className="umami--click--headerLogo" onClick={() => setIsMenuOpen(false)}>
-              <Logo />
-            </a>
-          </Link>
+      <nav tw="w-full">
+        <div tw="grid grid-rows-1 mb-4">
           <ButtonClose aria-label="Close menu" title="Close menu" onClick={() => setIsMenuOpen(false)}>
             <HiX />
           </ButtonClose>
@@ -50,17 +43,16 @@ const NavMobile = ({ setIsMenuOpen, asPath, isMenuOpen }: NavMobileProps) => {
         <RouteItems>
           {routes.map(route => (
             <li key={route.href}>
-              <NextLink
-                variant="header"
-                css={tw`focus:(ring-0 ring-offset-0)`}
+              <TextLink
+                variant="ghost"
+                styles={tw`focus:(ring-0 ring-offset-0)`}
                 onClick={() => setIsMenuOpen(false)}
                 title={route.label}
-                isActive={route.href === asPath}
                 href={route.href}
                 className={`umami--click--NAV-${route.label}`}
               >
                 {route.label}
-              </NextLink>
+              </TextLink>
             </li>
           ))}
           {isMounted && <ButtonThemeSwitcher />}
@@ -70,4 +62,4 @@ const NavMobile = ({ setIsMenuOpen, asPath, isMenuOpen }: NavMobileProps) => {
   )
 }
 
-export default memo(NavMobile)
+export default memo(MobileNav)
