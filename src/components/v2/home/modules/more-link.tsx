@@ -3,7 +3,7 @@ import 'twin.macro'
 import ButtonLink from '@components/v2/shared/button-link'
 
 interface MoreLinkProps {
-  type: 'projects' | 'bookmarks' | 'posts'
+  type: 'projects' | 'posts'
 }
 
 const MoreLink = (props: MoreLinkProps) => {
@@ -23,15 +23,6 @@ const MoreLink = (props: MoreLinkProps) => {
         <div tw="flex justify-center items-center mx-auto">
           <ButtonLink className="umami--click--more-projects" title="More projects" href="/projects">
             More projects
-          </ButtonLink>
-        </div>
-      )
-
-    case 'bookmarks':
-      return (
-        <div tw="flex justify-center items-center mx-auto">
-          <ButtonLink className="umami--click--more-bookmarks" title="More bookmarks" href="/bookmarks">
-            More bookmarks
           </ButtonLink>
         </div>
       )

@@ -11,7 +11,7 @@ const RecentPosts = ({ posts }: { posts: Post[] }) => {
   return (
     <section css={[Container]}>
       <SectionTitle title="Recent posts" />
-      <div tw="space-y-12 md:space-y-5">
+      <div tw="flex flex-col items-center w-full space-y-4">
         {threeRecentPosts?.map(post => (
           <RecentPost key={post.slug} slug={post.slug} publishedAt={post.publishedAt}>
             {post.title}
