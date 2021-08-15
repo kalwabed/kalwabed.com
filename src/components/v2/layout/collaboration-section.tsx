@@ -6,7 +6,7 @@ import { Container } from '../shared/container'
 
 const CollaborationSection = () => {
   return (
-    <section css={[Container]} tw="md:p-6 my-20 space-y-2">
+    <section css={[Container]} tw="md:p-6 my-20 space-y-2 text-highContrast">
       <h1 tw="text-5xl lg:text-6xl font-semibold leading-normal lg:leading-relaxed">Let's build something together.</h1>
       <p tw="text-2xl leading-relaxed">
         Feel free to reach out if you're looking for a developer, have a question, or just want to connect.

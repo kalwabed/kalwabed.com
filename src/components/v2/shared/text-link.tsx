@@ -4,16 +4,18 @@ import Link, { LinkProps } from 'next/link'
 import { Interpolation, Theme } from '@emotion/react'
 
 const TwTextLink = tw.a`
-text-link
 font-bold
-border-bottom-width[3px] border-transparent
 no-underline
 transition
-hover:(text-highContrast border-link)
-focus:(ring ring-link outline-none)
+focus:(ring outline-none)
 inline-flex
 items-center
 `
+
+const variants = {
+  primary: tw`text-link border-bottom-width[3px] border-transparent hover:(text-highContrast border-link) focus:ring-link`,
+  ghost: tw`text-highContrast hocus:(text-link) focus:ring-link`
+}
 
 interface NextLinkProps {
   link?: LinkProps
@@ -22,12 +24,15 @@ interface NextLinkProps {
   href: string
   children: ReactNode
   styles?: Interpolation<Theme>
+  variant?: 'primary' | 'ghost'
 }
 
 const TextLink = (props: NextLinkProps) => {
+  const { variant = 'primary' } = props
+
   return (
     <Link {...props.link} href={props.href} passHref>
-      <TwTextLink {...props} css={props.styles}>
+      <TwTextLink {...props} css={[variants[variant], props.styles]}>
         {props.children}
       </TwTextLink>
     </Link>

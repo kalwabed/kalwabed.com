@@ -28,10 +28,27 @@ interface Props {
   variant?: 'outline'
   styles?: Interpolation<Theme>
   className?: string
+  isExternal?: boolean
 }
 
 const ButtonLink: React.FC<Props> = props => {
-  const { variant = 'outline', styles, className, title, href } = props
+  const { variant = 'outline', styles, className, title, href, isExternal } = props
+
+  if (isExternal) {
+    return (
+      <Link {...props.link} href={href} passHref>
+        <BaseButton
+          target="_blank"
+          rel="noopener noreferrer"
+          title={title}
+          className={className}
+          css={[variants[variant], styles]}
+        >
+          {props.children}
+        </BaseButton>
+      </Link>
+    )
+  }
 
   return (
     <Link {...props.link} href={href} passHref>
