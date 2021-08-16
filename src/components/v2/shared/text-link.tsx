@@ -25,11 +25,22 @@ interface NextLinkProps {
   children: ReactNode
   styles?: Interpolation<Theme>
   variant?: 'primary' | 'ghost'
+  isExternal?: boolean
   onClick?: () => void
 }
 
 const TextLink = (props: NextLinkProps) => {
-  const { variant = 'primary' } = props
+  const { variant = 'primary', isExternal } = props
+
+  if (isExternal) {
+    return (
+      <Link {...props.link} href={props.href} passHref>
+        <TwTextLink target="_blank" rel="noopener noreferrer" {...props} css={[variants[variant], props.styles]}>
+          {props.children}
+        </TwTextLink>
+      </Link>
+    )
+  }
 
   return (
     <Link {...props.link} href={props.href} passHref>

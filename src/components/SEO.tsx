@@ -84,7 +84,7 @@ const SEO = (props: SEOProps) => {
           url={url}
           authorName="Kalwabed Rizki"
           datePublished={props.openGraph.article.publishedTime}
-          description={props.openGraph.description}
+          description={props.description}
           images={[defaultOgImg]}
           title={title}
           dateModified={props.openGraph.article.modifiedTime}

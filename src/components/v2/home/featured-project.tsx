@@ -37,7 +37,7 @@ const FeaturedProject: React.FC<{ project: Project }> = ({ project }) => {
             A web application that is intended as a meeting place between land sellers and potential buyers.
           </p>
           <div tw="mt-6 lg:mt-auto">
-            <TextLink href="/project/tuantanah">More detail</TextLink>
+            <TextLink href="/projects/tuantanah">More detail</TextLink>
           </div>
         </section>
       </_Wrapper>
