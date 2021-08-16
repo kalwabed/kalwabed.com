@@ -1,12 +1,13 @@
 import 'twin.macro'
 
+import { Project } from '@/types'
 import ProjectCard from './modules/project-card'
 
-const ProjectList = () => {
+const ProjectList = ({ projects }: { projects: Project[] }) => {
   return (
     <div tw="grid grid-rows-1 gap-20">
-      {[1, 2, 3].map(project => (
-        <ProjectCard key={project} />
+      {projects?.map(project => (
+        <ProjectCard key={project.slug} project={project} />
       ))}
     </div>
   )
