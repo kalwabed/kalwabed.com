@@ -8,6 +8,7 @@ export default {
     LinkedIn: 'https://linkedin.com/in/kalwabed',
     Instagram: 'https://instagram.com/kalwabed'
   },
+  // TODO: delete this in v2
   pageMeta: {
     about: { pageTitle: 'About', pageDescription: 'About Kalwabed Rizki, contact, and more' },
     bookmarks: { pageTitle: 'Bookmarks', pageDescription: 'List of my personal recommendations' },

@@ -21,7 +21,7 @@ const ProjectCard = () => {
       </div>
 
       <div tw="overflow-hidden mx-5 rounded-lg">
-        <Image src={BannerExample} placeholder="blur" tw="rounded-lg" alt="asdasda" />
+        <Image src={BannerExample} placeholder="blur" tw="rounded-lg" alt="TuanTanah preview banner" />
       </div>
 
       <div tw="flex flex-col space-y-4">

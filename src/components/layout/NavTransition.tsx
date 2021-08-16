@@ -33,6 +33,7 @@ const NavTransition = ({ children, isVisible }: NavProps) => {
           leave={css(tw`transition-opacity duration-200`)}
           leaveFrom={css(tw`opacity-100`)}
           leaveTo={css(tw`opacity-0`)}
+          as="header"
         >
           {children}
         </_Transition>

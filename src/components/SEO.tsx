@@ -10,7 +10,6 @@ const defaultOgImg =
 
 const defaultSeoConfig: NextSeoProps = {
   defaultTitle: 'Home',
-  titleTemplate: '%s | Kalwabed',
   description: app.description,
   canonical: app.siteUrl,
   additionalMetaTags: [
@@ -28,7 +27,7 @@ const defaultSeoConfig: NextSeoProps = {
     locale: 'en-US',
     site_name: 'kalwabed.xyz',
     url: app.siteUrl,
-    title: 'Home | Kalwabed',
+    title: 'Home',
     type: 'website',
     images: [
       {
@@ -56,15 +55,13 @@ export const DefaultSEO = () => {
   return <DefaultSeo {...defaultSeoConfig} />
 }
 
-const titlePrefix = ' | Kalwabed'
-
 interface SEOProps extends NextSeoProps {
   isPost?: boolean
 }
 
 const SEO = (props: SEOProps) => {
   const { asPath } = useRouter()
-  const { title, isPost } = props
+  const { title, description, isPost } = props
   const url = app.siteUrl + asPath
 
   return (
@@ -74,9 +71,9 @@ const SEO = (props: SEOProps) => {
         canonical={url}
         openGraph={{
           url,
-          title: title + titlePrefix,
-          images: [{ url: defaultOgImg, alt: title }],
-          profile: { firstName: 'Kalwabed', lastName: 'Rizki', gender: 'male', username: 'kalwabed' },
+          title,
+          description,
+          images: [{ url: defaultOgImg, alt: 'kalwabed.xyz default og-image' }],
           ...props.openGraph
         }}
         {...props}

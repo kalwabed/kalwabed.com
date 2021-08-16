@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { HiOutlineMenu } from 'react-icons/hi'
 
 import { useAppContext } from '@/AppContext'
-import Logo from '@components/layout/Logo'
+import Logo from '@components/v2/layout/logo'
 import ThemeSwitcher from './theme-switcher'
 import MobileNav from './mobile-navigation'
 
