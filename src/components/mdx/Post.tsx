@@ -19,8 +19,8 @@ my-8
 const ImgLink = tw.a`
 w-full
 overflow-hidden
-outline-none
-hover:ring-2
+hover:(ring-2)
+focus:outline-none
 transition
 shadow
 rounded

@@ -12,7 +12,7 @@ const MoreLink = (props: MoreLinkProps) => {
     case 'posts':
       return (
         <div tw="flex justify-center items-center mx-auto">
-          <ButtonLink className="umami--click--more-posts" title="More posts" href="/posts">
+          <ButtonLink className="umami--click--more-posts" title="More posts" href="/blog">
             More posts
           </ButtonLink>
         </div>

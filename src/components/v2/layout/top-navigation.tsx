@@ -56,7 +56,7 @@ const TopNavigation = () => {
         <div tw="flex items-center justify-between py-4 px-4 w-full mx-auto max-w-2xl md:px-0 lg:max-w-screen-lg">
           <Link href="/" passHref>
             <a tw="inline-flex items-center" title="Kalwabed" aria-label="Logo" className="umami--click--headerLogo">
-              {isMounted && <Logo />}
+              <Logo />
             </a>
           </Link>
           <ul tw="hidden md:flex items-center space-x-3">

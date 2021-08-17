@@ -1,6 +1,9 @@
 import Link from 'next/link'
 import tw from 'twin.macro'
 
+import { Post } from '@/types'
+import dateFormatter from '@/utils/dateFormatter'
+
 const _Wrapper = tw.a`
 w-full md:w-3/4 lg:w-4/6
 bg-subtleAppBg
@@ -21,18 +24,15 @@ items-center
 w-full
 `
 
-const BlogCard = () => {
+const BlogCard = ({ post }: { post: Post }) => {
   return (
-    <Link href="/blog/awawak" passHref>
+    <Link href={`/blog/${post.slug}`} passHref>
       <_Wrapper className="group">
         <_Container>
-          <small tw="text-sm text-lowContrast">Kamis, 14 Agustus 2021</small>
+          <small tw="text-sm text-lowContrast">{dateFormatter(post.publishedAt, 'EEEE, d MMMM yyyy').formatted}</small>
           <div tw="mt-5 mb-7 space-y-2 text-center">
-            <h2 tw="text-4xl font-bold transition group-hocus:text-link">Notion as headless CMS</h2>
-            <p tw="text-lowContrast tracking-wide">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque praesentium, provident nisi dolore ex
-              saepe ducimus.
-            </p>
+            <h2 tw="text-4xl font-bold transition group-hocus:text-link">{post.title}</h2>
+            <p tw="text-lowContrast tracking-wide">{post.summary}</p>
           </div>
         </_Container>
       </_Wrapper>

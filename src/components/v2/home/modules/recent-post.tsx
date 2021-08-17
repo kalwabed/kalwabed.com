@@ -21,7 +21,7 @@ const RecentPost: React.FC<{ slug: string; publishedAt: string }> = props => {
   const formattedDatePublished = dateFormatter(publishedAt)
 
   return (
-    <Link href={`/posts/${slug}`} passHref>
+    <Link href={`/blog/${slug}`} passHref>
       <_Wrapper>
         <time
           tw="text-sm text-lowContrast flex-grow-0 flex-shrink-0 flex-basis[100px]"
