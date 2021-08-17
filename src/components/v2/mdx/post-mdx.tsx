@@ -1,11 +1,4 @@
 import tw from 'twin.macro'
-import type { ReactNode } from 'react'
-
-interface PostImageProps {
-  image?: string
-  children?: ReactNode
-  label?: string
-}
 
 const PostImageWrapper = tw.figure`
 flex flex-col
@@ -27,7 +20,12 @@ rounded
 before:hidden
 `
 
-export const PostImage = (props: PostImageProps) => {
+interface PostImageProps {
+  image?: string
+  label?: string
+}
+
+export const PostImage: React.FC<PostImageProps> = props => {
   const { image, label } = props
 
   return (
@@ -44,5 +42,32 @@ export const PostImage = (props: PostImageProps) => {
       </ImgLink>
       <figcaption tw="text-sm">{label}</figcaption>
     </PostImageWrapper>
+  )
+}
+
+const UpdateWrapper = tw.aside`
+relative
+p-6
+mt-3
+rounded-md
+mb-6
+space-y-2
+bg-subtleAppBg
+border-l-4
+border-v2-borderIdle
+shadow
+`
+
+interface UpdateProps {
+  content: string
+  title: string
+}
+
+export const Update: React.FC<UpdateProps> = props => {
+  return (
+    <UpdateWrapper>
+      <strong>{props.title}</strong>
+      <div>{props.content}</div>
+    </UpdateWrapper>
   )
 }
