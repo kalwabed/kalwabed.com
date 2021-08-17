@@ -6,9 +6,13 @@ import { PostStyle } from '@/utils/styles'
 
 const PostContent = ({ content }) => {
   return (
-    <article css={[tw`prose dark:prose-light mx-auto`, PostStyle]}>
-      <MDXRemote lazy components={PostMDXComponents} {...content} />
-    </article>
+    <div tw="flex flex-col w-full justify-center">
+      <div>
+        <article css={[tw`prose dark:prose-light mx-auto`, PostStyle]}>
+          <MDXRemote lazy components={PostMDXComponents} {...content} />
+        </article>
+      </div>
+    </div>
   )
 }
 

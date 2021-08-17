@@ -5,6 +5,7 @@ import { PostWithMdx } from '@/types'
 import BlogBySlugPageRenderer from '@components/v2/blog/slug'
 import Page from '@components/v2/layout/page'
 import SEO from '@components/SEO'
+import app from '@/config/app'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getSlugs('_posts')
@@ -26,7 +27,16 @@ const BlogContentPage: NextPage<{ post: PostWithMdx }> = ({ post }) => {
         isPost
         title={post.title}
         description={post.summary}
-        openGraph={{ article: { publishedTime: post.publishedAt, modifiedTime: post.updatedAt } }}
+        openGraph={{
+          type: 'article',
+          article: {
+            publishedTime: post.publishedAt,
+            modifiedTime: post.updatedAt,
+            authors: [app.socials.Twitter],
+            section: 'Tech',
+            tags: ['Tech', 'Blog', 'Dev blog']
+          }
+        }}
       />
       <BlogBySlugPageRenderer post={post} />
     </Page>
