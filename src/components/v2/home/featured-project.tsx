@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import tw from 'twin.macro'
 
 import { Container } from '../shared/container'
@@ -30,11 +29,11 @@ const FeaturedProject: React.FC<{ project: Project }> = ({ project }) => {
       <_Wrapper>
         <Image src={projectBanner[slug]} alt="Featured project banner" placeholder="blur" />
         <section tw="w-full p-6 lg:p-8 flex flex-col">
-          <Link href={`/projects/${slug}`} passHref>
-            <a tw="text-4xl font-bold transition hocus:text-link">
-              <h2>{title}</h2>
-            </a>
-          </Link>
+          <h3>
+            <TextLink variant="ghost" size="lg" href={`/projects/${slug}`}>
+              {title}
+            </TextLink>
+          </h3>
           <small tw="text-sm text-lowContrast mt-2 lg:mt-3.5">
             <TechList techs={techs} />
           </small>

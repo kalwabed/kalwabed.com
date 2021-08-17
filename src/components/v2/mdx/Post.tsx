@@ -24,6 +24,7 @@ hover:ring-2
 transition
 shadow
 rounded
+before:hidden
 `
 
 export const PostImage = (props: PostImageProps) => {

@@ -16,7 +16,7 @@ export const PostStyle = css`
   }
 
   a {
-    ${tw`text-link break-all inline-flex no-underline items-center transition border-bottom-width[3px] border-transparent hover:(text-highContrast border-link) focus:(outline-none ring ring-link)`}
+    ${tw`text-link break-all inline-flex no-underline items-center transition hocus:underline`}
   }
 
   figure > a {

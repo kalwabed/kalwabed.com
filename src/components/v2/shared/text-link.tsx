@@ -4,17 +4,25 @@ import Link, { LinkProps } from 'next/link'
 import { Interpolation, Theme } from '@emotion/react'
 
 const TwTextLink = tw.a`
+relative
 font-bold
 no-underline
 transition
-focus:(ring outline-none)
 inline-flex
 items-center
+focus:(before:h-1 outline-none)
+before:(absolute bottom-0 top[21px] left-0 opacity-0 transition duration-300 w-full h-0.5 bg-link content)
+hocus:before:opacity-100
 `
 
 const variants = {
-  primary: tw`text-link border-bottom-width[3px] border-transparent hover:(text-highContrast border-link) focus:ring-link`,
-  ghost: tw`text-highContrast hocus:(text-link) focus:ring-link`
+  primary: tw`text-link`,
+  ghost: tw`text-highContrast before:hidden hocus:text-link`
+}
+
+const sizes = {
+  md: tw`text-base`,
+  lg: tw`text-4xl`
 }
 
 interface NextLinkProps {
@@ -27,15 +35,21 @@ interface NextLinkProps {
   variant?: 'primary' | 'ghost'
   isExternal?: boolean
   onClick?: () => void
+  size?: keyof typeof sizes
 }
 
 const TextLink = (props: NextLinkProps) => {
-  const { variant = 'primary', isExternal } = props
+  const { variant = 'primary', size = 'md', isExternal } = props
 
   if (isExternal) {
     return (
       <Link {...props.link} href={props.href} passHref>
-        <TwTextLink target="_blank" rel="noopener noreferrer" {...props} css={[variants[variant], props.styles]}>
+        <TwTextLink
+          target="_blank"
+          rel="noopener noreferrer"
+          css={[variants[variant], sizes[size], props.styles]}
+          {...props}
+        >
           {props.children}
         </TwTextLink>
       </Link>
@@ -44,7 +58,7 @@ const TextLink = (props: NextLinkProps) => {
 
   return (
     <Link {...props.link} href={props.href} passHref>
-      <TwTextLink {...props} css={[variants[variant], props.styles]}>
+      <TwTextLink css={[variants[variant], sizes[size], props.styles]} {...props}>
         {props.children}
       </TwTextLink>
     </Link>

@@ -14,7 +14,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
     <section tw="flex flex-col space-y-8">
       <div tw="flex flex-col space-y-1">
         <div>
-          <TextLink variant="ghost" href={`/projects/${slug}`} styles={tw`text-4xl`}>
+          <TextLink variant="ghost" size="lg" href={`/projects/${slug}`}>
             {title}
           </TextLink>
         </div>
