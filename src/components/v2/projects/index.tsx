@@ -8,7 +8,7 @@ import ProjectList from './project-list'
 const ProjectsPageRenderer = ({ projects }: { projects: Project[] }) => {
   return (
     <div css={[Container]} tw="my-20">
-      <PageSection title="Projects." subTitle="You’ve find my projects page" />
+      <PageSection title="Projects." subTitle="Where I show off my projects. More on my Github" />
       <ProjectList projects={projects} />
     </div>
   )

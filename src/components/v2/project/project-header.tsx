@@ -5,14 +5,14 @@ import { Container } from '../shared/container'
 import TextLink from '../shared/text-link'
 
 const ProjectHeader = ({ project }: { project: Project }) => {
-  const { description, liveUrl, githubRepo, title, techs } = project
+  const { summary, liveUrl, githubRepo, title, techs, status } = project
 
   return (
     <div tw="w-full py-20 md:py-28 bg-subtleAppBg">
       <div css={[Container]}>
         <section tw="w-full lg:w-3/4 space-y-10">
           <h1 tw="text-5xl font-bold">{title}</h1>
-          <p tw="text-lowContrast">{description}</p>
+          <p tw="text-lowContrast">{summary}</p>
         </section>
 
         <div tw="grid grid-cols-3 md:grid-cols-4 gap-7">
@@ -43,7 +43,7 @@ const ProjectHeader = ({ project }: { project: Project }) => {
 
           <section>
             <h2 tw="font-bold text-lg">Status</h2>
-            <p>Actively maintenance</p>
+            <p>{status}</p>
           </section>
         </div>
       </div>

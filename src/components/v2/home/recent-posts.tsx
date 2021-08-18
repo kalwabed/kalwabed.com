@@ -1,8 +1,9 @@
 import 'twin.macro'
 
-import { Container } from '@components/v2/shared/container'
 import { Post } from '@/types'
-import { MoreLink, SectionTitle } from './modules'
+import { Container } from '@components/v2/shared/container'
+import SectionTitle from './modules/section-title'
+import MoreLink from './modules/more-link'
 import RecentPost from './modules/recent-post'
 
 const RecentPosts = ({ posts }: { posts: Post[] }) => {

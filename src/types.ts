@@ -23,10 +23,11 @@ export interface Bookmark {
 export interface Project {
   title: string
   banner: string
-  description: string
+  status: string
+  summary: string
   techs: string[]
   liveUrl: string
-  shortDescription: string
+  description: string
   slug: string
   githubRepo: string
   isFeatured: boolean

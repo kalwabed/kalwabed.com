@@ -11,11 +11,6 @@ const footerLinks = [
     title: 'Resourcess page'
   },
   {
-    href: '/linktree',
-    label: 'Linktree',
-    title: 'Where you can find me on the internet'
-  },
-  {
     href: '/rss.xml',
     label: 'RSS',
     title: 'RSS feed'

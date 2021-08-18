@@ -14,6 +14,4 @@ const BlogBySlugPageRenderer = ({ post }: { post: PostWithMdx }) => {
   )
 }
 
-// TODO: add post update section
-
 export default BlogBySlugPageRenderer
