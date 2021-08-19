@@ -10,8 +10,7 @@ flex
 items-center
 justify-center
 inset-0
-bg-white
-dark:(bg-subtleAppBg)
+bg-subtleAppBg
 `
 
 interface NavProps {

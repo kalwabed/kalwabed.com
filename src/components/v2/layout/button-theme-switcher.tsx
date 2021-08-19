@@ -3,6 +3,8 @@ import { useTheme } from 'next-themes'
 import { useCallback } from 'react'
 
 const ButtonThemeSwitcher = () => {
+  return null
+
   const { setTheme, resolvedTheme } = useTheme()
 
   const switchTheme = useCallback(() => {

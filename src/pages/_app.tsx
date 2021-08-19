@@ -1,4 +1,3 @@
-import { ThemeProvider } from 'next-themes'
 import Script from 'next/script'
 import { CacheProvider } from '@emotion/react'
 
@@ -19,13 +18,11 @@ export default function MyApp({ Component, pageProps }) {
         />
         <GlobalStyles />
         <DefaultSEO />
-        <ThemeProvider attribute="class">
-          <AppContext.Provider>
-            <LayoutRoot>
-              <Component {...pageProps} />
-            </LayoutRoot>
-          </AppContext.Provider>
-        </ThemeProvider>
+        <AppContext.Provider>
+          <LayoutRoot>
+            <Component {...pageProps} />
+          </LayoutRoot>
+        </AppContext.Provider>
       </CacheProvider>
     </>
   )

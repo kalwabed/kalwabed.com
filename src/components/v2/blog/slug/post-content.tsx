@@ -8,7 +8,7 @@ const PostContent = ({ content }) => {
   return (
     <div tw="flex flex-col w-full justify-center">
       <div>
-        <article css={[tw`prose dark:prose-light mx-auto`, PostStyle]}>
+        <article css={[tw`prose prose-light mx-auto`, PostStyle]}>
           <MDXRemote lazy components={PostMDXComponents} {...content} />
         </article>
       </div>

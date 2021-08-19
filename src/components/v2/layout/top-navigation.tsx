@@ -3,9 +3,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { HiOutlineMenu } from 'react-icons/hi'
 
-import { useAppContext } from '@/AppContext'
 import Logo from '@components/v2/layout/logo'
-import ThemeSwitcher from './theme-switcher'
 import MobileNav from './mobile-navigation'
 
 export const routes = [
@@ -48,7 +46,6 @@ border-appBorder
 
 const TopNavigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const { isMounted } = useAppContext()
 
   return (
     <>
@@ -69,7 +66,7 @@ const TopNavigation = () => {
                 </Link>
               </li>
             ))}
-            {isMounted && <ThemeSwitcher />}
+            {/* {isMounted && <ThemeSwitcher />} */}
           </ul>
 
           <div tw="md:hidden">
@@ -79,7 +76,7 @@ const TopNavigation = () => {
               title="Open menu"
               onClick={() => setIsMenuOpen(prev => !prev)}
             >
-              <HiOutlineMenu tw="w-5 h-5" />
+              <HiOutlineMenu tw="w-5 h-5 text-highContrast" />
             </button>
           </div>
         </div>
