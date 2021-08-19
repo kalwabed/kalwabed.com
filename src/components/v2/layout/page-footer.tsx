@@ -5,16 +5,16 @@ import CollaborationSection from '@components/v2/layout/collaboration-section'
 import Divider from '../shared/divider'
 
 const footerLinks = [
-  {
-    href: '/resources',
-    label: 'Resources',
-    title: 'Resourcess page'
-  },
-  {
-    href: '/rss.xml',
-    label: 'RSS',
-    title: 'RSS feed'
-  }
+  // {
+  //   href: '/resources',
+  //   label: 'Resources',
+  //   title: 'Resourcess page'
+  // },
+  // {
+  //   href: '/rss.xml',
+  //   label: 'RSS',
+  //   title: 'RSS feed'
+  // }
 ]
 
 const PageFooter = () => {
