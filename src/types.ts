@@ -12,17 +12,8 @@ export interface PostWithMdx extends Post {
   mdxSource: MDXRemoteSerializeResult
 }
 
-export interface Bookmark {
-  createdAt: { created_time: Date }
-  noFavicon: { checkbox: boolean }
-  url: { url: string }
-  description: { rich_text: { plain_text: string }[] }
-  title: { title: { plain_text: string }[] }
-}
-
 export interface Project {
   title: string
-  banner: string
   status: string
   summary: string
   techs: string[]

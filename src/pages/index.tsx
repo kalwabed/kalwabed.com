@@ -1,9 +1,9 @@
 import type { GetStaticProps, NextPage } from 'next'
 
-import HomePageRenderer from '@components/v2/home'
+import HomePageRenderer from '@components/home'
 import { getAllFrontMatters, getFeaturedProject } from '@/lib/mdx'
 import { Post, Project } from '@/types'
-import Page from '@components/v2/layout/page'
+import Page from '@components/layout/page'
 
 export const getStaticProps: GetStaticProps = async () => {
   const posts = getAllFrontMatters('_posts')

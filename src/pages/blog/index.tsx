@@ -1,7 +1,7 @@
 import type { GetStaticProps, NextPage } from 'next'
 
-import BlogPageRenderer from '@components/v2/blog'
-import Page from '@components/v2/layout/page'
+import BlogPageRenderer from '@components/blog'
+import Page from '@components/layout/page'
 import SEO from '@components/SEO'
 import { Post } from '@/types'
 import { getAllFrontMatters } from '@/lib/mdx'

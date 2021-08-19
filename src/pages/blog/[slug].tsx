@@ -2,8 +2,8 @@ import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 
 import { getDataBySlug, getSlugs } from '@/lib/mdx'
 import { PostWithMdx } from '@/types'
-import BlogBySlugPageRenderer from '@components/v2/blog/slug'
-import Page from '@components/v2/layout/page'
+import BlogBySlugPageRenderer from '@components/blog/slug'
+import Page from '@components/layout/page'
 import SEO from '@components/SEO'
 import app from '@/config/app'
 

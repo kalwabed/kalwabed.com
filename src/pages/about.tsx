@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 
-import AboutPageRenderer from '@components/v2/about'
-import Page from '@components/v2/layout/page'
+import AboutPageRenderer from '@components/about'
+import Page from '@components/layout/page'
 import SEO from '@components/SEO'
 
 const AboutPage: NextPage = () => {

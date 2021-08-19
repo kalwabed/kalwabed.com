@@ -2,8 +2,8 @@ import type { GetStaticProps, NextPage } from 'next'
 
 import { Project } from '@/types'
 import { getAllFrontMatters } from '@/lib/mdx'
-import Page from '@components/v2/layout/page'
-import ProjectsPageRenderer from '@components/v2/projects'
+import Page from '@components/layout/page'
+import ProjectsPageRenderer from '@components/projects'
 import SEO from '@components/SEO'
 
 export const getStaticProps: GetStaticProps = async () => {

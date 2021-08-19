@@ -2,8 +2,8 @@ import type { GetStaticPaths, GetStaticProps } from 'next'
 
 import { ProjectWithMdx } from '@/types'
 import { getDataBySlug, getSlugs } from '@/lib/mdx'
-import ProjectPageRenderer from '@components/v2/project'
-import Page from '@components/v2/layout/page'
+import ProjectPageRenderer from '@components/project'
+import Page from '@components/layout/page'
 import SEO from '@components/SEO'
 
 export const getStaticPaths: GetStaticPaths = async () => {

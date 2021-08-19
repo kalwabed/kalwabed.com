@@ -5,7 +5,7 @@ import emotionCache from '@/utils/emotionCache'
 import GlobalStyles from '@components/global-styles'
 import { DefaultSEO } from '@/components/SEO'
 import AppContext from '@/AppContext'
-import LayoutRoot from '@components/v2/layout/layout-root'
+import LayoutRoot from '@components/layout/layout-root'
 
 export default function MyApp({ Component, pageProps }) {
   return (
