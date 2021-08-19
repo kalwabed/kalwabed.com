@@ -1,6 +1,6 @@
+import { useState } from 'react'
 import tw from 'twin.macro'
 import Link from 'next/link'
-import { useState } from 'react'
 import { HiOutlineMenu } from 'react-icons/hi'
 
 import Logo from '@components/layout/logo'

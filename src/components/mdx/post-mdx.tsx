@@ -67,7 +67,7 @@ export const Update: React.FC<UpdateProps> = props => {
   return (
     <UpdateWrapper>
       <strong>{props.title}</strong>
-      <div>{props.content}</div>
+      <div dangerouslySetInnerHTML={{ __html: props.content }} />
     </UpdateWrapper>
   )
 }

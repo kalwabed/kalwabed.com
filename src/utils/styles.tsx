@@ -16,7 +16,7 @@ export const PostStyle = css`
   }
 
   a {
-    ${tw`text-link break-all inline-flex no-underline items-center transition hocus:underline`}
+    ${tw`relative text-link break-all inline-flex no-underline items-center transition before:(absolute bottom-0 top[21px] left-0 opacity-0 transition duration-300 w-full h-0.5 bg-link content) hocus:before:opacity-100 focus:(before:h-1 outline-none)`}
   }
 
   figure > a {
