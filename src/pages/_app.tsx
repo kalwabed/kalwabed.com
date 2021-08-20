@@ -9,14 +9,14 @@ import LayoutRoot from '@components/layout/layout-root'
 export default function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Script
+        strategy="afterInteractive"
+        src={process.env.NEXT_PUBLIC_UMAMI_URL}
+        data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
+      />
+      <DefaultSEO />
       <CacheProvider value={emotionCache}>
-        <Script
-          strategy="afterInteractive"
-          src={process.env.NEXT_PUBLIC_UMAMI_URL}
-          data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
-        />
         <GlobalStyles />
-        <DefaultSEO />
         <LayoutRoot>
           <Component {...pageProps} />
         </LayoutRoot>
