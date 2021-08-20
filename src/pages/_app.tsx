@@ -4,7 +4,6 @@ import { CacheProvider } from '@emotion/react'
 import emotionCache from '@/utils/emotionCache'
 import GlobalStyles from '@components/global-styles'
 import { DefaultSEO } from '@/components/SEO'
-import AppContext from '@/AppContext'
 import LayoutRoot from '@components/layout/layout-root'
 
 export default function MyApp({ Component, pageProps }) {
@@ -18,11 +17,9 @@ export default function MyApp({ Component, pageProps }) {
         />
         <GlobalStyles />
         <DefaultSEO />
-        <AppContext.Provider>
-          <LayoutRoot>
-            <Component {...pageProps} />
-          </LayoutRoot>
-        </AppContext.Provider>
+        <LayoutRoot>
+          <Component {...pageProps} />
+        </LayoutRoot>
       </CacheProvider>
     </>
   )

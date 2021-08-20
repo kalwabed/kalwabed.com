@@ -66,7 +66,6 @@ const TopNavigation = () => {
                 </Link>
               </li>
             ))}
-            {/* {isMounted && <ThemeSwitcher />} */}
           </ul>
 
           <div tw="md:hidden">

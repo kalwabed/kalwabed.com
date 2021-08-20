@@ -51,7 +51,6 @@ const MobileNav = ({ setIsMenuOpen, isMenuOpen }: NavMobileProps) => {
               </TextLink>
             </li>
           ))}
-          {/* {isMounted && <ButtonThemeSwitcher />} */}
         </RouteItems>
       </nav>
     </NavTransition>
