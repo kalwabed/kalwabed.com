@@ -491,10 +491,10 @@
     "@babel/helper-validator-identifier" "^7.14.5"
     to-fast-properties "^2.0.0"
 
-"@corex/deepmerge@^2.6.20":
-  version "2.6.20"
-  resolved "https://registry.yarnpkg.com/@corex/deepmerge/-/deepmerge-2.6.20.tgz#a72d1cb5a101fd11160815b96f499a588362ba5b"
-  integrity sha512-oZZxwDtV0bf8VPcSIhZPvdBFUkVIC8zRblUjrrVAsbGRiqUuZJfoXw2M6NDiIXWcUCfOqbkFND6Yf3b9ej9AjA==
+"@corex/deepmerge@^2.6.34":
+  version "2.6.34"
+  resolved "https://registry.yarnpkg.com/@corex/deepmerge/-/deepmerge-2.6.34.tgz#8dd084f2bcc9cf54f6b1210a1aebd25206de2a84"
+  integrity sha512-5l3bQRGOoCJ1nYTxEaOW/MRuwNDq32KYatWO5rwOlOzxY4beVCrxDBaDBX5wpDn0PYm0QAul/vAC9GDHShEbTw==
 
 "@emotion/babel-plugin@^11.0.0", "@emotion/babel-plugin@^11.3.0":
   version "11.3.0"
@@ -791,10 +791,10 @@
     "@nodelib/fs.scandir" "2.1.4"
     fastq "^1.6.0"
 
-"@notionhq/client@^0.2.4":
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/@notionhq/client/-/client-0.2.4.tgz#8d908a781501f4110166af05ef2da61c00782422"
-  integrity sha512-omokCm0TwRH0DTCkHGCX4V4jEd7XQoMvQ9d7bcLn+mZgnTW5uU50T+vqQudr6p3y3BMeCXROI/u+JmU2RJT/AQ==
+"@notionhq/client@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@notionhq/client/-/client-0.3.0.tgz#88f939c2bd6d14e89c0c1c94d4d435a09059f406"
+  integrity sha512-lncHgZ+0WSB5inliMoI2gQ/B5KE7VHYQ8/3r31gp7xADupJC4S2k+hetl6GBjp91EmcL2QHMZirJc0kFYUqu/w==
   dependencies:
     "@types/node-fetch" "^2.5.10"
     node-fetch "^2.6.1"
@@ -853,10 +853,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.37.tgz#a3dd8da4eb84a996c36e331df98d82abd76b516e"
   integrity sha512-XYmBiy+ohOR4Lh5jE379fV2IU+6Jn4g5qASinhitfyO71b/sCo6MKsMLF5tc7Zf2CE8hViVQyYSobJNke8OvUw==
 
-"@types/node@^16.6.0":
-  version "16.6.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.6.0.tgz#0d5685f85066f94e97f19e8a67fe003c5fadacc4"
-  integrity sha512-OyiZPohMMjZEYqcVo/UJ04GyAxXOJEZO/FpzyXxcH4r/ArrVoXHf4MbUrkLp0Tz7/p1mMKpo5zJ6ZHl8XBNthQ==
+"@types/node@^16.7.1":
+  version "16.7.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-16.7.1.tgz#c6b9198178da504dfca1fd0be9b2e1002f1586f0"
+  integrity sha512-ncRdc45SoYJ2H4eWU9ReDfp3vtFqDYhjOsKlFFUDEn8V1Bgr2RjYal8YT5byfadWIRluhPFU6JiDOl0H6Sl87A==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -878,10 +878,10 @@
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.3.tgz#2ab0d5da2e5815f94b0b9d4b95d1e5f243ab2ca7"
   integrity sha512-KfRL3PuHmqQLOG+2tGpRO26Ctg+Cq1E01D2DMriKEATHgWLfeNDmq9e29Q9WIky0dQ3NPkd1mzYH8Lm936Z9qw==
 
-"@types/react@^17.0.17":
-  version "17.0.17"
-  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.17.tgz#1772d3d5425128e0635a716f49ef57c2955df055"
-  integrity sha512-nrfi7I13cAmrd0wje8czYpf5SFbryczCtPzFc6ijqvdjKcyA3tCvGxwchOUlxb2ucBPuJ9Y3oUqKrRqZvrz0lw==
+"@types/react@^17.0.19":
+  version "17.0.19"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.19.tgz#8f2a85e8180a43b57966b237d26a29481dacc991"
+  integrity sha512-sX1HisdB1/ZESixMTGnMxH9TDe8Sk709734fEQZzCV/4lSu9kJCPbo2PbTRoZM+53Pp0P10hYVyReUueGwUi4A==
   dependencies:
     "@types/prop-types" "*"
     "@types/scheduler" "*"
@@ -3679,12 +3679,12 @@ next-seo@^4.26.0:
   resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-4.26.0.tgz#4218cfae5651fdc2e330dcdf1cc1b34ce199d41c"
   integrity sha512-5TqywQ3XAwqdmEU1AyNZjR7WdDKFTkDD8aBtgQelPvzBUEy8i0mTjtiw+09jhiHFNik6FqS8uPKCaYcY6jRgSQ==
 
-next-sitemap@^1.6.148:
-  version "1.6.148"
-  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.6.148.tgz#59ae167bd9317e8a285f586d9ceaab8bdf1817aa"
-  integrity sha512-PZhH2ftJYHjwcFYrHtHOrhmf/D/N7YJEaEAKKp6t9uIxRoMMNXoxkh9ImwgGXVBv0WEroRtx1eOT5QjJvpXdDA==
+next-sitemap@^1.6.162:
+  version "1.6.162"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.6.162.tgz#b1a6fc475c8d2ce6a3ff6beef16161035ef356a3"
+  integrity sha512-JHc10olNs3Dt89Qur4K3V29cKdM8sG0dg6sVTbsZAm2pzw/3d9AAhLiV614w7dCElovFwAl93V1fF/mgG5I48Q==
   dependencies:
-    "@corex/deepmerge" "^2.6.20"
+    "@corex/deepmerge" "^2.6.34"
     matcher "^4.0.0"
     minimist "^1.2.5"
 
@@ -4610,10 +4610,10 @@ rehype@^12.0.0:
     rehype-stringify "^9.0.0"
     unified "^10.0.0"
 
-remark-autolink-headings@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/remark-autolink-headings/-/remark-autolink-headings-7.0.0.tgz#d5288ac0a7fcc06f7255f74ee2b2fe5445e0bc57"
-  integrity sha512-8pC6GzOny0vOfBxwl1jnAcMG/r5+XR1mbSKiGBgQYnsmSyFBGvEuukEaSNplbxyOOdUAjNRRhfTkXeutYXNUUw==
+remark-autolink-headings@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/remark-autolink-headings/-/remark-autolink-headings-7.0.1.tgz#1d8528ea8783b828200d13c055ec2d5f2cae5060"
+  integrity sha512-a1BIwoJ0cSnX+sPp5u3AFULBFWHGYBt57Fo4a+7IlGiJOQxs8b7uYAE5Iu26Ocl7Y5cvinZy3FaGVruLCKg6vA==
   dependencies:
     "@types/hast" "^2.0.0"
     "@types/mdast" "^3.0.0"
