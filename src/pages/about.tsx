@@ -7,7 +7,7 @@ import SEO from '@components/SEO'
 const AboutPage: NextPage = () => {
   return (
     <Page>
-      <SEO title="About" description="About Kalwabed Rizki, contact, and more" />
+      <SEO title="About" description="About Kalwabed Rizki, contact, and more." />
       <AboutPageRenderer />
     </Page>
   )

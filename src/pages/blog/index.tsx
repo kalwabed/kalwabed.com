@@ -15,7 +15,7 @@ export const getStaticProps: GetStaticProps = async () => {
 const BlogPage: NextPage<{ posts: Post[] }> = ({ posts }) => {
   return (
     <Page>
-      <SEO title="Blog" description="Sometimes I write something and put it here" />
+      <SEO title="Blog" description="Sometimes I write something and put it here." />
       <BlogPageRenderer posts={posts} />
     </Page>
   )
