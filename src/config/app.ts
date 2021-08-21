@@ -1,6 +1,6 @@
 export default {
   siteUrl: 'https://kalwabed.xyz',
-  description: 'Kalwabed Rizki personal website. Web developer based in Banyuwangi, Indonesia.',
+  description: 'Kalwabed Rizki personal website.',
   email: 'kalwabed@gmail.com',
   socials: {
     Twitter: 'https://twitter.com/kalwabedrzk',
