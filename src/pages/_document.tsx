@@ -25,7 +25,7 @@ export default class MyDocument extends Document {
         <Head>
           <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet" />
         </Head>
-        <body tw="bg-white dark:bg-dark">
+        <body tw="bg-appBg">
           <Main />
           <NextScript />
         </body>

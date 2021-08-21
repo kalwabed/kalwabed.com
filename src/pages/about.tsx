@@ -1,12 +1,15 @@
-import AboutPageRenderer from '@/components/About'
-import PageWrapper from '@/components/layout/PageWrapper'
-import app from '@/config/app'
+import type { NextPage } from 'next'
 
-const AboutPage = () => {
+import AboutPageRenderer from '@components/about'
+import Page from '@components/layout/page'
+import SEO from '@components/SEO'
+
+const AboutPage: NextPage = () => {
   return (
-    <PageWrapper {...app.pageMeta.about}>
+    <Page>
+      <SEO title="About" description="About Kalwabed Rizki, contact, and more" />
       <AboutPageRenderer />
-    </PageWrapper>
+    </Page>
   )
 }
 

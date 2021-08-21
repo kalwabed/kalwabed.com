@@ -1,28 +1,10 @@
-const months = [
-  'January',
-  'February',
-  'March',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December'
-]
+import _format from 'date-fns/format'
 
-/**
- *
- * @param date string
- * @reference https://github.com/you-dont-need/You-Dont-Need-Momentjs#string--date-format
- */
-
-function dateFormatter(date: string) {
+function dateFormatter(date: string, format?: string) {
   const _date = new Date(date)
 
   return {
-    formatted: `${months[_date.getMonth() - 1]}, ${_date.getDate()} ${_date.getFullYear()}`,
+    formatted: _format(_date, format ?? 'd MMM, yyyy'),
     ISO: _date.toISOString(),
     dateString: _date.toDateString(),
     utc: _date.toUTCString()

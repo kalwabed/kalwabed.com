@@ -1,4 +1,4 @@
-import { MDXRemoteSerializeResult } from 'next-mdx-remote'
+import type { MDXRemoteSerializeResult } from 'next-mdx-remote'
 
 export interface Post {
   title: string
@@ -12,21 +12,13 @@ export interface PostWithMdx extends Post {
   mdxSource: MDXRemoteSerializeResult
 }
 
-export interface Bookmark {
-  createdAt: { created_time: Date }
-  noFavicon: { checkbox: boolean }
-  url: { url: string }
-  description: { rich_text: { plain_text: string }[] }
-  title: { title: { plain_text: string }[] }
-}
-
 export interface Project {
   title: string
-  banner: string
-  description: string
+  status: string
+  summary: string
   techs: string[]
   liveUrl: string
-  shortDescription: string
+  description: string
   slug: string
   githubRepo: string
   isFeatured: boolean

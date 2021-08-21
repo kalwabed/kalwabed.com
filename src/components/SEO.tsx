@@ -9,7 +9,7 @@ const defaultOgImg =
   'https://i.microlink.io/https%3A%2F%2Fcards.microlink.io%2F%3Fpreset%3Djxnblk%26subtitle%3DWeb%2Bdeveloper%2Bbased%2Bin%2BIndonesia%26title%3Dkalwabed%26logo%3Dhttps%253A%252F%252Fkalwabed.xyz%252Fstatic%252F512.png%26p%3D2gKIPD4KICA8RmxleAogICAgc3g9e3sKICAgICAgYWxpZ25JdGVtczogJ2NlbnRlcicsCiAgICAgIGp1c3RpZnlDb250ZW50OiAnY2VudGVyJywKICAgICAgZmxleERpcmVjdGlvbjogJ2NvbHVtbicsCiAgICAgIGJnOiBxdWVyeS5iZywKICAgICAgZm9udEZhbWlseTonSW50ZXInLAogICAgICBweDogNSwKICAgIH19CiAgPgogICAgPEltYWdlIHN4PXt7IHdpZHRoOiAnMTI4cHgnIH19IHNyYz17cXVlcnkubG9nb30gLz4KICAgIDxUZXh0CiAgICAgIHN4PXt7CiAgICAgICAgcHk6IDQsCiAgICAgICAgdGV4dFRyYW5zZm9ybTogJ3VwcGVyY2FzZScsCiAgICAgICAgbGV0dGVyU3BhY2luZzogJzAuMmVtJywKICAgICAgICBsaW5lSGVpZ2h0OiAxLjI1LAogICAgICAgIGZvbnRXZWlnaHQ6IDgwMCwKICAgICAgICBmb250U2l6ZTogNCwKICAgICAgICBjb2xvcjogcXVlcnkuY29sb3IsCiAgICAgIH19CiAgICA-CiAgICAgIHtxdWVyeS50aXRsZX0KICAgIDwvVGV4dD4KICAgIDxUZXh0CiAgICAgIHN4PXt7CiAgICAgICAgZm9udFdlaWdodDogNTAwLAogICAgICAgIGZvbnRTaXplOiAzLAogICAgICAgIGNvbG9yOiBxdWVyeS5jb2xvciwKICAgICAgfX0KICAgID4KICAgICAge3F1ZXJ5LnN1YnRpdGxlfQogICAgPC9UZXh0PgogIDwvRmxleD4KPC8-'
 
 const defaultSeoConfig: NextSeoProps = {
-  defaultTitle: 'Home',
+  defaultTitle: 'Home | Kalwabed',
   titleTemplate: '%s | Kalwabed',
   description: app.description,
   canonical: app.siteUrl,
@@ -28,7 +28,7 @@ const defaultSeoConfig: NextSeoProps = {
     locale: 'en-US',
     site_name: 'kalwabed.xyz',
     url: app.siteUrl,
-    title: 'Home | Kalwabed',
+    title: 'Home',
     type: 'website',
     images: [
       {
@@ -56,15 +56,13 @@ export const DefaultSEO = () => {
   return <DefaultSeo {...defaultSeoConfig} />
 }
 
-const titlePrefix = ' | Kalwabed'
-
 interface SEOProps extends NextSeoProps {
   isPost?: boolean
 }
 
 const SEO = (props: SEOProps) => {
   const { asPath } = useRouter()
-  const { title, isPost } = props
+  const { title, description, isPost } = props
   const url = app.siteUrl + asPath
 
   return (
@@ -74,9 +72,9 @@ const SEO = (props: SEOProps) => {
         canonical={url}
         openGraph={{
           url,
-          title: title + titlePrefix,
-          images: [{ url: defaultOgImg, alt: title }],
-          profile: { firstName: 'Kalwabed', lastName: 'Rizki', gender: 'male', username: 'kalwabed' },
+          title,
+          description,
+          images: [{ url: defaultOgImg, alt: 'kalwabed.xyz default og-image' }],
           ...props.openGraph
         }}
         {...props}
@@ -87,7 +85,7 @@ const SEO = (props: SEOProps) => {
           url={url}
           authorName="Kalwabed Rizki"
           datePublished={props.openGraph.article.publishedTime}
-          description={props.openGraph.description}
+          description={props.description}
           images={[defaultOgImg]}
           title={title}
           dateModified={props.openGraph.article.modifiedTime}

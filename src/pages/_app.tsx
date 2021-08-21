@@ -1,31 +1,25 @@
-import { ThemeProvider } from 'next-themes'
 import Script from 'next/script'
 import { CacheProvider } from '@emotion/react'
 
 import emotionCache from '@/utils/emotionCache'
-import GlobalStyles from '@/components/GlobalStyles'
-import PageRoot from '@/components/layout/PageRoot'
+import GlobalStyles from '@components/global-styles'
 import { DefaultSEO } from '@/components/SEO'
-import AppContext from '@/AppContext'
+import LayoutRoot from '@components/layout/layout-root'
 
 export default function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Script
+        strategy="afterInteractive"
+        src={process.env.NEXT_PUBLIC_UMAMI_URL}
+        data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
+      />
+      <DefaultSEO />
       <CacheProvider value={emotionCache}>
-        <Script
-          strategy="afterInteractive"
-          src={process.env.NEXT_PUBLIC_UMAMI_URL}
-          data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
-        />
         <GlobalStyles />
-        <DefaultSEO />
-        <ThemeProvider attribute="class">
-          <AppContext.Provider>
-            <PageRoot>
-              <Component {...pageProps} />
-            </PageRoot>
-          </AppContext.Provider>
-        </ThemeProvider>
+        <LayoutRoot>
+          <Component {...pageProps} />
+        </LayoutRoot>
       </CacheProvider>
     </>
   )

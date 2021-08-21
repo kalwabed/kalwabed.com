@@ -1,5 +1,8 @@
 module.exports = {
   reactStrictMode: true,
+  experimental: {
+    esmExternals: true
+  },
   async headers() {
     return [
       {

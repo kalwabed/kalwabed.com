@@ -16,7 +16,11 @@ export const PostStyle = css`
   }
 
   a {
-    ${tw`text-brand-500 dark:text-brand-400 break-all inline-flex items-center no-underline hocus:(underline transition text-underline-offset[3px] outline-none) focus:(ring-2 ring-brand-300 no-underline ring-offset-2 dark:(ring-brand-500 ring-offset-brand-600))`}
+    ${tw`text-link break-words no-underline transition duration-300 border-b-2 border-transparent hocus:border-link focus:outline-none`}
+  }
+
+  figure > a {
+    ${tw`border-0`}
   }
 
   .remark-code-title {

@@ -11,7 +11,19 @@ module.exports = {
     extend: {
       colors: {
         slate: '#293845',
-        dark: '#151515',
+        dark: '#151715',
+        appBg: '#141716',
+        subtleAppBg: '#191D1B',
+        appBorder: '#303633',
+        v2: {
+          hover: '#252A27',
+          active: '#2A2F2C',
+          borderIdle: '#393F3C',
+          borderHover: '#4A524E'
+        },
+        lowContrast: '#99A29E',
+        highContrast: '#ECEEED',
+        link: '#00C99E',
         iconBg: '#F0F1EC',
         cyan: colors.cyan,
         brand: {
