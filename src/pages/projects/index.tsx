@@ -15,7 +15,7 @@ export const getStaticProps: GetStaticProps = async () => {
 const ProjectsPage: NextPage<{ projects: Project[] }> = ({ projects }) => {
   return (
     <Page>
-      <SEO title="Projects" description="Where my projects life." />
+      <SEO title="Projects" description="Where I show off my projects." />
       <ProjectsPageRenderer projects={projects} />
     </Page>
   )
