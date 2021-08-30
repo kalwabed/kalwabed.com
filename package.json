@@ -16,7 +16,7 @@
     "@emotion/server": "^11.4.0",
     "@emotion/styled": "^11.3.0",
     "@headlessui/react": "^1.4.0",
-    "@notionhq/client": "^0.3.0",
+    "@notionhq/client": "^0.3.1",
     "@tailwindcss/typography": "^0.4.1",
     "date-fns": "^2.23.0",
     "feed": "^4.2.2",
