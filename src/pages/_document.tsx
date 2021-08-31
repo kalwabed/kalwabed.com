@@ -1,5 +1,5 @@
 import 'twin.macro'
-import Document, { Html, Head, Main, NextScript } from 'next/document'
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
 import createEmotionServer from '@emotion/server/create-instance'
 
 import emotionCache from '@/utils/emotionCache'
@@ -7,7 +7,7 @@ import emotionCache from '@/utils/emotionCache'
 const { extractCritical } = createEmotionServer(emotionCache)
 
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+  static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx)
     const { css, ids } = extractCritical(initialProps.html)
     return {
