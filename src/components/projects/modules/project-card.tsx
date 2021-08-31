@@ -27,7 +27,13 @@ const ProjectCard = ({ project }: { project: Project }) => {
       </div>
 
       <div tw="overflow-hidden mx-5">
-        <Image src={projectBanner[slug]} placeholder="blur" tw="rounded-lg shadow-lg" alt={`${title} preview banner`} />
+        <Image
+          src={projectBanner[slug]}
+          placeholder="blur"
+          tw="rounded-lg shadow-lg"
+          alt={`${title} preview banner`}
+          quality={95}
+        />
       </div>
 
       <div tw="flex flex-col space-y-4">
