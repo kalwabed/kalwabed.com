@@ -5,7 +5,7 @@ import TextLink from '../shared/text-link'
 
 const Bio = () => {
   return (
-    <div tw="text-lowContrast w-full md:w-11/12 lg:w-10/12 tracking-wide">
+    <div tw="text-lowContrast w-full md:w-11/12 lg:w-10/12 tracking-wider">
       <div tw="space-y-7 mb-10">
         <p>
           Hello world! My name is Kalwabed Rizki. You can call me Albed. I live in Indonesia, precisely in the

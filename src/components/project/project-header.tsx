@@ -12,7 +12,7 @@ const ProjectHeader = ({ project }: { project: Project }) => {
       <div css={[Container]}>
         <section tw="w-full lg:w-3/4 space-y-10">
           <h1 tw="text-5xl font-bold">{title}</h1>
-          <p tw="text-lowContrast">{summary}</p>
+          <p tw="text-lowContrast tracking-wider">{summary}</p>
         </section>
 
         <div tw="grid grid-cols-3 md:grid-cols-4 gap-7">

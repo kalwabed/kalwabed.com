@@ -12,7 +12,7 @@ interface ContentProps {
 const ParagraphWrapper = tw.div`
 leading-relaxed
 tracking-wider
-text-gray-500 dark:text-gray-300
+text-gray-400
 space-y-3
 `
 

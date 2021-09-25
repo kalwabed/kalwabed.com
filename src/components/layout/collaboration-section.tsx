@@ -39,7 +39,7 @@ const links = [
   },
   {
     title: 'Email',
-    href: 'mailto'.concat(app.email),
+    href: 'mailto:'.concat(app.email),
     Icon: FiMail
   }
 ]
