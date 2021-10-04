@@ -40,7 +40,7 @@
     "babel-plugin-macros": "^3.1.0",
     "eslint": "^7.32.0",
     "eslint-config-next": "^11.1.2",
-    "next-sitemap": "^1.6.168",
+    "next-sitemap": "^1.6.173",
     "rehype": "^12.0.0",
     "tailwindcss": "^2.2.15",
     "twin.macro": "^2.7.0",
