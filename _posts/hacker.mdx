@@ -2,7 +2,7 @@
 title: 'Hacker'
 summary: 'Not a hacker, in the end'
 publishedAt: '2020-12-30'
-updatedAt: '2020-12-30'
+updatedAt: '2021-10-09'
 ---
 
 ## Table of Contents
@@ -68,17 +68,17 @@ When you visit that page, do you think something is strange?
 
 Please enter with your username & password up to you. Once logged in we will be presented with the `home` page:
 
-![advanced-home](https://cdn.statically.io/img/kawari.space/f=auto/assets/posts/hacker/advanced-home.png)
+<PostImage image={'/static/posts/hacker/advanced-home.png'} label="Factory home page" />
 
 Do you feel something strange now? If so, maybe questions will arise in our minds, _"how do you get in?"_ From here we have to start to be suspicious of the question maker. Successfully logged in but how come there's no _flag_ for us? Let's explore together the source of the problem.
 
 First, we have to make sure there is no 'mystery box' that we have to solve first on the start page.
 
-![checked-login](https://cdn.statically.io/img/kawari.space/f=auto/assets/posts/hacker/checked-login.png)
+<PostImage image={'/static/posts/hacker/checked-login.png'} label="Factory login page" />
 
 Second, pay attention to the behavior of the page when it is successfully logged in without any input validation, warning, or anything else from the browser.
 
-![two-circles](https://cdn.statically.io/img/kawari.space/f=auto/assets/posts/hacker/two-circles.png)
+<PostImage image={'/static/posts/hacker/two-circles.png'} label="Stranger indication" />
 
 In circle number 1 we are told that we did it successfully and _flag_ is actually already here but not visible to us.
 
@@ -86,25 +86,25 @@ In circle number 2 the question maker seems to signal to us that the _flag_ we a
 
 So what we first explored were the `elements` in HTML.
 
-![elements](https://cdn.statically.io/img/kawari.space/f=auto/assets/posts/hacker/elements.png)
+<PostImage image={'/static/posts/hacker/elements.png'} label="Browser elements" />
 
 Is there something strange? Did the creator leave a message or something? Hm ... I don't think it's odd.
 
 The next step, we will check [browser cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies), to see if the question maker left _clue_ or whatever helps.
 
-![application](https://cdn.statically.io/img/kawari.space/f=auto/assets/posts/hacker/application.png)
+<PostImage image={'/static/posts/hacker/application.png'} label="Browser application section" />
 
 In the `application`, open the Cookies section, and click the url address that is there.
 
 Look at the picture below
 
-![cookie](https://cdn.statically.io/img/kawari.space/f=auto/assets/posts/hacker/cookie-url.png)
+<PostImage image={'/static/posts/hacker/cookie-url.png'} label="Flag in the cookies" />
 
 Bright dots began to appear. The question creator has given us _clue_ to get the _flag_ we are looking for.
 
 Are you aware or not the username and password that we entered was in there (username & password)? Then we are also 'told' by the creator that we are not admins, correct? So if we are not admin and the _flag_ is here then we need admin access to make the _flag_ appear. So the easiest way to allow us to have admin access is to change the _value_ of the admin which was previously False to ~~true~~ True.
 
-![admin](https://cdn.statically.io/img/kawari.space/f=auto/assets/posts/hacker/admin-true.png)
+<PostImage image={'/static/posts/hacker/admin-true.png'} label="Set admin cookies to true" />
 
 _"Already changed the page, how come it still shows the same?"_ Because we change it in the _[client](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs)_ section then we have to notify _[server](https://developer.mozilla.org/en-US/docs/Learn/Server-side/First_steps/Introduction#What_is_server-side_website_programming)_ if we have changed the _value_ of admin and let _server_ process requests us by refreshing the page.
 
@@ -112,7 +112,7 @@ By refreshing the page, _client_ will send Cookies to _server_, then the _server
 
 The result:
 
-![picoctf](https://cdn.statically.io/img/kawari.space/f=auto/assets/posts/hacker/picoctf.png)
+<PostImage image={'/static/posts/hacker/picoctf.png'} label="Flag appeared" />
 
 ## Conclusion
 
@@ -120,6 +120,6 @@ Now that we know a little of how those hackers work, and how we position ourselv
 
 _To beat a hacker you have to think like one._
 
-If you are interested in practicing or learning CTF, like the example we completed above, you can visit [https://2019game.picoctf.com](https://2019game.picoctf.com/?ref=kawari.space), or [https://www.geeksforgeeks.org/top-10-cyber-hacking-competitions-capture-the-flag-ctf/](https://www.geeksforgeeks.org/top-10-cyber-hacking-competitions-capture-the-flag-ctf/?ref=kawari.space).
+If you are interested in practicing or learning CTF, like the example we completed above, you can visit [https://2019game.picoctf.com](https://2019game.picoctf.com/?ref=kalwabed.xyz), or [https://www.geeksforgeeks.org/top-10-cyber-hacking-competitions-capture-the-flag-ctf/](https://www.geeksforgeeks.org/top-10-cyber-hacking-competitions-capture-the-flag-ctf/?ref=kalwabed.xyz).
 
 Thanks.
