@@ -20,6 +20,7 @@ export interface HomePageProps {
 const HomePage: NextPage<HomePageProps> = props => {
   return (
     <Page>
+      halo gais
       <HomePageRenderer {...props} />
     </Page>
   )
