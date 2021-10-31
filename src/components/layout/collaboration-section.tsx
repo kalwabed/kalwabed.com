@@ -1,7 +1,7 @@
 import tw from 'twin.macro'
 import { FiMail, FiLinkedin, FiTwitter, FiGithub, FiInstagram } from 'react-icons/fi'
 
-import app from '@/config/app'
+import app from '~config/app'
 import { Container } from '../shared/container'
 
 const _H1 = tw.h1`

@@ -1,7 +1,7 @@
 import 'twin.macro'
 import Link from 'next/link'
 
-import CollaborationSection from '@components/layout/collaboration-section'
+import CollaborationSection from '~components/layout/collaboration-section'
 import Divider from '../shared/divider'
 
 const footerLinks = [

@@ -1,6 +1,6 @@
 import 'twin.macro'
 
-import ButtonLink from '@components/shared/button-link'
+import ButtonLink from '~components/shared/button-link'
 
 interface MoreLinkProps {
   type: 'projects' | 'posts'

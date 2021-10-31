@@ -3,7 +3,7 @@ import tw from 'twin.macro'
 import Link from 'next/link'
 import { HiOutlineMenu } from 'react-icons/hi'
 
-import Logo from '@components/layout/logo'
+import Logo from '~components/layout/logo'
 import MobileNav from './mobile-navigation'
 
 export const routes = [

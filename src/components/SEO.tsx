@@ -2,7 +2,7 @@ import { NextSeo, NextSeoProps, DefaultSeo, ArticleJsonLd, SocialProfileJsonLd }
 import { useRouter } from 'next/router'
 import { memo } from 'react'
 
-import app from '@/config/app'
+import app from '~config/app'
 
 const twitterUsername = '@' + app.socials.Twitter.split('/')[3]
 const defaultOgImg =

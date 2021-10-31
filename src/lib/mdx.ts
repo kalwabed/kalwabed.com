@@ -8,7 +8,7 @@ import reSlug from 'remark-slug'
 import reParse from 'remark-parse'
 import mdxPrism from 'mdx-prism'
 
-import MyFeed from '@/scripts/generate-rss'
+import MyFeed from '~scripts/generate-rss'
 
 const root = process.cwd()
 

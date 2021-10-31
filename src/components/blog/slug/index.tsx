@@ -1,7 +1,7 @@
 import 'twin.macro'
 
-import { PostWithMdx } from '@/types'
-import { Container } from '@components/shared/container'
+import { PostWithMdx } from '~types'
+import { Container } from '~components/shared/container'
 import PostContent from './post-content'
 import PostHeader from './post-header'
 

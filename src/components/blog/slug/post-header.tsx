@@ -1,6 +1,6 @@
 import tw from 'twin.macro'
 
-import dateFormatter from '@/utils/dateFormatter'
+import dateFormatter from '~utils/dateFormatter'
 
 const Wrapper = tw.div`
 my-12

@@ -1,8 +1,10 @@
 module.exports = {
   reactStrictMode: true,
-  experimental: {
-    esmExternals: true
+  swcMinify: true,
+  images: {
+    formats: ['image/avif', 'image/webp']
   },
+
   async headers() {
     return [
       {

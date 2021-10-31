@@ -1,8 +1,8 @@
 import tw from 'twin.macro'
 import { MDXRemote } from 'next-mdx-remote'
 
-import { PostMDXComponents } from '@components/mdx'
-import { PostStyle } from '@/utils/styles'
+import { PostMDXComponents } from '~components/mdx'
+import { PostStyle } from '~utils/styles'
 
 const PostContent = ({ content }) => {
   return (

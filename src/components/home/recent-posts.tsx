@@ -1,7 +1,7 @@
 import 'twin.macro'
 
-import { Post } from '@/types'
-import { Container } from '@components/shared/container'
+import { Post } from '~types'
+import { Container } from '~components/shared/container'
 import SectionTitle from './modules/section-title'
 import MoreLink from './modules/more-link'
 import RecentPost from './modules/recent-post'

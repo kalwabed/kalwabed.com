@@ -1,6 +1,6 @@
 import 'twin.macro'
 
-import { Post } from '@/types'
+import { Post } from '~types'
 import { Container } from '../shared/container'
 import PageSection from '../shared/page-section'
 import BlogList from './blog-list'

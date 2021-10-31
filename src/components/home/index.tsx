@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic'
 
 import Hero from './hero'
 import RecentPosts from './recent-posts'
-import { HomePageProps } from '@/pages'
+import { HomePageProps } from '~pages'
 
 const FeaturedProject = dynamic(() => import('./featured-project'))
 

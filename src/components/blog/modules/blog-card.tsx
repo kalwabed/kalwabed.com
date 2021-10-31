@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import tw from 'twin.macro'
 
-import { Post } from '@/types'
-import dateFormatter from '@/utils/dateFormatter'
+import { Post } from '~types'
+import dateFormatter from '~utils/dateFormatter'
 
 const _Wrapper = tw.a`
 w-full md:w-3/4 lg:w-4/6

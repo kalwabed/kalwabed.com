@@ -1,7 +1,7 @@
 import tw from 'twin.macro'
 import Link from 'next/link'
 
-import dateFormatter from '@/utils/dateFormatter'
+import dateFormatter from '~utils/dateFormatter'
 
 const _Wrapper = tw.a`
 w-full

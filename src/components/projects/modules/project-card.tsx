@@ -1,11 +1,11 @@
 import 'twin.macro'
 import Image from 'next/image'
 
-import ButtonLink from '@components/shared/button-link'
-import TextLink from '@components/shared/text-link'
-import { Project } from '@/types'
-import projectBanner from '@components/shared/project-banners'
-import TechList from '@components/shared/tech-list'
+import ButtonLink from '~components/shared/button-link'
+import TextLink from '~components/shared/text-link'
+import { Project } from '~types'
+import projectBanner from '~components/shared/project-banners'
+import TechList from '~components/shared/tech-list'
 
 const ProjectCard = ({ project }: { project: Project }) => {
   const { summary, title, liveUrl, githubRepo, slug, techs, publishedAt } = project

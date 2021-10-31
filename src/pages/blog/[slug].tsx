@@ -1,11 +1,11 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 
-import { getDataBySlug, getSlugs } from '@/lib/mdx'
-import { PostWithMdx } from '@/types'
-import BlogBySlugPageRenderer from '@components/blog/slug'
-import Page from '@components/layout/page'
-import SEO from '@components/SEO'
-import app from '@/config/app'
+import { getDataBySlug, getSlugs } from '~lib/mdx'
+import { PostWithMdx } from '~types'
+import BlogBySlugPageRenderer from '~components/blog/slug'
+import Page from '~components/layout/page'
+import SEO from '~components/SEO'
+import app from '~config/app'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getSlugs('_posts')

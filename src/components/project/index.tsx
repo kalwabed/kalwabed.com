@@ -1,6 +1,6 @@
 import 'twin.macro'
 
-import { ProjectWithMdx } from '@/types'
+import { ProjectWithMdx } from '~types'
 import ProjectHeader from './project-header'
 import ProjectContent from './project-content'
 

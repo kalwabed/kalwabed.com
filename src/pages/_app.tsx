@@ -1,10 +1,10 @@
 import Script from 'next/script'
 import { CacheProvider } from '@emotion/react'
 
-import emotionCache from '@/utils/emotionCache'
-import GlobalStyles from '@components/global-styles'
-import { DefaultSEO } from '@/components/SEO'
-import LayoutRoot from '@components/layout/layout-root'
+import emotionCache from '~utils/emotionCache'
+import GlobalStyles from '~components/global-styles'
+import { DefaultSEO } from '~components/SEO'
+import LayoutRoot from '~components/layout/layout-root'
 
 export default function MyApp({ Component, pageProps }) {
   return (

@@ -1,6 +1,6 @@
 import 'twin.macro'
 
-import { Project } from '@/types'
+import { Project } from '~types'
 import { Container } from '../shared/container'
 import PageSection from '../shared/page-section'
 import ProjectList from './project-list'

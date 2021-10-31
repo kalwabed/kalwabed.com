@@ -1,6 +1,6 @@
 import 'twin.macro'
 
-import { Project } from '@/types'
+import { Project } from '~types'
 import ProjectCard from './modules/project-card'
 
 const ProjectList = ({ projects }: { projects: Project[] }) => {

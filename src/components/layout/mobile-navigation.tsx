@@ -2,8 +2,8 @@ import tw from 'twin.macro'
 import { memo } from 'react'
 import { HiX } from 'react-icons/hi'
 
-import NavTransition from '@components/layout/nav-transition'
-import { routes } from '@components/layout/top-navigation'
+import NavTransition from '~components/layout/nav-transition'
+import { routes } from '~components/layout/top-navigation'
 import TextLink from '../shared/text-link'
 
 const ButtonClose = tw.button`

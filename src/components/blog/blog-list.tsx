@@ -1,6 +1,6 @@
 import 'twin.macro'
 
-import type { Post } from '@/types'
+import type { Post } from '~types'
 import BlogCard from './modules/blog-card'
 
 const BlogList = ({ posts }: { posts: Post[] }) => {

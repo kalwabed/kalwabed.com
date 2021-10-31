@@ -1,10 +1,10 @@
 import type { GetStaticProps, NextPage } from 'next'
 
-import BlogPageRenderer from '@components/blog'
-import Page from '@components/layout/page'
-import SEO from '@components/SEO'
-import { Post } from '@/types'
-import { getAllFrontMatters } from '@/lib/mdx'
+import BlogPageRenderer from '~components/blog'
+import Page from '~components/layout/page'
+import SEO from '~components/SEO'
+import { Post } from '~types'
+import { getAllFrontMatters } from '~lib/mdx'
 
 export const getStaticProps: GetStaticProps = async () => {
   const posts = getAllFrontMatters('_posts')

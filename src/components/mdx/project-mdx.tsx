@@ -2,7 +2,7 @@ import type { ReactNode } from 'react'
 import tw from 'twin.macro'
 import Image from 'next/image'
 
-import TextLink from '@components/shared/text-link'
+import TextLink from '~components/shared/text-link'
 
 interface ContentProps {
   heading: string

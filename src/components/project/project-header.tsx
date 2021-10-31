@@ -1,6 +1,6 @@
 import 'twin.macro'
 
-import { Project } from '@/types'
+import { Project } from '~types'
 import { Container } from '../shared/container'
 import TextLink from '../shared/text-link'
 

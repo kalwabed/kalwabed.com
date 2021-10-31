@@ -2,7 +2,7 @@ import 'twin.macro'
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
 import createEmotionServer from '@emotion/server/create-instance'
 
-import emotionCache from '@/utils/emotionCache'
+import emotionCache from '~utils/emotionCache'
 
 const { extractCritical } = createEmotionServer(emotionCache)
 

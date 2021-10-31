@@ -1,6 +1,6 @@
 import 'twin.macro'
 
-import TextLink from '@components/shared/text-link'
+import TextLink from '~components/shared/text-link'
 
 const Hero = () => {
   return (

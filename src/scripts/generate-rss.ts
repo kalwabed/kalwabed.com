@@ -1,8 +1,8 @@
 import { Feed } from 'feed'
 import fs from 'fs'
 import path from 'path'
-import app from '@/config/app'
-import { Post } from '@/types'
+import app from '~config/app'
+import { Post } from '~types'
 
 const { description, socials, email, siteUrl } = app
 
