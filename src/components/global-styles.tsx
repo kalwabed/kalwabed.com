@@ -35,11 +35,17 @@ const CustomStyle = css`
     color: ${theme`colors.highContrast`};
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    ${tw`font-display`}
+  }
+
   #__next {
-    min-height: 100vh;
-    width: '100%';
-    display: flex;
-    flex-direction: column;
+    ${tw`w-full min-h-full flex flex-col`}
   }
 `
 

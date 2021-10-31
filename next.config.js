@@ -1,17 +1,14 @@
-module.exports = {
+/**
+ * @type {import('next').NextConfig}
+ */
+const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
     formats: ['image/avif', 'image/webp']
   },
-
   async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: securityHeaders
-      }
-    ]
+    return [{ source: '/(.*)', headers: securityHeaders }]
   },
   webpack: (config, { isServer, dev }) => {
     // Unset client-side javascript that only works server-side
@@ -29,6 +26,8 @@ module.exports = {
     return config
   }
 }
+
+module.exports = nextConfig
 
 // https://securityheaders.com
 const ContentSecurityPolicy = `

@@ -6,7 +6,8 @@ module.exports = {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     fontFamily: {
-      sans: ['Manrope', 'Inter', ...defaultTheme.fontFamily.sans]
+      display: ['Manrope', ...defaultTheme.fontFamily.sans],
+      body: ['Inter', ...defaultTheme.fontFamily.sans]
     },
     extend: {
       colors: {
