@@ -1,5 +1,6 @@
 import tw from 'twin.macro'
 import { FiMail, FiLinkedin, FiTwitter, FiGithub, FiInstagram } from 'react-icons/fi'
+import * as AccessibleIcon from '@radix-ui/react-accessible-icon'
 
 import app from '~config/app'
 import { Container } from '../shared/container'
@@ -54,7 +55,9 @@ const CollaborationSection = () => {
       <div tw="flex items-center space-x-4">
         {links.map(({ Icon, href, title }) => (
           <_Link key={title} href={href} title={title} target="_blank" rel="noopener noreferrer">
-            <Icon tw="w-6 h-6" />
+            <AccessibleIcon.Root label={title}>
+              <Icon tw="w-6 h-6" />
+            </AccessibleIcon.Root>
           </_Link>
         ))}
       </div>
