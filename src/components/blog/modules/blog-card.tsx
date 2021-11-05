@@ -9,9 +9,9 @@ w-full md:w-3/4 lg:w-4/6
 bg-subtleAppBg
 rounded-sm
 transition
-border border-v2-borderIdle
+border border-bdr-idle
 shadow-sm
-hover:(border-v2-borderHover shadow)
+hover:(border-bdr-hover shadow)
 focus:(outline-none ring ring-appBorder)
 `
 

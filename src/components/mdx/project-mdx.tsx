@@ -84,7 +84,7 @@ export const JustImages = (props: JustImagesProps) => {
             width={width || 1200}
             height={height || 560}
             quality={90}
-            tw="rounded bg-slate w-full"
+            tw="rounded bg-subtleAppBg w-full"
           />
         </a>
         <figcaption tw="text-sm">{label}</figcaption>
@@ -108,7 +108,7 @@ export const JustImages = (props: JustImagesProps) => {
             width={600}
             height={580}
             quality={90}
-            tw="rounded bg-slate w-full shadow"
+            tw="rounded bg-subtleAppBg w-full shadow"
           />
         </a>
       ))}

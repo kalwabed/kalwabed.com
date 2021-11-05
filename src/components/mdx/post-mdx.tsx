@@ -37,7 +37,7 @@ export const PostImage: React.FC<PostImageProps> = props => {
           alt={label || 'image'}
           width={100}
           height={100}
-          tw="rounded w-full bg-slate"
+          tw="rounded w-full bg-subtleAppBg"
         />
       </ImgLink>
       <figcaption tw="text-sm">{label}</figcaption>
@@ -54,7 +54,7 @@ mb-6
 space-y-2
 bg-subtleAppBg
 border-l-4
-border-v2-borderIdle
+border-bdr-idle
 shadow
 `
 

@@ -18,7 +18,7 @@ outline-none
 `
 
 const variants = {
-  outline: tw`text-lowContrast border-v2-borderIdle hover:(bg-v2-hover border-v2-borderHover) focus:(ring-v2-borderIdle bg-v2-active)`
+  outline: tw`text-lowContrast border-bdr-idle hover:(bg-btn-hover border-bdr-hover) focus:(ring-bdr-idle bg-btn-active)`
 }
 
 interface Props {

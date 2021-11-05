@@ -1,9 +1,8 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
-const colors = require('tailwindcss/colors')
 
 module.exports = {
   purge: ['./src/**/*.tsx'],
-  darkMode: 'class', // or 'media' or 'class'
+  darkMode: false, // or 'media' or 'class'
   theme: {
     fontFamily: {
       display: ['Manrope', ...defaultTheme.fontFamily.sans],
@@ -11,34 +10,20 @@ module.exports = {
     },
     extend: {
       colors: {
-        slate: '#293845',
-        dark: '#151715',
-        appBg: '#141716',
-        subtleAppBg: '#191D1B',
-        appBorder: '#303633',
-        v2: {
-          hover: '#252A27',
-          active: '#2A2F2C',
-          borderIdle: '#393F3C',
-          borderHover: '#4A524E'
+        appBg: '#141716', // sageDark sage1
+        subtleAppBg: '#191D1B', // sageDark sage2
+        appBorder: '#303633', // sageDark sage6
+        btn: {
+          hover: '#252A27', // sageDark sage4
+          active: '#2A2F2C' // sageDark sage5
         },
-        lowContrast: '#99A29E',
-        highContrast: '#ECEEED',
-        link: '#00C99E',
-        iconBg: '#F0F1EC',
-        cyan: colors.cyan,
-        brand: {
-          50: '#ffe2f6',
-          100: '#ffb1db',
-          200: '#ff7fc1',
-          300: '#ff4da8',
-          400: '#fe1e90',
-          500: '#e50776',
-          600: '#b3005c',
-          700: '#810042',
-          800: '#4f0027',
-          900: '#1f000f'
-        }
+        bdr: {
+          idle: '#393F3C', // sageDark sage7
+          hover: '#4A524E' // sageDark sage8
+        },
+        lowContrast: '#99A29E', // sageDark sage11
+        highContrast: '#ECEEED', // sageDark sage12
+        link: '#00C99E' // mintA mintA9
       },
       typography: theme => ({
         light: {
