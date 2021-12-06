@@ -40,7 +40,7 @@
     "@types/react": "^17.0.37",
     "babel-plugin-macros": "^3.1.0",
     "eslint": "8.4.0",
-    "eslint-config-next": "^12.0.6",
+    "eslint-config-next": "^12.0.7",
     "next-sitemap": "^1.6.203",
     "rehype": "^12.0.0",
     "tailwindcss": "^2.2.19",
