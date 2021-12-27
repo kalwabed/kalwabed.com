@@ -36,7 +36,7 @@
   "devDependencies": {
     "@babel/core": "^7.16.0",
     "@emotion/babel-plugin": "^11.3.0",
-    "@types/node": "^16.11.11",
+    "@types/node": "^17.0.5",
     "@types/react": "^17.0.37",
     "babel-plugin-macros": "^3.1.0",
     "eslint": "8.4.0",
