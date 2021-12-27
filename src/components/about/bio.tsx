@@ -16,8 +16,7 @@ const Bio = () => {
           I started programming since I was in vocational high school. I got a lot of knowledge from there. The
           technologies I was familiar with at that time were: PHP, MySQL, Bootstrap, and CodeIgniter. I think I was
           quite successful with that technology by making an application for warehouse management, which of course still
-          has many shortcomings. Switching from PHP, now I'm confident enough to position myself as a Javascript
-          Developer 😁
+          has many shortcomings.
         </p>
         <p>
           The technology that I usually use to build a web on the frontend is of course React.js, and Next.js. In terms
