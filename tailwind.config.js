@@ -1,8 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  purge: ['./src/**/*.tsx'],
-  darkMode: false, // or 'media' or 'class'
+  content: ['./src/**/*.tsx'],
   theme: {
     fontFamily: {
       display: ['Manrope', ...defaultTheme.fontFamily.sans],

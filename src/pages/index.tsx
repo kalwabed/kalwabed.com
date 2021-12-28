@@ -1,9 +1,7 @@
 import type { GetStaticProps, NextPage } from 'next'
 
-import HomePageRenderer from '~components/home'
 import { getAllFrontMatters, getFeaturedProject } from '~lib/mdx'
 import { Post, Project } from '~types'
-import Page from '~components/layout/page'
 
 export const getStaticProps: GetStaticProps = async () => {
   const posts = getAllFrontMatters('_posts')
@@ -19,9 +17,10 @@ export interface HomePageProps {
 
 const HomePage: NextPage<HomePageProps> = props => {
   return (
-    <Page>
-      <HomePageRenderer {...props} />
-    </Page>
+    <p className="text-white">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eveniet ea aliquam reprehenderit, veritatis
+      possimus nemo qui sunt voluptatem, neque unde praesentium voluptatum vitae, numquam modi quia ex voluptas dolores.
+    </p>
   )
 }
 
