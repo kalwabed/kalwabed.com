@@ -1,7 +1,7 @@
 import * as AccessibleIcon from '@radix-ui/react-accessible-icon'
 import { FiTwitter, FiInstagram, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
 
-import Container from '~components/shared/Container'
+import Container from '~components/shared/container'
 import appConfig from '~config/app'
 
 const links = [
