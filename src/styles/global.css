@@ -1,0 +1,49 @@
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-tap-highlight-color: transparent;
+  scrollbar-width: thin;
+  scrollbar-color: #191D1B #303633;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body::-webkit-scrollbar {
+  width: 11px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #303633;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #00C99E;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #191D1B;
+  border: 1px solid #303633;
+}
+
+*::selection {
+  background-color: #01dda21e;
+  color: #eceeed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Manrope', sans-serif;
+}
+
+#__next {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

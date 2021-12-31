@@ -1,4 +1,5 @@
 import '~styles/tailwind.css'
+import '~styles/global.css'
 import Script from 'next/script'
 
 import { DefaultSEO } from '~components/SEO'

@@ -1,4 +1,4 @@
-import type { GetStaticProps, NextPage } from 'next'
+import type { GetStaticProps } from 'next'
 
 import { getAllFrontMatters, getFeaturedProject } from '~lib/mdx'
 import { NextPageWithLayout, Post, Project } from '~types'
