@@ -3,8 +3,12 @@ import Script from 'next/script'
 
 import { DefaultSEO } from '~components/SEO'
 import LayoutRoot from '~components/layout/layout-root'
+import Page from '~components/layout/page'
+import { AppPropsWithLayout } from '~types'
 
-export default function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+  const getLayout = Component.getLayout ?? (page => page)
+
   return (
     <>
       <Script
@@ -13,9 +17,13 @@ export default function MyApp({ Component, pageProps }) {
         data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
       />
       <DefaultSEO />
-      <LayoutRoot>
-        <Component {...pageProps} />
-      </LayoutRoot>
+      {getLayout(
+        <LayoutRoot>
+          <Page>
+            <Component {...pageProps} />
+          </Page>
+        </LayoutRoot>
+      )}
     </>
   )
 }

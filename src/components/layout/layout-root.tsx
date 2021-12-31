@@ -1,3 +1,4 @@
+import PageFooter from './page-footer'
 import TopNavigation from './top-navigation'
 
 const LayoutRoot: React.FC = ({ children }) => {
@@ -5,6 +6,7 @@ const LayoutRoot: React.FC = ({ children }) => {
     <>
       <TopNavigation />
       {children}
+      <PageFooter />
     </>
   )
 }

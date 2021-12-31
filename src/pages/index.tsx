@@ -1,7 +1,7 @@
 import type { GetStaticProps, NextPage } from 'next'
 
 import { getAllFrontMatters, getFeaturedProject } from '~lib/mdx'
-import { Post, Project } from '~types'
+import { NextPageWithLayout, Post, Project } from '~types'
 
 export const getStaticProps: GetStaticProps = async () => {
   const posts = getAllFrontMatters('_posts')
@@ -15,7 +15,7 @@ export interface HomePageProps {
   featuredProject: Project
 }
 
-const HomePage: NextPage<HomePageProps> = props => {
+const HomePage: NextPageWithLayout = props => {
   return (
     <p className="text-white">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eveniet ea aliquam reprehenderit, veritatis
