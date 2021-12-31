@@ -1,4 +1,5 @@
 import type { GetStaticProps } from 'next'
+import FeaturedProject from '~components/home/featured-project'
 
 import Hero from '~components/home/hero'
 import RecentPosts from '~components/home/recent-posts'
@@ -17,11 +18,12 @@ export interface HomePageProps {
   featuredProject: Project
 }
 
-const HomePage: NextPageWithLayout<HomePageProps> = ({ posts }) => {
+const HomePage: NextPageWithLayout<HomePageProps> = ({ posts, featuredProject }) => {
   return (
     <div className="space-y-20 mb-10">
       <Hero />
       <RecentPosts posts={posts} />
+      <FeaturedProject project={featuredProject} />
     </div>
   )
 }

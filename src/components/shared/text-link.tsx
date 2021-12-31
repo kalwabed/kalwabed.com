@@ -20,7 +20,7 @@ const sizes = {
 }
 
 const baseClass =
-  'relative font-bold no-underline transition inline-flex items-center focus:before:h-0.5 outline-none before:absolute before:bottom-0 before:top-[21px] before:left-0 before:opacity-0 before:transition before:duration-300 before:w-full before:h-0.5 before:bg-link hover:before:opacity-100 focus:before:opacity-100 '
+  'relative font-bold no-underline transition inline-flex items-center focus:before:h-1 outline-none before:absolute before:bottom-0 before:top-[21px] before:left-0 before:opacity-0 before:transition before:duration-300 before:w-full before:h-0.5 before:bg-link hover:before:opacity-100 focus:before:opacity-100 '
 
 const TextLink = ({
   variant = 'primary',

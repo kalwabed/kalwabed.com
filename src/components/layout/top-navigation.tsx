@@ -26,7 +26,7 @@ const TopNavigation = () => {
   return (
     <>
       <div className="z-50 backdrop-blur-md backdrop-filter bg-appBg bg-opacity-60 sticky inset-0 border-b border-appBorder">
-        <div className="flex items-center justify-between py-4 px-4 w-full mx-auto max-w-2xl md:px-0 lg:max-w-screen-lg">
+        <div className="flex items-center justify-between py-3.5 px-4 w-full mx-auto max-w-2xl md:px-0 lg:max-w-screen-lg">
           <Link href="/">
             <a>
               <Logo />
@@ -38,7 +38,7 @@ const TopNavigation = () => {
               <li key={href}>
                 <Link href={href}>
                   <a
-                    className={`umami--click-NAV-${label} font-medium text-lowContrast transition py-2 px-3 rounded hover:text-highContrast focus:text-highContrast focus:outline-none focus:ring focus:ring-appBorder`}
+                    className={`umami--click-NAV-${label} font-medium text-lowContrast transition py-2 px-2.5 rounded hover:text-highContrast focus:text-highContrast focus:outline-none focus:ring focus:ring-appBorder`}
                   >
                     {label}
                   </a>
