@@ -44,7 +44,13 @@ const CollaborationSection = () => {
 
       <div className="flex items-center space-x-4">
         {links.map(({ label, href, Icon }) => (
-          <a key={href} href={href} className="transition hover:opacity-80 focus:opacity-80">
+          <a
+            key={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            href={href}
+            className="transition hover:opacity-80 focus:opacity-80"
+          >
             <AccessibleIcon.Root label={label}>
               <Icon className="w-6 h-6" />
             </AccessibleIcon.Root>

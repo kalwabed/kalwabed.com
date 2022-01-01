@@ -1,14 +1,18 @@
 import type { NextPage } from 'next'
 
+import Bio from '~components/about/bio'
 import SEO from '~components/SEO'
+import Container from '~components/shared/container'
 
 const AboutPage: NextPage = () => {
   return (
-    <>
+    <Container className="my-14">
       <SEO title="About" description="About Kalwabed Rizki, contact, and more." />
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non illum maiores amet quo facere perspiciatis earum
-      eos, quaerat hic placeat nobis laborum eum velit, voluptates qui quam quis cumque fugiat!
-    </>
+      <section className="px-0 md:px-10 lg:px-16 space-y-10">
+        <h1 className="text-5xl font-bold">About.</h1>
+        <Bio />
+      </section>
+    </Container>
   )
 }
 
