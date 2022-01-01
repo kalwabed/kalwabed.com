@@ -1,10 +1,11 @@
 import type { GetStaticProps, NextPage } from 'next'
 
-import BlogPageRenderer from '~components/blog'
-import Page from '~components/layout/page'
 import SEO from '~components/SEO'
 import { Post } from '~types'
 import { getAllFrontMatters } from '~lib/mdx'
+import BlogList from '~components/blog/blog-list'
+import Container from '~components/shared/container'
+import PageSection from '~components/shared/page-section'
 
 export const getStaticProps: GetStaticProps = async () => {
   const posts = getAllFrontMatters('_posts')
@@ -14,10 +15,11 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const BlogPage: NextPage<{ posts: Post[] }> = ({ posts }) => {
   return (
-    <Page>
+    <Container className="my-20">
       <SEO title="Blog" description="Sometimes I write something and put it here." />
-      <BlogPageRenderer posts={posts} />
-    </Page>
+      <PageSection title="Blog." subTitle="Sometimes I write something and put it here" />
+      <BlogList posts={posts} />
+    </Container>
   )
 }
 
