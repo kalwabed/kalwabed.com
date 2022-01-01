@@ -2,9 +2,9 @@ import type { GetStaticPaths, GetStaticProps } from 'next'
 
 import { ProjectWithMdx } from '~types'
 import { getDataBySlug, getSlugs } from '~lib/mdx'
-import ProjectPageRenderer from '~components/project'
-import Page from '~components/layout/page'
 import SEO from '~components/SEO'
+import ProjectHeader from '~components/projects/project/header'
+import ProjectContent from '~components/projects/project/content'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getSlugs('_projects')
@@ -21,10 +21,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 const ProjectBySlugPage = ({ project }: { project: ProjectWithMdx }) => {
   return (
-    <Page>
+    <div className="space-y-12 mb-10">
       <SEO title={project.title} description={project.description} />
-      <ProjectPageRenderer project={project} />
-    </Page>
+      <ProjectHeader project={project} />
+      <ProjectContent mdxSource={project.mdxSource} />
+    </div>
   )
 }
 

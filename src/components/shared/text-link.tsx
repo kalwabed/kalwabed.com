@@ -11,7 +11,7 @@ interface TextLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 
 const variants = {
   primary: 'text-link',
-  ghost: 'text-highContrast before:hidden hocus:text-link'
+  ghost: 'text-highContrast before:hidden hover:text-link focus:text-link'
 }
 
 const sizes = {
