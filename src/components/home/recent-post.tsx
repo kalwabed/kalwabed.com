@@ -11,6 +11,7 @@ const RecentPost: React.FC<{ slug: string; publishedAt: string }> = ({ published
         <time
           className="text-sm text-lowContrast flex-grow-0 flex-shrink-0 basis-[100px]"
           dateTime={formattedDatePublished.ISO}
+          title={formattedDatePublished.utc}
         >
           {formattedDatePublished.formatted}
         </time>
