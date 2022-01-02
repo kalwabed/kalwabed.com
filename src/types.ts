@@ -1,4 +1,7 @@
+import type { NextPage } from 'next'
 import type { MDXRemoteSerializeResult } from 'next-mdx-remote'
+import type { AppProps } from 'next/app'
+import type { ReactElement, ReactNode } from 'react'
 
 export interface Post {
   title: string
@@ -27,4 +30,12 @@ export interface Project {
 
 export interface ProjectWithMdx extends Project {
   mdxSource: MDXRemoteSerializeResult
+}
+
+export type NextPageWithLayout<payload = {}> = NextPage<payload> & {
+  getLayout?: (page: ReactElement) => ReactNode
+}
+
+export type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout
 }

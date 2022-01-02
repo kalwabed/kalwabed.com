@@ -1,60 +1,48 @@
-import tw from 'twin.macro'
-import Link, { LinkProps } from 'next/link'
-import { Interpolation, Theme } from '@emotion/react'
+import type { AnchorHTMLAttributes } from 'react'
+import clsx from 'clsx'
+import Link from 'next/link'
 
-const BaseButton = tw.a`
-font-bold
-tracking-wide
-border
-transition
-focus:ring
-inline-flex
-py-1
-px-4
-rounded
-items-center
-no-underline
-outline-none
-`
+const baseClass =
+  'font-bold tracking-wide border transition focus:ring inline-flex py-1 px-4 rounded items-center no-underline outline-none'
 
 const variants = {
-  outline: tw`text-lowContrast border-bdr-idle hover:(bg-btn-hover border-bdr-hover) focus:(ring-bdr-idle bg-btn-active)`
+  outline:
+    'text-lowContrast border-bdr-idle hover:bg-btn-hover hover:border-bdr-hover focus:ring-bdr-idle focus:bg-btn-active'
 }
 
-interface Props {
-  link?: LinkProps
-  href: string
-  title?: string
-  variant?: 'outline'
-  styles?: Interpolation<Theme>
-  className?: string
+interface ButtonLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+  variant?: keyof typeof variants
   isExternal?: boolean
 }
 
-const ButtonLink: React.FC<Props> = props => {
-  const { variant = 'outline', styles, className, title, href, isExternal } = props
-
+const ButtonLink: React.FC<ButtonLinkProps> = ({
+  href,
+  isExternal,
+  variant = 'outline',
+  className,
+  children,
+  ...props
+}) => {
   if (isExternal) {
     return (
-      <Link {...props.link} href={href} passHref>
-        <BaseButton
+      <Link href={href}>
+        <a
           target="_blank"
           rel="noopener noreferrer"
-          title={title}
-          className={className}
-          css={[variants[variant], styles]}
+          className={clsx(baseClass, variants[variant], className)}
+          {...props}
         >
-          {props.children}
-        </BaseButton>
+          {children}
+        </a>
       </Link>
     )
   }
 
   return (
-    <Link {...props.link} href={href} passHref>
-      <BaseButton title={title} className={className} css={[variants[variant], styles]}>
-        {props.children}
-      </BaseButton>
+    <Link href={href}>
+      <a className={clsx(baseClass, variants[variant])} {...props}>
+        {children}
+      </a>
     </Link>
   )
 }

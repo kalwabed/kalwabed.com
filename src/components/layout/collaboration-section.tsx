@@ -1,67 +1,63 @@
-import tw from 'twin.macro'
-import { FiMail, FiLinkedin, FiTwitter, FiGithub, FiInstagram } from 'react-icons/fi'
 import * as AccessibleIcon from '@radix-ui/react-accessible-icon'
+import { FiTwitter, FiInstagram, FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
 
-import app from '~config/app'
-import { Container } from '../shared/container'
-
-const _H1 = tw.h1`
-text-5xl lg:text-6xl
-font-semibold
-leading-normal
-lg:leading-relaxed
-`
-
-const _Link = tw.a`
-transition
-hocus:opacity-80
-`
+import Container from '~components/shared/container'
+import appConfig from '~config/app'
 
 const links = [
   {
-    title: 'Twitter',
-    href: app.socials.Twitter,
+    label: 'Twitter',
+    href: appConfig.socials.Twitter,
     Icon: FiTwitter
   },
   {
-    title: 'Instagram',
-    href: app.socials.Instagram,
+    label: 'Instagram',
+    href: appConfig.socials.Instagram,
     Icon: FiInstagram
   },
   {
-    title: 'Github',
-    href: app.socials.Github,
+    label: 'Github',
+    href: appConfig.socials.Github,
     Icon: FiGithub
   },
   {
-    title: 'LinkedIn',
-    href: app.socials.LinkedIn,
+    label: 'LinkedIn',
+    href: appConfig.socials.LinkedIn,
     Icon: FiLinkedin
   },
   {
-    title: 'Email',
-    href: 'mailto:'.concat(app.email),
+    label: 'Email',
+    href: 'mailto:'.concat(appConfig.email),
     Icon: FiMail
   }
 ]
 
 const CollaborationSection = () => {
   return (
-    <section css={[Container]} tw="md:p-6 my-20 space-y-2 text-highContrast">
-      <_H1>Let's build something together.</_H1>
-      <p tw="text-2xl leading-relaxed">
+    <Container className="md:p-6 my-20 space-y-2 text-highContrast">
+      <h1 className="text-5xl font-semibold leading-normal lg:text-6xl lg:leading-relaxed">
+        Let's build something together.
+      </h1>
+      <p className="text-2xl leading-relaxed">
         Feel free to reach out if you're looking for a developer, have a question, or just want to connect.
       </p>
-      <div tw="flex items-center space-x-4">
-        {links.map(({ Icon, href, title }) => (
-          <_Link key={title} href={href} title={title} target="_blank" rel="noopener noreferrer">
-            <AccessibleIcon.Root label={title}>
-              <Icon tw="w-6 h-6" />
+
+      <div className="flex items-center space-x-4">
+        {links.map(({ label, href, Icon }) => (
+          <a
+            key={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            href={href}
+            className="transition hover:opacity-80 focus:opacity-80"
+          >
+            <AccessibleIcon.Root label={label}>
+              <Icon className="w-6 h-6" />
             </AccessibleIcon.Root>
-          </_Link>
+          </a>
         ))}
       </div>
-    </section>
+    </Container>
   )
 }
 

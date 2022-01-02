@@ -1,60 +1,40 @@
-import tw from 'twin.macro'
-import { memo } from 'react'
 import { HiX } from 'react-icons/hi'
+import TextLink from '~components/shared/text-link'
+import NavTransition from './nav-transition'
+import { routes } from './top-navigation'
 
-import NavTransition from '~components/layout/nav-transition'
-import { routes } from '~components/layout/top-navigation'
-import TextLink from '../shared/text-link'
-
-const ButtonClose = tw.button`
-p-2
-mx-auto
-transition
-rounded
-focus:(outline-none)
-`
-
-const RouteItems = tw.ul`
-space-y-4
-grid grid-rows-4
-gap-6
-justify-items-center
-items-center
-`
-
-type NavMobileProps = {
-  setIsMenuOpen: (arg: boolean) => void
+interface MobileNavigationProps {
+  setIsMenuOpen: (isMenuOpen: boolean) => void
   isMenuOpen: boolean
 }
 
-const MobileNav = ({ setIsMenuOpen, isMenuOpen }: NavMobileProps) => {
+const MobileNavigation = ({ isMenuOpen, setIsMenuOpen }: MobileNavigationProps) => {
   return (
     <NavTransition isVisible={isMenuOpen}>
-      <nav tw="w-full">
-        <div tw="grid grid-rows-1 mb-6">
-          <ButtonClose aria-label="Close menu" title="Close menu" onClick={() => setIsMenuOpen(false)}>
-            <HiX tw="text-highContrast" />
-          </ButtonClose>
+      <nav className="w-full">
+        <div className="grid grid-rows-1 mb-6">
+          <button className="p-2 mx-auto transition rounded outline-none">
+            <HiX className="text-highContrast" />
+          </button>
         </div>
-        <RouteItems>
+        <ul className="space-y-4 grid grid-rows-4 gap-6 justify-items-center items-center">
           {routes.map(route => (
             <li key={route.href}>
               <TextLink
                 variant="ghost"
-                styles={tw`text-xl`}
+                className={`text-xl umami--click--NAV-${route.label}`}
                 onClick={() => setIsMenuOpen(false)}
                 title={route.label}
                 href={route.href}
-                className={`umami--click--NAV-${route.label}`}
               >
                 {route.label}
               </TextLink>
             </li>
           ))}
-        </RouteItems>
+        </ul>
       </nav>
     </NavTransition>
   )
 }
 
-export default memo(MobileNav)
+export default MobileNavigation

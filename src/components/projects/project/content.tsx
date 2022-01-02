@@ -1,16 +1,14 @@
-import 'twin.macro'
+import { MDXRemote, MDXRemoteSerializeResult } from 'next-mdx-remote'
 import { memo } from 'react'
-import { MDXRemote } from 'next-mdx-remote'
-import type { MDXRemoteSerializeResult } from 'next-mdx-remote'
 
 import { ProjectMDXComponents } from '~components/mdx'
-import { Container } from '../shared/container'
+import Container from '~components/shared/container'
 
 const ProjectContent = ({ mdxSource }: { mdxSource: MDXRemoteSerializeResult }) => {
   return (
-    <article css={[Container]} tw="space-y-24">
+    <Container className="space-y-24">
       <MDXRemote {...mdxSource} components={ProjectMDXComponents} />
-    </article>
+    </Container>
   )
 }
 

@@ -1,23 +1,21 @@
-import 'twin.macro'
-
+import Container from '~components/shared/container'
+import TextLink from '~components/shared/text-link'
 import { Project } from '~types'
-import { Container } from '../shared/container'
-import TextLink from '../shared/text-link'
 
 const ProjectHeader = ({ project }: { project: Project }) => {
   const { summary, liveUrl, githubRepo, title, techs, status } = project
 
   return (
-    <div tw="w-full py-20 md:py-28 bg-subtleAppBg">
-      <div css={[Container]}>
-        <section tw="w-full lg:w-3/4 space-y-10">
-          <h1 tw="text-5xl font-bold">{title}</h1>
-          <p tw="text-lowContrast tracking-wider">{summary}</p>
+    <div className="w-full py-20 md:py-28 bg-subtleAppBg">
+      <Container>
+        <section className="w-full space-y-10 lg:w-3/4">
+          <h1 className="text-5xl font-bold">{title}</h1>
+          <p className="text-lowContrast tracking-wide">{summary}</p>
         </section>
 
-        <div tw="grid grid-cols-3 md:grid-cols-4 gap-7">
+        <div className="grid grid-cols-3 md:grid-cols-4 gap-7">
           <section>
-            <h2 tw="font-bold text-lg">Tech stacks</h2>
+            <h2 className="font-bold text-lg">Tech stacks</h2>
             {techs.map(tech => (
               <p key={tech}>{tech}</p>
             ))}
@@ -25,7 +23,7 @@ const ProjectHeader = ({ project }: { project: Project }) => {
 
           {githubRepo && (
             <section>
-              <h2 tw="font-bold text-lg">Source code</h2>
+              <h2 className="font-bold text-lg">Source code</h2>
               <TextLink isExternal href={githubRepo}>
                 Github
               </TextLink>
@@ -34,7 +32,7 @@ const ProjectHeader = ({ project }: { project: Project }) => {
 
           {liveUrl && (
             <section>
-              <h2 tw="font-bold text-lg">Website</h2>
+              <h2 className="font-bold text-lg">Website</h2>
               <TextLink isExternal href={liveUrl}>
                 Live
               </TextLink>
@@ -42,11 +40,11 @@ const ProjectHeader = ({ project }: { project: Project }) => {
           )}
 
           <section>
-            <h2 tw="font-bold text-lg">Status</h2>
+            <h2 className="font-bold text-lg">Status</h2>
             <p>{status}</p>
           </section>
         </div>
-      </div>
+      </Container>
     </div>
   )
 }

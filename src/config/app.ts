@@ -1,4 +1,4 @@
-export default {
+const appConfig = {
   siteUrl: 'https://kalwabed.xyz',
   description: 'Kalwabed Rizki personal website.',
   email: 'kalwabed@gmail.com',
@@ -9,3 +9,5 @@ export default {
     Instagram: 'https://instagram.com/kalwabed'
   }
 }
+
+export default appConfig

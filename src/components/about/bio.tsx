@@ -1,12 +1,10 @@
-import 'twin.macro'
-
-import Divider from '../shared/divider'
-import TextLink from '../shared/text-link'
+import Divider from '~components/shared/divider'
+import TextLink from '~components/shared/text-link'
 
 const Bio = () => {
   return (
-    <div tw="text-lowContrast w-full md:w-11/12 lg:w-10/12 tracking-wider">
-      <div tw="space-y-7 mb-10">
+    <div className="text-lowContrast w-full md:w-11/12 lg:w-10/12 tracking-wider">
+      <div className="space-y-7 mb-10">
         <p>
           Hello world! My name is Kalwabed Rizki. You can call me Albed. I live in Indonesia, precisely in the
           easternmost regency on the island of Java, namely Banyuwangi. You will usually pass through this regency if
@@ -26,7 +24,7 @@ const Bio = () => {
           because why not. I'm also interested in learning Golang, and maybe it will be my next programming language.
         </p>
       </div>
-      <div tw="space-y-8">
+      <div className="space-y-8">
         <Divider isCenter />
         <p>
           Day-to-day I work full time at{' '}

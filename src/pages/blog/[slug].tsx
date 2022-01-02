@@ -2,10 +2,11 @@ import type { GetStaticPaths, GetStaticProps, NextPage } from 'next'
 
 import { getDataBySlug, getSlugs } from '~lib/mdx'
 import { PostWithMdx } from '~types'
-import BlogBySlugPageRenderer from '~components/blog/slug'
-import Page from '~components/layout/page'
 import SEO from '~components/SEO'
-import app from '~config/app'
+import appConfig from '~config/app'
+import PostHeader from '~components/blog/post-header'
+import PostContent from '~components/blog/post-content'
+import Container from '~components/shared/container'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getSlugs('_posts')
@@ -22,7 +23,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
 const BlogContentPage: NextPage<{ post: PostWithMdx }> = ({ post }) => {
   return (
-    <Page>
+    <Container>
       <SEO
         isPost
         title={post.title}
@@ -32,14 +33,15 @@ const BlogContentPage: NextPage<{ post: PostWithMdx }> = ({ post }) => {
           article: {
             publishedTime: post.publishedAt,
             modifiedTime: post.updatedAt,
-            authors: [app.socials.Twitter],
+            authors: [appConfig.socials.Twitter],
             section: 'Tech',
             tags: ['Tech', 'Blog', 'Dev blog']
           }
         }}
       />
-      <BlogBySlugPageRenderer post={post} />
-    </Page>
+      <PostHeader publishedAt={post.publishedAt} title={post.title} />
+      <PostContent content={post.mdxSource} />
+    </Container>
   )
 }
 
