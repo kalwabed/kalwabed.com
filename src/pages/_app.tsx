@@ -1,7 +1,6 @@
 import '~styles/tailwind.css'
 import '~styles/global.css'
 import '~styles/mdx.css'
-import Script from 'next/script'
 
 import { DefaultSEO } from '~components/SEO'
 import LayoutRoot from '~components/layout/layout-root'
@@ -13,11 +12,6 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   return (
     <>
-      <Script
-        strategy="afterInteractive"
-        src={process.env.NEXT_PUBLIC_UMAMI_URL}
-        data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
-      />
       <DefaultSEO />
       {getLayout(
         <LayoutRoot>
