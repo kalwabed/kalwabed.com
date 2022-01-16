@@ -3,7 +3,7 @@ import CollaborationSection from './collaboration-section'
 
 const PageFooter = () => {
   return (
-    <footer className="bg-subtleAppBg mt-20 pb-10 border-t border-appBorder">
+    <footer className="bg-subtleAppBg mt-20 pb-10 border-t border-appBorder opacity-50 hover:opacity-100 transition duration-300">
       <CollaborationSection />
 
       <div className="mt-4">

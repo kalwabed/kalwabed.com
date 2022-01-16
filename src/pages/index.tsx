@@ -1,8 +1,9 @@
 import type { GetStaticProps } from 'next'
-import FeaturedProject from '~components/home/featured-project'
 
+import FeaturedProject from '~components/home/featured-project'
 import Hero from '~components/home/hero'
 import RecentPosts from '~components/home/recent-posts'
+import SEO from '~components/SEO'
 import { getAllFrontMatters, getFeaturedProject } from '~lib/mdx'
 import { NextPageWithLayout, Post, Project } from '~types'
 
@@ -21,6 +22,7 @@ export interface HomePageProps {
 const HomePage: NextPageWithLayout<HomePageProps> = ({ posts, featuredProject }) => {
   return (
     <div className="space-y-20 mb-10">
+      <SEO title="Kalwabed Rizki • Frontend engineer" defaultTitle="%s" />
       <Hero />
       <RecentPosts posts={posts} />
       <FeaturedProject project={featuredProject} />

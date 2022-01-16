@@ -7,7 +7,7 @@ import Container from '~components/shared/container'
 const AboutPage: NextPage = () => {
   return (
     <Container className="my-14">
-      <SEO title="About" description="About Kalwabed Rizki, contact, and more." />
+      <SEO title="About me" description="About Kalwabed Rizki, contact, and more." />
 
       <section className="px-0 md:px-10 lg:px-16 space-y-10">
         <h1 className="text-5xl font-bold">About.</h1>

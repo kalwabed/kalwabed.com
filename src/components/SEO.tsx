@@ -9,8 +9,8 @@ const defaultOgImg =
   'https://i.microlink.io/https%3A%2F%2Fcards.microlink.io%2F%3Fpreset%3Djxnblk%26subtitle%3DWeb%2Bdeveloper%2Bbased%2Bin%2BIndonesia%26title%3Dkalwabed%26logo%3Dhttps%253A%252F%252Fkalwabed.xyz%252Fstatic%252F512.png%26p%3D2gKIPD4KICA8RmxleAogICAgc3g9e3sKICAgICAgYWxpZ25JdGVtczogJ2NlbnRlcicsCiAgICAgIGp1c3RpZnlDb250ZW50OiAnY2VudGVyJywKICAgICAgZmxleERpcmVjdGlvbjogJ2NvbHVtbicsCiAgICAgIGJnOiBxdWVyeS5iZywKICAgICAgZm9udEZhbWlseTonSW50ZXInLAogICAgICBweDogNSwKICAgIH19CiAgPgogICAgPEltYWdlIHN4PXt7IHdpZHRoOiAnMTI4cHgnIH19IHNyYz17cXVlcnkubG9nb30gLz4KICAgIDxUZXh0CiAgICAgIHN4PXt7CiAgICAgICAgcHk6IDQsCiAgICAgICAgdGV4dFRyYW5zZm9ybTogJ3VwcGVyY2FzZScsCiAgICAgICAgbGV0dGVyU3BhY2luZzogJzAuMmVtJywKICAgICAgICBsaW5lSGVpZ2h0OiAxLjI1LAogICAgICAgIGZvbnRXZWlnaHQ6IDgwMCwKICAgICAgICBmb250U2l6ZTogNCwKICAgICAgICBjb2xvcjogcXVlcnkuY29sb3IsCiAgICAgIH19CiAgICA-CiAgICAgIHtxdWVyeS50aXRsZX0KICAgIDwvVGV4dD4KICAgIDxUZXh0CiAgICAgIHN4PXt7CiAgICAgICAgZm9udFdlaWdodDogNTAwLAogICAgICAgIGZvbnRTaXplOiAzLAogICAgICAgIGNvbG9yOiBxdWVyeS5jb2xvciwKICAgICAgfX0KICAgID4KICAgICAge3F1ZXJ5LnN1YnRpdGxlfQogICAgPC9UZXh0PgogIDwvRmxleD4KPC8-'
 
 const defaultSeoConfig: NextSeoProps = {
-  defaultTitle: 'Home | Kalwabed Rizki',
-  titleTemplate: '%s | Kalwabed Rizki',
+  defaultTitle: 'Kalwabed Rizki • Frontend engineer',
+  titleTemplate: '%s • Kalwabed Rizki',
   description: app.description,
   canonical: app.siteUrl,
   additionalMetaTags: [
