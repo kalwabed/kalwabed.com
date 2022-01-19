@@ -457,10 +457,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.37.tgz#a3dd8da4eb84a996c36e331df98d82abd76b516e"
   integrity sha512-XYmBiy+ohOR4Lh5jE379fV2IU+6Jn4g5qASinhitfyO71b/sCo6MKsMLF5tc7Zf2CE8hViVQyYSobJNke8OvUw==
 
-"@types/node@17.0.8":
-  version "17.0.8"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.8.tgz#50d680c8a8a78fe30abe6906453b21ad8ab0ad7b"
-  integrity sha512-YofkM6fGv4gDJq78g4j0mMuGMkZVxZDgtU0JRdx6FgiJDG+0fY0GKVolOV8WqVmEhLCXkQRjwDdKyPxJp/uucg==
+"@types/node@17.0.10":
+  version "17.0.10"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.10.tgz#616f16e9d3a2a3d618136b1be244315d95bd7cab"
+  integrity sha512-S/3xB4KzyFxYGCppyDt68yzBU9ysL88lSdIah4D6cptdcltc4NCPCAMc0+PCpg/lLIyC7IPvj2Z52OJWeIUkog==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
@@ -1542,10 +1542,10 @@ next-seo@^4.28.1:
   resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-4.28.1.tgz#c98ee559c8ab7196c62d0f6903afd7a8cde47a03"
   integrity sha512-WZgwdM+UhpNF3A37zFllzmPhnOVJ9vYeYlc0n3Z/kYfz/QQgy8NEdncNNggS9dU4JD8xriaCcyknhy5OsrFsJw==
 
-next-sitemap@^1.9.9:
-  version "1.9.9"
-  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.9.9.tgz#f36a5315da01836cbd93c6ad9d6730d320c94540"
-  integrity sha512-Tl7otSmXq/k+FDH5FAJGCH1bOMxs6ddRmuPVurgQTrz+pFWzMQ7KIPSP96wiY5vZ5npFjPTPJP2wlCwOqQB1Dw==
+next-sitemap@^1.9.12:
+  version "1.9.12"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-1.9.12.tgz#288c2dfc907039892e21eb1b0c7a94d288f323d9"
+  integrity sha512-kHXf4ZNAGLJyK16HbjzE5X9JlKwXtxW+9J4dh3oT7LSbU/+3bN+VqWjNw/776Otbanf7EJsvl51oQ78qQW5XBQ==
   dependencies:
     "@corex/deepmerge" "^2.6.148"
     minimist "^1.2.5"
@@ -2217,10 +2217,10 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-tailwindcss@^3.0.14:
-  version "3.0.14"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.0.14.tgz#207dc80351ac6a0746799be3ef2af836c9eea3c5"
-  integrity sha512-7VTZJVMY9iTZhGsiTC9d3gWk+tSJz8iKZoxd5mvO0w4n0lulzVPYEOiwKcz5h8M/rNhlpymU7Ix5519Tl5wrfA==
+tailwindcss@^3.0.15:
+  version "3.0.15"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-3.0.15.tgz#e4db219771eb7678a3bfd97b3f6c8fe20be0a410"
+  integrity sha512-bT2iy7FtjwgsXik4ZoJnHXR+SRCiGR1W95fVqpLZebr64m4ahwUwRbIAc5w5+2fzr1YF4Ct2eI7dojMRRl8sVQ==
   dependencies:
     arg "^5.0.1"
     chalk "^4.1.2"
