@@ -36,10 +36,10 @@ const CollaborationSection = () => {
   return (
     <Container className="md:p-6 my-20 space-y-2 text-highContrast">
       <h1 className="text-5xl font-semibold leading-normal lg:text-6xl lg:leading-relaxed">
-        Let's build something together.
+        Let&apos;s build something together.
       </h1>
       <p className="text-2xl leading-relaxed">
-        Feel free to reach out if you're looking for a developer, have a question, or just want to connect.
+        Feel free to reach out if you&apos;re looking for a developer, have a question, or just want to connect.
       </p>
 
       <div className="flex items-center space-x-4">

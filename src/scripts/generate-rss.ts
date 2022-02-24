@@ -6,7 +6,7 @@ import { Post } from '~types'
 
 const { description, socials, email, siteUrl } = app
 
-const pureUrl = siteUrl.replace('https://', '')
+const pureUrl = siteUrl.replace('https://www.', '')
 const copyright = `All rights reserved ${new Date().getFullYear()}, Kalwabed Rizki`
 const me = { email, link: socials.LinkedIn, name: 'Kalwabed Rizki' }
 

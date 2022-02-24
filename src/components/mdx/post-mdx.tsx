@@ -9,14 +9,17 @@ export const PostImage: React.FC<PostImageProps> = props => {
   return (
     <figure className="flex flex-col mx-auto justify-center items-center space-y-1 my-8">
       <div className="w-full overflow-hidden shadow rounded">
-        <img
-          src={image}
-          alt={label || 'Image'}
-          width={100}
-          height={100}
-          className="rounded w-full bg-subtleAppBg"
-          decoding="async"
-        />
+        <a href={image} rel="noopener referrer noreferrer" target="_blank">
+          {/* eslint-disable @next/next/no-img-element */}
+          <img
+            src={image}
+            alt={label || 'Image'}
+            width={100}
+            height={100}
+            className="rounded w-full bg-subtleAppBg"
+            decoding="async"
+          />
+        </a>
       </div>
       <figcaption className="text-sm">{label}</figcaption>
     </figure>

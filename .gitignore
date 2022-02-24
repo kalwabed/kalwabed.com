@@ -20,6 +20,8 @@
 # misc
 .DS_Store
 *.pem
+sitemap*
+robots.txt
 
 # debug
 npm-debug.log*

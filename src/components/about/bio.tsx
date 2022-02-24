@@ -19,9 +19,10 @@ const Bio = () => {
         <p>
           The technology that I usually use to build a web on the frontend is of course React.js, and Next.js. In terms
           of styling, I usually use Tailwindcss, Chakra UI, and previously also used Bootstrap. Sometimes for styling I
-          use CSS-in-JS solutions like Emotion, but I'm not that familiar with it and would like to learn more. For
+          use CSS-in-JS solutions like Emotion, but I&apos;m not that familiar with it and would like to learn more. For
           backend/API I usually use Express.js, and headless CMS like Strapi. I use Typescript more in every project
-          because why not. I'm also interested in learning Golang, and maybe it will be my next programming language.
+          because why not. I&apos;m also interested in learning Golang, and maybe it will be my next programming
+          language.
         </p>
       </div>
       <div className="space-y-8">
@@ -33,7 +34,7 @@ const Bio = () => {
           </TextLink>{' '}
           as a Frontend Engineer. Build an application to help remote workers in Indonesia. In addition, I am also an
           undergraduate student of Informatics at Amikom University, Yogyakarta. Outside of my job, I like to make
-          things out of the ideas that pop into my head. I'll probably put it later on the{' '}
+          things out of the ideas that pop into my head. I&apos;ll probably put it later on the{' '}
           <TextLink href="/projects">projects</TextLink> page on this website.
         </p>
       </div>

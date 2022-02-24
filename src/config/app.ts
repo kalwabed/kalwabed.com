@@ -1,5 +1,5 @@
 const appConfig = {
-  siteUrl: 'https://kalwabed.xyz',
+  siteUrl: 'https://www.kalwabed.xyz',
   description: 'Kalwabed Rizki personal website.',
   email: 'kalwabed@gmail.com',
   socials: {

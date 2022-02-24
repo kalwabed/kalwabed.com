@@ -85,7 +85,7 @@ We're going to start getting into the code.
 
 This time I will use Nextjs [SSR](https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering) to get the data from the server side, like this:
 
-```js:index.js
+```js
 export async function getServerSideProps() {
   const res = await fetch('https://notion-api.splitbee.io/v1/table/bf7cafe8a4004459849614159bd7a8f7')
   const guests = await res.json()
