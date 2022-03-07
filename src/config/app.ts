@@ -1,6 +1,6 @@
 const appConfig = {
   siteUrl: 'https://www.kalwabed.xyz',
-  description: 'Kalwabed Rizki personal website.',
+  description: 'Web developer based in Yogyakarta, Indonesia.',
   email: 'kalwabed@gmail.com',
   socials: {
     Twitter: 'https://twitter.com/kalwabedrzk',

@@ -22,7 +22,7 @@ export interface HomePageProps {
 const HomePage: NextPageWithLayout<HomePageProps> = ({ posts, featuredProject }) => {
   return (
     <div className="space-y-20 mb-10">
-      <SEO defaultTitle="%s" />
+      <SEO title="Kalwabed Rizki • Frontend Developer" openGraph={{ title: 'Home' }} />
       <Hero />
       <RecentPosts posts={posts} />
       <FeaturedProject project={featuredProject} />
