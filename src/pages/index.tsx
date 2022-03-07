@@ -22,7 +22,7 @@ export interface HomePageProps {
 const HomePage: NextPageWithLayout<HomePageProps> = ({ posts, featuredProject }) => {
   return (
     <div className="space-y-20 mb-10">
-      <SEO title="Kalwabed Rizki • Frontend engineer" defaultTitle="%s" />
+      <SEO defaultTitle="%s" />
       <Hero />
       <RecentPosts posts={posts} />
       <FeaturedProject project={featuredProject} />

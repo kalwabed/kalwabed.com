@@ -9,8 +9,6 @@ import Page from '~components/layout/page'
 import { AppPropsWithLayout } from '~types'
 
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
-  if (typeof window === 'undefined') return null
-
   const umamiUrl = process.env.NEXT_PUBLIC_UMAMI_URL
   const umamiId = process.env.NEXT_PUBLIC_UMAMI_ID
   const getLayout = Component.getLayout ?? (page => page)
