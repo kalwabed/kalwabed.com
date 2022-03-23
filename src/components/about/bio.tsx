@@ -28,13 +28,8 @@ const Bio = () => {
       <div className="space-y-8">
         <Divider isCenter />
         <p>
-          Day-to-day I work full time at{' '}
-          <TextLink isExternal href="https://kolabo.id">
-            Kolabo
-          </TextLink>{' '}
-          as a Frontend Engineer. Build an application to help remote workers in Indonesia. In addition, I am also an
-          undergraduate student of Informatics at Amikom University, Yogyakarta. Outside of my job, I like to make
-          things out of the ideas that pop into my head. I&apos;ll probably put it later on the{' '}
+          Day-to-day I&apos;m an undergraduate student of Informatics at Amikom University, Yogyakarta. Outside of my
+          job, I like to make things out of the ideas that pop into my head. I&apos;ll probably put it later on the{' '}
           <TextLink href="/projects">projects</TextLink> page on this website.
         </p>
       </div>
