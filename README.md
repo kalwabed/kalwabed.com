@@ -6,9 +6,8 @@
 
 - Next.js
 - Typescript
-- Tailwindcss + Emotion
+- Tailwindcss
 - MDX
-- Notion API
 
 # Credits
 
