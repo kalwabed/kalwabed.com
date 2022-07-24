@@ -28,9 +28,10 @@ const Bio = () => {
       <div className="space-y-8">
         <Divider isCenter />
         <p>
-          Day-to-day I&apos;m an undergraduate student of Informatics at Amikom University, Yogyakarta. Outside of my
-          job, I like to make things out of the ideas that pop into my head. I&apos;ll probably put it later on the{' '}
-          <TextLink href="/projects">projects</TextLink> page on this website.
+          Day-to-day I work full-time at an Indonesia-based F&B startup as a Tech Lead. Leading teams to build
+          data-intensive applications. I&apos;m also an undergraduate student of Informatics at Amikom University,
+          Yogyakarta. Outside of my job, I like to make things out of the ideas that pop into my head. I&apos;ll
+          probably put it later on the <TextLink href="/projects">projects</TextLink> page on this website.
         </p>
       </div>
     </div>
