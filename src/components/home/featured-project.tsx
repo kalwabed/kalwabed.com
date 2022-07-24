@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/future/image'
 
 import Container from '~components/shared/container'
 import projectBanner from '~components/shared/project-banners'
@@ -15,7 +15,7 @@ const FeaturedProject: React.FC<{ project: Project }> = ({ project }) => {
       <SectionTitle text="Featured project" />
 
       <div className="w-full flex justify-between flex-col lg:flex-row bg-subtleAppBg border border-appBorder overflow-hidden rounded-lg shadow">
-        <Image src={projectBanner[slug]} alt="Featured project banner" placeholder="blur" />
+        <Image src={projectBanner[slug]} sizes="25vw" quality={90} alt="Featured project banner" placeholder="blur" />
         <section className="w-full p-6 lg:p-8 flex flex-col">
           <h3>
             <TextLink variant="ghost" size="lg" href={`/projects/${slug}`}>

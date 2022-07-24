@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/future/image'
 
 import ButtonLink from '~components/shared/button-link'
 import projectBanner from '~components/shared/project-banners'
@@ -27,6 +27,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
       <div className="overflow-hidden">
         <Image
           src={projectBanner[slug]}
+          sizes="50vw"
           placeholder="blur"
           className="rounded-lg shadow-lg"
           alt={`${title} preview banner`}

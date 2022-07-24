@@ -1,4 +1,4 @@
-import Image from 'next/image'
+import Image from 'next/future/image'
 import TextLink from '~components/shared/text-link'
 
 interface ContentProps {
@@ -24,10 +24,11 @@ export const ContentWithImage = ({ image, children, heading }: ContentWithImageP
         <Image
           src={image}
           alt={heading}
+          sizes="50vw"
           width={500}
           height={412}
           quality={90}
-          className="rouned bg-subtleAppBg shadow"
+          className="rounded bg-subtleAppBg shadow"
         />
       </div>
       <section className="w-full lg:w-1/2 space-y-3">
@@ -54,11 +55,12 @@ export const JustImages = (props: JustImagesProps) => {
         <div className="w-full overflow-hidden">
           <Image
             src={images[0]}
+            sizes="100vw"
             alt={label || 'image'}
             width={width || 1200}
             height={height || 560}
             quality={90}
-            className="rouned bg-subtleAppBg w-full"
+            className="rounded bg-subtleAppBg w-full"
           />
         </div>
         <figcaption className="text-sm">{label}</figcaption>

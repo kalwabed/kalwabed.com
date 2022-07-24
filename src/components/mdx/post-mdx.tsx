@@ -1,3 +1,5 @@
+import Image from 'next/future/image'
+
 interface PostImageProps {
   image?: string
   label?: string
@@ -10,14 +12,13 @@ export const PostImage: React.FC<PostImageProps> = props => {
     <figure className="flex flex-col mx-auto justify-center items-center space-y-1 my-8">
       <div className="w-full overflow-hidden shadow rounded">
         <a href={image} rel="noopener referrer noreferrer" target="_blank">
-          {/* eslint-disable @next/next/no-img-element */}
-          <img
+          <Image
             src={image}
             alt={label || 'Image'}
+            sizes="50vw"
             width={100}
             height={100}
             className="rounded w-full bg-subtleAppBg"
-            decoding="async"
           />
         </a>
       </div>
