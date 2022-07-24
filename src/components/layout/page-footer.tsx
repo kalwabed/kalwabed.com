@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { HiExternalLink } from 'react-icons/hi'
+
 import Divider from '~components/shared/divider'
 import CollaborationSection from './collaboration-section'
 
