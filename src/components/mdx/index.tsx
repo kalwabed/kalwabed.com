@@ -8,5 +8,10 @@ const Link = dynamic(() => import('./project-mdx').then(mod => mod.Link))
 const PostImage = dynamic(() => import('./post-mdx').then(mod => mod.PostImage))
 const Update = dynamic(() => import('./post-mdx').then(mod => mod.Update))
 
-export const ProjectMDXComponents = { Content, ContentWithImage, JustImages, Link }
+export const ProjectMDXComponents = {
+  Content,
+  ContentWithImage,
+  JustImages,
+  Link
+}
 export const PostMDXComponents = { PostImage, Update }

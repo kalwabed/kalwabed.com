@@ -1,11 +1,11 @@
 import type { GetStaticProps, NextPage } from 'next'
 
-import SEO from '~components/SEO'
-import { Post } from '~types'
-import { getAllFrontMatters } from '~lib/mdx'
 import BlogList from '~components/blog/blog-list'
+import SEO from '~components/SEO'
 import Container from '~components/shared/container'
 import PageSection from '~components/shared/page-section'
+import { getAllFrontMatters } from '~lib/mdx'
+import { Post } from '~types'
 
 export const getStaticProps: GetStaticProps = async () => {
   const posts = getAllFrontMatters('_posts')

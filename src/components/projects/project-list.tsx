@@ -1,4 +1,5 @@
 import { Project } from '~types'
+
 import ProjectCard from './project-card'
 
 const ProjectList = ({ projects }: { projects: Project[] }) => {

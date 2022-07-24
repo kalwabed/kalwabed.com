@@ -1,10 +1,10 @@
 import type { GetStaticPaths, GetStaticProps } from 'next'
 
-import { ProjectWithMdx } from '~types'
-import { getDataBySlug, getSlugs } from '~lib/mdx'
-import SEO from '~components/SEO'
-import ProjectHeader from '~components/projects/project/header'
 import ProjectContent from '~components/projects/project/content'
+import ProjectHeader from '~components/projects/project/header'
+import SEO from '~components/SEO'
+import { getDataBySlug, getSlugs } from '~lib/mdx'
+import { ProjectWithMdx } from '~types'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = getSlugs('_projects')

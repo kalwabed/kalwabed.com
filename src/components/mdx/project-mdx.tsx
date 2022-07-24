@@ -1,4 +1,5 @@
 import Image from 'next/future/image'
+
 import TextLink from '~components/shared/text-link'
 
 interface ContentProps {
@@ -86,6 +87,6 @@ export const JustImages = (props: JustImagesProps) => {
   )
 }
 
-export const Link = ({ text, href, children }) => {
+export const Link = ({ text, href }) => {
   return <TextLink href={href}>{text}</TextLink>
 }

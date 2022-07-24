@@ -1,11 +1,12 @@
 import '~styles/tailwind.css'
 import '~styles/global.css'
 import '~styles/mdx.css'
+
 import Script from 'next/script'
 
-import { DefaultSEO } from '~components/SEO'
 import LayoutRoot from '~components/layout/layout-root'
 import Page from '~components/layout/page'
+import { DefaultSEO } from '~components/SEO'
 import { AppPropsWithLayout } from '~types'
 
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {

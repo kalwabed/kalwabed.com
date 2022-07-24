@@ -1,6 +1,9 @@
 import { Transition } from '@headlessui/react'
 
-const NavTransition: React.FC<{ isVisible: boolean; children: React.ReactNode }> = ({ isVisible, children }) => {
+const NavTransition: React.FC<{
+  isVisible: boolean
+  children: React.ReactNode
+}> = ({ isVisible, children }) => {
   return (
     <Transition
       show={isVisible}

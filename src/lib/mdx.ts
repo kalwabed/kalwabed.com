@@ -1,12 +1,12 @@
-import { serialize } from 'next-mdx-remote/serialize'
 import fs from 'fs'
 import matter from 'gray-matter'
+import mdxPrism from 'mdx-prism'
+import { serialize } from 'next-mdx-remote/serialize'
 import path from 'path'
 import autoLink from 'remark-autolink-headings'
 import codeTitles from 'remark-code-titles'
-import reSlug from 'remark-slug'
 import reParse from 'remark-parse'
-import mdxPrism from 'mdx-prism'
+import reSlug from 'remark-slug'
 
 import MyFeed from '~scripts/generate-rss'
 

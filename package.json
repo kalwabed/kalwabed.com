@@ -11,7 +11,8 @@
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint --fix",
+    "fmt": "prettier --write --cache 'src/**/*.{js,jsx,ts,tsx}'"
   },
   "dependencies": {
     "@headlessui/react": "^1.6.1",
@@ -38,11 +39,18 @@
     "@next/env": "^12.2.3",
     "@types/node": "18.0.6",
     "@types/react": "^18.0.15",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "@typescript-eslint/parser": "^5.30.7",
     "autoprefixer": "^10.4.5",
     "eslint": "8.20.0",
     "eslint-config-next": "12.2.3",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
     "next-sitemap": "^3.1.11",
     "postcss": "^8.4.12",
+    "prettier-eslint": "^15.0.1",
     "rehype": "^12.0.1",
     "tailwindcss": "^3.0.24",
     "typescript": "^4.6.3"

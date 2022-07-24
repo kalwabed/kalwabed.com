@@ -1,5 +1,6 @@
 import Container from '~components/shared/container'
 import { Post } from '~types'
+
 import MoreLink from './more-link'
 import RecentPost from './recent-post'
 import SectionTitle from './section-title'

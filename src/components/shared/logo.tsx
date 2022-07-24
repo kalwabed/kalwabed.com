@@ -1,5 +1,5 @@
-import { memo } from 'react'
 import Image from 'next/future/image'
+import { memo } from 'react'
 
 import WhiteLogo from '~assets/logo-white.png'
 

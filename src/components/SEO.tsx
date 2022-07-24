@@ -1,6 +1,6 @@
-import { NextSeo, NextSeoProps, DefaultSeo, ArticleJsonLd, SocialProfileJsonLd } from 'next-seo'
-import { OpenGraph } from 'next-seo/lib/types'
 import { useRouter } from 'next/router'
+import { ArticleJsonLd, DefaultSeo, NextSeo, NextSeoProps, SocialProfileJsonLd } from 'next-seo'
+import { OpenGraph } from 'next-seo/lib/types'
 
 import app from '~config/app'
 
@@ -14,7 +14,10 @@ const defaultSeoConfig: NextSeoProps = {
   description: app.description,
   canonical: app.siteUrl,
   additionalMetaTags: [
-    { name: 'keywords', content: 'kalwabed rizki, kalwabed, rizki, portfolio, blog, developer' },
+    {
+      name: 'keywords',
+      content: 'kalwabed rizki, kalwabed, rizki, portfolio, blog, developer'
+    },
     { name: 'image', content: defaultOgImg }
   ],
   additionalLinkTags: [

@@ -1,6 +1,7 @@
 import { Feed } from 'feed'
 import fs from 'fs'
 import path from 'path'
+
 import app from '~config/app'
 import { Post } from '~types'
 

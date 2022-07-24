@@ -2,11 +2,11 @@ import Link from 'next/link'
 
 import dateFormatter from '~utils/dateFormatter'
 
-const RecentPost: React.FC<{ slug: string; publishedAt: string; children: React.ReactNode }> = ({
-  publishedAt,
-  slug,
-  children
-}) => {
+const RecentPost: React.FC<{
+  slug: string
+  publishedAt: string
+  children: React.ReactNode
+}> = ({ publishedAt, slug, children }) => {
   const formattedDatePublished = dateFormatter(publishedAt)
 
   return (

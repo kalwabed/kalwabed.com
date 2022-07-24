@@ -1,5 +1,7 @@
 import { HiX } from 'react-icons/hi'
+
 import TextLink from '~components/shared/text-link'
+
 import NavTransition from './nav-transition'
 import { routes } from './top-navigation'
 

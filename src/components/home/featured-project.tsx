@@ -4,6 +4,7 @@ import Container from '~components/shared/container'
 import projectBanner from '~components/shared/project-banners'
 import TextLink from '~components/shared/text-link'
 import { Project } from '~types'
+
 import MoreLink from './more-link'
 import SectionTitle from './section-title'
 

@@ -1,4 +1,5 @@
 import { Post } from '~types'
+
 import BlogCard from './blog-card'
 
 const BlogList = ({ posts }: { posts: Post[] }) => {

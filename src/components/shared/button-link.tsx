@@ -1,6 +1,6 @@
-import type { AnchorHTMLAttributes } from 'react'
 import clsx from 'clsx'
 import Link from 'next/link'
+import type { AnchorHTMLAttributes } from 'react'
 
 const baseClass =
   'font-bold tracking-wide border transition focus:ring inline-flex py-1 px-4 rounded items-center no-underline outline-none'

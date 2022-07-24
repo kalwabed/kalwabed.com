@@ -1,6 +1,6 @@
-import type { AnchorHTMLAttributes } from 'react'
 import clsx from 'clsx'
 import Link from 'next/link'
+import type { AnchorHTMLAttributes } from 'react'
 
 interface TextLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   variant?: 'primary' | 'ghost'

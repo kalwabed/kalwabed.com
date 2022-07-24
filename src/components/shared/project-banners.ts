@@ -1,5 +1,5 @@
-import tuantanah from './assets/tuantanah-banner.png'
 import namlogistic from './assets/nam-banner.png'
+import tuantanah from './assets/tuantanah-banner.png'
 
 const projectBanner = {
   tuantanah,
