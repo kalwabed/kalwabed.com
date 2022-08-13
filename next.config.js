@@ -16,22 +16,6 @@ const nextConfig = {
   },
   async headers() {
     return [{ source: '/(.*)', headers: securityHeaders }]
-  },
-  webpack: (config, { isServer, dev }) => {
-    // Unset client-side javascript that only works server-side
-    config.resolve.fallback = { fs: false, module: false }
-
-    // Replace React with Preact only in client production build
-    // ? currently next-mdx-remote 4.0.0 does not support preact
-    // if (!dev && !isServer) {
-    //   Object.assign(config.resolve.alias, {
-    //     react: 'preact/compat',
-    //     'react-dom/test-utils': 'preact/test-utils',
-    //     'react-dom': 'preact/compat'
-    //   })
-    // }
-
-    return config
   }
 }
 
