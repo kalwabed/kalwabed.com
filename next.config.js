@@ -6,10 +6,7 @@ const nextConfig = {
   swcMinify: true,
   experimental: {
     browsersListForSwc: true,
-    legacyBrowsers: false,
-    images: {
-      allowFutureImage: true
-    }
+    legacyBrowsers: false
   },
   images: {
     formats: ['image/avif', 'image/webp']
