@@ -42,7 +42,7 @@ const MyFeed = ({ posts }: { posts: Post[] }) => {
       date: new Date(post.updatedAt),
       author: [me],
       copyright,
-      link: `${siteUrl}/posts/${post.slug}`,
+      link: `${siteUrl}/blog/${post.slug}`,
       id: post.slug
     })
   )
