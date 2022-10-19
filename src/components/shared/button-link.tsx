@@ -1,6 +1,7 @@
-import clsx from 'clsx'
 import Link from 'next/link'
 import type { AnchorHTMLAttributes } from 'react'
+
+import clsxm from '~lib/clsxm'
 
 const baseClass =
   'font-bold tracking-wide border transition focus:ring inline-flex py-1 px-4 rounded items-center no-underline outline-none'
@@ -29,7 +30,7 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
         <a
           target="_blank"
           rel="noopener noreferrer"
-          className={clsx(baseClass, variants[variant], className)}
+          className={clsxm(baseClass, variants[variant], className)}
           {...props}
         >
           {children}
@@ -40,7 +41,7 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
 
   return (
     <Link href={href}>
-      <a className={clsx(baseClass, variants[variant])} {...props}>
+      <a className={clsxm(baseClass, variants[variant], className)} {...props}>
         {children}
       </a>
     </Link>

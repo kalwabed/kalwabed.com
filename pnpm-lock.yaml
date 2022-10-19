@@ -35,6 +35,7 @@ specifiers:
   remark-code-titles: ^0.1.2
   remark-parse: ^10.0.1
   remark-slug: ^7.0.1
+  tailwind-merge: ^1.6.0
   tailwindcss: ^3.1.8
   typescript: ^4.8.3
 
@@ -57,6 +58,7 @@ dependencies:
   remark-code-titles: 0.1.2
   remark-parse: 10.0.1
   remark-slug: 7.0.1
+  tailwind-merge: 1.6.0
 
 devDependencies:
   '@next/env': 12.3.0
@@ -3667,6 +3669,10 @@ packages:
   /supports-preserve-symlinks-flag/1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+
+  /tailwind-merge/1.6.0:
+    resolution: {integrity: sha512-lfpys05uZMcVGIbgrrM/HlQGYKiPIcUhs76H1VrXo0gerpYkoLk4zjQTppdyAcBcmpzlzXJw7X0JniUKOr2hkg==}
+    dev: false
 
   /tailwindcss/3.1.8_postcss@8.4.16:
     resolution: {integrity: sha512-YSneUCZSFDYMwk+TGq8qYFdCA3yfBRdBlS7txSq0LUmzyeqRe3a8fBQzbz9M3WS/iFT4BNf/nmw9mEzrnSaC0g==}

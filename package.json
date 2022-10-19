@@ -32,7 +32,8 @@
     "remark-autolink-headings": "^7.0.1",
     "remark-code-titles": "^0.1.2",
     "remark-parse": "^10.0.1",
-    "remark-slug": "^7.0.1"
+    "remark-slug": "^7.0.1",
+    "tailwind-merge": "^1.6.0"
   },
   "devDependencies": {
     "@next/env": "^12.3.0",
