@@ -1,6 +1,7 @@
-import clsx from 'clsx'
 import Link from 'next/link'
 import type { AnchorHTMLAttributes } from 'react'
+
+import clsxm from '~lib/clsxm'
 
 interface TextLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   variant?: 'primary' | 'ghost'
@@ -37,7 +38,7 @@ const TextLink = ({
           {...props}
           target="_blank"
           rel="noopener noreferrer"
-          className={clsx(baseClass, variants[variant], sizes[size], className)}
+          className={clsxm(baseClass, variants[variant], sizes[size], className)}
         >
           {children}
         </a>
@@ -47,7 +48,7 @@ const TextLink = ({
 
   return (
     <Link href={props.href}>
-      <a {...props} className={clsx(baseClass, variants[variant], sizes[size], className)}>
+      <a {...props} className={clsxm(baseClass, variants[variant], sizes[size], className)}>
         {children}
       </a>
     </Link>
