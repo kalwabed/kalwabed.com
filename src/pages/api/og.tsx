@@ -41,7 +41,7 @@ export default function handler(req: NextRequest) {
           </div>
 
           <div
-            tw="flex justify-center items-center w-full px-4 py-12 max-w-2xl mx-auto text-white text-4xl font-semibold rounded shadow-lg border"
+            tw="flex justify-center text-center items-center w-full px-4 py-12 max-w-2xl mx-auto text-white text-4xl font-semibold rounded shadow-lg border"
             style={{
               background: 'linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)'
             }}
