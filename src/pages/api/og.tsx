@@ -41,15 +41,15 @@ export default function handler(req: NextRequest) {
           </div>
 
           <div
-            tw="flex justify-center items-center w-full px-4 py-12 max-w-2xl mx-auto text-white text-4xl font-medium rounded-sm shadow-lg border"
+            tw="flex justify-center items-center w-full px-4 py-12 max-w-2xl mx-auto text-white text-4xl font-semibold rounded shadow-lg border"
             style={{
-              background: 'linear-gradient(to left, #fff1bf, #ec458d,#474ed7)'
+              background: 'linear-gradient(to right, #833ab4, #fd1d1d, #fcb045)'
             }}
           >
             {title}
           </div>
 
-          <div tw="text-gray-400 mt-auto mx-auto px-8 py-12">{desc}</div>
+          <div tw="text-gray-400 text-center max-w-xl mt-auto mx-auto px-8 py-12">{desc}</div>
         </div>
       ),
       {
