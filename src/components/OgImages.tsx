@@ -47,7 +47,7 @@ export const KalwabedOgImage = (props: Omit<OgImageProps, 'desc'>) => {
       </svg>
 
       <div tw="flex flex-col w-full h-full max-w-lg ml-auto">
-        <p tw="text-white text-6xl text-center font-bold ml-auto mt-40 mr-16" style={{ color: '#ECEEED' }}>
+        <p tw="text-white text-5xl text-right font-bold ml-auto mt-32 mr-16" style={{ color: '#ECEEED' }}>
           {title}
         </p>
         <div tw="flex items-center ml-auto mt-auto mb-8 mr-16">
