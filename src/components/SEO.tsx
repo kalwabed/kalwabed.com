@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 import { ArticleJsonLd, DefaultSeo, NextSeo, NextSeoProps, SocialProfileJsonLd } from 'next-seo'
 import { OpenGraph } from 'next-seo/lib/types'
 
@@ -66,10 +66,10 @@ interface SEOProps {
 }
 
 const SEO = (props: SEOProps) => {
-  const { asPath } = useRouter()
+  const pathname = usePathname()
   const { title, description, isPost, openGraph } = props
-  const url = app.siteUrl + asPath
-  const titleWithSuffix = asPath === '/' ? 'Kalwabed Rizki' : `${title} • Kalwabed Rizki`
+  const url = app.siteUrl + pathname
+  const titleWithSuffix = pathname === '/' ? 'Kalwabed Rizki' : `${title} • Kalwabed Rizki`
 
   return (
     <>

@@ -10,7 +10,7 @@ const Hero = () => {
           <p className="tracking-wide text-2xl md:text-3xl text-lowContrast">
             Software engineer interested in modern software development architecture.
           </p>
-          <TextLink className="umami--click--learn-more" href="/about" aria-label="About me">
+          <TextLink href="/about" aria-label="About me">
             Learn more about me
           </TextLink>
         </section>

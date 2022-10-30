@@ -3,10 +3,9 @@
  */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   experimental: {
-    browsersListForSwc: true,
-    legacyBrowsers: false
+    legacyBrowsers: false,
+    appDir: true
   },
   images: {
     formats: ['image/avif', 'image/webp']

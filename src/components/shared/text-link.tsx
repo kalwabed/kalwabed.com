@@ -33,24 +33,21 @@ const TextLink = ({
 }: TextLinkProps) => {
   if (isExternal) {
     return (
-      <Link href={props.href}>
-        <a
-          {...props}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={clsxm(baseClass, variants[variant], sizes[size], className)}
-        >
-          {children}
-        </a>
+      <Link
+        href={props.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={clsxm(baseClass, variants[variant], sizes[size], className)}
+        {...props}
+      >
+        {children}
       </Link>
     )
   }
 
   return (
-    <Link href={props.href}>
-      <a {...props} className={clsxm(baseClass, variants[variant], sizes[size], className)}>
-        {children}
-      </a>
+    <Link href={props.href} {...props} className={clsxm(baseClass, variants[variant], sizes[size], className)}>
+      {children}
     </Link>
   )
 }

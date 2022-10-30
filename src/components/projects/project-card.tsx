@@ -1,4 +1,4 @@
-import Image from 'next/future/image'
+import Image from 'next/image'
 
 import ButtonLink from '~components/shared/button-link'
 import projectBanner from '~components/shared/project-banners'

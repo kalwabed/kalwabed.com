@@ -13,15 +13,14 @@ const PageFooter = () => {
       <div className="mt-4">
         <div className="flex flex-col justify-center items-center">
           <Divider />
-          <Link href="https://pena.kalwabed.xyz">
-            <a
-              rel="noopener noreferrer"
-              target="_blank"
-              className="text-lowContrast text-sm font-medium inline-flex space-x-0.5 items-center mt-4 mb-8 hover:text-highContrast"
-            >
-              <span>Pena</span>
-              <HiExternalLink />
-            </a>
+          <Link
+            href="https://pena.kalwabed.xyz"
+            rel="noopener noreferrer"
+            target="_blank"
+            className="text-lowContrast text-sm font-medium inline-flex space-x-0.5 items-center mt-4 mb-8 hover:text-highContrast"
+          >
+            <span>Pena</span>
+            <HiExternalLink />
           </Link>
 
           <p className="text-sm tracking-wide leading-relaxed text-center text-lowContrast">

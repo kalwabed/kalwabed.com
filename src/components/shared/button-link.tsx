@@ -26,24 +26,21 @@ const ButtonLink: React.FC<ButtonLinkProps> = ({
 }) => {
   if (isExternal) {
     return (
-      <Link href={href}>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          className={clsxm(baseClass, variants[variant], className)}
-          {...props}
-        >
-          {children}
-        </a>
+      <Link
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={clsxm(baseClass, variants[variant], className)}
+        {...props}
+      >
+        {children}
       </Link>
     )
   }
 
   return (
-    <Link href={href}>
-      <a className={clsxm(baseClass, variants[variant], className)} {...props}>
-        {children}
-      </a>
+    <Link href={href} className={clsxm(baseClass, variants[variant], className)} {...props}>
+      {children}
     </Link>
   )
 }
