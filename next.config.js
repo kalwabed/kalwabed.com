@@ -5,7 +5,7 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     legacyBrowsers: false,
-    appDir: true
+    appDir: false
   },
   images: {
     formats: ['image/avif', 'image/webp']

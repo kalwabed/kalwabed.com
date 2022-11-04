@@ -3,25 +3,27 @@ import '~styles/global.css'
 import '~styles/mdx.css'
 
 import { Inter, Manrope } from '@next/font/google'
-import React from 'react'
+import { AppProps } from 'next/app'
 
+import LayoutRoot from '~components/layout/layout-root'
 import Page from '~components/layout/page'
-import PageFooter from '~components/layout/page-footer'
-import TopNavigation from '~components/layout/top-navigation'
+import { DefaultSEO } from '~components/SEO'
 
 const inter = Inter({ subsets: ['latin'] })
 const manrope = Manrope({ subsets: ['latin'] })
 
-const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export default function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <html lang="en">
-      <body className={`bg-appBg ${inter.className}`}>
-        <TopNavigation />
-        <Page>{children}</Page>
-        <PageFooter />
-      </body>
-
+    <LayoutRoot>
+      <DefaultSEO />
+      <Page>
+        <Component {...pageProps} />
+      </Page>
       <style jsx global>{`
+        html {
+          font-family: ${inter.style.fontFamily};
+        }
+
         h1,
         h2,
         h3,
@@ -31,8 +33,6 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           font-family: ${manrope.style.fontFamily};
         }
       `}</style>
-    </html>
+    </LayoutRoot>
   )
 }
-
-export default RootLayout
