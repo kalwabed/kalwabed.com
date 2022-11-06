@@ -4,6 +4,7 @@ import '~styles/mdx.css'
 
 import { Inter, Manrope } from '@next/font/google'
 import { AppProps } from 'next/app'
+import Script from 'next/script'
 
 import LayoutRoot from '~components/layout/layout-root'
 import Page from '~components/layout/page'
@@ -15,6 +16,11 @@ const manrope = Manrope({ subsets: ['latin'] })
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <LayoutRoot>
+      <Script
+        data-website-id={process.env.NEXT_PUBLIC_UMAMI_ID}
+        src={process.env.NEXT_PUBLIC_UMAMI_URL}
+        data-do-not-track="true"
+      />
       <DefaultSEO />
       <Page>
         <Component {...pageProps} />
