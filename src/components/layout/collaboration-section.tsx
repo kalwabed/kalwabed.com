@@ -49,7 +49,7 @@ const CollaborationSection = () => {
             target="_blank"
             rel="noopener noreferrer"
             href={href}
-            className="transition hover:opacity-80 focus:opacity-80"
+            className={`umami--click--${label.toLowerCase()} transition hover:opacity-80 focus:opacity-80`}
           >
             <AccessibleIcon.Root label={label}>
               <Icon className="w-6 h-6" />

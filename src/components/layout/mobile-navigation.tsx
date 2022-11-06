@@ -24,7 +24,7 @@ const MobileNavigation = ({ isMenuOpen, setIsMenuOpen }: MobileNavigationProps) 
             <li key={route.href}>
               <TextLink
                 variant="ghost"
-                className={`text-xl umami--click--NAV-${route.label}`}
+                className={`text-xl umami--click--mobileNAV-${route.label}`}
                 onClick={() => setIsMenuOpen(false)}
                 title={route.label}
                 href={route.href}

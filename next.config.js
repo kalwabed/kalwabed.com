@@ -3,10 +3,9 @@
  */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
   experimental: {
-    browsersListForSwc: true,
-    legacyBrowsers: false
+    legacyBrowsers: false,
+    appDir: false
   },
   images: {
     formats: ['image/avif', 'image/webp']
@@ -21,7 +20,7 @@ module.exports = nextConfig
 // https://securityheaders.com
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-eval' 'unsafe-inline' umami-kawari.herokuapp.com;
+  script-src 'self' 'unsafe-eval' 'unsafe-inline' *.kalwabed.xyz;
   style-src 'self' 'unsafe-inline' fonts.googleapis.com;
   img-src * blob: data:;
   media-src 'none';
@@ -43,7 +42,7 @@ const securityHeaders = [
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
   {
     key: 'X-Frame-Options',
-    value: 'DENY'
+    value: 'SAMEORIGIN'
   },
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-Options
   {
@@ -55,15 +54,10 @@ const securityHeaders = [
     key: 'X-DNS-Prefetch-Control',
     value: 'on'
   },
-  // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-Security
-  {
-    key: 'Strict-Transport-Security',
-    value: 'max-age=31536000; includeSubDomains; preload'
-  },
   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy
   // Opt-out of Google FLoC: https://amifloced.org/
   {
     key: 'Permissions-Policy',
-    value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
+    value: 'camera=(), microphone=(), geolocation=()'
   }
 ]

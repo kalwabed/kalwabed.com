@@ -1,4 +1,4 @@
-import Image from 'next/future/image'
+import Image from 'next/image'
 
 import ButtonLink from '~components/shared/button-link'
 import projectBanner from '~components/shared/project-banners'
@@ -41,12 +41,12 @@ const ProjectCard = ({ project }: { project: Project }) => {
         <div className="space-x-2">
           <ButtonLink href={`/projects/${slug}`}>Write-up</ButtonLink>
           {liveUrl && (
-            <ButtonLink href={liveUrl} isExternal>
+            <ButtonLink href={liveUrl} className={`umami--click--project-demo-${slug}`} isExternal>
               Demo
             </ButtonLink>
           )}
           {githubRepo && (
-            <ButtonLink href={githubRepo} isExternal>
+            <ButtonLink href={githubRepo} className={`umami--click--project-repository-${slug}`} isExternal>
               Github
             </ButtonLink>
           )}
