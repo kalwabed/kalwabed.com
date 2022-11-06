@@ -17,7 +17,7 @@ const PageFooter = () => {
             href="https://pena.kalwabed.xyz"
             rel="noopener noreferrer"
             target="_blank"
-            className="text-lowContrast text-sm font-medium inline-flex space-x-0.5 items-center mt-4 mb-8 hover:text-highContrast"
+            className="umami--click--pena text-lowContrast text-sm font-medium inline-flex space-x-0.5 items-center mt-4 mb-8 hover:text-highContrast"
           >
             <span>Pena</span>
             <HiExternalLink />

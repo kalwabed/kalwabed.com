@@ -39,7 +39,7 @@ const TopNavigation = () => {
               <li key={href}>
                 <Link
                   href={href}
-                  className={`umami--click-NAV-${label} font-medium text-lowContrast transition py-2 px-2.5 rounded hover:text-highContrast focus:text-highContrast focus:outline-none focus:ring focus:ring-appBorder`}
+                  className={`umami--click--topNAV-${label} font-medium text-lowContrast transition py-2 px-2.5 rounded hover:text-highContrast focus:text-highContrast focus:outline-none focus:ring focus:ring-appBorder`}
                 >
                   {label}
                 </Link>
