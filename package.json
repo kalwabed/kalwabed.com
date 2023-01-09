@@ -19,7 +19,7 @@
     "@next/font": "^13.0.2",
     "@radix-ui/react-accessible-icon": "^1.0.1",
     "@tailwindcss/typography": "^0.5.7",
-    "@vercel/og": "^0.0.20",
+    "@vercel/og": "^0.0.22",
     "clsx": "^1.1.1",
     "date-fns": "^2.29.3",
     "feed": "^4.2.2",
