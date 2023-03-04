@@ -2,15 +2,21 @@ import '~styles/tailwind.css'
 import '~styles/global.css'
 import '~styles/mdx.css'
 
-import { Inter, Manrope } from '@next/font/google'
+import { Inter, Manrope } from 'next/font/google'
 import React from 'react'
 
 import Page from '~components/layout/page'
 import PageFooter from '~components/layout/page-footer'
 import TopNavigation from '~components/layout/top-navigation'
 
-const inter = Inter({ subsets: ['latin'] })
-const manrope = Manrope({ subsets: ['latin'] })
+const inter = Inter({
+  variable: '--font-inter',
+  subsets: ['latin']
+})
+const manrope = Manrope({
+  variable: '--font-manrope',
+  subsets: ['latin']
+})
 
 const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (

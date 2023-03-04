@@ -2,16 +2,20 @@ import '~styles/tailwind.css'
 import '~styles/global.css'
 import '~styles/mdx.css'
 
-import { Inter, Manrope } from '@next/font/google'
-import { AppProps } from 'next/app'
+import type { AppProps } from 'next/app'
+import { Inter, Manrope } from 'next/font/google'
 import Script from 'next/script'
 
 import LayoutRoot from '~components/layout/layout-root'
 import Page from '~components/layout/page'
 import { DefaultSEO } from '~components/SEO'
 
-const inter = Inter({ subsets: ['latin'] })
-const manrope = Manrope({ subsets: ['latin'] })
+const inter = Inter({
+  subsets: ['latin']
+})
+const manrope = Manrope({
+  subsets: ['latin']
+})
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (

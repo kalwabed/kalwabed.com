@@ -4,7 +4,7 @@ import type { NextRequest } from 'next/server'
 import { KalwabedOgImage, PenaOgImage } from '~components/OgImages'
 
 export const config = {
-  runtime: 'experimental-edge'
+  runtime: 'edge'
 }
 
 export default function handler(req: NextRequest) {
