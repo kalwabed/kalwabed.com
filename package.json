@@ -16,7 +16,6 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.13",
-    "@next/font": "^13.2.3",
     "@radix-ui/react-accessible-icon": "^1.0.1",
     "@tailwindcss/typography": "^0.5.9",
     "@vercel/og": "^0.3.0",
