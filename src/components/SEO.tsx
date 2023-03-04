@@ -89,11 +89,11 @@ const SEO = (props: SEOProps) => {
         <ArticleJsonLd
           url={url}
           authorName="Kalwabed Rizki"
-          datePublished={props.openGraph.article.publishedTime}
-          description={props.description}
+          datePublished={openGraph?.article?.publishedTime ?? new Date().toISOString()}
+          description={description ?? ''}
           images={[appDeploymentOgUrl + `?title=${title}`]}
           title={title}
-          dateModified={props.openGraph.article.modifiedTime}
+          dateModified={openGraph?.article?.modifiedTime}
           publisherName="kalwabed.xyz"
           publisherLogo={app.siteUrl.concat('/static/icon.svg')}
         />

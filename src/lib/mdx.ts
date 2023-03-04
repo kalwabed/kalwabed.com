@@ -9,6 +9,7 @@ import reParse from 'remark-parse'
 import reSlug from 'remark-slug'
 
 import MyFeed from '~scripts/generate-rss'
+import { Post } from '~types'
 
 const root = process.cwd()
 
@@ -51,11 +52,20 @@ export function getAllFrontMatters(type: TypeData) {
       },
       ...allData
     ]
-  }, [])
+  }, []) as {
+    isFeatured: boolean
+    publishedAt: string
+    title: string
+    status: string
+    slug: string
+    techs: string[]
+    description: string
+    summary: string
+  }[]
 
   // generate RSS for post type
   if (type === '_posts' && data.length !== 0) {
-    MyFeed({ posts: data })
+    MyFeed({ posts: data as unknown as Post[] })
   }
 
   return data.sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1))

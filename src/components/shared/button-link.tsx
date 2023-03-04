@@ -17,7 +17,7 @@ interface ButtonLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 }
 
 const ButtonLink: React.FC<ButtonLinkProps> = ({
-  href,
+  href = '/',
   isExternal,
   variant = 'outline',
   className,

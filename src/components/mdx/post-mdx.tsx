@@ -1,7 +1,7 @@
 import Image from 'next/image'
 
 interface PostImageProps {
-  image?: string
+  image: string
   label?: string
 }
 
@@ -11,7 +11,7 @@ export const PostImage: React.FC<PostImageProps> = props => {
   return (
     <figure className="flex flex-col mx-auto justify-center items-center space-y-1 my-8">
       <div className="w-full overflow-hidden shadow rounded">
-        <a href={image} rel="noopener referrer noreferrer" target="_blank">
+        <a href={image} rel="noopener noreferrer" target="_blank">
           <Image
             src={image}
             alt={label || 'Image'}

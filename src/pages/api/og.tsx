@@ -18,8 +18,8 @@ export default function handler(req: NextRequest) {
     const hasDomain = searchParams.has('domain')
     const hasDesc = searchParams.has('desc')
     const domain = hasDomain ? searchParams.get('domain')?.slice(0, 100) : 'kalwabed.xyz'
-    const title = hasTitle ? searchParams.get('title')?.slice(0, 100) : 'Default Title'
-    const desc = hasDesc ? searchParams.get('desc')?.slice(0, 100) : ''
+    const title = hasTitle ? searchParams.get('title')?.slice(0, 100) ?? '' : 'Default Title'
+    const desc = hasDesc ? searchParams.get('desc')?.slice(0, 100) ?? '' : ''
 
     if (domain === 'pena') {
       return new ImageResponse(<PenaOgImage desc={desc} title={title} />, {
