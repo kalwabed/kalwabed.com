@@ -4,10 +4,6 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   content: ['./src/**/*.tsx', './app/**/*.tsx'],
   theme: {
-    // fontFamily: {
-    //   display: [manrope.style.fontFamily, ...defaultTheme.fontFamily.sans],
-    //   body: [inter.style.fontFamily, ...defaultTheme.fontFamily.sans]
-    // },
     extend: {
       colors: {
         appBg: '#141716', // sageDark sage1

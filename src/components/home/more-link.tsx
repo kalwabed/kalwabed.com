@@ -21,7 +21,7 @@ const MoreLink = ({ type }: { type: 'posts' | 'projects' }) => {
       )
 
     default:
-      break
+      return <></>
   }
 }
 
