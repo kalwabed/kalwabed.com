@@ -81,6 +81,7 @@ export const PenaOgImage = (props: OgImageProps) => {
             width="30"
             height="30"
             tw="rounded-full shadow"
+            alt="Pena"
           />
           <span tw="ml-2 text-xl">Pena</span>
         </div>

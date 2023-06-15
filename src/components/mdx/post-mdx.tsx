@@ -5,7 +5,7 @@ interface PostImageProps {
   label?: string
 }
 
-export const PostImage: React.FC<PostImageProps> = props => {
+export const PostImage = (props: PostImageProps) => {
   const { image, label } = props
 
   return (
@@ -32,7 +32,7 @@ interface UpdateProps {
   title: string
 }
 
-export const Update: React.FC<UpdateProps> = ({ content, title }) => {
+export const Update = ({ content, title }: UpdateProps) => {
   return (
     <div className="relative p-6 mt-3 rounded-md mb-6 space-y-2 bg-subtleAppBg border-l-4 border-bdr-idle shadow">
       <strong>{title}</strong>
