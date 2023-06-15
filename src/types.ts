@@ -28,3 +28,10 @@ export interface Project {
 export interface ProjectWithMdx extends Project {
   mdxSource: MDXRemoteSerializeResult
 }
+
+export interface Talk {
+  title: string
+  date: string
+  url: string
+  organizer: string
+}

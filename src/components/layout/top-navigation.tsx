@@ -16,6 +16,10 @@ export const routes = [
     label: 'Projects'
   },
   {
+    href: '/talks',
+    label: 'Talks'
+  },
+  {
     href: '/about',
     label: 'About'
   }
