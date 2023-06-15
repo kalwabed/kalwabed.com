@@ -12,7 +12,7 @@ const TalksPage = () => {
     {
       title: 'Reactive JavaScript: Unveiling the Magic of Signals',
       date: fmtDate(new Date(2023, 5, 17)),
-      url: 'https://ags-se.netlify.app/',
+      url: 'https://dub.sh/jogjajs-signals',
       organizer: 'JogjaJS'
     },
     {
