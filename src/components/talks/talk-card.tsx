@@ -11,20 +11,22 @@ const TalkCard = ({ talk }: { talk: Talk }) => {
       <TextLink
         variant="ghost"
         href={url}
-        title="Slides for this talk"
-        className={`umami--click--talks-${encodeURIComponent(title)} text-2xl leading-relaxed`}
+        title="Get the slides for this talk"
+        className={`umami--click--talks-${encodeURIComponent(title)} text-xl md:text-2xl`}
       >
         {title}
       </TextLink>
-      <div className="flex items-center gap-1.5 text-sm text-lowContrast">
-        <p>{organizer}</p>•<time>{date}</time>
+      <div className="flex-auto text-sm text-lowContrast mt-2">
+        <span>{organizer}</span>
+        <span className="mx-1.5">•</span>
+        <time>{date}</time>
       </div>
       <div className="mt-8 w-fit">
         <a
           href={url}
           rel="noopener noreferrer"
           target="_blank"
-          title="Slides for this talk"
+          title="Get the slides for this talk"
           className={`umami--click--talks-${encodeURIComponent(title)} hover:text-lowContrast transition`}
         >
           <FiExternalLink className="w-5 h-5" />

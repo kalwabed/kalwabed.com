@@ -4,10 +4,26 @@ import TalkCard from '~components/talks/talk-card'
 import { Talk } from '~types'
 
 const TalksPage = () => {
+  function fmtDate(date: Date) {
+    return new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(date)
+  }
+
   const talks: Talk[] = [
     {
+      title: 'Reactive JavaScript: Unveiling the Magic of Signals',
+      date: fmtDate(new Date(2023, 5, 17)),
+      url: 'https://ags-se.netlify.app/',
+      organizer: 'JogjaJS'
+    },
+    {
+      title: 'Prospek Karir Menjadi Seorang Software Engineer',
+      date: fmtDate(new Date(2023, 2, 2)),
+      url: 'https://ags-se.netlify.app/',
+      organizer: 'Amikom Computer Club'
+    },
+    {
       title: 'Becoming an Open-Source Contributor',
-      date: new Intl.DateTimeFormat('en-US', { dateStyle: 'medium' }).format(new Date(2023, 1, 18)),
+      date: fmtDate(new Date(2023, 1, 18)),
       url: 'https://kpb-oss.netlify.app',
       organizer: 'Komunitas Programmer Banyuwangi'
     }
@@ -21,9 +37,9 @@ const TalksPage = () => {
         <h1 className="text-5xl font-bold leading-relaxed">Talks.</h1>
         <p className="text-lowContrast">I&apos;ve given a few talks over the years. Here are some of them.</p>
       </section>
-      <div className="grid grid-cols-1 md:grid-cols-1 w-full mt-12">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full mt-12">
         {talks.map(talk => (
-          <TalkCard talk={talk} key={talk.url} />
+          <TalkCard talk={talk} key={talk.title} />
         ))}
       </div>
     </Container>
