@@ -7,7 +7,7 @@ import Container from '~components/shared/container'
 const ProjectContent = ({ mdxSource }: { mdxSource: MDXRemoteSerializeResult }) => {
   return (
     <Container className="space-y-24">
-      <MDXRemote {...mdxSource} components={ProjectMDXComponents} />
+      <MDXRemote {...mdxSource} components={ProjectMDXComponents} lazy />
     </Container>
   )
 }
