@@ -18,13 +18,13 @@ const TalksPage = () => {
     {
       title: 'Prospek Karir Menjadi Seorang Software Engineer',
       date: fmtDate(new Date(2023, 2, 2)),
-      url: 'https://ags-se.netlify.app/',
+      url: 'https://dub.sh/ags-se',
       organizer: 'Amikom Computer Club'
     },
     {
       title: 'Becoming an Open-Source Contributor',
       date: fmtDate(new Date(2023, 1, 18)),
-      url: 'https://kpb-oss.netlify.app',
+      url: 'https://dub.sh/kpb-oss',
       organizer: 'Komunitas Programmer Banyuwangi'
     }
   ]
