@@ -3,10 +3,6 @@
  */
 const nextConfig = {
   reactStrictMode: true,
-  experimental: {
-    legacyBrowsers: false,
-    appDir: false
-  },
   images: {
     formats: ['image/avif', 'image/webp']
   },
