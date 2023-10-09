@@ -10,6 +10,12 @@ const TalksPage = () => {
 
   const talks: Talk[] = [
     {
+      title: 'From OS to Browser: Harnessing Web API Filesystem for Modern Applications',
+      date: fmtDate(new Date(2023, 9, 11)),
+      url: 'https://dub.sh/gdsc-wf',
+      organizer: 'GDSC UMS'
+    },
+    {
       title: 'Reactive JavaScript: Unveiling the Magic of Signals',
       date: fmtDate(new Date(2023, 5, 17)),
       url: 'https://dub.sh/jogjajs-signals',
