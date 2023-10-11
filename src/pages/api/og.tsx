@@ -32,7 +32,7 @@ export default function handler(req: NextRequest) {
       width: defaultWidth,
       height: defaultHeight
     })
-  } catch (e: any) {
+  } catch (e) {
     console.log(`${e.message}`)
     return new Response(`Failed to generate the image`, {
       status: 500
