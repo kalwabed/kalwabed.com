@@ -1,24 +1,24 @@
 {
   "name": "kalwabed.xyz",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "engines": {
-    "node": "^16||^18",
+    "node": "^20",
     "pnpm": "^8"
   },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "astro dev",
+    "build": "astro build",
     "postbuild": "next-sitemap",
-    "start": "next start",
-    "lint": "next lint --fix",
-    "fmt": "prettier --write --cache 'src/**/*.{js,jsx,ts,tsx}'"
+    "start": "astro preview",
+    "fmt": "prettier --write --cache 'src/**/*.{js,astro,ts}'"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
     "@radix-ui/react-accessible-icon": "^1.0.3",
     "@tailwindcss/typography": "^0.5.10",
     "@vercel/og": "^0.5.17",
+    "astro": "^4.0.3",
     "clsx": "^2.0.0",
     "date-fns": "^2.30.0",
     "feed": "^4.2.2",
