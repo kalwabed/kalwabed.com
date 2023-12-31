@@ -1,0 +1,25 @@
+---
+import 'gardevoir/dist/index.min.css'
+import '~/styles/custom.css'
+import Navbar from '~/components/navbar.astro'
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kalwabed Rizki - Software engineer</title>
+  </head>
+  <body>
+    <Navbar />
+    <main id="root">
+      <slot />
+    </main>
+  </body>
+</html>
+
+<style is:global lang="scss">
+html, body, #root {
+  height: 100%;
+}
+</style>

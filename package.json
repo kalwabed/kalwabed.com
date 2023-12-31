@@ -14,7 +14,9 @@
   },
   "dependencies": {
     "astro": "^4.0.8",
-    "date-fns": "^3.0.6"
+    "date-fns": "^3.0.6",
+    "gardevoir": "^1.0.0",
+    "sass": "^1.69.6"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.4.1",
