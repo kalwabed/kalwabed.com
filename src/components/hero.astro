@@ -1,0 +1,51 @@
+---
+import { Image } from 'astro:assets';
+import logo from '~/assets/logo.jpeg';
+---
+
+<div class="wrapper">
+  <h1>Focusing on building the web things.</h1>
+  <p class="sub_title">Interested in modern software development architecture.</p>
+
+  <div class="about">
+    <div class="profile">
+      <Image src={logo} alt="kalwabed.xyz gradient logo" width={20} height={20}  />
+      <span>Hi, I'm Kalwabed</span>
+    </div>
+    <p>kalwabed[at]gmail.com</p>
+  </div>
+</div>
+
+<style lang="scss">
+@use '../styles/colors';
+
+.wrapper {
+  max-width: 600px;
+  margin: 102px auto 0;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+.sub_title {
+  font-size: 32px;
+}
+
+.about {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 45px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+
+  img {
+    border-radius: 999px;
+  }
+}
+</style>
