@@ -10,7 +10,14 @@
     "dev": "astro dev",
     "build": "astro build",
     "start": "astro preview",
-    "fmt": "biome check --apply src/**/*.**"
+    "lint-fmt": "biome check --apply .",
+    "postinstall": "pnpm dlx simple-git-hooks"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm dlx lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,astro,css}": "pnpm lint-fmt"
   },
   "dependencies": {
     "astro": "^4.0.8",
@@ -20,6 +27,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.4.1",
+    "lint-staged": "^15.2.0",
+    "simple-git-hooks": "^2.9.0",
     "typescript": "^5.3.3"
   }
 }
