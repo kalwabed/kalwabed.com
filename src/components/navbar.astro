@@ -16,8 +16,6 @@
 </nav>
 
 <style lang="scss">
-@use '../styles/colors';
-
 nav {
   width: 100%;
   display: flex;
@@ -25,11 +23,11 @@ nav {
 }
 
 a {
-  color: colors.$iris-11;
+  color: var(--iris-9);
   text-decoration: none;
 
   &:hover {
-    color: colors.$iris-12;
+    color: var(--iris-12);
   }
 }
 
@@ -37,8 +35,8 @@ ul {
   margin: 1rem auto;
   display: flex;
   gap: 2rem;
-  background: colors.$iris-2;
-  border: 1px solid colors.$iris-6;
+  background: var(--iris-2);
+  border: 1px solid var(--iris-6);
   padding: .4rem 1.5rem;
   border-radius: 13px;
 }

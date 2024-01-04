@@ -17,11 +17,16 @@ import logo from '~/assets/logo.jpeg';
 </div>
 
 <style lang="scss">
-@use '../styles/colors';
+@use '../styles/breakpoints' as br;
 
 .wrapper {
   max-width: 600px;
   margin: 102px auto 0;
+  padding: 0 1rem;
+
+  @include br.tablet {
+    padding: 0;
+  }
 }
 
 h1 {
