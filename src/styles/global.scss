@@ -1,6 +1,12 @@
 @use "./vars";
 @use "./breakpoints";
 
+html,
+body,
+#root {
+	height: 100%;
+}
+
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/

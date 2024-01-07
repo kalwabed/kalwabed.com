@@ -1,0 +1,38 @@
+---
+import { Image } from 'astro:assets';
+import WritingHeadIcon from '~/assets/writing-head-icon.svg'
+---
+
+<div class="head">
+  <Image src={WritingHeadIcon} alt="Writing head icon" width={20} height={20} />
+  <h2>Writing</h2>
+</div>
+
+<style lang="scss">
+@use '../styles/breakpoints' as br;
+
+.head {
+  position: relative;
+  max-width: var(--default-mw);
+  margin: 102px auto 0;
+
+  img {
+    position: absolute;
+    left: -10px;
+    bottom: 7px;
+    @include br.desktop {
+      left: -35px;
+    }
+  }
+
+  h2 {
+    font-size: 24px;
+    padding: {
+      left: 1rem;
+    }
+    @include br.desktop {
+      padding: 0;
+    }
+  }
+}
+</style>

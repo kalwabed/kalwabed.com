@@ -18,8 +18,14 @@ import Navbar from '~/components/navbar.astro'
   </body>
 </html>
 
-<style is:global lang="scss">
-html, body, #root {
-  height: 100%;
+<style lang="scss">
+@use '../styles/breakpoints' as br;
+
+main {
+  padding: 0 1rem;
+
+  @include br.tablet {
+    padding: 0;
+  }
 }
 </style>
