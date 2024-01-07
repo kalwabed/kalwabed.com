@@ -1,6 +1,10 @@
 ---
 import { Image } from 'astro:assets';
 import WritingHeadIcon from '~/assets/writing-head-icon.svg'
+
+interface Props {
+  section?: 'blog' | 'project'
+}
 ---
 
 <div class="head">

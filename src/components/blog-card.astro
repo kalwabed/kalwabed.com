@@ -1,0 +1,43 @@
+<a href="/">
+  <h3>Unified Versus Split Diff</h3>
+  <p>For a large change, I don’t want to do a “diff review”, I want to do a proper code review of a codebase at a particular instant in time.</p>
+  <small>Jun 21, 2023</small>
+</a>
+
+<style lang="scss">
+@use '../styles/breakpoints' as br;
+
+a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background var(--transition);
+
+  &:hover {
+    @include br.desktop {
+      background: var(--slate-2);
+    }
+
+    > p {
+      color: var(--iris-12);
+    }
+  }
+}
+
+h3 {
+  color: var(--iris-12);
+}
+
+p {
+  margin-top: 5px;
+  color: gray;
+  transition: color var(--transition);
+}
+
+small {
+  margin-top: 18px;
+  color: var(--iris-12);
+}
+</style>

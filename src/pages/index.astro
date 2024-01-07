@@ -2,9 +2,20 @@
 import DefaultLayout from '~/layouts/default.astro'
 import Hero from '~/components/hero.astro'
 import SectionHead from '~/components/section-head.astro'
+import BlogCard from '~/components/blog-card.astro'
 ---
 
 <DefaultLayout>
   <Hero />
   <SectionHead />
+  <div class="wrapper">
+    <BlogCard />
+  </div>
 </DefaultLayout>
+
+<style lang="scss">
+.wrapper {
+  max-width: var(--default-mw);
+  margin: 18px auto 0;
+}
+</style>
