@@ -7,6 +7,15 @@ body,
 	height: 100%;
 }
 
+body {
+	color: var(--fc-primary);
+}
+
+.container {
+	max-width: var(--default-mw);
+	margin: 18px auto 0;
+}
+
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/

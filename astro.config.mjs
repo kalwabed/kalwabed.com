@@ -1,14 +1,14 @@
 import { defineConfig } from "astro/config";
-import Icons from 'unplugin-icons/vite'
+import Icons from "unplugin-icons/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  vite: {
-    plugins: [
-      Icons({
-        compiler: 'astro',
-        autoInstall: true
-      })
-    ]
-  }
+	vite: {
+		plugins: [
+			Icons({
+				compiler: "astro",
+				autoInstall: true,
+			}),
+		],
+	},
 });

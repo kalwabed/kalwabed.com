@@ -9,18 +9,11 @@ import FeaturedProject from '~/components/featured-project.astro'
 <DefaultLayout>
   <Hero />
   <SectionHead section="blog" />
-  <div class="wrapper">
+  <div class="container">
     <BlogCard />
   </div>
   <SectionHead section='project' />
-  <div class="wrapper">
+  <div class="container">
     <FeaturedProject />
   </div>
 </DefaultLayout>
-
-<style lang="scss">
-.wrapper {
-  max-width: var(--default-mw);
-  margin: 18px auto 0;
-}
-</style>

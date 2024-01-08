@@ -28,6 +28,8 @@ $desktop-width: 1024px;
   --slate-11: #60646c;
   --slate-12: #1c2024;
 
+  --fc-primary: var(--slate-12);
+  --fc-subtle: var(--slate-11);
   --default-mw: 600px;
   --transition: .2s ease;
 }

@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import logo from '~/assets/logo.jpeg';
 ---
 
-<div class="wrapper">
+<div class="container">
   <h1>Focusing on building the web things.</h1>
   <p class="sub_title">Interested in modern software development architecture.</p>
 
@@ -19,9 +19,8 @@ import logo from '~/assets/logo.jpeg';
 <style lang="scss">
 @use '../styles/breakpoints' as br;
 
-.wrapper {
-  max-width: var(--default-mw);
-  margin: 102px auto 0;
+.container {
+  margin-top: 102px;
 }
 
 h1 {

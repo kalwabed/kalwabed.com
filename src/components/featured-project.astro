@@ -5,7 +5,7 @@ import sample from '~/assets/pf-sample.png';
 ---
 
 <Image src={sample} alt="Featured project preview" />
-<a href="/">
+<a class="parent-link" href="/">
   <h3>Unified Versus Split Diff</h3>
   <p>For a large change, I don’t want to do a “diff review”, I want to do a proper code review of a codebase at a particular instant in time.</p>
 </a>
@@ -20,8 +20,11 @@ img {
 
 a {
   display: flex;
-  flex-direction: column;
   text-decoration: none;
+}
+
+.parent-link {
+  flex-direction: column;
   padding: 8px;
   border-radius: 4px;
   transition: background var(--transition);
@@ -32,27 +35,31 @@ a {
     }
 
     > p {
-      color: var(--slate-12);
+      color: var(--fc-primary);
     }
   }
 }
 
 h3 {
-  color: var(--slate-12);
+  color: var(--fc-primary);
 }
 
 p {
   margin-top: 5px;
-  color: gray;
+  color: var(--fc-subtle);
   transition: color var(--transition);
 }
 
 .ext {
-  flex-direction: row;
   align-items: start;
+  padding-left: 8px;
   gap: 2px;
   margin-top: 5px;
   color: var(--slate-12);
   font-size: small;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 </style>
