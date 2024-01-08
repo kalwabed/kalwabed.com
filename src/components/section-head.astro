@@ -1,15 +1,21 @@
 ---
 import { Image } from 'astro:assets';
 import WritingHeadIcon from '~/assets/writing-head-icon.svg'
+import ProjectHeadIcon from '~/assets/project-head-icon.svg'
 
 interface Props {
-  section?: 'blog' | 'project'
+  section: 'blog' | 'project'
 }
+
+const { section } = Astro.props
+
+const icon = section === 'blog' ? WritingHeadIcon : ProjectHeadIcon
+const title = section === 'blog' ? 'Writing' : 'Featured project'
 ---
 
 <div class="head">
-  <Image src={WritingHeadIcon} alt="Writing head icon" width={20} height={20} />
-  <h2>Writing</h2>
+  <Image src={icon} alt="Section icon" width={20} height={20} />
+  <h2>{title}</h2>
 </div>
 
 <style lang="scss">

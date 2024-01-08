@@ -1,0 +1,58 @@
+---
+import { Image } from 'astro:assets';
+import GgExternal from '~icons/gg/external'
+import sample from '~/assets/pf-sample.png';
+---
+
+<Image src={sample} alt="Featured project preview" />
+<a href="/">
+  <h3>Unified Versus Split Diff</h3>
+  <p>For a large change, I don’t want to do a “diff review”, I want to do a proper code review of a codebase at a particular instant in time.</p>
+</a>
+<a class="ext" href="123">Access website <GgExternal /></a>
+
+<style lang="scss">
+@use '../styles/breakpoints' as br;
+
+img {
+  height: 100%;
+}
+
+a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background var(--transition);
+
+  &:hover {
+    @include br.desktop {
+      background: var(--slate-2);
+    }
+
+    > p {
+      color: var(--slate-12);
+    }
+  }
+}
+
+h3 {
+  color: var(--slate-12);
+}
+
+p {
+  margin-top: 5px;
+  color: gray;
+  transition: color var(--transition);
+}
+
+.ext {
+  flex-direction: row;
+  align-items: start;
+  gap: 2px;
+  margin-top: 5px;
+  color: var(--slate-12);
+  font-size: small;
+}
+</style>

@@ -3,13 +3,18 @@ import DefaultLayout from '~/layouts/default.astro'
 import Hero from '~/components/hero.astro'
 import SectionHead from '~/components/section-head.astro'
 import BlogCard from '~/components/blog-card.astro'
+import FeaturedProject from '~/components/featured-project.astro'
 ---
 
 <DefaultLayout>
   <Hero />
-  <SectionHead />
+  <SectionHead section="blog" />
   <div class="wrapper">
     <BlogCard />
+  </div>
+  <SectionHead section='project' />
+  <div class="wrapper">
+    <FeaturedProject />
   </div>
 </DefaultLayout>
 
