@@ -1,0 +1,48 @@
+<footer class="container">
+	<ul>
+		<li><a href="/about">About</a></li>
+		<li><a href="/projects">Projects</a></li>
+		<li><a href="/blog">Blog</a></li>
+		<li><a href="/uses">Uses</a></li>
+	</ul>
+	<p>© 2021-present Kalwabed Rizki. All rights reserved</p>
+</footer>
+
+<style>
+	.container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding: 1rem 0 .5rem;
+		border-top: 1px solid var(--slate-6);
+		opacity: 60%;
+		transition: opacity .3s ease;
+
+		&:hover {
+			opacity: 100%;
+		}
+	}
+
+	ul {
+		display: flex;
+		gap: 30px;
+	}
+	
+	li {
+		list-style: none;
+	}
+
+	a {
+		text-decoration: none;
+		color: var(--fc-primary);
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	p {
+		margin-top: .7rem;
+		color: var(--fc-subtle);
+	}
+</style>
