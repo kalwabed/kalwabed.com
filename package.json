@@ -21,16 +21,16 @@
   },
   "dependencies": {
     "astro": "^4.1.1",
-    "date-fns": "^3.1.0",
+    "date-fns": "^3.2.0",
     "gardevoir": "^1.0.0",
     "sass": "^1.69.7"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.4.1",
+    "@biomejs/biome": "^1.5.1",
     "@iconify-json/gg": "^1.1.9",
     "lint-staged": "^15.2.0",
     "simple-git-hooks": "^2.9.0",
     "typescript": "^5.3.3",
-    "unplugin-icons": "^0.18.1"
+    "unplugin-icons": "^0.18.2"
   }
 }
