@@ -1,4 +1,14 @@
-<nav>
+---
+import { Image } from 'astro:assets';
+import logo from '~/assets/logo.jpeg';
+
+const isHomepage = Astro.url.pathname === '/'
+---
+
+<nav class={`container ${isHomepage ? 'home' : ''}`}>
+  <a href="/">
+    <Image src={logo} alt="kalwabed.xyz gradient logo" width={20} height={20} class={isHomepage ? 'hidden' : ''}  />
+  </a>
   <ul>
     <li>
       <a href="/about">About</a>
@@ -16,10 +26,22 @@
 </nav>
 
 <style lang="scss">
-nav {
-  width: 100%;
+.container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  &.home {
+    justify-content: center;
+  }
+}
+
+img {
+  border-radius: 999px;
+
+  &.hidden {
+    display: none;
+  }
 }
 
 a {
@@ -32,12 +54,15 @@ a {
 }
 
 ul {
-  margin: 1rem auto;
+  margin: {
+    top: 1rem;
+    bottom: 1rem;
+  };
   display: flex;
   gap: 2rem;
   background: var(--iris-2);
   border: 1px solid var(--iris-6);
-  padding: .4rem 1.5rem;
+  padding: .2rem 1rem;
   border-radius: 13px;
 }
 
