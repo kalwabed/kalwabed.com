@@ -4,7 +4,7 @@ import Icons from "unplugin-icons/vite";
 // https://astro.build/config
 export default defineConfig({
 	image: {
-		service: squooshImageService()
+		service: squooshImageService(),
 	},
 	vite: {
 		plugins: [
