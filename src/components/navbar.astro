@@ -6,7 +6,7 @@ const isHomepage = Astro.url.pathname === '/'
 ---
 
 <nav class={`container ${isHomepage ? 'home' : ''}`}>
-  <a href="/">
+  <a href="/" aria-hidden={isHomepage ? 'true' : 'false'}>
     <Image src={logo} alt="kalwabed.xyz gradient logo" width={20} height={20} class={isHomepage ? 'hidden' : ''}  />
   </a>
   <ul>

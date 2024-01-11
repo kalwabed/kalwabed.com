@@ -1,6 +1,11 @@
 @use "./vars";
 @use "./breakpoints";
 
+@import '@fontsource-variable/inter';
+@import '@fontsource/crimson-pro/400.css';
+@import '@fontsource/crimson-pro/500.css';
+@import '@fontsource/crimson-pro/600.css';
+
 html,
 body,
 #root {
@@ -9,11 +14,20 @@ body,
 
 body {
 	color: var(--fc-primary);
+	font-family: var(--font-body);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: var(--font-heading), Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .container {
 	max-width: var(--default-mw);
-	margin: 18px auto 0;
+	margin: 0 auto 0;
 }
 
 /*
