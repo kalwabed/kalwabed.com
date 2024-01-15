@@ -1,6 +1,5 @@
 ---
 import { Image } from 'astro:assets';
-import GgMenu from '~icons/gg/menu'
 import logo from '~/assets/logo.svg';
 
 const isHomepage = Astro.url.pathname === '/'
@@ -35,17 +34,9 @@ const isHomepage = Astro.url.pathname === '/'
   max-width: 968px;
   width: 100%;
   margin-top: 2.19rem;
-  padding: {
-    top: 1rem;
-    right: 1rem;
-    left: 1rem;
-  }
+  padding: 0 1rem;
 
-  &.home {
-    justify-content: center;
-  }
-
-  @include br.tablet {
+  @include br.desktop {
     padding: 0;
   }
 }

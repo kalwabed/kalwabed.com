@@ -1,52 +1,99 @@
 ---
 import { Image } from 'astro:assets';
-import logo from '~/assets/logo.jpeg';
+import heroImg from '~/assets/hero-image.png'
 ---
 
 <div class="container">
-  <h1>Focusing on building the web things.</h1>
-  <p class="sub_title">Interested in modern software development architecture.</p>
+  <section>
+    <h1>Hi I'm Kalwabed</h1>
+    <p class="sub_title">Focusing on building the web things. Interested in modern software development architecture.</p>
+    <span aria-hidden="true" class="circle circle-1"></span>
+    <span aria-hidden="true" class="circle circle-2"></span>
+  </section>
 
-  <div class="about">
-    <div class="profile">
-      <Image src={logo} alt="kalwabed.xyz gradient logo" width={20} height={20}  />
-      <span>Hi, I'm Kalwabed</span>
-    </div>
-    <p>kalwabed[at]gmail.com</p>
-  </div>
+  <Image src={heroImg} alt="Hero image by Pablo Stanley" />
 </div>
 
 <style lang="scss">
 @use '../styles/breakpoints' as br;
 
 .container {
-  margin-top: 102px;
+  margin-top: 30px;
+  max-width: 968px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  @include br.desktop {
+    margin-top: -30px;
+  }
 }
 
 h1 {
-  font-size: 38px;
+  font-size: 3rem;
+  font-weight: 400;
+  position: relative;
+  z-index: 11;
+
+  @include br.tablet {
+    font-size: 3.75rem;
+  }
 }
 
 .sub_title {
-  font-size: 38px;
+  font-size: 1.125rem;
   color: var(--fc-subtle);
-  font-family: var(--font-heading), serif;
+
+  @include br.desktop {
+    width: 70%;
+  }
 }
 
-.about {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  margin-top: 45px;
+section {
+  position: relative;
 }
 
-.profile {
-  display: flex;
-  align-items: center;
-  gap: .5rem;
+.circle {
+  display: block;
+  position: absolute;
+  border-radius: 999px;
+}
 
-  img {
-    border-radius: 999px;
+.circle-1 {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--light-orange);
+  top: -19px;
+  left: -29px;
+  z-index: 5;
+
+  @include br.tablet {
+    top: -10px;
+    left: -30px;
+  }  
+}
+
+.circle-2 {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: var(--light-blue);
+  top: 42px;
+  right: 60px;
+  z-index: 5;
+
+  @include br.tablet {
+    top: 51px;
+    right: 261px;
+  }
+}
+
+img {
+  display: none;
+
+  @include br.tablet {
+    display: block;
   }
 }
 </style>

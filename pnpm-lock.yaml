@@ -8,9 +8,15 @@ dependencies:
   '@fontsource-variable/inter':
     specifier: ^5.0.16
     version: 5.0.16
+  '@fontsource-variable/overpass':
+    specifier: ^5.0.17
+    version: 5.0.17
   '@fontsource/crimson-pro':
     specifier: ^5.0.16
     version: 5.0.16
+  '@fontsource/schoolbell':
+    specifier: ^5.0.8
+    version: 5.0.8
   astro:
     specifier: ^4.1.1
     version: 4.1.1(sass@1.69.7)(typescript@5.3.3)
@@ -656,8 +662,16 @@ packages:
     resolution: {integrity: sha512-k+BUNqksTL+AN+o+OV7ILeiE9B5M5X+/jA7LWvCwjbV9ovXTqZyKRhA/x7uYv/ml8WQ0XNLBM7cRFIx4jW0/hg==}
     dev: false
 
+  /@fontsource-variable/overpass@5.0.17:
+    resolution: {integrity: sha512-NzrUBQPBlVpfTpMqBIYsrxIKer+ADtC07e9NyxnSgBsgV1eZwaih9cRGnuOa4H/B00kM0bBj1kN1M6XEiVeFuA==}
+    dev: false
+
   /@fontsource/crimson-pro@5.0.16:
     resolution: {integrity: sha512-GeVJ6Vj6Z0B8qf6Qni6OihMCZsdHr57hpMYeshjT+yuvfJ0FxrlFAA9MSEgE23fz/GUpWcdheH6WrGRrogoG9w==}
+    dev: false
+
+  /@fontsource/schoolbell@5.0.8:
+    resolution: {integrity: sha512-pBwdwWJd+mWLNLPKEiM8JTljXUYmwrYDNilOEUrwmYZpKKm36OIse2QHcx6fV2n5nNmDipRQJOYf3WxY96ToXQ==}
     dev: false
 
   /@iconify-json/gg@1.1.9:
