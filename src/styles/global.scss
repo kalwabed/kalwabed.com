@@ -28,7 +28,13 @@ h5 {
 
 .container {
 	max-width: var(--default-mw);
-	margin: 0 auto 0;
+	margin: 0 auto;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 }
 
 /*

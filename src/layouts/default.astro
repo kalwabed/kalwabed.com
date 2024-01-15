@@ -12,11 +12,13 @@ import Footer from '~/components/page-footer.astro'
     <title>Kalwabed Rizki - Software engineer</title>
   </head>
   <body>
-    <Navbar />
-    <main id="root">
-      <slot />
-    </main>
-    <Footer />
+    <div id="root">
+      <Navbar />
+      <main>
+        <slot />
+      </main>
+      <Footer />
+    </div>
   </body>
 </html>
 
@@ -25,6 +27,7 @@ import Footer from '~/components/page-footer.astro'
 
 main {
   padding: 0 1rem;
+  margin-bottom: 149px;
 
   @include br.tablet {
     padding: 0;
