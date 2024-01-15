@@ -26,14 +26,25 @@ const isHomepage = Astro.url.pathname === '/'
 </nav>
 
 <style lang="scss">
+@use '../styles/breakpoints' as br;
+
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: {
+    top: 1rem;
+    right: 1rem;
+    left: 1rem;
+  }
   width: 100%;
 
   &.home {
     justify-content: center;
+  }
+
+  @include br.tablet {
+    padding: 0;
   }
 }
 
@@ -65,6 +76,10 @@ ul {
   border: 1px solid var(--iris-6);
   padding: .2rem 1rem;
   border-radius: 13px;
+
+  @include br.tablet {
+    display: flex;
+  }
 }
 
 li {

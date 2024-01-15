@@ -1,7 +1,7 @@
 @use 'vars';
 
 @mixin tablet {
-  @media (min-width: #{vars.$tablet-width}) and (max-width: #{vars.$desktop-width - 1px}) {
+  @media (min-width: #{vars.$tablet-width}) {
     @content;
   }
 }
