@@ -1,17 +1,14 @@
 ---
 import { Image } from 'astro:assets';
 import GgMenu from '~icons/gg/menu'
-import logo from '~/assets/logo.jpeg';
+import logo from '~/assets/logo.svg';
 
 const isHomepage = Astro.url.pathname === '/'
 ---
 
 <nav class={`container ${isHomepage ? 'home' : ''}`}>
-  <a href="/" aria-hidden={isHomepage ? 'true' : 'false'}>
-    <Image src={logo} alt="kalwabed.xyz gradient logo" width={20} height={20} class={isHomepage ? 'hidden' : ''}  />
-    <span>
-      kalwabed
-    </span>
+  <a href="/">
+    <Image src={logo} alt="kalwabed.xyz letter logo" />
   </a>
   <ul>
     <li>
@@ -27,7 +24,6 @@ const isHomepage = Astro.url.pathname === '/'
       <a href="/uses">Uses</a>
     </li>
   </ul>
-  <button><GgMenu /></button>
 </nav>
 
 <style lang="scss">
@@ -35,14 +31,15 @@ const isHomepage = Astro.url.pathname === '/'
 
 .container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  max-width: 968px;
+  width: 100%;
+  margin-top: 2.19rem;
   padding: {
     top: 1rem;
     right: 1rem;
     left: 1rem;
   }
-  width: 100%;
 
   &.home {
     justify-content: center;
@@ -53,60 +50,27 @@ const isHomepage = Astro.url.pathname === '/'
   }
 }
 
-img {
-  border-radius: 999px;
-
-  &.hidden {
-    display: none;
-  }
-}
-
 a {
-  color: var(--iris-9);
+  color: var(--fc-primary);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
 
   &:hover {
-    color: var(--iris-12);
-  }
-
-  & > span {
-    margin-left: 8px;
-    color: var(--fc-primary);
-    @include br.tablet {
-      display: none;
-      margin: 0;
-    }
+    text-decoration: underline;
   }
 }
 
 ul {
+  display: flex;
   margin: {
     top: 1rem;
     bottom: 1rem;
   };
-  display: none;
-  gap: 2rem;
-  background: var(--iris-2);
-  border: 1px solid var(--iris-6);
-  padding: .2rem 1rem;
-  border-radius: 13px;
-
-  @include br.tablet {
-    display: flex;
-  }
+  gap: 1.3rem;
 }
 
 li {
   list-style: none;
-}
-
-button {
-  border: 0;
-  background: transparent;
-  @include br.tablet {
-    display: none;
-  }
 }
 </style>
