@@ -14,6 +14,8 @@ import ProjectCard from '~/components/project-card.astro'
 </DefaultLayout>
 
 <style lang="scss">
+  @use '../../styles/breakpoints' as br;
+
   .container {
     display: flex;
     flex-direction: column;
@@ -21,21 +23,27 @@ import ProjectCard from '~/components/project-card.astro'
   }
 
   h1 {
-    text-align: center;
-    margin-bottom: 69px;
+    margin-bottom: 32px;
     font-size: 2.29rem;
+
+    @include br.tablet {
+      text-align: center;
+      margin-bottom: 69px;
+    }
   }
 
   .project-list {
     max-width: var(--over-mw);
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 5rem;
-    justify-items: end;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 2rem;
+    justify-items: start;
 
-    >:nth-child(even) {
-      background-color: red;
+    @include br.tablet {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 5rem;
+      justify-items: end;
     }
   }
 </style>

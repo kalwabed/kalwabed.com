@@ -8,7 +8,7 @@ import GgExternal from '~icons/gg/external'
 		<Image src="https://www.kalwabed.xyz/favicon.ico" alt="kalwabed.xyz favicon" width={22} height={22}  />
 		<b>2023</b>
 	</div>
-	<h2>Tuantanah</h2>
+	<a class="link-title" href="/projects/412">Tuantanah</a>
 	<p>I have recently been made aware that the frequency.</p>
 	<div class="links">
 		<a href='/projects/123'>Write-up</a>
@@ -17,14 +17,24 @@ import GgExternal from '~icons/gg/external'
 </section>
 
 <style lang="scss">
+	@use '../styles/breakpoints' as br;
 	$small: 0.75rem;
 
 	.wrapper {
-		max-width: 20rem;
+		display: flex;
+		flex-direction: column;
+		max-width: 100%;
+
+		@include br.desktop {
+			max-width: 20rem;
+		}
 	}
 	
-	h2 {
-		font-size: 2rem;
+	.link-title {
+		font-size: 1.5rem;
+		font-family: var(--font-heading);
+		font-weight: 600;
+		line-height: 1.625;
 	}
 
 	p {
