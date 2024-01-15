@@ -1,14 +1,63 @@
 ---
 import { Image } from 'astro:assets';
+import GgExternal from '~icons/gg/external'
 ---
 
-<div class="wrapper">
-	<Image src="https://www.kalwabed.xyz/favicon.ico" alt="kalwabed.xyz favicon" width={25} height={25}  />
-	<b>2023</b>
-</div>
+<section class="wrapper">
+	<div class="icon-year">
+		<Image src="https://www.kalwabed.xyz/favicon.ico" alt="kalwabed.xyz favicon" width={22} height={22}  />
+		<b>2023</b>
+	</div>
+	<h2>Tuantanah</h2>
+	<p>I have recently been made aware that the frequency.</p>
+	<div class="links">
+		<a href='/projects/123'>Write-up</a>
+		<a href='/projects/123' target="_blank" rel="noopener noreferrer">Demo <GgExternal /></a>
+	</div>
+</section>
 
 <style lang="scss">
+	$small: 0.75rem;
+
 	.wrapper {
-		background: red;
+		max-width: 20rem;
+	}
+	
+	h2 {
+		font-size: 2rem;
+	}
+
+	p {
+		color: var(--fc-subtle);
+	}
+
+	.icon-year {
+		display: inline-flex;
+		gap: 8px;
+		align-items: center;
+
+		& b {
+			font-size: $small;
+		}
+	}
+
+	.links {
+		display: flex;
+		gap: 1rem;
+		align-items: center;
+		margin-top: 1rem;
+	}
+
+	a {
+		color: var(--fc-primary);
+		text-decoration: none;
+		display: inline-flex;
+		align-items: start;
+		gap: 2px;
+		font-size: $small;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 </style>
