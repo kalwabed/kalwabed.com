@@ -6,7 +6,7 @@ const isHomepage = Astro.url.pathname === '/'
 ---
 
 <nav class={`container ${isHomepage ? 'home' : ''}`}>
-  <a href="/" title="To home page">
+  <a href="/" aria-label="Link to home page">
     <Image src={logo} alt="kalwabed.xyz letter logo" />
   </a>
   <ul>

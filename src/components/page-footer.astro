@@ -36,20 +36,35 @@ const links = [
 </footer>
 
 <style lang="scss">
+	@use '../styles/breakpoints' as br;
+	
 	.container {
 		max-width: var(--over-mw);
 		width: 100%;
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
-		padding: 1rem 0 .5rem;
+		flex-direction: column;
+		padding: 1rem 1rem .5rem;
 		border-top: 1px solid var(--slate-6);
 		opacity: 60%;
 		transition: opacity .3s ease;
+		margin-top: auto;
 
 		&:hover {
 			opacity: 100%;
 			border-top-color: var(--slate-7);
+		}
+
+		@include br.tablet {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		@include br.desktop {
+			padding: {
+				right: 0;
+				left: 0;
+			}
 		}
 	}
 
