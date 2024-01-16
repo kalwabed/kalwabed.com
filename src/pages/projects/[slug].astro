@@ -1,0 +1,83 @@
+---
+import { Image } from 'astro:assets'
+import DefaultLayout from '~/layouts/default.astro'
+import faviconExample from '~/assets/logo.jpeg'
+
+export function getStaticPaths() {
+  return [
+    {
+      params: { slug: 'omaewa' }
+    }
+  ]
+}
+---
+
+<DefaultLayout>
+  <div class="container">
+    <article>
+      <div class="project-title">
+        <Image src={faviconExample} alt="Example project" width="30" height="30"   />
+        <h2>Tuantanah</h2>
+      </div>
+      <div class="project-side">
+        <Image src="/proj-example.png" alt="Example project" width="586" height="300"   />
+        <div class="meta">
+          <h4>Tech stacks</h4>
+          <p>Svelte</p>
+          <h4>Demo</h4>
+          <p>Svelte</p>
+          <h4>Source</h4>
+          <p>Svelte</p>
+          <h4>Year</h4>
+          <p>2023</p>
+        </div>
+      </div>
+    </article>
+  </div>
+</DefaultLayout>
+
+<style lang="scss">
+@use '../../styles/breakpoints' as br;
+
+.container {
+  margin-top: 2rem;
+  max-width: var(--over-mw);
+}
+
+.project-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  & img {
+    border-radius: 999px;
+  }
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+.project-side {
+  display: flex;
+  gap: 2rem;
+  margin-top: .375rem;
+
+  .meta {
+    height: auto;
+    width: 100%;
+    background: var(--slate-3);
+    border: 1px solid var(--slate-6);
+    border-radius: .25rem;
+    padding: 1.2rem;
+
+    & h4 {
+      font-family: var(--font-body);
+    }
+
+    & p {
+      margin-bottom: 1rem;
+    }
+  }
+}
+</style>
