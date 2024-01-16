@@ -1,0 +1,47 @@
+---
+import DefaultLayout from '~/layouts/default.astro'
+import BlogCard from '~components/blog-card.astro';
+---
+
+<DefaultLayout>
+  <div class="container">
+    <h1>Blog</h1>
+  </div>
+  <div class="writing-list">
+    <BlogCard />
+    <BlogCard />
+  </div>
+</DefaultLayout>
+
+<style lang="scss">
+  @use '../../styles/breakpoints' as br;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 69px;
+  }
+
+  h1 {
+    margin-bottom: 32px;
+    font-size: 2.29rem;
+
+    @include br.tablet {
+      text-align: center;
+      margin-bottom: 69px;
+    }
+  }
+
+  .writing-list {
+    max-width: var(--over-mw);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1rem;
+    justify-items: center;
+
+    @include br.tablet {
+      max-width: 34rem;
+    }
+  }
+</style>
