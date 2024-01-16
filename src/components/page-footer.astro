@@ -1,26 +1,55 @@
+---
+import GgExternal from '~icons/gg/external'
+
+const links = [
+	{
+		label: 'About',
+		href: '/about'
+	},
+	{
+		label: 'Uses',
+		href: '/uses'
+	},
+	{
+		label: 'Github',
+		href: 'https://github.com/kalwabed',
+		external: true,
+	},
+	{
+		label: 'X',
+		href: 'https://x.com/kalwabedrzk',
+		external: true,
+	},
+]
+---
+
 <footer class="container">
 	<ul>
-		<li><a href="/about">About</a></li>
-		<li><a href="/projects">Projects</a></li>
-		<li><a href="/blog">Blog</a></li>
-		<li><a href="/uses">Uses</a></li>
+		{links.map(link => {
+			if (link.external) {
+				return	<li><a href={link.href} target="_blank" rel="noopener noreferrer">{link.label} <GgExternal /></a></li>
+			}
+			return	<li><a href={link.href}>{link.label}</a></li>
+		})}
 	</ul>
 	<p>© 2021-present Kalwabed Rizki. All rights reserved</p>
 </footer>
 
 <style lang="scss">
 	.container {
+		max-width: var(--over-mw);
+		width: 100%;
 		display: flex;
 		align-items: center;
-		flex-direction: column;
+		justify-content: space-between;
 		padding: 1rem 0 .5rem;
 		border-top: 1px solid var(--slate-6);
 		opacity: 60%;
 		transition: opacity .3s ease;
-		margin-top: auto;
 
 		&:hover {
 			opacity: 100%;
+			border-top-color: var(--slate-7);
 		}
 	}
 
@@ -34,11 +63,17 @@
 	}
 
 	a {
+		display: inline-flex;
 		text-decoration: none;
 		color: var(--fc-primary);
 
 		&:hover {
 			text-decoration: underline;
+		}
+
+		& svg {
+			width: 15px;
+			height: 15px;
 		}
 	}
 
