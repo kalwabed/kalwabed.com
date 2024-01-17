@@ -46,16 +46,11 @@ const isHomepage = Astro.url.pathname === '/'
 a {
   color: var(--fc-primary);
   text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-
-  &:hover {
-    text-decoration: underline;
-  }
 }
 
 ul {
   display: flex;
+  align-items: center;
   margin: {
     top: 1rem;
     bottom: 1rem;
@@ -65,5 +60,11 @@ ul {
 
 li {
   list-style: none;
+
+  a {
+    &:hover {
+      background-color: var(--light-blue);
+    }
+  }
 }
 </style>
