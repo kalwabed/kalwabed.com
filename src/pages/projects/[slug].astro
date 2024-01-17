@@ -23,14 +23,7 @@ export function getStaticPaths() {
         <h2>Tuantanah</h2>
       </div>
       <div class="project-side">
-        <section>
-          <Image src="/proj-example.png" alt="Example project" width="600" height="300"   />
-          <div class="desc">
-            <p>
-              So I started to walk into the water. I won't lie to you boys, I was terrified. But I pressed on, and as I made my way past the breakers a strange calm came over me. I don't know if it was divine intervention or the kinship of all living things but I tell you Jerry at that moment, I was a marine biologist.
-            </p>
-          </div>
-        </section>
+        <Image src="/proj-example.png" class="cover" alt="Example project" width="660" height="380"   />
         <div class="meta">
           <div class="stack">
             <h4>Tech stacks</h4>
@@ -53,6 +46,11 @@ export function getStaticPaths() {
             <p>2023</p>
           </div>
         </div>
+      </div>
+      <div class="desc">
+        <p>
+          So I started to walk into the water. I won't lie to you boys, I was terrified. But I pressed on, and as I made my way past the breakers a strange calm came over me. I don't know if it was divine intervention or the kinship of all living things but I tell you Jerry at that moment, I was a marine biologist.
+        </p>
       </div>
     </article>
   </div>
@@ -82,19 +80,54 @@ h2 {
 
 .project-side {
   display: flex;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 1rem;
   margin-top: .375rem;
 
+  @include br.tablet {
+    gap: 2rem;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .cover {
+    width: 100%;
+    height: 230px;
+    border-radius: 0.3125rem;
+
+    @include br.tablet {
+      width: 550px;
+      height: 330px;
+    }
+
+    @include br.desktop {
+      width: 660px;
+      height: 380px;
+    }
+  }
+
   .meta {
-    height: 300px;
+    height: 100%;
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: .8rem;
     background: var(--slate-3);
     border: 1px solid var(--slate-6);
     border-radius: .25rem;
-    padding: 1.2rem;
+    padding: 1rem;
+
+    @include br.tablet {
+      gap: .5rem;
+      padding: 1.2rem;
+      min-height: 330px;
+    }
+
+    @include br.desktop {
+      gap: 1rem;
+      width: 400px;
+      min-height: 380px;
+    }
 
     & h4 {
       font-family: var(--font-body);
@@ -113,10 +146,6 @@ h2 {
       }
     }
   }
-
-  .desc {
-    margin-top: 1.5rem;
-  }
 }
 
 .stack {
@@ -134,6 +163,15 @@ h2 {
     display: inline-flex;
     align-items: center;
     gap: .2rem;
+  }
+}
+
+.desc {
+  margin-top: 1.5rem;
+  max-width: 550px;
+
+  @include br.desktop {
+    max-width: 660px;
   }
 }
 </style>
