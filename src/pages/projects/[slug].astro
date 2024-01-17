@@ -1,5 +1,8 @@
 ---
 import { Image } from 'astro:assets'
+import LogosSvelteIcon from '~icons/logos/svelte-icon'
+import GgGlobeAlt from '~icons/gg/globe-alt'
+import LogosGithubIcon from '~icons/logos/github-icon'
 import DefaultLayout from '~/layouts/default.astro'
 import faviconExample from '~/assets/logo.jpeg'
 
@@ -20,16 +23,35 @@ export function getStaticPaths() {
         <h2>Tuantanah</h2>
       </div>
       <div class="project-side">
-        <Image src="/proj-example.png" alt="Example project" width="586" height="300"   />
+        <section>
+          <Image src="/proj-example.png" alt="Example project" width="600" height="300"   />
+          <div class="desc">
+            <p>
+              So I started to walk into the water. I won't lie to you boys, I was terrified. But I pressed on, and as I made my way past the breakers a strange calm came over me. I don't know if it was divine intervention or the kinship of all living things but I tell you Jerry at that moment, I was a marine biologist.
+            </p>
+          </div>
+        </section>
         <div class="meta">
-          <h4>Tech stacks</h4>
-          <p>Svelte</p>
-          <h4>Demo</h4>
-          <p>Svelte</p>
-          <h4>Source</h4>
-          <p>Svelte</p>
-          <h4>Year</h4>
-          <p>2023</p>
+          <div class="stack">
+            <h4>Tech stacks</h4>
+            <div class="tech">
+              <div><LogosSvelteIcon /> Svelte</div>
+              <div><LogosSvelteIcon /> Svelte</div>
+              <div><LogosSvelteIcon /> Svelte</div>
+            </div>
+          </div>
+          <div class="stack">
+            <h4>Demo</h4>
+            <a href="/123"><GgGlobeAlt /> apakahreal.com</a>
+          </div>
+          <div class="stack">
+            <h4>Source</h4>
+            <a href="/123"><LogosGithubIcon /> Github</a>
+          </div>
+          <div class="stack">
+            <h4>Year</h4>
+            <p>2023</p>
+          </div>
         </div>
       </div>
     </article>
@@ -64,8 +86,11 @@ h2 {
   margin-top: .375rem;
 
   .meta {
-    height: auto;
+    height: 300px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     background: var(--slate-3);
     border: 1px solid var(--slate-6);
     border-radius: .25rem;
@@ -73,11 +98,42 @@ h2 {
 
     & h4 {
       font-family: var(--font-body);
+      margin-bottom: .2rem;
     }
 
-    & p {
-      margin-bottom: 1rem;
+    a {
+      color: var(--fc-primary);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: .2rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
+  }
+
+  .desc {
+    margin-top: 1.5rem;
+  }
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.tech {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .5rem;
+
+  & > div {
+    display: inline-flex;
+    align-items: center;
+    gap: .2rem;
   }
 }
 </style>

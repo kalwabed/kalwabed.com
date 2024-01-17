@@ -37,6 +37,9 @@ devDependencies:
   '@iconify-json/gg':
     specifier: ^1.1.9
     version: 1.1.9
+  '@iconify-json/logos':
+    specifier: ^1.1.33
+    version: 1.1.33
   lint-staged:
     specifier: ^15.2.0
     version: 15.2.0
@@ -676,6 +679,12 @@ packages:
 
   /@iconify-json/gg@1.1.9:
     resolution: {integrity: sha512-gj4XlLoYR645g4WWMzv2+E5EBIbqnyOLlKL+9MPjb05fSDqYb6BRG2ICn68hIWOtcMS/UPNJQ5M8/Y2FgWD72g==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/logos@1.1.33:
+    resolution: {integrity: sha512-XHnob/dyib1oCaHZV0yRLXUfGQAr46pTuO/Y+jx9ImVBVb5jyZfJ+PLgro5pp8fyQkXWV2vq7pdR0yP5s4gcvg==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
