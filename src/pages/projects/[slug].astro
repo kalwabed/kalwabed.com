@@ -5,6 +5,7 @@ import GgGlobeAlt from '~icons/gg/globe-alt'
 import LogosGithubIcon from '~icons/logos/github-icon'
 import DefaultLayout from '~/layouts/default.astro'
 import faviconExample from '~/assets/logo.jpeg'
+import projExample from '~/assets/proj-example.png'
 
 export function getStaticPaths() {
   return [
@@ -23,7 +24,7 @@ export function getStaticPaths() {
         <h2>Tuantanah</h2>
       </div>
       <div class="project-side">
-        <Image src="/proj-example.png" class="cover" alt="Example project" width="660" height="380"   />
+        <Image src={projExample} class="cover" alt="Example project" />
         <div class="meta">
           <div class="stack">
             <h4>Tech stacks</h4>
