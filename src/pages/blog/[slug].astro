@@ -1,12 +1,10 @@
 ---
+import { getCollection } from 'astro:content';
 import DefaultLayout from '~/layouts/default.astro'
 
-export function getStaticPaths() {
-  return [
-    {
-      params: { slug: '123' }
-    }
-  ]
+export async function getStaticPaths() {
+  const allBlogPosts = await getCollection('blog')
+  return allBlogPosts.map(blog => ({params: { slug: blog.slug}}))
 }
 ---
 

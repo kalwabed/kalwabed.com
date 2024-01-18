@@ -1,6 +1,9 @@
 ---
+import { getCollection } from 'astro:content';
 import DefaultLayout from '~/layouts/default.astro'
 import BlogCard from '~components/blog-card.astro';
+
+const allBlogPosts = await getCollection('blog')
 ---
 
 <DefaultLayout>
@@ -8,8 +11,9 @@ import BlogCard from '~components/blog-card.astro';
     <h1>Blog</h1>
   </div>
   <div class="writing-list">
-    <BlogCard />
-    <BlogCard />
+    {allBlogPosts.map(blog => (
+      <BlogCard data={{...blog.data, slug: blog.slug}} />
+    ))}
   </div>
 </DefaultLayout>
 

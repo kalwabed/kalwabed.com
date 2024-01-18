@@ -6,7 +6,8 @@
 			"node_modules",
 			"pnpm-lock.yaml",
 			"dist",
-			"public"
+			"public",
+			".astro"
 		],
 		"ignoreUnknown": true
 	},

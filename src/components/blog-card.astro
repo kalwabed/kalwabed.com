@@ -1,6 +1,19 @@
-<a href="/blog/123">
-  <h3>Unified Versus Split Diff</h3>
-  <p>For a large change, I don’t want to do a “diff review”, I want to do a proper code review of a codebase at a particular instant in time.</p>
+---
+export interface Props {
+  data: {
+    slug: string
+    title: string
+    summary: string
+  }
+}
+
+const { data } = Astro.props
+const { slug, title, summary } = data
+---
+
+<a href={`/blog/${slug}`}>
+  <h3>{title}</h3>
+  <p>{summary}</p>
   <small>Jun 21, 2023</small>
 </a>
 
