@@ -1,0 +1,56 @@
+---
+import DefaultLayout from '~/layouts/default.astro'
+
+export function getStaticPaths() {
+  return [
+    {
+      params: { slug: '123' }
+    }
+  ]
+}
+---
+
+<DefaultLayout>
+  <article class="container">
+    <header class="meta">
+      <p>Kalwabed Rizki, Jun 21, 2023 <span>—</span> 5 mins read</p>
+      <h1>Building Sandpack: an embeddable sandbox for everyone</h1>
+    </header>
+    <main>
+      <h2>A bit of self-reflection</h2>
+      <p>From a particular moment in my career, React.js started becoming omnipresent in the front-end community. Seeing so much innovation in the open-source community cultivated a strong desire in me to contribute to something real with a positive impact. Something that could last and possibly make the world a bit fairer.</p>
+      <p>From a particular moment in my career, React.js started becoming omnipresent in the front-end community. Seeing so much innovation in the open-source community cultivated a strong desire in me to contribute to something real with a positive impact. Something that could last and possibly make the world a bit fairer.</p>
+    </main>
+  </article>
+</DefaultLayout>
+
+<style lang="scss">
+@use '../../styles/breakpoints' as br;
+
+article {
+  margin-top: 5rem;
+
+  main {
+    h2 {
+      margin-top: .5rem;
+      line-height: 1.625;
+    }
+    p {
+      color: var(--fc-subtle);
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.meta {
+  margin-bottom: 4rem;
+
+  p {
+    color: var(--fc-subtle);
+  }
+
+  h1 {
+    text-wrap: balance;
+  }
+}
+</style>
