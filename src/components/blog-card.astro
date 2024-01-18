@@ -1,20 +1,23 @@
 ---
+import dayjs from 'dayjs'
+
 export interface Props {
   data: {
     slug: string
     title: string
     summary: string
+    publishDate: Date
   }
 }
 
 const { data } = Astro.props
-const { slug, title, summary } = data
+const { slug, title, summary, publishDate } = data
 ---
 
 <a href={`/blog/${slug}`}>
   <h3>{title}</h3>
   <p>{summary}</p>
-  <small>Jun 21, 2023</small>
+  <small>{dayjs(publishDate).format('MMM DD, YYYY')}</small>
 </a>
 
 <style lang="scss">
@@ -22,6 +25,7 @@ const { slug, title, summary } = data
 
 a {
   display: flex;
+  width: 100%;
   flex-direction: column;
   text-decoration: none;
   padding: 8px;

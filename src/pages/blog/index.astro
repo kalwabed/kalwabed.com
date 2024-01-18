@@ -4,6 +4,9 @@ import DefaultLayout from '~/layouts/default.astro'
 import BlogCard from '~components/blog-card.astro';
 
 const allBlogPosts = await getCollection('blog')
+const sortedBlog = allBlogPosts.toSorted((a, b) => {
+  return new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
+})
 ---
 
 <DefaultLayout>
@@ -11,7 +14,7 @@ const allBlogPosts = await getCollection('blog')
     <h1>Blog</h1>
   </div>
   <div class="writing-list">
-    {allBlogPosts.map(blog => (
+    {sortedBlog.map(blog => (
       <BlogCard data={{...blog.data, slug: blog.slug}} />
     ))}
   </div>

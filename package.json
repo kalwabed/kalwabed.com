@@ -25,7 +25,7 @@
     "@fontsource/crimson-pro": "^5.0.16",
     "@fontsource/schoolbell": "^5.0.8",
     "astro": "^4.2.0",
-    "date-fns": "^3.2.0",
+    "dayjs": "^1.11.10",
     "gardevoir": "^1.0.0",
     "sass": "^1.70.0"
   },
