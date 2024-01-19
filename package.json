@@ -20,6 +20,7 @@
     "src/**/*.{ts,astro,css}": "pnpm lint-fmt"
   },
   "dependencies": {
+    "@astrojs/mdx": "^2.0.5",
     "@fontsource-variable/inter": "^5.0.16",
     "@fontsource-variable/overpass": "^5.0.17",
     "@fontsource/crimson-pro": "^5.0.16",

@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import DefaultLayout from '~/layouts/default.astro'
+import Blockquote from '~components/mdx/blockquote.astro';
 import { formatDate } from '~utils/date';
 
 export async function getStaticPaths() {
@@ -19,7 +20,7 @@ const { Content } = await entry.render()
       <h1>{entry.data.title}</h1>
     </header>
     <main>
-      <Content />
+      <Content components={{ blockquote: Blockquote }} />
     </main>
   </article>
 </DefaultLayout>
@@ -62,16 +63,16 @@ const { Content } = await entry.render()
 
     li {
       color: var(--fc-subtle);
-      margin-left: 1rem;
+      padding-left: 1rem;
+      margin: .5rem 0;
 
       @include br.tablet {
-        margin-left: 0;
+        padding-left: 0;
       }
     }
 
     :not(pre) code {
-      background: var(--iris-3);
-      border: 1px solid var(--iris-6);
+      color: var(--iris-12);
       font-weight: 500;
 
       &::before {
@@ -82,8 +83,13 @@ const { Content } = await entry.render()
       }
     }
 
+    blockquote p:last-of-type {
+      margin-bottom: 0;
+    }
+
     ul, ol {
-      margin-bottom: 1rem;
+      margin: 1rem 0;
+      padding-left: 1rem;
     }
 
     pre {

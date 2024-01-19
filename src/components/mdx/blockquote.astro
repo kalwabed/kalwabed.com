@@ -1,0 +1,28 @@
+---
+import GgQuote from '~icons/gg/quote'
+
+const props = Astro.props
+---
+
+<blockquote {...props}>
+  <span><GgQuote /></span>
+  <slot />
+</blockquote>
+
+<style lang="scss">
+blockquote {
+  background: var(--iris-2);
+  padding: .8rem;
+  border: 1px solid var(--iris-6);
+  margin-bottom: 1rem;
+
+  svg {
+    font-size: 2.5rem;
+    margin: {
+      left: -1rem;
+      top: -1rem;
+    };
+    color: var(--iris-10);
+  }
+}
+</style>
