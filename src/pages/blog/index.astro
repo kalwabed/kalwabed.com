@@ -1,12 +1,9 @@
 ---
-import { getCollection } from 'astro:content';
 import DefaultLayout from '~/layouts/default.astro'
 import BlogCard from '~components/blog-card.astro';
+import { getSortedPosts } from '~utils/fetcher';
 
-const allBlogPosts = await getCollection('blog')
-const sortedBlog = allBlogPosts.toSorted((a, b) => {
-  return new Date(b.data.publishDate).getTime() - new Date(a.data.publishDate).getTime()
-})
+const sortedBlog = await getSortedPosts()
 ---
 
 <DefaultLayout>

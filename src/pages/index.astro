@@ -4,13 +4,19 @@ import Hero from '~/components/hero.astro'
 import SectionHead from '~/components/section-head.astro'
 import BlogCard from '~/components/blog-card.astro'
 import FeaturedProject from '~/components/featured-project.astro'
+import { getSortedPosts } from '~utils/fetcher'
+
+const sortedBlog = await getSortedPosts()
+const latestPosts = sortedBlog.slice(0, 3)
 ---
 
 <DefaultLayout>
   <Hero />
   <SectionHead line section="blog" />
   <div class="container">
-    <BlogCard />
+    {latestPosts.map(blog => (
+      <BlogCard data={{...blog.data, slug: blog.slug}} />
+    ))}
   </div>
   <SectionHead section="project" />
   <div class="container">
