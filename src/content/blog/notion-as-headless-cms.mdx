@@ -1,0 +1,108 @@
+---
+title: 'Notion as headless CMS'
+summary: 'Not only for keeping records, but now it can also be a data provider'
+publishDate: 2021-05-06
+---
+
+> <b>Update 19 August, 2021</b>. Notion has provided facilities to developers in the form of an <a href='https://developers.notion.com'>official API</a> that we can use to access data on our Notion. In the future I recommend using the official API from Notion. <p>But you can still refer here using the Serverless Wrapper from <a href='https://github.com/splitbee/notion-api-worker'>Splitbee</a> if you need.</p>
+
+Here we will try to create a simple website, using Notion as a headless CMS to provide the data. You are free to use any technology that supports server-side-rendering, but I will try to implement it with Nextjs because this API can only be called via the server side.
+
+## Headless CMS
+
+Referring from Wikipedia:
+
+> A headless CMS makes content accessible via an API for display on any device, without a built-in front-end or presentation layer.
+
+So, we make the user interface display, then we will receive data from the headless CMS which we will process later on the frontend.
+
+[More details](https://www.contentful.com/r/knowledgebase/what-is-headless-cms/)
+
+## Notion
+
+[Notion](https://notion.so) is a place where we can create records, databases, and more. A place that I use every day, and almost for all matters, such as: keeping notes, to-do, ideas, to a small project manager 😂
+
+If you've never tried it I suggest you give it a try!
+
+> The all-in-one workspace — for notes, tasks, wikis, and databases. -**@NotionHQ**
+
+## Let's Play!
+
+I assume that you already understand the basic concepts of Javascript, and the API.
+
+We will list the names of invited guests and their addresses, with the format: name, address.
+
+### Step 1
+
+Create a new page (anywhere) and then we will make it a table to store our data later. After that, fill in the column names with: name, address.
+
+Look at figures 1.1 and 1.2 below.
+
+![1.1](/static/posts/notion-as-headless/table-init.png)
+
+![1.2](/static/posts/notion-as-headless/table-structure.png)
+
+### Step 2
+
+We initial the data.
+
+![Three preliminary data](/static/posts/notion-as-headless/table-initial-data.png)
+
+### Step 3
+
+How do we get data from Notion? Thank goodness there is [https://github.com/splitbee/notion-api-worker](https://github.com/splitbee/notion-api-worker). We can use the API or we can host it ourselves to get data from our Notion page. In the endpoints section, we will use the API to get data from the table ([https://github.com/splitbee/notion-api-worker#load-data-from-table](https://github.com/splitbee/notion-api-worker#load-data-from-table)).
+
+The way it works is very easy, we only need the Id of our Notion page.
+
+To get it, we just need to take the share link and then take our page Id. Pay attention to the image instructions below:
+
+![How to share link](/static/posts/notion-as-headless/share-link.png)
+
+### Step 4
+
+After getting the link from the previous step we have to separate it to get the Id of our page.
+
+For example, from my page link [https://www.notion.so/kalwabed/bf7cafe8a4004459849614159bd7a8f7?v=9b5dae324a1f468589daca73ed100531](https://www.notion.so/kalwabed/bf7cafe8a4004459849614159bd7a8f7?v=9b5dae324a1f468589daca73ed100531), then our page Id is in the section after the username, that is _bf7cafe8a4004459849614159bd7a8f7_.
+
+To test whether it is correct or not, please visit: `https://notion-api.splitbee.io/v1/table/<your page id>` (replace `<your page id>` with your page id).
+
+If there are no problems, then the results in the browser will be as shown below:
+
+![Json results in the browser](/static/posts/notion-as-headless/browser-result.png)
+
+> If an error occurs, make sure the page id and url you entered are correct, then try again.
+
+### Last step
+
+We're going to start getting into the code.
+
+As I said before, you are free to use any technology that supports server-side-rendering, but here I will give an example using Nextjs because this API can only be called via the server side., CMIIW.
+
+This time I will use Nextjs [SSR](https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering) to get the data from the server side, like this:
+
+```js
+export async function getServerSideProps() {
+  const res = await fetch('https://notion-api.splitbee.io/v1/table/bf7cafe8a4004459849614159bd7a8f7')
+  const guests = await res.json()
+
+  return { props: { guests } }
+}
+```
+
+So, the end result is:
+
+![Result from SSR](/static/posts/notion-as-headless/api-result.png)
+
+Look at [Codesandbox](https://codesandbox.io/s/notion-as-cms-3v90g?file=/pages/index.js:0-269)
+
+## Conclusion
+
+Notion can not only be used to store our records, but also provide data for our website as well.
+
+I also use this technique to provide Bookmarks data on my website [kalwabed.xyz](https://kalwabed.xyz), and it's very helpful to keep the resulting data updated. Check the repository [here](https://github.com/kalwabed/kalwabed.xyz).
+
+## Useful Links
+
+- [https://github.com/splitbee/notion-api-worker](https://github.com/splitbee/notion-api-worker)
+- [https://github.com/splitbee/react-notion](https://github.com/splitbee/react-notion)
+- [https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering](https://nextjs.org/docs/basic-features/data-fetching#getserversideprops-server-side-rendering)
