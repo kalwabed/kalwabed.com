@@ -34,8 +34,8 @@ Good examples on this website:
 
 Before
 
-<PostImage image={'/static/posts/reduce-bundle-size/before.png'} label="Vercel deploy" />
+![Vercel deploy](/static/posts/reduce-bundle-size/before.png)
 
 After
 
-<PostImage image={'/static/posts/reduce-bundle-size/after.png'} label="Vercel deploy" />
+![Vercel deploy](/static/posts/reduce-bundle-size/after.png)

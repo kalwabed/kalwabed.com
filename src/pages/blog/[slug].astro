@@ -1,54 +1,121 @@
 ---
 import { getCollection } from 'astro:content';
 import DefaultLayout from '~/layouts/default.astro'
+import { formatDate } from '~utils/date';
 
 export async function getStaticPaths() {
   const allBlogPosts = await getCollection('blog')
-  return allBlogPosts.map(blog => ({params: { slug: blog.slug}}))
+  return allBlogPosts.map(blog => ({ params: { slug: blog.slug }, props: { entry: blog }}))
 }
+
+const { entry } = Astro.props
+const { Content } = await entry.render()
 ---
 
 <DefaultLayout>
-  <article class="container">
+  <article class="container blog">
     <header class="meta">
-      <p>Kalwabed Rizki, Jun 21, 2023 <span>—</span> 5 mins read</p>
-      <h1>Building Sandpack: an embeddable sandbox for everyone</h1>
+      <p>Kalwabed Rizki, {formatDate(entry.data.publishDate)} <span>—</span> 5 mins read</p>
+      <h1>{entry.data.title}</h1>
     </header>
     <main>
-      <h2>A bit of self-reflection</h2>
-      <p>From a particular moment in my career, React.js started becoming omnipresent in the front-end community. Seeing so much innovation in the open-source community cultivated a strong desire in me to contribute to something real with a positive impact. Something that could last and possibly make the world a bit fairer.</p>
-      <p>From a particular moment in my career, React.js started becoming omnipresent in the front-end community. Seeing so much innovation in the open-source community cultivated a strong desire in me to contribute to something real with a positive impact. Something that could last and possibly make the world a bit fairer.</p>
+      <Content />
     </main>
   </article>
 </DefaultLayout>
 
-<style lang="scss">
+<style is:global lang="scss">
 @use '../../styles/breakpoints' as br;
 
-article {
+.blog {
   margin-top: 5rem;
+
+  .meta {
+    margin-bottom: 4rem;
+
+    p {
+      color: var(--fc-subtle);
+    }
+
+    h1 {
+      text-wrap: balance;
+    }
+  }
 
   main {
     h2 {
-      margin-top: .5rem;
+      margin: {
+        top: .8rem;
+        bottom: .3rem;
+      };
       line-height: 1.625;
     }
+
     p {
       color: var(--fc-subtle);
       margin-bottom: 1rem;
     }
-  }
-}
 
-.meta {
-  margin-bottom: 4rem;
+    li {
+      color: var(--fc-subtle);
+    }
 
-  p {
-    color: var(--fc-subtle);
-  }
+    :not(pre) code {
+      background: var(--iris-3);
+      border: 1px solid var(--iris-6);
+      font-weight: 500;
 
-  h1 {
-    text-wrap: balance;
+      &::before {
+        content: "`";
+      }
+      &::after {
+        content: "`";
+      }
+    }
+
+    ul, ol {
+      margin-bottom: 1rem;
+    }
+
+    pre {
+      overflow-x: auto;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      margin-bottom: 1.75rem;
+      padding: 0.75rem;
+      border-radius: .2rem;
+      -ms-overflow-style: none;
+      /* IE and Edge */
+      scrollbar-width: none;
+      /* Firefox */
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      code {
+        background: transparent;
+      }
+    }
+
+    a {
+      color: var(--iris-9);
+      text-decoration: none;
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 300ms;
+      font-weight: 500;
+      border-bottom: 2px solid transparent;
+
+      &:hover {
+        border-bottom-color: var(--iris-8);
+      }
+
+      &:focus {
+        outline: 2px solid var(--iris-7);
+        outline-offset: 2px;
+      }
+    }    
   }
 }
 </style>

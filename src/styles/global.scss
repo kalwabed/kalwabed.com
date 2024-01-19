@@ -3,6 +3,8 @@
 
 @import '@fontsource-variable/overpass';
 @import '@fontsource/schoolbell';
+@import '@fontsource/fira-code/400.css';
+@import '@fontsource/fira-code/500.css';
 
 html,
 body,
@@ -21,6 +23,10 @@ h3,
 h4,
 h5 {
 	font-family: var(--font-heading), Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+code {
+	font-family: 'Fira Code', 'Courier New', Courier, monospace;
 }
 
 .container {

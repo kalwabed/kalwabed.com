@@ -14,6 +14,9 @@ dependencies:
   '@fontsource/crimson-pro':
     specifier: ^5.0.16
     version: 5.0.16
+  '@fontsource/fira-code':
+    specifier: ^5.0.16
+    version: 5.0.16
   '@fontsource/schoolbell':
     specifier: ^5.0.8
     version: 5.0.8
@@ -663,6 +666,10 @@ packages:
 
   /@fontsource/crimson-pro@5.0.16:
     resolution: {integrity: sha512-GeVJ6Vj6Z0B8qf6Qni6OihMCZsdHr57hpMYeshjT+yuvfJ0FxrlFAA9MSEgE23fz/GUpWcdheH6WrGRrogoG9w==}
+    dev: false
+
+  /@fontsource/fira-code@5.0.16:
+    resolution: {integrity: sha512-mOAs/sgZz+ETOB4foFnOnbewQDJpByvR4h/pLmgkWVn/gbA8Tlb4wUSWK4QFc+SKmHaDJsT/wgWjDUcxssZn7w==}
     dev: false
 
   /@fontsource/schoolbell@5.0.8:
