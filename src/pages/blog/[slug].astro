@@ -28,7 +28,11 @@ const { Content } = await entry.render()
 @use '../../styles/breakpoints' as br;
 
 .blog {
-  margin-top: 5rem;
+  margin-top: 2rem;
+
+  @include br.desktop {
+    margin-top: 5rem;
+  }
 
   .meta {
     margin-bottom: 4rem;
@@ -58,6 +62,11 @@ const { Content } = await entry.render()
 
     li {
       color: var(--fc-subtle);
+      margin-left: 1rem;
+
+      @include br.tablet {
+        margin-left: 0;
+      }
     }
 
     :not(pre) code {

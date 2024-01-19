@@ -55,15 +55,24 @@ ul {
     top: 1rem;
     bottom: 1rem;
   };
-  gap: 1.3rem;
+  gap: 1rem;
 }
 
 li {
   list-style: none;
 
   a {
+    padding: .2rem;
+    transition-property: color, background;
+    transition-duration: .1s;
+    transition-timing-function: ease;
     &:hover {
-      background-color: var(--light-blue);
+      color: white;
+      background-color: var(--iris-10);
+    }
+
+    &:focus {
+      outline: 2px solid var(--iris-7);
     }
   }
 }
