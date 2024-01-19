@@ -1,18 +1,12 @@
 {
-  "extends": "astro/tsconfigs/strict",
-  "compilerOptions": {
-    "baseUrl": ".",
-    "paths": {
-      "~*": [
-        "./src/*"
-      ]
-    },
-    "incremental": true,
-    "types": [
-      "unplugin-icons/types/astro",
-    ]
-  },
-  "exclude": [
-    "node_modules"
-  ]
+	"extends": "astro/tsconfigs/strict",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"~*": ["./src/*"]
+		},
+		"incremental": true,
+		"types": ["unplugin-icons/types/astro"]
+	},
+	"exclude": ["node_modules"]
 }

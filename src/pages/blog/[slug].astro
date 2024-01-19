@@ -10,13 +10,13 @@ export async function getStaticPaths() {
 }
 
 const { entry } = Astro.props
-const { Content } = await entry.render()
+const { Content, remarkPluginFrontmatter } = await entry.render()
 ---
 
 <DefaultLayout>
   <article class="container blog">
     <header class="meta">
-      <p>Kalwabed Rizki, {formatDate(entry.data.publishDate)} <span>—</span> 5 mins read</p>
+      <p>Kalwabed Rizki, {formatDate(entry.data.publishDate)} <span>—</span> {remarkPluginFrontmatter.minutesRead}</p>
       <h1>{entry.data.title}</h1>
     </header>
     <main>
