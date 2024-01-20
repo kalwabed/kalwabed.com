@@ -49,12 +49,13 @@ const { Content, remarkPluginFrontmatter } = await entry.render()
   }
 
   main {
-    h2, h3 {
+    h2, h3, h4, h5 {
+      font-family: var(--font-body);
+      line-height: 1.625;
       margin: {
         top: 2.5rem;
         bottom: .3rem;
       };
-      line-height: 1.625;
     }
 
     p {
