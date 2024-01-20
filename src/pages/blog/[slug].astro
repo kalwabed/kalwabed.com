@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import DefaultLayout from '~/layouts/default.astro'
 import Blockquote from '~components/mdx/blockquote.astro';
+import Image from '~components/mdx/image.astro';
 import { formatDate } from '~utils/date';
 
 export async function getStaticPaths() {
@@ -20,7 +21,7 @@ const { Content, remarkPluginFrontmatter } = await entry.render()
       <h1>{entry.data.title}</h1>
     </header>
     <main>
-      <Content components={{ blockquote: Blockquote }} />
+      <Content components={{ blockquote: Blockquote, img: Image }} />
     </main>
   </article>
 </DefaultLayout>

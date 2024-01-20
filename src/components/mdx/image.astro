@@ -1,0 +1,29 @@
+---
+const props = Astro.props as { src: string, alt: string }
+---
+
+<figure>
+  <img {...props} width="400" height="250" decoding="async" loading="lazy" />
+  <figcaption>{props.alt}</figcaption>
+</figure>
+
+<style lang="scss">
+figure {
+  margin-bottom: 1rem;
+}
+
+img {
+  margin: 0 -10vw;
+  height: auto;
+  max-width: none;
+  width: calc(100% + 20vw);
+  background: var(--slate-3);
+  border: 1px solid var(--slate-6);
+}
+
+figcaption {
+  text-align: center;
+  font-size: 14px;
+  color: var(--fc-subtle);
+}
+</style>
