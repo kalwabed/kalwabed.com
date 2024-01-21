@@ -8,17 +8,23 @@ const props = Astro.props as { src: string, alt: string }
 </figure>
 
 <style lang="scss">
+@use '../../styles/breakpoints' as br;
+
 figure {
   margin-bottom: 1rem;
 }
 
 img {
-  margin: 0 -10vw;
   height: auto;
-  max-width: none;
-  width: calc(100% + 20vw);
+  width: 100%;
   background: var(--slate-3);
   border: 1px solid var(--slate-6);
+
+  @include br.tablet {
+    margin: 0 -10vw;
+    width: calc(100% + 20vw);
+    max-width: none;
+  }
 }
 
 figcaption {
