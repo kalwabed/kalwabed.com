@@ -1,0 +1,194 @@
+---
+import { Image } from 'astro:assets';
+import PhGithubLogo from '~icons/ph/github-logo'
+import PhInstagramLogo from '~icons/ph/instagram-logo'
+import PhTwitterLogo from '~icons/ph/twitter-logo'
+import PhLinkedinLogoLight from '~icons/ph/linkedin-logo-light'
+import DefaultLayout from '~/layouts/default.astro'
+import PresentingImg from '~/assets/presenting.png'
+
+const talks = [
+  {
+    title: 'From OS to Browser: Harnessing Web API Filesystem for Modern Applications',
+    slides: 'https://dub.sh/gdsc-wf',
+    organizer: 'GDSC UMS',
+    year: 2023
+  },
+  {
+    title: 'Reactive JavaScript: Unveiling the Magic of Signals',
+    slides: 'https://dub.sh/jogjajs-signals',
+    organizer: 'JogjaJS',
+    year: 2023
+  },
+  {
+    title: 'Prospek Karir Menjadi Seorang Software Engineer',
+    slides: 'https://dub.sh/ags-se',
+    organizer: 'Amikom Computer Club',
+    year: 2023
+  },
+  {
+    title: 'Becoming an Open-Source Contributor',
+    slides: 'https://dub.sh/kpb-oss',
+    organizer: 'Komunitas Programmer Banyuwangi',
+    year: 2023
+  }
+]
+
+const socials = [
+  {
+    handler: '@kalwabedrzk',
+    url: 'https://twitter.com/kalwabedrzk',
+    Icon: PhTwitterLogo,
+  },
+  {
+    handler: 'kalwabed',
+    url: 'https://www.instagram.com/kalwabed',
+    Icon: PhInstagramLogo,
+  },
+  {
+    handler: 'kalwabed',
+    url: 'https://github.com/kalwabed',
+    Icon: PhGithubLogo,
+  },
+  {
+    handler: 'kalwabed',
+    url: 'https://www.linkedin.com/in/kalwabed',
+    Icon: PhLinkedinLogoLight,
+  },
+]
+---
+
+<DefaultLayout>
+  <div class="container">
+    <h1>Hey there!</h1>
+    <p>I’m Kalwabed Rizki, a software engineer and <a href="https://www.goodreads.com/kalwabed">seasoned book reader</a> based in Yogyakarta, Indonesia.</p>
+    <p>Dabbling in web development for a few years. Using JavaScript (I prefer TypeScript) for everyday work and frameworks like <a href="https://react.dev">React.js</a>, <a href="https://vuejs.org">Vue.js</a> and <a href="https://astro.build">Astro</a> for professional use.</p>
+    <p>Currently working at VNT Networks as a Full-stack Developer, building scalable products and applications for internal needs.</p>
+    <p>Sometimes I write about things outside the programming and technical world, which I write in Indonesian and publish on <a href="https://pena.kalwabed.xyz">Pena</a>.</p>
+
+    <h2>Speaking</h2>
+    <figure>
+      <Image src={PresentingImg} alt="Kalwabed presenting at JogjaJS meetup #27" />
+      <figcaption>Kalwabed presenting at JogjaJS meetup #27</figcaption>
+    </figure>
+    <p>I'm a learner and believe in open source culture. I like to give talks at events or meetups when I have time and something interesting to share.</p>
+
+    <span class="topics-title">PREVIOUS TOPICS</span>
+
+    <ul class="talks">
+      {talks.map(talk => (
+        <li>
+          <div>
+            <a href={talk.slides}>{talk.title}</a> 
+            <span>{talk.organizer}, {talk.year}</span>
+          </div>
+        </li>
+      ))}
+    </ul>
+
+    <h2>Online</h2>
+    <p>You can contact me by email at <b>kalwabed[at]gmail.com</b> to say hi! I always appreciate meeting new people.</p>
+    <ul class="social">
+      {socials.map(social => (
+        <li>
+          <social.Icon /> <a href={social.url}>{social.handler}</a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</DefaultLayout>
+
+<style lang="scss">
+@use '../styles/breakpoints' as br;
+
+.container {
+  margin-top: 18px;
+}
+
+h1 {
+  margin-bottom: 32px;
+  font-size: 2.29rem;
+
+  @include br.tablet {
+    text-align: center;
+    margin-bottom: 69px;
+  }
+}
+
+p {
+  margin-bottom: .8rem;
+}
+
+h2 {
+  margin-top: 1.5rem;
+}
+
+figure {
+  margin: {
+    top: 1rem;
+    bottom: 1rem;
+  };
+
+  img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 3px;
+
+    @include br.tablet {
+      height: 200px;
+    }
+  }
+
+  figcaption {
+    font-size: 14px;
+    margin-top: .19rem;
+    color: var(--fc-subtle);
+    text-align: center;
+  }
+}
+
+.topics-title {
+  font-size: 11px;
+  letter-spacing: 1.2px;
+}
+
+.talks {
+  margin: {
+    top: .3rem;
+    left: .3rem;
+  };
+
+  li {
+    margin-bottom: .5rem;
+    font-size: 14px;
+    list-style: square;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.social {
+  li {
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    list-style: none;
+    margin-bottom: .3rem;
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: var(--iris-9);
+  
+}
+</style>

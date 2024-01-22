@@ -55,6 +55,9 @@ devDependencies:
   '@iconify-json/logos':
     specifier: ^1.1.42
     version: 1.1.42
+  '@iconify-json/ph':
+    specifier: ^1.1.10
+    version: 1.1.10
   lint-staged:
     specifier: ^15.2.0
     version: 15.2.0
@@ -732,6 +735,12 @@ packages:
 
   /@iconify-json/logos@1.1.42:
     resolution: {integrity: sha512-/f+frtPm3m3Z30oy8Pk+QqRDkbmAiIaWGPl5CmsCXm15MVfvw9a/V/gD7WzdyuSGAZcFuQaqbHXj92y/n+2ifg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
+
+  /@iconify-json/ph@1.1.10:
+    resolution: {integrity: sha512-e7owJfx9BgnUVGXKk/243iFV4tHH1UiBDl5mWYkwKoPf4nN2rzPGdD7ISfvwr3SB25VvOteSC5DOVWxjs56Ywg==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
