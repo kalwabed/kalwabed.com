@@ -16,8 +16,8 @@ const links = [
 		external: true,
 	},
 	{
-		label: 'X',
-		href: 'https://x.com/kalwabedrzk',
+		label: 'Twitter',
+		href: 'https://twitter.com/kalwabedrzk',
 		external: true,
 	},
 ]
@@ -46,15 +46,9 @@ const links = [
 		flex-direction: column;
 		padding: 1rem;
 		border-top: 1px solid var(--slate-6);
-		opacity: 60%;
-		transition: opacity .3s ease;
 		margin-top: auto;
 		font-size: small;
-
-		&:hover {
-			opacity: 100%;
-			border-top-color: var(--slate-7);
-		}
+		color: var(--fc-subtle);
 
 		@include br.tablet {
 			flex-direction: row;
@@ -81,7 +75,7 @@ const links = [
 	a {
 		display: inline-flex;
 		text-decoration: none;
-		color: var(--fc-primary);
+		color: var(--fc-subtle);
 
 		&:hover {
 			text-decoration: underline;
@@ -91,9 +85,5 @@ const links = [
 			width: 15px;
 			height: 15px;
 		}
-	}
-
-	p {
-		color: var(--fc-subtle);
 	}
 </style>

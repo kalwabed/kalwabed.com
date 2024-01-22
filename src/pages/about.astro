@@ -177,7 +177,11 @@ figure {
     align-items: center;
     gap: .25rem;
     list-style: none;
-    margin-bottom: .3rem;
+    margin-bottom: .5rem;
+
+    @include br.tablet {
+      margin-bottom: .3rem;
+    }
 
     svg {
       width: 18px;
@@ -188,7 +192,6 @@ figure {
 
 a {
   text-decoration: none;
-  color: var(--iris-9);
-  
+  color: var(--iris-9)
 }
 </style>
