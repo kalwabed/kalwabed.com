@@ -115,25 +115,6 @@ const { Content, remarkPluginFrontmatter } = await entry.render()
         background: transparent;
       }
     }
-
-    a {
-      color: var(--iris-9);
-      text-decoration: none;
-      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      transition-duration: 300ms;
-      font-weight: 500;
-      border-bottom: 2px solid transparent;
-
-      &:hover {
-        border-bottom-color: var(--iris-8);
-      }
-
-      &:focus {
-        outline: 2px solid var(--iris-7);
-        outline-offset: 2px;
-      }
-    }    
   }
 }
 </style>

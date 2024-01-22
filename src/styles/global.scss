@@ -41,6 +41,22 @@ code {
 	width: 100%;
 }
 
+a {
+	color: var(--iris-9);
+	text-decoration: none;
+	transition: color 200ms ease;
+	font-weight: 500;
+
+	&:hover {
+		text-decoration: underline;
+		color: var(--iris-10);
+	}
+
+	&:focus {
+		outline: 2px solid var(--iris-7);
+	}
+}
+
 /*
   Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
