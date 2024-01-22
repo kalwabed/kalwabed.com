@@ -46,6 +46,13 @@ const isHomepage = Astro.url.pathname === '/'
 a {
   color: var(--fc-primary);
   text-decoration: none;
+  width: fit-content;
+
+  &:has(> img) {
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
 ul {
