@@ -1,0 +1,75 @@
+---
+import DefaultLayout from '~/layouts/default.astro'
+---
+
+<DefaultLayout>
+  <div class="container">
+    <h1>Uses</h1>
+
+    <h2>Languages and framework</h2>
+    <p>I still love the clean foundation of HTML and CSS, but for interactive elements, JavaScript reigns supreme. <a href="https://kit.svelte.dev">SvelteKit's</a> efficiency and reactivity make it my framework of choice, and TypeScript's type annotations bring a welcome layer of confidence to my codebase.</p>
+    <p>
+      Previously, I’ve worked a good deal with <a href="https://react.dev">React</a> and <a href="https://nextjs.org">Next</a>. Professionally, I work/have worked in various framework flavors, including <a href="https://nuxt.com">Nuxt</a>, and <a href="https://astro.build">Astro</a>.
+    </p>
+    <p>My professional career has been deeply rooted in the JavaScript stack, with <a href="https://nodejs.org">Node</a> being my trusty companion. Now, driven by a desire to improve the web, I'm embarking on a journey to conquer <a href="https://www.rust-lang.org">Rust</a> as well.</p>
+
+    <h2>Code tools</h2>
+    <ul>
+      <li>
+        <a href="https://helix-editor.com">Helix</a>: my current favorite terminal editor. I've been a <a href="https://code.visualstudio.com">Visual Studio Code</a> user for a long time. But this change has really allowed me to move faster.
+      </li>
+      <li>
+        Font: <a href="https://github.com/tonsky/FiraCode">Fira Code</a>. My favorite dev font since I first encountered it.
+      </li>
+      <li>
+        <a href="https://vivaldi.com">Vivaldi</a>: I’m also a fan of <a href="https://brave.com">Brave</a>, but Vivaldi is a great browser because it's the same Chromium-based, but with all the customization and utilization I need. I use <a href="https://librewolf.net">Librewolf</a> if I want to test in Firefox.
+      </li>
+      <li>
+        <a href="https://konsole.kde.org">Konsole</a>: I've tried other terminals, but none seem to work as well. Since I've been using <a href="https://kde.org">KDE</a> as my desktop environment, the support has been first class too.
+      </li>
+      <li>
+        <a href="https://cloudflare.com">Cloudflare</a>: I’m also a fan of <a href="https://netlify.com">Netlify</a> and <a href="https://vercel.com">Vercel</a>. I moved some projects to Cloudflare to have more control over the infrastructure.
+      </li>
+    </ul>
+  </div>
+</DefaultLayout>
+
+<style lang="scss">
+@use '../styles/breakpoints' as br;
+
+.container {
+  margin-top: 69px;
+}
+
+h1 {
+  margin-bottom: 32px;
+  font-size: 2.29rem;
+
+  @include br.tablet {
+    text-align: center;
+    margin-bottom: 49px;
+  }
+}
+
+p {
+  margin: {
+    top: .5rem;
+    bottom: .5rem;
+  };
+}
+
+h2 {
+  margin: {
+    top: 3rem;
+    bottom: .75rem;
+  };
+}
+
+ul {
+  margin-left: .8rem;
+}
+
+li {
+  margin-bottom: .4rem;
+}
+</style>
