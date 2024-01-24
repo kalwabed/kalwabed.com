@@ -5,7 +5,7 @@ import GgExternal from '~icons/gg/external'
 export interface Props {
 	project: {
 		title: string
-		releaseYear: number
+		releaseDate: string
 		summary: string
 		slug: string
 		demoUrl?: string
@@ -13,7 +13,7 @@ export interface Props {
 	}
 }
 
-const { project: { faviconPath, releaseYear, title, slug, summary, demoUrl} } = Astro.props
+const { project: { faviconPath, releaseDate, title, slug, summary, demoUrl} } = Astro.props
 
 const favicon = demoUrl + `/${faviconPath}`
 ---
@@ -21,7 +21,7 @@ const favicon = demoUrl + `/${faviconPath}`
 <section class="wrapper">
 	<div class="icon-year">
 		<Image src={favicon} alt={`${title} favicon`} width={22} height={22}  />
-		<b>{releaseYear}</b>
+		<b>{new Date(releaseDate).getFullYear()}</b>
 	</div>
 	<a class="link-title" href={`/projects/${slug}`}>{title}</a>
 	<p>{summary}</p>

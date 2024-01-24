@@ -14,7 +14,7 @@ const projectCollection = defineCollection({
 	type: "content",
 	schema: z.object({
 		title: z.string(),
-		releaseYear: z.number(),
+		releaseDate: z.date(),
 		summary: z.string(),
 		demoUrl: z.string().url().optional(),
 		faviconPath: z.string().optional(),

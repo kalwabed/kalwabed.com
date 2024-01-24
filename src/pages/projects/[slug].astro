@@ -53,7 +53,7 @@ const favicon = entry.data.demoUrl + `/${entry.data.faviconPath}`
           ) : null}
           <div class="stack">
             <h4>Year</h4>
-            <p>{entry.data.releaseYear}</p>
+            <p>{new Date(entry.data.releaseDate).getFullYear()}</p>
           </div>
         </div>
       </div>

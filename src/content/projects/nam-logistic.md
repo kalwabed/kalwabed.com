@@ -1,7 +1,7 @@
 ---
 title: 'NAM Logistic'
 summary: 'Been a PHP developer'
-releaseYear: 2020
+releaseDate: 2020-12-30
 demoUrl: 'https://www.namlogistic.co.id'
 faviconPath: 'favicon.ico'
 techs:
