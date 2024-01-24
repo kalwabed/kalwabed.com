@@ -2,7 +2,9 @@
 import { getCollection } from 'astro:content'
 import { Image } from 'astro:assets'
 import MdxImage from '~components/mdx/image.astro';
+import LogosNextjsIcon from '~icons/logos/nextjs-icon'
 import LogosSvelteIcon from '~icons/logos/svelte-icon'
+import LogosReact from '~icons/logos/react'
 import GgGlobeAlt from '~icons/gg/globe-alt'
 import LogosGithubIcon from '~icons/logos/github-icon'
 import DefaultLayout from '~/layouts/default.astro'
@@ -19,6 +21,20 @@ const { entry } = Astro.props
 const { Content } = await entry.render()
 
 const favicon = entry.data.demoUrl + `/${entry.data.faviconPath}`
+const techList: Record<string, { label: string, Logo: typeof LogosNextjsIcon }> = {
+  nextjs: {
+    label: 'Next.js',
+    Logo: LogosNextjsIcon
+  },
+  svelte: {
+    label: 'Svelte',
+    Logo: LogosSvelteIcon
+  },
+  react: {
+    label: 'React',
+    Logo: LogosReact
+  }
+}
 ---
 
 <DefaultLayout>
@@ -34,9 +50,12 @@ const favicon = entry.data.demoUrl + `/${entry.data.faviconPath}`
           <div class="stack">
             <h4>Tech stacks</h4>
             <div class="tech">
-              <div><LogosSvelteIcon /> Svelte</div>
-              <div><LogosSvelteIcon /> Svelte</div>
-              <div><LogosSvelteIcon /> Svelte</div>
+              {entry.data.techs.map(tech => {
+                const Logo = techList[tech].Logo
+                return (
+                  <div><Logo /> {techList[tech].label}</div>
+                )
+              })}
             </div>
           </div>
           {entry.data.demoUrl ? (
@@ -162,7 +181,7 @@ const favicon = entry.data.demoUrl + `/${entry.data.faviconPath}`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: .5rem;
+  gap: .8rem;
 
   & > div {
     display: flex;
