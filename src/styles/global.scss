@@ -1,5 +1,5 @@
 @use "./vars";
-@use "./breakpoints";
+@use "./breakpoints" as br;
 
 @import '@fontsource-variable/overpass';
 @import '@fontsource/schoolbell';
@@ -32,7 +32,16 @@ code {
 
 .container {
 	max-width: var(--default-mw);
-	margin: 0 auto;
+
+	margin: {
+		top: 2rem;
+		left: auto;
+		right: auto;
+	}
+
+	@include br.tablet {
+		margin-top: 69px;
+	}
 }
 
 #root {
