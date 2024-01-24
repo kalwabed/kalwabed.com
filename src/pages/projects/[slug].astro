@@ -5,6 +5,9 @@ import MdxImage from '~components/mdx/image.astro';
 import LogosNextjsIcon from '~icons/logos/nextjs-icon'
 import LogosSvelteIcon from '~icons/logos/svelte-icon'
 import LogosReact from '~icons/logos/react'
+import LogosExpress from '~icons/logos/express'
+import LogosBootstrap from '~icons/logos/bootstrap'
+import LogosMongodbIcon from '~icons/logos/mongodb-icon'
 import GgGlobeAlt from '~icons/gg/globe-alt'
 import LogosGithubIcon from '~icons/logos/github-icon'
 import DefaultLayout from '~/layouts/default.astro'
@@ -21,7 +24,7 @@ const { entry } = Astro.props
 const { Content } = await entry.render()
 
 const favicon = entry.data.demoUrl + `/${entry.data.faviconPath}`
-const techList: Record<string, { label: string, Logo: typeof LogosNextjsIcon }> = {
+const techList: Record<string, { label?: string, Logo: typeof LogosNextjsIcon }> = {
   nextjs: {
     label: 'Next.js',
     Logo: LogosNextjsIcon
@@ -33,6 +36,18 @@ const techList: Record<string, { label: string, Logo: typeof LogosNextjsIcon }> 
   react: {
     label: 'React',
     Logo: LogosReact
+  },
+  express: {
+    label: 'Express',
+    Logo: LogosExpress
+  },
+  bootstrap: {
+    label: 'Bootstrap',
+    Logo: LogosBootstrap
+  },
+  mongodb: {
+    label: 'Mongo DB',
+    Logo: LogosMongodbIcon
   }
 }
 ---
