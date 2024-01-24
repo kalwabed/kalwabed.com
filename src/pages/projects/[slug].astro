@@ -1,27 +1,32 @@
 ---
+import { getCollection } from 'astro:content'
 import { Image } from 'astro:assets'
+import MdxImage from '~components/mdx/image.astro';
 import LogosSvelteIcon from '~icons/logos/svelte-icon'
 import GgGlobeAlt from '~icons/gg/globe-alt'
 import LogosGithubIcon from '~icons/logos/github-icon'
 import DefaultLayout from '~/layouts/default.astro'
-import faviconExample from '~/assets/logo.jpeg'
-import projExample from '~/assets/proj-example.png'
+import projExample from '~/assets/projects/nam-cover.png'
+import { removeHttp } from '~utils/url'
+import Blockquote from '~components/mdx/blockquote.astro'
 
-export function getStaticPaths() {
-  return [
-    {
-      params: { slug: 'omaewa' }
-    }
-  ]
+export async function getStaticPaths() {
+  const projects = await getCollection('projects')
+  return projects.map(project => ({ params: { slug: project.slug }, props: { entry: project }}))
 }
+
+const { entry } = Astro.props
+const { Content } = await entry.render()
+
+const favicon = entry.data.demoUrl + `/${entry.data.faviconPath}`
 ---
 
 <DefaultLayout>
   <div class="container">
     <article>
       <div class="project-title">
-        <Image src={faviconExample} alt="Example project" width="30" height="30"   />
-        <h2>Tuantanah</h2>
+        <Image src={favicon} alt={`${entry.data.title} favicon`} width="30" height="30"   />
+        <h1>{entry.data.title}</h1>
       </div>
       <div class="project-side">
         <Image src={projExample} class="cover" alt="Example project" />
@@ -34,31 +39,34 @@ export function getStaticPaths() {
               <div><LogosSvelteIcon /> Svelte</div>
             </div>
           </div>
-          <div class="stack">
-            <h4>Demo</h4>
-            <a href="/123"><GgGlobeAlt /> apakahreal.com</a>
-          </div>
-          <div class="stack">
-            <h4>Source</h4>
-            <a href="/123"><LogosGithubIcon /> Github</a>
-          </div>
+          {entry.data.demoUrl ? (
+            <div class="stack">
+              <h4>Demo</h4>
+              <a href={entry.data.demoUrl}><GgGlobeAlt /> {removeHttp(entry.data.demoUrl)}</a>
+            </div>
+          ) : null}
+          {entry.data.sourceUrl ? (
+            <div class="stack">
+              <h4>Source</h4>
+              <a href={entry.data.sourceUrl}><LogosGithubIcon /> Github</a>
+            </div>
+          ) : null}
           <div class="stack">
             <h4>Year</h4>
-            <p>2023</p>
+            <p>{entry.data.releaseYear}</p>
           </div>
         </div>
       </div>
-      <div class="desc">
-        <p>
-          So I started to walk into the water. I won't lie to you boys, I was terrified. But I pressed on, and as I made my way past the breakers a strange calm came over me. I don't know if it was divine intervention or the kinship of all living things but I tell you Jerry at that moment, I was a marine biologist.
-        </p>
+      <div class="prose">
+        <Content components={{ blockquote: Blockquote, img: MdxImage }} />
       </div>
     </article>
   </div>
 </DefaultLayout>
 
-<style lang="scss">
+<style is:global lang="scss">
 @use '../../styles/breakpoints' as br;
+@use '../../styles/typography';
 
 .container {
   margin-top: 2rem;
@@ -70,13 +78,10 @@ export function getStaticPaths() {
   align-items: center;
   gap: 1rem;
 
-  & img {
-    border-radius: 999px;
+  h1 {
+    font-size: 2.25rem;
   }
-}
 
-h2 {
-  font-size: 2.25rem;
 }
 
 .project-side {
@@ -165,7 +170,7 @@ h2 {
   }
 }
 
-.desc {
+.prose {
   margin-top: 1.5rem;
   max-width: 550px;
 

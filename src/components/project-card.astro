@@ -1,18 +1,35 @@
 ---
 import { Image } from 'astro:assets';
 import GgExternal from '~icons/gg/external'
+
+export interface Props {
+	project: {
+		title: string
+		releaseYear: number
+		summary: string
+		slug: string
+		demoUrl?: string
+		faviconPath?: string
+	}
+}
+
+const { project: { faviconPath, releaseYear, title, slug, summary, demoUrl} } = Astro.props
+
+const favicon = demoUrl + `/${faviconPath}`
 ---
 
 <section class="wrapper">
 	<div class="icon-year">
-		<Image src="https://www.kalwabed.xyz/favicon.ico" alt="kalwabed.xyz favicon" width={22} height={22}  />
-		<b>2023</b>
+		<Image src={favicon} alt={`${title} favicon`} width={22} height={22}  />
+		<b>{releaseYear}</b>
 	</div>
-	<a class="link-title" href="/projects/omaewa">Tuantanah</a>
-	<p>I have recently been made aware that the frequency.</p>
+	<a class="link-title" href={`/projects/${slug}`}>{title}</a>
+	<p>{summary}</p>
 	<div class="links">
-		<a href='/projects/omaewa'>Write-up</a>
-		<a href='/projects/123' target="_blank" rel="noopener noreferrer">Demo <GgExternal /></a>
+		<a href={`/projects/${slug}`}>Write-up</a>
+		{demoUrl ? (
+			<a href={demoUrl} target="_blank" rel="noopener noreferrer">Demo <GgExternal /></a>
+		): null}
 	</div>
 </section>
 

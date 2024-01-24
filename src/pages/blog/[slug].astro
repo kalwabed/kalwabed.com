@@ -20,7 +20,7 @@ const { Content, remarkPluginFrontmatter } = await entry.render()
       <p>Kalwabed Rizki, {formatDate(entry.data.publishDate)} <span>—</span> {remarkPluginFrontmatter.minutesRead}</p>
       <h1>{entry.data.title}</h1>
     </header>
-    <main>
+    <main class="prose">
       <Content components={{ blockquote: Blockquote, img: Image }} />
     </main>
   </article>
@@ -28,6 +28,7 @@ const { Content, remarkPluginFrontmatter } = await entry.render()
 
 <style is:global lang="scss">
 @use '../../styles/breakpoints' as br;
+@use '../../styles/typography';
 
 .blog {
   margin-top: 2rem;
@@ -45,75 +46,6 @@ const { Content, remarkPluginFrontmatter } = await entry.render()
 
     h1 {
       text-wrap: balance;
-    }
-  }
-
-  main {
-    h2, h3, h4, h5 {
-      font-family: var(--font-body);
-      line-height: 1.625;
-      margin: {
-        top: 2.5rem;
-        bottom: .3rem;
-      };
-    }
-
-    p {
-      color: var(--fc-subtle);
-      margin-bottom: 1rem;
-    }
-
-    li {
-      color: var(--fc-subtle);
-      padding-left: 1rem;
-      margin: .5rem 0;
-
-      @include br.tablet {
-        padding-left: 0;
-      }
-    }
-
-    :not(pre) code {
-      color: var(--iris-12);
-      font-weight: 500;
-
-      &::before {
-        content: "`";
-      }
-      &::after {
-        content: "`";
-      }
-    }
-
-    blockquote > p:last-of-type {
-      margin-bottom: 0;
-    }
-
-    ul, ol {
-      margin: 1rem 0;
-      padding-left: 1rem;
-    }
-
-    pre {
-      overflow-x: auto;
-      font-size: 0.875rem;
-      line-height: 1.25rem;
-      margin-bottom: 1.75rem;
-      padding: 0.75rem;
-      border-radius: .2rem;
-      border: 1px solid var(--slate-6);
-      -ms-overflow-style: none;
-      /* IE and Edge */
-      scrollbar-width: none;
-      /* Firefox */
-
-      &::-webkit-scrollbar {
-        display: none;
-      }
-
-      code {
-        background: transparent;
-      }
     }
   }
 }

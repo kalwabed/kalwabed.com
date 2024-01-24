@@ -1,6 +1,9 @@
 ---
+import { getCollection } from 'astro:content';
 import DefaultLayout from '~/layouts/default.astro'
 import ProjectCard from '~/components/project-card.astro'
+
+const projects = await getCollection('projects')
 ---
 
 <DefaultLayout>
@@ -8,8 +11,9 @@ import ProjectCard from '~/components/project-card.astro'
     <h1>Projects</h1>
   </div>
   <div class="project-list">
-    <ProjectCard />
-    <ProjectCard />
+    {projects.map(project => (
+      <ProjectCard project={{...project.data, slug: project.slug}} />
+    ))}
   </div>
 </DefaultLayout>
 
