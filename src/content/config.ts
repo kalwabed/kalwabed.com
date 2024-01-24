@@ -20,7 +20,7 @@ const projectCollection = defineCollection({
 		faviconPath: z.string().optional(),
 		sourceUrl: z.string().url().optional(),
 		techs: z.string().array(),
-		imageCover: z.string().optional(),
+		imageCover: z.string(),
 	}),
 });
 

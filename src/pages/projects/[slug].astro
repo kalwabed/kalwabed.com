@@ -50,6 +50,14 @@ const techList: Record<string, { label?: string, Logo: typeof LogosNextjsIcon }>
     Logo: LogosMongodbIcon
   }
 }
+
+const projectAssetsFolder = '/src/assets/projects'
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/projects/*.{jpeg,jpg,png,gif}');
+const projectCover = images[`${projectAssetsFolder}/${entry.data.imageCover}`]
+
+if (!projectCover) {
+  throw new Error(`"${entry.data.imageCover} does not exist in glob: "${projectAssetsFolder}/*.{jpeg,jpg,png,gif}"`)
+}
 ---
 
 <DefaultLayout>
@@ -60,7 +68,7 @@ const techList: Record<string, { label?: string, Logo: typeof LogosNextjsIcon }>
         <h1>{entry.data.title}</h1>
       </div>
       <div class="project-side">
-        <Image src={projExample} class="cover" alt="Example project" />
+        <Image src={projectCover()} class="cover" alt={`${entry.data.title} cover image`} />
         <div class="meta">
           <div class="stack">
             <h4>Tech stacks</h4>
