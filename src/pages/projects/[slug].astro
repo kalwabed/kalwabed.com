@@ -13,7 +13,7 @@ import LogosGithubIcon from '~icons/logos/github-icon'
 import DefaultLayout from '~/layouts/default.astro'
 import { removeHttp } from '~utils/url'
 import Blockquote from '~components/mdx/blockquote.astro'
-import { getProjectImg } from '~utils/asset';
+import { getDynamicImage } from '~utils/asset';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects')
@@ -51,7 +51,7 @@ const techList: Record<string, { label?: string, Logo: typeof LogosNextjsIcon }>
   }
 }
 
-const projectCover = getProjectImg(entry.data.imageCover)
+const projectCover = getDynamicImage(entry.data.imageCover)
 ---
 
 <DefaultLayout title={entry.data.title} description={entry.data.summary}>

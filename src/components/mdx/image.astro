@@ -1,6 +1,6 @@
 ---
 import { Image as AstroImg } from 'astro:assets'
-import { getProjectImg } from '~utils/asset';
+import { getDynamicImage } from '~utils/asset';
 
 export interface Props {
 	src: string
@@ -9,7 +9,7 @@ export interface Props {
 
 const { src, alt } = Astro.props
 
-const imgSrc = getProjectImg(src)
+const imgSrc = getDynamicImage(src)
 ---
 
 <figure>
