@@ -38,15 +38,15 @@ Create a new page (anywhere) and then we will make it a table to store our data 
 
 Look at figures 1.1 and 1.2 below.
 
-![1.1](/static/posts/notion-as-headless/table-init.png)
+![1.1](/posts/notion-as-headless/table-init.png)
 
-![1.2](/static/posts/notion-as-headless/table-structure.png)
+![1.2](/posts/notion-as-headless/table-structure.png)
 
 ### Step 2
 
 We initial the data.
 
-![Three preliminary data](/static/posts/notion-as-headless/table-initial-data.png)
+![Three preliminary data](/posts/notion-as-headless/table-initial-data.png)
 
 ### Step 3
 
@@ -56,7 +56,7 @@ The way it works is very easy, we only need the Id of our Notion page.
 
 To get it, we just need to take the share link and then take our page Id. Pay attention to the image instructions below:
 
-![How to share link](/static/posts/notion-as-headless/share-link.png)
+![How to share link](/posts/notion-as-headless/share-link.png)
 
 ### Step 4
 
@@ -68,7 +68,7 @@ To test whether it is correct or not, please visit: `https://notion-api.splitbee
 
 If there are no problems, then the results in the browser will be as shown below:
 
-![Json results in the browser](/static/posts/notion-as-headless/browser-result.png)
+![Json results in the browser](/posts/notion-as-headless/browser-result.png)
 
 > If an error occurs, make sure the page id and url you entered are correct, then try again.
 
@@ -91,7 +91,7 @@ export async function getServerSideProps() {
 
 So, the end result is:
 
-![Result from SSR](/static/posts/notion-as-headless/api-result.png)
+![Result from SSR](/posts/notion-as-headless/api-result.png)
 
 Look at [Codesandbox](https://codesandbox.io/s/notion-as-cms-3v90g?file=/pages/index.js:0-269)
 
