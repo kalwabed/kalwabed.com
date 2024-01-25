@@ -1,7 +1,7 @@
 import mdx from "@astrojs/mdx";
-import autoprefixer from "autoprefixer";
 import a11yEmoji from "@fec/remark-a11y-emoji";
 import { defineConfig, squooshImageService } from "astro/config";
+import autoprefixer from "autoprefixer";
 import Icons from "unplugin-icons/vite";
 import { remarkReadingTime } from "./remark-reading-time.mjs";
 
