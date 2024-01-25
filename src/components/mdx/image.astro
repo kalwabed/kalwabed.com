@@ -1,10 +1,20 @@
 ---
-const props = Astro.props as { src: string, alt: string }
+import { Image as AstroImg } from 'astro:assets'
+import { getProjectImg } from '~utils/asset';
+
+export interface Props {
+	src: string
+  alt: string
+}
+
+const { src, alt } = Astro.props
+
+const imgSrc = getProjectImg(src)
 ---
 
 <figure>
-  <img {...props} width="400" height="250" decoding="async" loading="lazy" />
-  <figcaption>{props.alt}</figcaption>
+  <AstroImg src={imgSrc()} alt={alt} />
+  <figcaption>{alt}</figcaption>
 </figure>
 
 <style lang="scss">

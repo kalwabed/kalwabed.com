@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import GgExternal from '~icons/gg/external'
-import { getProjectCover } from '~utils/asset';
+import { getProjectImg } from '~utils/asset';
 
 export interface Props {
   project: {
@@ -14,7 +14,7 @@ export interface Props {
 }
 
 const { project: { demoUrl, imageCover, slug, summary, title} } = Astro.props
-const coverImage = getProjectCover(imageCover)
+const coverImage = getProjectImg(imageCover)
 ---
 
 <Image src={coverImage()} alt={`${title} cover`} />
