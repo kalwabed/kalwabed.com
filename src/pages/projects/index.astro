@@ -1,9 +1,9 @@
 ---
-import { getCollection } from 'astro:content';
 import DefaultLayout from '~/layouts/default.astro'
 import ProjectCard from '~/components/project-card.astro'
+import { getSortedProjects } from '~utils/fetcher';
 
-const projects = await getCollection('projects')
+const projects = await getSortedProjects()
 ---
 
 <DefaultLayout>

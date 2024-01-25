@@ -4,9 +4,12 @@ import Hero from '~/components/hero.astro'
 import SectionHead from '~/components/section-head.astro'
 import BlogCard from '~/components/blog-card.astro'
 import FeaturedProject from '~/components/featured-project.astro'
-import { getSortedPosts } from '~utils/fetcher'
+import { getSortedPosts, getSortedProjects } from '~utils/fetcher'
 
 const sortedBlog = await getSortedPosts()
+const sortedProjects = await getSortedProjects()
+
+const featuredProject = sortedProjects.find(project => project.data.isFeatured)
 const latestPosts = sortedBlog.slice(0, 3)
 ---
 
@@ -20,7 +23,7 @@ const latestPosts = sortedBlog.slice(0, 3)
   </div>
   <SectionHead section="project" />
   <div class="container">
-    <FeaturedProject />
+    <FeaturedProject project={{...featuredProject!.data, slug: featuredProject!.slug}} />
   </div>
 </DefaultLayout>
 

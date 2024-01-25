@@ -11,9 +11,9 @@ import LogosMongodbIcon from '~icons/logos/mongodb-icon'
 import GgGlobeAlt from '~icons/gg/globe-alt'
 import LogosGithubIcon from '~icons/logos/github-icon'
 import DefaultLayout from '~/layouts/default.astro'
-import projExample from '~/assets/projects/nam-cover.png'
 import { removeHttp } from '~utils/url'
 import Blockquote from '~components/mdx/blockquote.astro'
+import { getProjectCover } from '~utils/asset';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects')
@@ -51,13 +51,7 @@ const techList: Record<string, { label?: string, Logo: typeof LogosNextjsIcon }>
   }
 }
 
-const projectAssetsFolder = '/src/assets/projects'
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/projects/*.{jpeg,jpg,png,gif}');
-const projectCover = images[`${projectAssetsFolder}/${entry.data.imageCover}`]
-
-if (!projectCover) {
-  throw new Error(`"${entry.data.imageCover} does not exist in glob: "${projectAssetsFolder}/*.{jpeg,jpg,png,gif}"`)
-}
+const projectCover = getProjectCover(entry.data.imageCover)
 ---
 
 <DefaultLayout>

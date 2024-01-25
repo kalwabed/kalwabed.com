@@ -1,21 +1,35 @@
 ---
 import { Image } from 'astro:assets';
 import GgExternal from '~icons/gg/external'
-import sample from '~/assets/pf-sample.png';
+import { getProjectCover } from '~utils/asset';
+
+export interface Props {
+  project: {
+    imageCover: string
+    title: string
+    summary: string
+    demoUrl?: string
+    slug: string
+  }
+}
+
+const { project: { demoUrl, imageCover, slug, summary, title} } = Astro.props
+const coverImage = getProjectCover(imageCover)
 ---
 
-<Image src={sample} alt="Featured project preview" />
-<a class="parent-link" href="/">
-  <h3>Unified Versus Split Diff</h3>
-  <p>For a large change, I don’t want to do a “diff review”, I want to do a proper code review of a codebase at a particular instant in time.</p>
+<Image src={coverImage()} alt={`${title} cover`} />
+<a class="parent-link" href={`/projects/${slug}`}>
+  <h3>{title}</h3>
+  <p>{summary}</p>
 </a>
-<a class="ext" href="123">Access website <GgExternal /></a>
+<a class="ext" href={demoUrl}>Access website <GgExternal /></a>
 
 <style lang="scss">
 @use '../styles/breakpoints' as br;
 
 img {
   height: 100%;
+  border-radius: 3px;
 }
 
 a {

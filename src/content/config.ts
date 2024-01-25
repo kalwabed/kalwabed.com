@@ -21,6 +21,7 @@ const projectCollection = defineCollection({
 		sourceUrl: z.string().url().optional(),
 		techs: z.string().array(),
 		imageCover: z.string(),
+		isFeatured: z.boolean().default(false),
 	}),
 });
 
