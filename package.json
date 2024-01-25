@@ -29,6 +29,7 @@
     "@fontsource/fira-code": "^5.0.16",
     "@fontsource/schoolbell": "^5.0.8",
     "astro": "^4.2.0",
+    "autoprefixer": "^10.4.17",
     "dayjs": "^1.11.10",
     "gardevoir": "^1.0.0",
     "mdast-util-to-string": "^4.0.0",

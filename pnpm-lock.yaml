@@ -32,6 +32,9 @@ dependencies:
   astro:
     specifier: ^4.2.0
     version: 4.2.0(sass@1.70.0)(typescript@5.3.3)
+  autoprefixer:
+    specifier: ^10.4.17
+    version: 10.4.17(postcss@8.4.33)
   dayjs:
     specifier: ^1.11.10
     version: 1.11.10
@@ -1229,6 +1232,22 @@ packages:
       - typescript
     dev: false
 
+  /autoprefixer@10.4.17(postcss@8.4.33):
+    resolution: {integrity: sha512-/cpVNRLSfhOtcGflT13P2794gVSgmPgTR+erw5ifnMLZb0UnSlkK4tquLmkd3BhA+nLo5tX8Cu0upUsGKvKbmg==}
+    engines: {node: ^10 || ^12 || >=14}
+    hasBin: true
+    peerDependencies:
+      postcss: ^8.1.0
+    dependencies:
+      browserslist: 4.22.2
+      caniuse-lite: 1.0.30001579
+      fraction.js: 4.3.7
+      normalize-range: 0.1.2
+      picocolors: 1.0.0
+      postcss: 8.4.33
+      postcss-value-parser: 4.2.0
+    dev: false
+
   /axobject-query@4.0.0:
     resolution: {integrity: sha512-+60uv1hiVFhHZeO+Lz0RYzsVHy5Wr1ayX0mwda9KPDVLNJgZ1T9Ny7VmFbLDzxsH0D87I86vgj3gFrjTJUYznw==}
     dependencies:
@@ -1851,6 +1870,10 @@ packages:
   /flattie@1.1.0:
     resolution: {integrity: sha512-xU99gDEnciIwJdGcBmNHnzTJ/w5AT+VFJOu6sTB6WM8diOYNA3Sa+K1DiEBQ7XH4QikQq3iFW1U+jRVcotQnBw==}
     engines: {node: '>=8'}
+    dev: false
+
+  /fraction.js@4.3.7:
+    resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
     dev: false
 
   /fs-constants@1.0.0:
@@ -3118,6 +3141,11 @@ packages:
     resolution: {integrity: sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==}
     engines: {node: '>=0.10.0'}
 
+  /normalize-range@0.1.2:
+    resolution: {integrity: sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==}
+    engines: {node: '>=0.10.0'}
+    dev: false
+
   /npm-run-path@4.0.1:
     resolution: {integrity: sha512-S48WzZW777zhNIrn7gxOlISNAqi9ZC/uQFnRdbeIHhZhCA6UqpkOT8T1G7BvfdgP4Er8gF4sUbaS0i7QvIfCWw==}
     engines: {node: '>=8'}
@@ -3309,6 +3337,10 @@ packages:
       mlly: 1.4.2
       pathe: 1.1.1
     dev: true
+
+  /postcss-value-parser@4.2.0:
+    resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
+    dev: false
 
   /postcss@8.4.33:
     resolution: {integrity: sha512-Kkpbhhdjw2qQs2O2DGX+8m5OVqEcbB9HRBvuYM9pgrjEFUg30A9LmXNlTAUj4S9kgtGyrMbTzVjH7E+s5Re2yg==}
