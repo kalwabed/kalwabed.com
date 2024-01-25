@@ -3,13 +3,54 @@ import 'gardevoir/dist/index.min.css'
 import '~/styles/global.scss'
 import Navbar from '~/components/navbar.astro'
 import Footer from '~/components/page-footer.astro'
+
+export interface Props {
+  title?: string
+  description?: string
+  keywords?: string[]
+}
+
+const defaultTitle = 'Kalwabed Rizki - Software engineer'
+const defaultDescription = 'Web developer based in Yogyakarta, Indonesia.'
+const defaultKeywords = ['kalwabed', 'rizki', 'kalwabed rizki', 'web', 'software engineer']
+
+const { description, title, keywords } = Astro.props
+const _desc = description ?? defaultDescription
+const _keywords = keywords ?? defaultKeywords
+const _title = title ? `${title} | Kalwabed Rizki` : defaultTitle
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Kalwabed Rizki - Software engineer</title>
+    <meta name="generator" content={Astro.generator}>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="canonical" href={Astro.url} />
+    <meta name="description" content={_desc} />
+    <meta name="keywords" content={_keywords.join(',').toLowerCase()} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="blog" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={_title} />
+    <meta property="og:description" content={_desc} />
+    <meta property="og:image" content='' />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={_title} />
+    <meta property="twitter:description" content={_desc} />
+    <meta property="twitter:image" content='' />
+    <title>{_title}</title>
   </head>
   <body>
     <div id="root">

@@ -54,7 +54,7 @@ const techList: Record<string, { label?: string, Logo: typeof LogosNextjsIcon }>
 const projectCover = getProjectCover(entry.data.imageCover)
 ---
 
-<DefaultLayout>
+<DefaultLayout title={entry.data.title} description={entry.data.summary}>
   <div class="container">
     <article>
       <div class="project-title">
