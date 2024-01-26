@@ -2,6 +2,7 @@
 title: 'Departing from PHP'
 summary: 'Been a PHP developer'
 publishDate: 2020-10-21
+ogImage: departing-from-php.jpg
 ---
 
 Before becoming a JavaScript developer, I first set out to start building websites using PHP on the server side.

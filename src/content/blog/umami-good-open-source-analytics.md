@@ -2,6 +2,7 @@
 title: 'Umami: good open source analytics'
 summary: 'Analytics alternatives to Google Analytics'
 publishDate: 2020-10-23
+ogImage: umami.jpg
 ---
 
 ## Table of Contents

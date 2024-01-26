@@ -6,17 +6,17 @@ import Footer from '~/components/page-footer.astro'
 
 export interface Props {
   title?: string
-  description?: string
+  desc?: string
+  ogImage?: string
   keywords?: string[]
 }
 
 const defaultTitle = 'Kalwabed Rizki - Software engineer'
 const defaultDescription = 'Web developer based in Yogyakarta, Indonesia.'
+const defaultOgImg = 'default.jpg'
 const defaultKeywords = ['kalwabed', 'rizki', 'kalwabed rizki', 'web', 'software engineer']
 
-const { description, title, keywords } = Astro.props
-const _desc = description ?? defaultDescription
-const _keywords = keywords ?? defaultKeywords
+const { desc = defaultDescription, title, keywords = defaultKeywords, ogImage = defaultOgImg } = Astro.props
 const _title = title ? `${title} | Kalwabed Rizki` : defaultTitle
 ---
 
@@ -35,22 +35,22 @@ const _title = title ? `${title} | Kalwabed Rizki` : defaultTitle
 
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="canonical" href={Astro.url} />
-    <meta name="description" content={_desc} />
-    <meta name="keywords" content={_keywords.join(',').toLowerCase()} />
+    <meta name="description" content={desc} />
+    <meta name="keywords" content={keywords.join(',').toLowerCase()} />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="blog" />
     <meta property="og:url" content={Astro.url} />
     <meta property="og:title" content={_title} />
-    <meta property="og:description" content={_desc} />
-    <meta property="og:image" content='' />
+    <meta property="og:description" content={desc} />
+    <meta property="og:image" content={`/og/${ogImage}`} />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content={Astro.url} />
     <meta property="twitter:title" content={_title} />
-    <meta property="twitter:description" content={_desc} />
-    <meta property="twitter:image" content='' />
+    <meta property="twitter:description" content={desc} />
+    <meta property="twitter:image" content={`/og/${ogImage}`} />
     <title>{_title}</title>
   </head>
   <body>

@@ -7,6 +7,7 @@ const blogCollection = defineCollection({
 		publishDate: z.date(),
 		summary: z.string(),
 		imageCover: z.string().optional(),
+		ogImage: z.string(),
 	}),
 });
 
@@ -22,6 +23,7 @@ const projectCollection = defineCollection({
 		techs: z.string().array(),
 		imageCover: z.string(),
 		isFeatured: z.boolean().default(false),
+		ogImage: z.string(),
 	}),
 });
 

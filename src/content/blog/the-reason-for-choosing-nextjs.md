@@ -2,6 +2,7 @@
 title: 'The reason for choosing Next.js'
 summary: 'Trying to answer my own question'
 publishDate: 2020-11-01
+ogImage: reason-next.jpg
 ---
 
 ## Table of Contents

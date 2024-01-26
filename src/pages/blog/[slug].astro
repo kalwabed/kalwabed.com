@@ -14,7 +14,7 @@ const { entry } = Astro.props
 const { Content, remarkPluginFrontmatter } = await entry.render()
 ---
 
-<DefaultLayout title={entry.data.title} description={entry.data.summary}>
+<DefaultLayout title={entry.data.title} desc={entry.data.summary} ogImage={entry.data.ogImage}>
   <article class="container blog">
     <header class="meta">
       <p>Kalwabed Rizki, {formatDate(entry.data.publishDate)} <span>—</span> {remarkPluginFrontmatter.minutesRead}</p>
