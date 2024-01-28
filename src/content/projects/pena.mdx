@@ -1,0 +1,29 @@
+---
+title: Pena
+summary: A place for me to pour out my writings, which are mostly about life and phenomena.
+releaseDate: 2022-08-07
+demoUrl: https://pena.kalwabed.xyz
+sourceUrl: https://github.com/kalwabed/pena.kalwabed.xyz
+faviconPath: favicon.ico
+imageCover: /projects/pena/cover.png
+isFeatured: true
+ogImage: pena.jpg
+techs:
+  - svelte
+---
+
+A website where I can write freely about non-technical things. It's more about daily life and phenomena that happen around me.
+
+I wrote it in Bahasa Indonesia because it's easier for me and my target audience to understand what I want to say.
+
+## Guest book
+
+In this guestbook section, I was inspired by [Lee Robinson's guestbook](https://leerob.io/guestbook). Here I made it simpler and freer.
+
+This feature gives me a new experience with [Planetscale](https://planetscale.com/) as my place to store data in a MySQL database. Combining Planetscale with [Prisma](https://leerob.io/guestbook) makes this small web-building experience even more interesting, especially when I use [SvelteKit](https://kit.svelte.dev/) to make it even more perfect.
+
+Another important feature is the notification whenever someone adds a message in the Guest book. I want to be notified every time someone fills it up.
+
+![Telegram bot message](/projects/pena/bot.png)
+
+For this reason, I added automation using a Telegram Bot that I created myself to notify me every time someone sends a new message to the Guest book.

@@ -7,7 +7,9 @@ import LogosSvelteIcon from '~icons/logos/svelte-icon'
 import LogosReact from '~icons/logos/react'
 import LogosExpress from '~icons/logos/express'
 import LogosBootstrap from '~icons/logos/bootstrap'
+import LogosFirebase from '~icons/logos/firebase'
 import LogosMongodbIcon from '~icons/logos/mongodb-icon'
+import LogosTailwindIcon from '~icons/logos/tailwindcss-icon'
 import GgGlobeAlt from '~icons/gg/globe-alt'
 import LogosGithubIcon from '~icons/logos/github-icon'
 import DefaultLayout from '~/layouts/default.astro'
@@ -48,6 +50,14 @@ const techList: Record<string, { label?: string, Logo: typeof LogosNextjsIcon }>
   mongodb: {
     label: 'Mongo DB',
     Logo: LogosMongodbIcon
+  },
+  tailwind: {
+    label: 'Tailwind',
+    Logo: LogosTailwindIcon
+  },
+  firebase: {
+    label: 'Firebase',
+    Logo: LogosFirebase
   }
 }
 
