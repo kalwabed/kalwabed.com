@@ -2,21 +2,13 @@
 import { getCollection } from 'astro:content'
 import { Image } from 'astro:assets'
 import MdxImage from '~components/mdx/image.astro';
-import LogosNextjsIcon from '~icons/logos/nextjs-icon'
-import LogosSvelteIcon from '~icons/logos/svelte-icon'
-import LogosReact from '~icons/logos/react'
-import LogosExpress from '~icons/logos/express'
-import LogosBootstrap from '~icons/logos/bootstrap'
-import LogosFirebase from '~icons/logos/firebase'
-import LogosMongodbIcon from '~icons/logos/mongodb-icon'
-import LogoAstroIcon from '~icons/logos/astro-icon'
-import LogosTailwindIcon from '~icons/logos/tailwindcss-icon'
 import GgGlobeAlt from '~icons/gg/globe-alt'
 import LogosGithubIcon from '~icons/logos/github-icon'
 import DefaultLayout from '~/layouts/default.astro'
 import { removeHttp } from '~utils/url'
 import Blockquote from '~components/mdx/blockquote.astro'
 import { getDynamicImage } from '~utils/asset';
+import { techList } from '~utils/tech-logo';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects')
@@ -27,44 +19,6 @@ const { entry } = Astro.props
 const { Content } = await entry.render()
 
 const favicon = entry.data.demoUrl + `/${entry.data.faviconPath}`
-const techList: Record<string, { label?: string, Logo: typeof LogosNextjsIcon }> = {
-  nextjs: {
-    label: 'Next.js',
-    Logo: LogosNextjsIcon
-  },
-  svelte: {
-    label: 'Svelte',
-    Logo: LogosSvelteIcon
-  },
-  react: {
-    label: 'React',
-    Logo: LogosReact
-  },
-  express: {
-    label: 'Express',
-    Logo: LogosExpress
-  },
-  bootstrap: {
-    label: 'Bootstrap',
-    Logo: LogosBootstrap
-  },
-  mongodb: {
-    label: 'Mongo DB',
-    Logo: LogosMongodbIcon
-  },
-  tailwind: {
-    label: 'Tailwind',
-    Logo: LogosTailwindIcon
-  },
-  firebase: {
-    label: 'Firebase',
-    Logo: LogosFirebase
-  },
-  astro: {
-    label: 'Astro',
-    Logo: LogoAstroIcon
-  }
-}
 
 const projectCover = getDynamicImage(entry.data.imageCover)
 ---
