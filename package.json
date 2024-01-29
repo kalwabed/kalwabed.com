@@ -1,50 +1,50 @@
 {
-  "name": "kalwabed.xyz",
-  "version": "0.2.0",
-  "private": true,
-  "engines": {
-    "node": "^20",
-    "pnpm": "^8"
-  },
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "start": "astro preview",
-    "lint-fmt": "biome check --apply .",
-    "postinstall": "pnpm dlx simple-git-hooks"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "pnpm dlx lint-staged"
-  },
-  "lint-staged": {
-    "src/**/*.{ts,astro,css}": "pnpm lint-fmt"
-  },
-  "dependencies": {
-    "@astrojs/mdx": "^2.1.0",
-    "@astrojs/rss": "^4.0.3",
-    "@astrojs/sitemap": "^3.0.5",
-    "@fontsource-variable/inter": "^5.0.16",
-    "@fontsource-variable/overpass": "^5.0.17",
-    "@fontsource/crimson-pro": "^5.0.16",
-    "@fontsource/fira-code": "^5.0.16",
-    "@fontsource/schoolbell": "^5.0.8",
-    "astro": "^4.2.4",
-    "autoprefixer": "^10.4.17",
-    "dayjs": "^1.11.10",
-    "gardevoir": "^1.0.0",
-    "mdast-util-to-string": "^4.0.0",
-    "reading-time": "^1.5.0",
-    "sass": "^1.70.0"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^1.5.3",
-    "@fec/remark-a11y-emoji": "^4.0.2",
-    "@iconify-json/gg": "^1.1.9",
-    "@iconify-json/logos": "^1.1.42",
-    "@iconify-json/ph": "^1.1.10",
-    "lint-staged": "^15.2.0",
-    "simple-git-hooks": "^2.9.0",
-    "typescript": "^5.3.3",
-    "unplugin-icons": "^0.18.2"
-  }
+	"name": "kalwabed.com",
+	"version": "0.3.0",
+	"private": true,
+	"engines": {
+		"node": "^20",
+		"pnpm": "^8"
+	},
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"start": "astro preview",
+		"lint-fmt": "biome check --apply .",
+		"postinstall": "pnpm dlx simple-git-hooks"
+	},
+	"simple-git-hooks": {
+		"pre-commit": "pnpm dlx lint-staged"
+	},
+	"lint-staged": {
+		"src/**/*.{ts,astro,css}": "pnpm lint-fmt"
+	},
+	"dependencies": {
+		"@astrojs/mdx": "^2.1.0",
+		"@astrojs/rss": "^4.0.3",
+		"@astrojs/sitemap": "^3.0.5",
+		"@fontsource-variable/inter": "^5.0.16",
+		"@fontsource-variable/overpass": "^5.0.17",
+		"@fontsource/crimson-pro": "^5.0.16",
+		"@fontsource/fira-code": "^5.0.16",
+		"@fontsource/schoolbell": "^5.0.8",
+		"astro": "^4.2.4",
+		"autoprefixer": "^10.4.17",
+		"dayjs": "^1.11.10",
+		"gardevoir": "^1.0.0",
+		"mdast-util-to-string": "^4.0.0",
+		"reading-time": "^1.5.0",
+		"sass": "^1.70.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.5.3",
+		"@fec/remark-a11y-emoji": "^4.0.2",
+		"@iconify-json/gg": "^1.1.9",
+		"@iconify-json/logos": "^1.1.42",
+		"@iconify-json/ph": "^1.1.10",
+		"lint-staged": "^15.2.0",
+		"simple-git-hooks": "^2.9.0",
+		"typescript": "^5.3.3",
+		"unplugin-icons": "^0.18.2"
+	}
 }
