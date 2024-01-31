@@ -1,5 +1,83 @@
 ---
 import DefaultLayout from '~/layouts/default.astro'
+
+const utils = [
+  {
+    name: "Obsidian",
+    label: "my home for journaling and taking notes.",
+    href: "https://obsidian.md"
+  },
+  {
+    name: "Gitui",
+    label: "give me better Git terminal visualization support.",
+    href: "https://github.com/extrawurst/gitui"
+  },
+  {
+    name: "Zellij",
+    label: "multi-workspace terminal for better access across tasks.",
+    href: "https://zellij.dev"
+  },
+  {
+    name: "Starship",
+    label: "gives me a new, cooler looking terminal experience.",
+    href: "https://starship.rs"
+  },
+  {
+    name: "Oh My ZSH",
+    label: "makes your terminal easier.",
+    href: "https://ohmyz.sh"
+  },
+  {
+    name: "Yadm",
+    label: "manage my dotfile.",
+    href: "https://yadm.io"
+  },
+  {
+    name: "atuin",
+    label: "shell history with ease.",
+    href: "https://atuin.sh"
+  },
+  {
+    name: "broot",
+    label: "directory overview but prettier.",
+    href: "https://dystroy.org/broot"
+  },
+  {
+    name: "zoxide",
+    label: "a smarter cd command.",
+    href: "https://github.com/ajeetdsouza/zoxide"
+  },
+  {
+    name: "bat",
+    label: "a cat(1) clone with wings.",
+    href: "https://github.com/sharkdp/bat"
+  },
+  {
+    name: "fzf",
+    label: "fast fuzzy finder.",
+    href: "https://github.com/junegunn/fzf"
+  },
+  {
+    name: "eza",
+    label: "a modern, maintained replacement for ls.",
+    href: "https://eza.rocks"
+  },
+  {
+    name: "fastfetch",
+    label: "like neofetch, but much faster because written mostly in C.",
+    href: "https://github.com/fastfetch-cli/fastfetch"
+  },
+  {
+    name: "fd",
+    label: "a simple, fast and user-friendly alternative to 'find'.",
+    href: "https://github.com/sharkdp/fd"
+  },
+  {
+    name: "fzf-tab",
+    label: "Replace zsh's default completion selection menu with fzf!",
+    href: "https://github.com/Aloxaf/fzf-tab"
+  },
+]
 ---
 
 <DefaultLayout title="Uses" desc="What Kalwabed uses" ogImage="uses.jpg">
@@ -25,60 +103,26 @@ import DefaultLayout from '~/layouts/default.astro'
         <a href="https://vivaldi.com">Vivaldi</a>: I’m also a fan of <a href="https://brave.com">Brave</a>, but Vivaldi is a great browser because it's the same Chromium-based, but with all the customization and utilization I need. I use <a href="https://librewolf.net">Librewolf</a> if I want to test in Firefox.
       </li>
       <li>
-        <a href="https://konsole.kde.org">Konsole</a>: I've tried other terminals, but none seem to work as well. Since I've been using <a href="https://kde.org">KDE</a> as my desktop environment, the support has been first class too.
+        <a href="https://sw.kovidgoyal.net/kitty">Kitty</a>: my favorite feature-rich terminal since I migrated to Hyprland.
       </li>
       <li>
         <a href="https://cloudflare.com">Cloudflare</a>: I’m also a fan of <a href="https://netlify.com">Netlify</a> and <a href="https://vercel.com">Vercel</a>. I moved some projects to Cloudflare to have more control over the infrastructure.
       </li>
       <li>
-        <a href="https://github.com/Schniz/fnm">Fnm</a>: fast and simple Node.js version manager, built in Rust.
+        <a href="https://github.com/Schniz/fnm">fnm</a>: fast and simple Node.js version manager, built in Rust.
       </li>
     </ul>
 
     <h2>Productivity & utility</h2>
     <ul>
       <li>
-        <a href="https://endeavouros.com">EndeavourOS</a>: the second <a href="https://archlinux.org">Arch</a>-based Linux distro as my daily driver, after previously using <a href="https://manjaro.org">Manjaro</a>. <a href="https://kde.org">KDE</a> as a desktop environment, is my favorite combination at the moment.
+        <a href="https://endeavouros.com">EndeavourOS</a>: the second <a href="https://archlinux.org">Arch</a>-based Linux distro as my daily driver, after previously using <a href="https://manjaro.org">Manjaro</a>. <a href="https://hyprland.org">Hyprland</a> as a window manager, is my favorite combination at the moment. Previously I have been using KDE for years.
       </li>
-      <li>
-        <a href="https://obsidian.md">Obsidian</a>: my home for journaling and taking notes.
-      </li>
-      <li>
-        <a href="https://github.com/extrawurst/gitui">GitUI</a>: give me better Git terminal visualization support.
-      </li>
-      <li>
-        <a href="https://zellij.dev">Zellij</a>: multi-workspace terminal for better access across tasks.
-      </li>
-      <li>
-        <a href="https://starship.rs">Starship</a>: gives me a new, cooler looking terminal experience.
-      </li>
-      <li>
-        <a href="https://ohmyz.sh">Oh My ZSH</a>: makes your terminal easier.
-      </li>
-      <li>
-        <a href="https://yadm.io">Yadm</a>: manage my dotfile.
-      </li>
-      <li>
-        <a href="https://atuin.sh">Atuin</a>: shell history with ease.
-      </li>
-      <li>
-        <a href="https://dystroy.org/broot">Broot</a>: directory overview but prettier.
-      </li>
-      <li>
-        <a href="https://github.com/ajeetdsouza/zoxide">Zoxide</a>: a smarter cd command.
-      </li>
-      <li>
-        <a href="https://github.com/sharkdp/bat">Bat</a>: a cat(1) clone with wings.
-      </li>
-      <li>
-        <a href="https://github.com/junegunn/fzf">Fzf</a>: fast fuzzy finder.
-      </li>
-      <li>
-        <a href="https://eza.rocks">Eza</a>: a modern, maintained replacement for ls.
-      </li>
-      <li>
-        <a href="https://github.com/fastfetch-cli/fastfetch">Fastfetch</a>: like neofetch, but much faster because written mostly in C.
-      </li>
+      {utils.map(util => (
+        <li>
+          <a href={util.href}>{util.name}</a>: {util.label}
+        </li>
+      ))}
     </ul>
 
     <h2>Hardware</h2>
