@@ -1,0 +1,112 @@
+@use "./vars";
+@use "./breakpoints" as br;
+
+@import '@fontsource-variable/overpass';
+@import '@fontsource/schoolbell';
+@import '@fontsource/fira-code/400.css';
+@import '@fontsource/fira-code/500.css';
+
+html,
+body,
+#root {
+	height: 100%;
+}
+
+body {
+	color: var(--fc-primary);
+	font-family: var(--font-body);
+	background-color: var(--slate-1);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: var(--font-heading), Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+code {
+	font-family: 'Fira Code', 'Courier New', Courier, monospace;
+}
+
+.container {
+	max-width: var(--default-mw);
+
+	margin: {
+		top: 2rem;
+		left: auto;
+		right: auto;
+	}
+
+	@include br.tablet {
+		margin-top: 69px;
+	}
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+a {
+	color: var(--iris-9);
+	text-decoration: none;
+	transition: color 200ms ease;
+	font-weight: 500;
+
+	&:hover {
+		text-decoration: underline;
+		color: var(--iris-10);
+	}
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+#root {
+	isolation: isolate;
+}

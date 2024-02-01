@@ -1,0 +1,62 @@
+---
+import dayjs from 'dayjs'
+
+export interface Props {
+  data: {
+    slug: string
+    title: string
+    summary: string
+    publishDate: Date
+  }
+}
+
+const { data } = Astro.props
+const { slug, title, summary, publishDate } = data
+---
+
+<a href={`/blog/${slug}`}>
+  <h3>{title}</h3>
+  <p>{summary}</p>
+  <small>{dayjs(publishDate).format('MMM DD, YYYY')}</small>
+</a>
+
+<style lang="scss">
+@use '../styles/breakpoints' as br;
+
+a {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background var(--transition);
+
+  &:hover {
+    @include br.desktop {
+      background: var(--slate-2);
+    }
+
+    > p {
+      color: var(--fc-primary);
+    }
+  }
+}
+
+h3 {
+  color: var(--fc-primary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+p {
+  margin-top: 5px;
+  color: var(--fc-subtle);
+  transition: color var(--transition);
+}
+
+small {
+  margin-top: 8px;
+  color: var(--fc-primary);
+}
+</style>

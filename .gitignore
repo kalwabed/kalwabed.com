@@ -8,14 +8,14 @@
 # testing
 /coverage
 
-# next.js
-/.next/
-/out/
+# astro
+.astro
 
 # production
 /build
 /public/atom.atom
 /public/rss.*
+dist
 
 # misc
 .DS_Store

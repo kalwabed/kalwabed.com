@@ -1,60 +1,50 @@
 {
-  "name": "kalwabed.xyz",
-  "version": "0.1.0",
-  "private": true,
-  "engines": {
-    "node": "^16||^18",
-    "pnpm": "^8"
-  },
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "postbuild": "next-sitemap",
-    "start": "next start",
-    "lint": "next lint --fix",
-    "fmt": "prettier --write --cache 'src/**/*.{js,jsx,ts,tsx}'"
-  },
-  "dependencies": {
-    "@headlessui/react": "^1.7.17",
-    "@radix-ui/react-accessible-icon": "^1.0.3",
-    "@tailwindcss/typography": "^0.5.10",
-    "@vercel/og": "^0.5.17",
-    "clsx": "^2.0.0",
-    "date-fns": "^2.30.0",
-    "feed": "^4.2.2",
-    "gray-matter": "^4.0.3",
-    "mdx-prism": "^0.3.4",
-    "next": "^13.5.4",
-    "next-mdx-remote": "^4.4.1",
-    "next-seo": "6.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.11.0",
-    "remark-autolink-headings": "^7.0.1",
-    "remark-code-titles": "^0.1.2",
-    "remark-parse": "^11.0.0",
-    "remark-slug": "^7.0.1",
-    "sharp": "^0.32.6",
-    "tailwind-merge": "^1.14.0"
-  },
-  "devDependencies": {
-    "@next/env": "^13.5.4",
-    "@types/node": "20.8.3",
-    "@types/react": "^18.2.25",
-    "@typescript-eslint/eslint-plugin": "^6.7.4",
-    "@typescript-eslint/parser": "^6.7.4",
-    "autoprefixer": "^10.4.16",
-    "eslint": "8.51.0",
-    "eslint-config-next": "13.5.4",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-import": "^2.28.1",
-    "eslint-plugin-simple-import-sort": "^10.0.0",
-    "eslint-plugin-unused-imports": "^3.0.0",
-    "next-sitemap": "^4.2.3",
-    "postcss": "^8.4.31",
-    "prettier-eslint": "^15.0.1",
-    "rehype": "^13.0.1",
-    "tailwindcss": "^3.3.3",
-    "typescript": "^5.2.2"
-  }
+	"name": "kalwabed.com",
+	"version": "0.3.0",
+	"private": true,
+	"engines": {
+		"node": "^20",
+		"pnpm": "^8"
+	},
+	"scripts": {
+		"dev": "astro dev",
+		"build": "astro build",
+		"start": "astro preview",
+		"lint-fmt": "biome check --apply .",
+		"postinstall": "pnpm dlx simple-git-hooks"
+	},
+	"simple-git-hooks": {
+		"pre-commit": "pnpm dlx lint-staged"
+	},
+	"lint-staged": {
+		"src/**/*.{ts,astro,css}": "pnpm lint-fmt"
+	},
+	"dependencies": {
+		"@astrojs/mdx": "^2.1.1",
+		"@astrojs/rss": "^4.0.4",
+		"@astrojs/sitemap": "^3.0.5",
+		"@fontsource-variable/inter": "^5.0.16",
+		"@fontsource-variable/overpass": "^5.0.17",
+		"@fontsource/crimson-pro": "^5.0.16",
+		"@fontsource/fira-code": "^5.0.16",
+		"@fontsource/schoolbell": "^5.0.8",
+		"astro": "^4.2.8",
+		"autoprefixer": "^10.4.17",
+		"dayjs": "^1.11.10",
+		"gardevoir": "^1.0.0",
+		"mdast-util-to-string": "^4.0.0",
+		"reading-time": "^1.5.0",
+		"sass": "^1.70.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.5.3",
+		"@fec/remark-a11y-emoji": "^4.0.2",
+		"@iconify-json/gg": "^1.1.9",
+		"@iconify-json/logos": "^1.1.42",
+		"@iconify-json/ph": "^1.1.10",
+		"lint-staged": "^15.2.1",
+		"simple-git-hooks": "^2.9.0",
+		"typescript": "^5.3.3",
+		"unplugin-icons": "^0.18.3"
+	}
 }

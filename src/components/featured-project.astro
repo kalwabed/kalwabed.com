@@ -1,0 +1,82 @@
+---
+import { Image } from 'astro:assets';
+import GgExternal from '~icons/gg/external'
+import { getDynamicImage } from '~utils/asset';
+
+export interface Props {
+  project: {
+    imageCover: string
+    title: string
+    summary: string
+    demoUrl?: string
+    slug: string
+  }
+}
+
+const { project: { demoUrl, imageCover, slug, summary, title} } = Astro.props
+const coverImage = getDynamicImage(imageCover)
+---
+
+<Image src={coverImage()} alt={`${title} cover`} />
+<a class="parent-link" href={`/projects/${slug}`}>
+  <h3>{title}</h3>
+  <p>{summary}</p>
+</a>
+<a class="ext" target="_blank" rel="noopener noreferrer" href={demoUrl}>Access website <GgExternal /></a>
+
+<style lang="scss">
+@use '../styles/breakpoints' as br;
+
+img {
+  height: 100%;
+  border-radius: 3px;
+  border: 1px solid var(--slate-6);
+}
+
+a {
+  display: flex;
+  text-decoration: none;
+}
+
+.parent-link {
+  flex-direction: column;
+  padding: 8px;
+  border-radius: 4px;
+  transition: background var(--transition);
+
+  &:hover {
+    @include br.desktop {
+      background: var(--slate-2);
+    }
+
+    > p {
+      color: var(--fc-primary);
+    }
+  }
+}
+
+h3 {
+  color: var(--fc-primary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+p {
+  margin-top: 5px;
+  color: var(--fc-subtle);
+  transition: color var(--transition);
+}
+
+.ext {
+  align-items: flex-start;
+  padding-left: 8px;
+  gap: 2px;
+  margin-top: 5px;
+  color: var(--fc-primary);
+  font-size: small;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+</style>

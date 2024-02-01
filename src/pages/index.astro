@@ -1,0 +1,34 @@
+---
+import DefaultLayout from '~/layouts/default.astro'
+import Hero from '~/components/hero.astro'
+import SectionHead from '~/components/section-head.astro'
+import BlogCard from '~/components/blog-card.astro'
+import FeaturedProject from '~/components/featured-project.astro'
+import { getSortedPosts, getSortedProjects } from '~utils/fetcher'
+
+const sortedBlog = await getSortedPosts()
+const sortedProjects = await getSortedProjects()
+
+const featuredProject = sortedProjects.find(project => project.data.isFeatured)
+const latestPosts = sortedBlog.slice(0, 3)
+---
+
+<DefaultLayout>
+  <Hero />
+  <SectionHead line section="blog" />
+  <div class="container">
+    {latestPosts.map(blog => (
+      <BlogCard data={{...blog.data, slug: blog.slug}} />
+    ))}
+  </div>
+  <SectionHead section="project" />
+  <div class="container">
+    <FeaturedProject project={{...featuredProject!.data, slug: featuredProject!.slug}} />
+  </div>
+</DefaultLayout>
+
+<style lang="scss">
+.container {
+  margin-top: 18px;
+}
+</style>

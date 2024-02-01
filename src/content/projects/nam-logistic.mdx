@@ -1,0 +1,36 @@
+---
+title: NAM Logistic
+summary: Company profile website for inter-island logistics service providers in Indonesia.
+releaseDate: 2020-12-30
+demoUrl: https://www.namlogistic.co.id
+faviconPath: favicon.ico
+imageCover: /projects/namlogistic/cover.png
+ogImage: nam-logistic.jpg
+techs:
+  - react
+  - nextjs
+---
+
+## Project purpose and goal
+
+NAM Logistics comes with the hope that prospective customers can easily access route data and cost estimates via the website.
+
+We also include a company profile that will add an elegant and professional impression to get customers' trust in using our logistics services.
+
+I really like how vast the Reactjs ecosystem is, so Nextjs (React framework) I think is a pretty ideal choice. Features such as: Context, and State, are enough to answer my needs for data flow between components.
+
+To speed up the development process, Chakra UI is an option. With its base component model which is easy to customize, it not only speeds up but also gives a professional look to it.
+
+![Estimation check](/projects/namlogistic/estimate.png)
+
+![Estimation/route data](/projects/namlogistic/data.png)
+
+## Problems and thought process
+
+Since I will be playing with data that can change one day, I am thinking of using a headless CMS to organize data by the company later. So I put together a data structure for it in a headless CMS. I finally realized that the data provided by the company is quite abstract, because the differences in attributes from one city to another can be very different, which is quite difficult in the compilation and sorting process.
+
+In the end, I made use of Typescript on data, so that the resulting data remains in accordance with what has been defined previously.
+
+## Lessons learned
+
+What I get a lot from here is how to manage a lot of data and abstract a logistics service; create an attractive and simple design using Chakra UI. And then I try to optimize data processing so that when rendering data faster and lighter.

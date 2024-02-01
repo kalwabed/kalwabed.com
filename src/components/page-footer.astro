@@ -1,0 +1,87 @@
+---
+import GgExternal from '~icons/gg/external'
+
+const links = [
+	{
+		label: 'Github',
+		href: 'https://github.com/kalwabed',
+		external: true,
+	},
+	{
+		label: 'Twitter',
+		href: 'https://twitter.com/kalwabedrzk',
+		external: true,
+	},
+]
+---
+
+<footer class="container">
+	<ul>
+		{links.map(link => {
+			if (link.external) {
+				return	<li><a href={link.href} target="_blank" rel="noopener noreferrer">{link.label} <GgExternal /></a></li>
+			}
+			return	<li><a href={link.href}>{link.label}</a></li>
+		})}
+	</ul>
+	<p>© 2021-present Kalwabed Rizki. All rights reserved</p>
+</footer>
+
+<style lang="scss">
+	@use '../styles/breakpoints' as br;
+	
+	.container {
+		max-width: var(--over-mw);
+		width: 100%;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		padding: 1rem;
+		border-top: 1px solid var(--slate-6);
+		margin-top: auto;
+		font-size: small;
+		color: var(--fc-subtle);
+
+		@include br.tablet {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		@include br.desktop {
+			padding: {
+				right: 0;
+				left: 0;
+			}
+		}
+	}
+
+	ul {
+		display: flex;
+		gap: 30px;
+		margin-bottom: .5rem;
+
+		@include br.tablet {
+			margin-bottom: 0;
+		}
+	}
+	
+	li {
+		list-style: none;
+	}
+
+	a {
+		display: inline-flex;
+		text-decoration: none;
+		color: var(--fc-subtle);
+
+		&:hover {
+			color: var(--fc-subtle);
+			text-decoration: underline;
+		}
+
+		& svg {
+			width: 15px;
+			height: 15px;
+		}
+	}
+</style>

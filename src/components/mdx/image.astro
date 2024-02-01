@@ -1,0 +1,45 @@
+---
+import { Image as AstroImg } from 'astro:assets'
+import { getDynamicImage } from '~utils/asset';
+
+export interface Props {
+	src: string
+  alt: string
+}
+
+const { src, alt } = Astro.props
+
+const imgSrc = getDynamicImage(src)
+---
+
+<figure>
+  <AstroImg src={imgSrc()} alt={alt} />
+  <figcaption>{alt}</figcaption>
+</figure>
+
+<style lang="scss">
+@use '../../styles/breakpoints' as br;
+
+figure {
+  margin-bottom: 1rem;
+}
+
+img {
+  height: auto;
+  width: 100%;
+  background: var(--slate-3);
+  border: 1px solid var(--slate-6);
+
+  @include br.tablet {
+    margin: 0 -10vw;
+    width: calc(100% + 20vw);
+    max-width: none;
+  }
+}
+
+figcaption {
+  text-align: center;
+  font-size: 14px;
+  color: var(--fc-subtle);
+}
+</style>

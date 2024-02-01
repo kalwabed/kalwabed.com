@@ -1,0 +1,52 @@
+---
+import { getCollection } from 'astro:content';
+import DefaultLayout from '~/layouts/default.astro'
+import Blockquote from '~components/mdx/blockquote.astro';
+import Image from '~components/mdx/image.astro';
+import { formatDate } from '~utils/date';
+
+export async function getStaticPaths() {
+  const allBlogPosts = await getCollection('blog')
+  return allBlogPosts.map(blog => ({ params: { slug: blog.slug }, props: { entry: blog }}))
+}
+
+const { entry } = Astro.props
+const { Content, remarkPluginFrontmatter } = await entry.render()
+---
+
+<DefaultLayout title={entry.data.title} desc={entry.data.summary} ogImage={entry.data.ogImage}>
+  <article class="container blog">
+    <header class="meta">
+      <p>Kalwabed Rizki, {formatDate(entry.data.publishDate)} <span>—</span> {remarkPluginFrontmatter.minutesRead}</p>
+      <h1>{entry.data.title}</h1>
+    </header>
+    <main class="prose">
+      <Content components={{ blockquote: Blockquote, img: Image }} />
+    </main>
+  </article>
+</DefaultLayout>
+
+<style is:global lang="scss">
+@use '../../styles/breakpoints' as br;
+@use '../../styles/typography';
+
+.blog {
+  margin-top: 2rem;
+
+  @include br.desktop {
+    margin-top: 5rem;
+  }
+
+  .meta {
+    margin-bottom: 4rem;
+
+    p {
+      color: var(--fc-subtle);
+    }
+
+    h1 {
+      text-wrap: balance;
+    }
+  }
+}
+</style>

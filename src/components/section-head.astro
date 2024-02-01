@@ -1,0 +1,64 @@
+---
+import { Image } from 'astro:assets';
+import GgQuote from '~icons/gg/quote'
+import writingLine from '~/assets/writing-line.svg'
+
+interface Props {
+  section: 'blog' | 'project'
+  line?: boolean
+}
+
+const { section, line } = Astro.props
+
+const title = section === 'blog' ? 'Writing' : 'Featured project'
+---
+
+<div class="head">
+  <GgQuote class="quote" />
+  <h2>{title}</h2>
+  {line && <Image src={writingLine} alt="Writing line" class="line" /> }
+</div>
+
+<style lang="scss">
+@use '../styles/breakpoints' as br;
+
+.head {
+  position: relative;
+  max-width: var(--default-mw);
+  margin: 102px auto 0;
+  display: flex;
+  width: 100%;
+}
+
+h2 {
+  font-size: 24px;
+  z-index: 11;
+  padding: {
+    left: 1rem;
+  }
+  @include br.desktop {
+    padding: 0;
+  }
+}
+
+.line {
+  position: absolute;
+  top: -24px;
+
+  @include br.tablet {
+    top: -29px;
+  }
+}
+
+.quote {
+  position: absolute;
+  top: -21px;
+  left: -21px;
+  width: 2.5rem;
+  height: 2.5rem;
+
+  @include br.tablet {
+    left: -28px;
+  }
+}
+</style>
