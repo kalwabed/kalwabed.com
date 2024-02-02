@@ -1,4 +1,5 @@
 import mdx from "@astrojs/mdx";
+import sitemap from "@astrojs/sitemap";
 import a11yEmoji from "@fec/remark-a11y-emoji";
 import { defineConfig, squooshImageService } from "astro/config";
 import autoprefixer from "autoprefixer";
@@ -30,5 +31,5 @@ export default defineConfig({
 			}),
 		],
 	},
-	integrations: [mdx()],
+	integrations: [mdx(), sitemap()],
 });
