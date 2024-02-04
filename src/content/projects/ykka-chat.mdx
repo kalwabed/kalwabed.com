@@ -1,0 +1,22 @@
+---
+title: YKKA Chat
+summary: Dead simple chat application.
+releaseDate: 2023-09-10
+demoUrl: https://ykka-chat.vercel.app
+sourceUrl: https://github.com/kalwabed/ykka-chat
+faviconPath: favicon.ico
+imageCover: /projects/ykka/cover.png
+isFeatured: true
+ogImage: ykka-chat.jpg
+techs:
+  - vue
+  - firebase
+---
+
+**Yang Kita-Kita Aja** ("Just us") chat is a simple application for exploring WebSocket technology with Firebase Realtime Database and Firebase Firestore.
+
+The first impression of WebSocket was that the implementation took some time for me to think about how it could work. I chose a case study of a chat application because it requires real-time data communication.
+
+There are some parts of this WebSocket implementation that I find quite challenging and confusing, namely the allocation of rooms for sockets in each chat room. Fortunately, I use Firebase Realtime Storage to manage this kind of thing, so I can focus on other things that are no less complicated: the data structure of each user and their messages.
+
+So far, the app is still very simple to be considered a chat app. There is still a lot of room for improvisation and features like notifications, authentication, file sharing, groups, and so on.

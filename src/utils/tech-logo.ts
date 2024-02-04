@@ -7,6 +7,7 @@ import LogosNextjsIcon from "~icons/logos/nextjs-icon";
 import LogosReact from "~icons/logos/react";
 import LogosSvelteIcon from "~icons/logos/svelte-icon";
 import LogosTailwindIcon from "~icons/logos/tailwindcss-icon";
+import LogosVue from "~icons/logos/vue";
 
 export const techList: Record<
 	string,
@@ -47,5 +48,9 @@ export const techList: Record<
 	astro: {
 		label: "Astro",
 		Logo: LogoAstroIcon,
+	},
+	vue: {
+		label: "Vue",
+		Logo: LogosVue,
 	},
 };
