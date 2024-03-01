@@ -4,7 +4,9 @@ import LogosExpress from "~icons/logos/express";
 import LogosFirebase from "~icons/logos/firebase";
 import LogosMongodbIcon from "~icons/logos/mongodb-icon";
 import LogosNextjsIcon from "~icons/logos/nextjs-icon";
+import LogosNuxtIcon from "~icons/logos/nuxt-icon";
 import LogosReact from "~icons/logos/react";
+import LogosSupabaseIcon from "~icons/logos/supabase-icon";
 import LogosSvelteIcon from "~icons/logos/svelte-icon";
 import LogosTailwindIcon from "~icons/logos/tailwindcss-icon";
 import LogosVue from "~icons/logos/vue";
@@ -38,7 +40,7 @@ export const techList: Record<
 		Logo: LogosMongodbIcon,
 	},
 	tailwind: {
-		label: "Tailwind",
+		label: "Tailwind CSS",
 		Logo: LogosTailwindIcon,
 	},
 	firebase: {
@@ -52,5 +54,13 @@ export const techList: Record<
 	vue: {
 		label: "Vue",
 		Logo: LogosVue,
+	},
+	nuxtjs: {
+		label: "Nuxt.js",
+		Logo: LogosNuxtIcon,
+	},
+	supabase: {
+		label: "Supabase",
+		Logo: LogosSupabaseIcon,
 	},
 };
