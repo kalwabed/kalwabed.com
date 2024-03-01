@@ -1,99 +1,102 @@
 ---
-import { Image } from 'astro:assets';
-import heroImg from '~/assets/hero-image.png'
+import { Image } from "astro:assets";
+import heroImg from "~/assets/hero-image.png";
 ---
 
 <div class="container">
   <section>
     <h1>Hi I'm Kalwabed</h1>
-    <p class="sub_title">Focusing on building the web things. Interested in modern software development architecture.</p>
+    <p class="sub_title">
+      Focusing on building the web things. Interested in modern software
+      development architecture.
+    </p>
     <span aria-hidden="true" class="circle circle-1"></span>
     <span aria-hidden="true" class="circle circle-2"></span>
   </section>
 
-  <Image src={heroImg} alt="Illustration by Pablo Stanley" />
+  <Image src={heroImg} alt="Illustration by Pablo Stanley" loading="eager" />
 </div>
 
 <style lang="scss">
-@use '../styles/breakpoints' as br;
+  @use "../styles/breakpoints" as br;
 
-.container {
-  margin-top: 30px;
-  max-width: var(--over-mw);
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
+  .container {
+    margin-top: 30px;
+    max-width: var(--over-mw);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
 
-  @include br.desktop {
-    margin-top: -30px;
+    @include br.desktop {
+      margin-top: -30px;
+    }
   }
-}
 
-h1 {
-  font-size: 3rem;
-  font-weight: 400;
-  position: relative;
-  z-index: 11;
+  h1 {
+    font-size: 3rem;
+    font-weight: 400;
+    position: relative;
+    z-index: 11;
 
-  @include br.tablet {
-    font-size: 3.75rem;
+    @include br.tablet {
+      font-size: 3.75rem;
+    }
   }
-}
 
-.sub_title {
-  font-size: 1.125rem;
-  color: var(--fc-subtle);
+  .sub_title {
+    font-size: 1.125rem;
+    color: var(--fc-subtle);
 
-  @include br.desktop {
-    width: 70%;
+    @include br.desktop {
+      width: 70%;
+    }
   }
-}
 
-section {
-  position: relative;
-}
-
-.circle {
-  display: block;
-  position: absolute;
-  border-radius: 999px;
-}
-
-.circle-1 {
-  width: 4rem;
-  height: 4rem;
-  background-color: var(--light-orange);
-  top: -19px;
-  left: -29px;
-  z-index: 5;
-
-  @include br.tablet {
-    top: -10px;
-    left: -30px;
-  }  
-}
-
-.circle-2 {
-  width: 1.25rem;
-  height: 1.25rem;
-  background-color: var(--light-blue);
-  top: 42px;
-  right: 60px;
-  z-index: 5;
-
-  @include br.tablet {
-    top: 51px;
-    right: 261px;
+  section {
+    position: relative;
   }
-}
 
-img {
-  display: none;
-
-  @include br.tablet {
+  .circle {
     display: block;
+    position: absolute;
+    border-radius: 999px;
   }
-}
+
+  .circle-1 {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--light-orange);
+    top: -19px;
+    left: -29px;
+    z-index: 5;
+
+    @include br.tablet {
+      top: -10px;
+      left: -30px;
+    }
+  }
+
+  .circle-2 {
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color: var(--light-blue);
+    top: 42px;
+    right: 60px;
+    z-index: 5;
+
+    @include br.tablet {
+      top: 51px;
+      right: 261px;
+    }
+  }
+
+  img {
+    display: none;
+
+    @include br.tablet {
+      display: block;
+    }
+  }
 </style>

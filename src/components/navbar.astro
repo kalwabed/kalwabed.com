@@ -1,13 +1,13 @@
 ---
-import { Image } from 'astro:assets';
-import logo from '~/assets/logo.svg';
+import { Image } from "astro:assets";
+import logo from "~/assets/logo.svg";
 
-const isHomepage = Astro.url.pathname === '/'
+const isHomepage = Astro.url.pathname === "/";
 ---
 
-<nav class={`container ${isHomepage ? 'home' : ''}`}>
+<nav class={`container ${isHomepage ? "home" : ""}`}>
   <a href="/" aria-label="Link to home page">
-    <Image src={logo} alt="kalwabed.com letter logo" />
+    <Image src={logo} alt="kalwabed.com letter logo" loading="eager" />
   </a>
   <ul>
     <li>
@@ -26,65 +26,65 @@ const isHomepage = Astro.url.pathname === '/'
 </nav>
 
 <style lang="scss">
-@use '../styles/breakpoints' as br;
+  @use "../styles/breakpoints" as br;
 
-.container {
-  position: relative;
-  z-index: 15;
-  display: flex;
-  flex-direction: column;
-  max-width: var(--over-mw);
-  width: 100%;
-  margin-top: 2.19rem;
-  padding: 0 1rem;
+  .container {
+    position: relative;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    max-width: var(--over-mw);
+    width: 100%;
+    margin-top: 2.19rem;
+    padding: 0 1rem;
 
-  @include br.desktop {
-    padding: 0;
-  }
-}
-
-a {
-  color: var(--fc-primary);
-  text-decoration: none;
-  width: fit-content;
-
-  &:has(> img) {
-    &:focus {
-      outline: none;
+    @include br.desktop {
+      padding: 0;
     }
   }
-}
-
-ul {
-  display: flex;
-  align-items: center;
-  margin: {
-    top: 1rem;
-    bottom: 1rem;
-  };
-  gap: 1rem;
-}
-
-li {
-  list-style: none;
 
   a {
-    padding: {
-      top: .2rem;
-      left: .3rem;
-      right: .3rem;
-    };
-    transition-property: color, background;
-    transition-duration: .1s;
-    transition-timing-function: ease;
-    &:hover {
-      color: white;
-      background-color: var(--iris-10);
-    }
+    color: var(--fc-primary);
+    text-decoration: none;
+    width: fit-content;
 
-    &:focus {
-      outline: 2px solid var(--iris-7);
+    &:has(> img) {
+      &:focus {
+        outline: none;
+      }
     }
   }
-}
+
+  ul {
+    display: flex;
+    align-items: center;
+    margin: {
+      top: 1rem;
+      bottom: 1rem;
+    }
+    gap: 1rem;
+  }
+
+  li {
+    list-style: none;
+
+    a {
+      padding: {
+        top: 0.2rem;
+        left: 0.3rem;
+        right: 0.3rem;
+      }
+      transition-property: color, background;
+      transition-duration: 0.1s;
+      transition-timing-function: ease;
+      &:hover {
+        color: white;
+        background-color: var(--iris-10);
+      }
+
+      &:focus {
+        outline: 2px solid var(--iris-7);
+      }
+    }
+  }
 </style>
