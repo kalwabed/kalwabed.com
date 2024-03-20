@@ -1,17 +1,20 @@
 ---
-import { getCollection } from 'astro:content';
-import DefaultLayout from '~/layouts/default.astro'
-import Blockquote from '~components/mdx/blockquote.astro';
-import Image from '~components/mdx/image.astro';
-import { formatDate } from '~utils/date';
+import { getCollection } from "astro:content";
+import DefaultLayout from "~/layouts/default.astro";
+import Blockquote from "~components/mdx/blockquote.astro";
+import Image from "~components/mdx/image.astro";
+import { formatDate } from "~utils/date";
 
 export async function getStaticPaths() {
-  const allBlogPosts = await getCollection('blog')
-  return allBlogPosts.map(blog => ({ params: { slug: blog.slug }, props: { entry: blog }}))
+	const allBlogPosts = await getCollection("blog");
+	return allBlogPosts.map((blog) => ({
+		params: { slug: blog.slug },
+		props: { entry: blog },
+	}));
 }
 
-const { entry } = Astro.props
-const { Content, remarkPluginFrontmatter } = await entry.render()
+const { entry } = Astro.props;
+const { Content, remarkPluginFrontmatter } = await entry.render();
 ---
 
 <DefaultLayout title={entry.data.title} desc={entry.data.summary} ogImage={entry.data.ogImage}>

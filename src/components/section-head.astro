@@ -1,11 +1,11 @@
 ---
 import { Image } from "astro:assets";
-import GgQuote from "~icons/gg/quote";
 import writingLine from "~/assets/writing-line.svg";
+import GgQuote from "~icons/gg/quote";
 
 interface Props {
-  section: "blog" | "project";
-  line?: boolean;
+	section: "blog" | "project";
+	line?: boolean;
 }
 
 const { section, line } = Astro.props;

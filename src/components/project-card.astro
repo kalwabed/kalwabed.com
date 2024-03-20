@@ -1,21 +1,23 @@
 ---
-import { Image } from 'astro:assets';
-import GgExternal from '~icons/gg/external'
+import { Image } from "astro:assets";
+import GgExternal from "~icons/gg/external";
 
 export interface Props {
 	project: {
-		title: string
-		releaseDate: Date
-		summary: string
-		slug: string
-		demoUrl?: string
-		faviconPath?: string
-	}
+		title: string;
+		releaseDate: Date;
+		summary: string;
+		slug: string;
+		demoUrl?: string;
+		faviconPath?: string;
+	};
 }
 
-const { project: { faviconPath, releaseDate, title, slug, summary, demoUrl} } = Astro.props
+const {
+	project: { faviconPath, releaseDate, title, slug, summary, demoUrl },
+} = Astro.props;
 
-const favicon = demoUrl + `/${faviconPath}`
+const favicon = `${demoUrl}/${faviconPath}`;
 ---
 
 <section class="wrapper">

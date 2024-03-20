@@ -1,16 +1,18 @@
 ---
-import DefaultLayout from '~/layouts/default.astro'
-import Hero from '~/components/hero.astro'
-import SectionHead from '~/components/section-head.astro'
-import BlogCard from '~/components/blog-card.astro'
-import FeaturedProject from '~/components/featured-project.astro'
-import { getSortedPosts, getSortedProjects } from '~utils/fetcher'
+import BlogCard from "~/components/blog-card.astro";
+import FeaturedProject from "~/components/featured-project.astro";
+import Hero from "~/components/hero.astro";
+import SectionHead from "~/components/section-head.astro";
+import DefaultLayout from "~/layouts/default.astro";
+import { getSortedPosts, getSortedProjects } from "~utils/fetcher";
 
-const sortedBlog = await getSortedPosts()
-const sortedProjects = await getSortedProjects()
+const sortedBlog = await getSortedPosts();
+const sortedProjects = await getSortedProjects();
 
-const featuredProject = sortedProjects.find(project => project.data.isFeatured)
-const latestPosts = sortedBlog.slice(0, 3)
+const featuredProject = sortedProjects.find(
+	(project) => project.data.isFeatured,
+);
+const latestPosts = sortedBlog.slice(0, 3);
 ---
 
 <DefaultLayout>

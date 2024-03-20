@@ -1,20 +1,22 @@
 ---
-import { Image } from 'astro:assets';
-import GgExternal from '~icons/gg/external'
-import { getDynamicImage } from '~utils/asset';
+import { Image } from "astro:assets";
+import GgExternal from "~icons/gg/external";
+import { getDynamicImage } from "~utils/asset";
 
 export interface Props {
-  project: {
-    imageCover: string
-    title: string
-    summary: string
-    demoUrl?: string
-    slug: string
-  }
+	project: {
+		imageCover: string;
+		title: string;
+		summary: string;
+		demoUrl?: string;
+		slug: string;
+	};
 }
 
-const { project: { demoUrl, imageCover, slug, summary, title} } = Astro.props
-const coverImage = getDynamicImage(imageCover)
+const {
+	project: { demoUrl, imageCover, slug, summary, title },
+} = Astro.props;
+const coverImage = getDynamicImage(imageCover);
 ---
 
 <Image src={coverImage()} alt={`${title} cover`} />

@@ -10,7 +10,7 @@
 		"dev": "astro dev",
 		"build": "astro build",
 		"start": "astro preview",
-		"lint-fmt": "biome check --apply .",
+		"lint-fmt": "biome check --apply-unsafe .",
 		"postinstall": "pnpm dlx simple-git-hooks"
 	},
 	"simple-git-hooks": {

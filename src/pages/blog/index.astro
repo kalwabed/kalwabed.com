@@ -1,9 +1,9 @@
 ---
-import DefaultLayout from '~/layouts/default.astro'
-import BlogCard from '~components/blog-card.astro';
-import { getSortedPosts } from '~utils/fetcher';
+import DefaultLayout from "~/layouts/default.astro";
+import BlogCard from "~components/blog-card.astro";
+import { getSortedPosts } from "~utils/fetcher";
 
-const sortedBlog = await getSortedPosts()
+const sortedBlog = await getSortedPosts();
 ---
 
 <DefaultLayout title="Blog" desc="Sometimes I write something about technical world and put it here" ogImage="blog.jpg">

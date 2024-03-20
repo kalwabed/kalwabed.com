@@ -1,17 +1,17 @@
 ---
-import dayjs from 'dayjs'
+import dayjs from "dayjs";
 
 export interface Props {
-  data: {
-    slug: string
-    title: string
-    summary: string
-    publishDate: Date
-  }
+	data: {
+		slug: string;
+		title: string;
+		summary: string;
+		publishDate: Date;
+	};
 }
 
-const { data } = Astro.props
-const { slug, title, summary, publishDate } = data
+const { data } = Astro.props;
+const { slug, title, summary, publishDate } = data;
 ---
 
 <a href={`/blog/${slug}`}>

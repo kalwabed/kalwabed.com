@@ -1,15 +1,15 @@
 ---
-import { Image as AstroImg } from 'astro:assets'
-import { getDynamicImage } from '~utils/asset';
+import { Image as AstroImg } from "astro:assets";
+import { getDynamicImage } from "~utils/asset";
 
 export interface Props {
-	src: string
-  alt: string
+	src: string;
+	alt: string;
 }
 
-const { src, alt } = Astro.props
+const { src, alt } = Astro.props;
 
-const imgSrc = getDynamicImage(src)
+const imgSrc = getDynamicImage(src);
 ---
 
 <figure>
