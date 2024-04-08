@@ -20,31 +20,31 @@
 		"src/**/*.{ts,astro,css}": "pnpm lint-fmt"
 	},
 	"dependencies": {
-		"@astrojs/mdx": "^2.1.1",
+		"@astrojs/mdx": "^2.2.4",
 		"@astrojs/rss": "^4.0.5",
-		"@astrojs/sitemap": "^3.1.1",
+		"@astrojs/sitemap": "^3.1.2",
 		"@fontsource-variable/inter": "^5.0.17",
 		"@fontsource-variable/overpass": "^5.0.18",
 		"@fontsource/crimson-pro": "^5.0.17",
 		"@fontsource/fira-code": "^5.0.17",
 		"@fontsource/schoolbell": "^5.0.8",
-		"astro": "^4.4.15",
-		"autoprefixer": "^10.4.18",
+		"astro": "^4.5.16",
+		"autoprefixer": "^10.4.19",
 		"dayjs": "^1.11.10",
 		"gardevoir": "^1.0.0",
 		"mdast-util-to-string": "^4.0.0",
 		"reading-time": "^1.5.0",
-		"sass": "^1.71.1"
+		"sass": "^1.74.1"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.6.0",
+		"@biomejs/biome": "^1.6.4",
 		"@fec/remark-a11y-emoji": "^4.0.2",
 		"@iconify-json/gg": "^1.1.9",
 		"@iconify-json/logos": "^1.1.42",
-		"@iconify-json/ph": "^1.1.11",
+		"@iconify-json/ph": "^1.1.12",
 		"lint-staged": "^15.2.2",
-		"simple-git-hooks": "^2.10.0",
-		"typescript": "^5.4.2",
+		"simple-git-hooks": "^2.11.1",
+		"typescript": "^5.4.4",
 		"unplugin-icons": "^0.18.5"
 	}
 }
