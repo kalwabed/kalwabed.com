@@ -39,6 +39,7 @@ const projectCover = getDynamicImage(entry.data.imageCover);
           alt={`${entry.data.title} favicon`}
           width="30"
           height="30"
+          loading="eager"
         />
         <h1>{entry.data.title}</h1>
       </div>
@@ -47,6 +48,7 @@ const projectCover = getDynamicImage(entry.data.imageCover);
           src={projectCover()}
           class="cover"
           alt={`${entry.data.title} cover`}
+          loading="eager"
         />
         <div class="meta">
           <div class="stack">

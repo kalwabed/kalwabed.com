@@ -9,13 +9,13 @@
 html,
 body,
 #root {
-	height: 100%;
+  height: 100%;
 }
 
 body {
-	color: var(--fc-primary);
-	font-family: var(--font-body);
-	background-color: var(--slate-1);
+  color: var(--fc-primary);
+  font-family: var(--font-body);
+  background-color: var(--slate-1);
 }
 
 h1,
@@ -23,43 +23,43 @@ h2,
 h3,
 h4,
 h5 {
-	font-family: var(--font-heading), Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: var(--font-heading), Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 code {
-	font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
 }
 
 .container {
-	max-width: var(--default-mw);
+  max-width: var(--default-mw);
 
-	margin: {
-		top: 2rem;
-		left: auto;
-		right: auto;
-	}
+  margin: {
+    top: 2rem;
+    left: auto;
+    right: auto;
+  }
 
-	@include br.tablet {
-		margin-top: 69px;
-	}
+  @include br.tablet {
+    margin-top: 69px;
+  }
 }
 
 #root {
-	display: flex;
-	flex-direction: column;
-	width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 a {
-	color: var(--iris-9);
-	text-decoration: none;
-	transition: color 200ms ease;
-	font-weight: 500;
+  color: var(--iris-9);
+  text-decoration: none;
+  transition: color 200ms ease;
+  font-weight: 500;
 
-	&:hover {
-		text-decoration: underline;
-		color: var(--iris-10);
-	}
+  &:hover {
+    text-decoration: underline;
+    color: var(--iris-10);
+  }
 }
 
 /*
@@ -69,16 +69,16 @@ a {
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 * {
-	margin: 0;
+  margin: 0;
 }
 
 body {
-	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 img,
@@ -86,15 +86,15 @@ picture,
 video,
 canvas,
 svg {
-	display: block;
-	max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 input,
 button,
 textarea,
 select {
-	font: inherit;
+  font: inherit;
 }
 
 p,
@@ -104,9 +104,9 @@ h3,
 h4,
 h5,
 h6 {
-	overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 #root {
-	isolation: isolate;
+  isolation: isolate;
 }

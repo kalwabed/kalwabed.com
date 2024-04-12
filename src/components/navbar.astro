@@ -48,6 +48,10 @@ const isHomepage = Astro.url.pathname === "/";
     text-decoration: none;
     width: fit-content;
 
+    &:hover {
+      text-decoration: none;
+    }
+
     &:has(> img) {
       &:focus {
         outline: none;
