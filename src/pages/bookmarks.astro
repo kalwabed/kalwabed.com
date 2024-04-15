@@ -1,0 +1,12 @@
+---
+import DefaultLayout from "~/layouts/default.astro";
+
+export const prerender = false;
+const url = "https://randomuser.me/api";
+const randomRes = await fetch(url);
+const person = await randomRes.json();
+---
+
+<DefaultLayout>
+<div>my email is {person.results[0].email}</div>
+</DefaultLayout>
