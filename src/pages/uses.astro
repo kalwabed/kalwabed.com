@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import desktop from "~/assets/desktop.png";
+import SectionTitle from "~/components/section-title.astro";
 import DefaultLayout from "~/layouts/default.astro";
 
 const utils = [
@@ -88,9 +89,9 @@ const utils = [
 ---
 
 <DefaultLayout title="Uses" desc="What Kalwabed uses" ogImage="uses.jpg">
-  <div class="container">
-    <h1>Uses</h1>
+    <SectionTitle>Uses</SectionTitle>
 
+  <div class="container">
     <h2>Languages and framework</h2>
     <p>
       I still love the clean foundation of HTML and CSS, but for interactive
@@ -205,20 +206,6 @@ const utils = [
 
 <style lang="scss">
   @use "../styles/breakpoints" as br;
-
-  .container {
-    margin-top: 69px;
-  }
-
-  h1 {
-    margin-bottom: 32px;
-    font-size: 2.29rem;
-
-    @include br.tablet {
-      text-align: center;
-      margin-bottom: 49px;
-    }
-  }
 
   p {
     margin: {
