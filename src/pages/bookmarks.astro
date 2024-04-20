@@ -1,12 +1,47 @@
 ---
 import DefaultLayout from "~/layouts/default.astro";
+import SectionTitle from "~components/section-title.astro";
+
+interface Bookmark {
+	id: string;
+	title: string;
+	summary: string;
+	url: string;
+	tags: string;
+	created_at: number;
+	updated_at: number;
+}
 
 export const prerender = false;
-const url = "https://randomuser.me/api";
-const randomRes = await fetch(url);
-const person = await randomRes.json();
+const url = "https://mamarks.klwbd.workers.dev";
+const bookmarkToken = import.meta.env.BOOKMARK_TOKEN ?? "";
+const bookmarkRes = await fetch(url, { headers: { "x-token": bookmarkToken } });
+const bookmarks: { data: Bookmark[] } = await bookmarkRes.json();
 ---
 
-<DefaultLayout>
-<div>my email is {person.results[0].email}</div>
+<DefaultLayout title="Bookmarks" desc="Kalwabed public personal bookmarks.">
+  <SectionTitle>
+    Bookmarks
+  </SectionTitle>
+  <div class="container">
+    {bookmarks.data.map(bm => (
+      <div class="bm-card">
+        <h2>{bm.title}</h2>
+        <p>{bm.summary}</p>
+        <a href={bm.url}>{bm.url}</a>
+      </div>
+    ))}
+  </div>
 </DefaultLayout>
+
+<style lang="scss">
+  @use '../styles/breakpoints' as br;
+
+  .container {
+    margin-top: 18px;
+  }
+
+  .bm-card {
+    margin-bottom: 1.2rem;
+  }
+</style>
