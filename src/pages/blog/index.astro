@@ -1,15 +1,16 @@
 ---
 import DefaultLayout from "~/layouts/default.astro";
 import BlogCard from "~components/blog-card.astro";
+import SectionTitle from "~components/section-title.astro";
 import { getSortedPosts } from "~utils/fetcher";
 
 const sortedBlog = await getSortedPosts();
 ---
 
 <DefaultLayout title="Blog" desc="Sometimes I write something about technical world and put it here" ogImage="blog.jpg">
-  <div class="container">
-    <h1>Blog</h1>
-  </div>
+  <SectionTitle title="Blog">
+    It's a place where I put my lessons learned—mostly from my own experiences—that I want to share.
+  </SectionTitle>
   <div class="writing-list">
     {sortedBlog.map(blog => (
       <BlogCard data={{...blog.data, slug: blog.slug}} />
@@ -19,21 +20,6 @@ const sortedBlog = await getSortedPosts();
 
 <style lang="scss">
   @use '../../styles/breakpoints' as br;
-
-  .container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  h1 {
-    margin-bottom: 32px;
-    font-size: 2.29rem;
-
-    @include br.tablet {
-      text-align: center;
-      margin-bottom: 69px;
-    }
-  }
 
   .writing-list {
     max-width: var(--over-mw);

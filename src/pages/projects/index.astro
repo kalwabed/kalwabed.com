@@ -1,15 +1,16 @@
 ---
 import ProjectCard from "~/components/project-card.astro";
 import DefaultLayout from "~/layouts/default.astro";
+import SectionTitle from "~components/section-title.astro";
 import { getSortedProjects } from "~utils/fetcher";
 
 const projects = await getSortedProjects();
 ---
 
 <DefaultLayout title="Projects" desc="Projects that I managed to build" ogImage="projects.jpg">
-  <div class="container">
-    <h1>Projects</h1>
-  </div>
+  <SectionTitle title="Projects">
+    List of traces and stories of the projects I've worked on that I can document. Most of the ones that aren't documented are still in my GitHub repository.
+  </SectionTitle>
   <div class="project-list">
     {projects.map(project => (
       <ProjectCard project={{...project.data, slug: project.slug}} />
@@ -19,21 +20,6 @@ const projects = await getSortedProjects();
 
 <style lang="scss">
   @use '../../styles/breakpoints' as br;
-
-  .container {
-    display: flex;
-    flex-direction: column;
-  }
-
-  h1 {
-    margin-bottom: 32px;
-    font-size: 2.29rem;
-
-    @include br.tablet {
-      text-align: center;
-      margin-bottom: 69px;
-    }
-  }
 
   .project-list {
     max-width: var(--over-mw);

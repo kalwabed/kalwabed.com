@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 import PresentingImg from "~/assets/presenting.png";
 import DefaultLayout from "~/layouts/default.astro";
+import SectionTitle from "~components/section-title.astro";
 import PhGithubLogo from "~icons/ph/github-logo";
 import PhInstagramLogo from "~icons/ph/instagram-logo";
 import PhLinkedinLogoLight from "~icons/ph/linkedin-logo-light";
@@ -60,8 +61,10 @@ const socials = [
 ---
 
 <DefaultLayout title="About" desc="About Kalwabed Rizki" ogImage="about.jpg">
+  <SectionTitle title="Hey there!">
+    Let me tell you a bit more about me as a regular person. Nice to greet you!
+  </SectionTitle>
   <div class="container">
-    <h1>Hey there!</h1>
     <p>
       I’m Kalwabed Rizki, a software engineer and <a
         href="https://www.goodreads.com/kalwabed">seasoned book reader</a

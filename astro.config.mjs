@@ -1,3 +1,4 @@
+import cloudflare from "@astrojs/cloudflare";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import a11yEmoji from "@fec/remark-a11y-emoji";
@@ -9,6 +10,7 @@ import { remarkReadingTime } from "./remark-reading-time.mjs";
 // https://astro.build/config
 export default defineConfig({
 	site: "https://www.kalwabed.com",
+	output: "hybrid",
 	image: {
 		service: squooshImageService(),
 	},
@@ -32,4 +34,5 @@ export default defineConfig({
 		],
 	},
 	integrations: [mdx(), sitemap()],
+	adapter: cloudflare(),
 });
