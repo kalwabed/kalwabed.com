@@ -77,13 +77,19 @@ const utils = [
 	},
 	{
 		name: "fzf-tab",
-		label: "Replace zsh's default completion selection menu with fzf!",
+		label: "replace zsh's default completion selection menu with fzf!",
 		href: "https://github.com/Aloxaf/fzf-tab",
 	},
 	{
 		name: "delta",
 		label: "a syntax-highlighting pager for git, diff, and grep output.",
 		href: "https://github.com/dandavison/delta",
+	},
+	{
+		name: "yazi",
+		label:
+			"blazing fast terminal file manager written in Rust, based on async I/O. ",
+		href: "https://github.com/sxyazi/yazi",
 	},
 ];
 ---
@@ -120,14 +126,14 @@ const utils = [
     <h2>Code tools</h2>
     <ul>
       <li>
+        <a href="https://neovim.io">Neovim</a>: my current favorite
+        terminal editor. It offers more flexibility and ergonomic, via <a href="https://www.lazyvim.org">LazyVim</a>.
+      </li>
+      <li>
         <a href="https://helix-editor.com">Helix</a>: my previous favorite
         terminal editor. I've been a <a href="https://code.visualstudio.com"
           >Visual Studio Code</a
         > user for a long time. But this change has really allowed me to move faster.
-      </li>
-      <li>
-        <a href="https://neovim.io">Neovim</a>: my current favorite
-        terminal editor. It offers more flexibility and ergonomic, via <a href="https://www.lazyvim.org">LazyVim</a>.
       </li>
       <li>
         Font: <a href="https://github.com/tonsky/FiraCode">Fira Code</a>. My
@@ -173,10 +179,15 @@ const utils = [
       {
         utils.map((util) => (
           <li>
-            <a href={util.href}>{util.name}</a>: {util.label}
+            <a href={util.href} title={util.name}>{util.name}</a>: {util.label}
           </li>
         ))
       }
+      <li>
+        <a href="https://github.com/kalwabed/dotfiles" title="My dotfiles">
+          My dotfiles
+        </a>
+      </li>
     </ul>
 
     <h2>Hardware</h2>
