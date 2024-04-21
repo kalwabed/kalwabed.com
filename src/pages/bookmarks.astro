@@ -19,15 +19,15 @@ const bookmarkRes = await fetch(url, { headers: { "x-token": bookmarkToken } });
 const bookmarks: { data: Bookmark[] } = await bookmarkRes.json();
 ---
 
-<DefaultLayout title="Bookmarks" desc="Kalwabed public personal bookmarks.">
+<DefaultLayout title="Bookmarks - My reading list" desc="Kalwabed public personal bookmarks.">
   <SectionTitle>
-    Bookmarks
+    My reading list
   </SectionTitle>
   <div class="container">
     {bookmarks.data.map(bm => (
       <div class="bm-card">
         <h2>{bm.title}</h2>
-        <p>{bm.summary}</p>
+        <p class="">{bm.summary}</p>
         <a href={bm.url}>{bm.url}</a>
       </div>
     ))}
@@ -42,6 +42,10 @@ const bookmarks: { data: Bookmark[] } = await bookmarkRes.json();
   }
 
   .bm-card {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.5rem;
+
+    p {
+      color: var(--fc-subtle);
+    }
   }
 </style>
