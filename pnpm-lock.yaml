@@ -21,20 +21,20 @@ importers:
         specifier: ^3.1.4
         version: 3.1.4
       '@fontsource-variable/inter':
-        specifier: ^5.0.17
-        version: 5.0.17
-      '@fontsource-variable/overpass':
         specifier: ^5.0.18
         version: 5.0.18
+      '@fontsource-variable/overpass':
+        specifier: ^5.0.19
+        version: 5.0.19
       '@fontsource/crimson-pro':
-        specifier: ^5.0.17
-        version: 5.0.17
+        specifier: ^5.0.18
+        version: 5.0.18
       '@fontsource/fira-code':
-        specifier: ^5.0.17
-        version: 5.0.17
+        specifier: ^5.0.18
+        version: 5.0.18
       '@fontsource/schoolbell':
-        specifier: ^5.0.8
-        version: 5.0.8
+        specifier: ^5.0.12
+        version: 5.0.12
       astro:
         specifier: ^4.6.3
         version: 4.6.3(@types/node@20.12.7)(sass@1.75.0)(typescript@5.4.5)
@@ -766,20 +766,20 @@ packages:
     resolution: {integrity: sha512-Au3jSkt66PRwTKTCYm7KzTGfMzUmn1LYPK+cyrytfzjfOPkHpohrLcGYPLsgxV8nzc4vXxt3Ay7MlBrmeIfFLg==}
     engines: {node: '>=16.0'}
 
-  '@fontsource-variable/inter@5.0.17':
-    resolution: {integrity: sha512-sa80nNnqF8kzhBvqusWiL9vlPMVpdmOwMmDBup46Jggsr1VBqo+YuzwB36Ls+X6uHJtb8Yv3ALBHL/zGmT862A==}
+  '@fontsource-variable/inter@5.0.18':
+    resolution: {integrity: sha512-rJzSrtJ3b7djiGFvRuTe6stDfbYJGhdQSfn2SI2WfXviee7Er0yKAHE5u7FU7OWVQQQ1x3+cxdmx9NdiAkcrcA==}
 
-  '@fontsource-variable/overpass@5.0.18':
-    resolution: {integrity: sha512-VvDN98o7xo1b+kQFMNzCsvF1gNT758AkuPUKzU8cveNsKabMMVrXMDg57smNyl+hL6PyXfU9OQWR6Yuty/FymQ==}
+  '@fontsource-variable/overpass@5.0.19':
+    resolution: {integrity: sha512-MGeaVYF/ItkSIbNNVBlCC68srrUSFJCSqIuRY9L3qyIsKdDUuF3ZCsIQ2SBWfWo/0zZ3Pa7TuVNOojgHENbioQ==}
 
-  '@fontsource/crimson-pro@5.0.17':
-    resolution: {integrity: sha512-o+m0sc4zhcCa7nIcsq4PXjsiXRsc13fxiJLVD9r33oRO3JNX1mDNvAdDKjL3AG2W0LhSz5vMHnPEhzss1eWCkA==}
+  '@fontsource/crimson-pro@5.0.18':
+    resolution: {integrity: sha512-c59oYv2heFJi5WFuSkANTUo4QoZOXJBjDYW0fhIPBASFs3HaMWVxEXluwxfbSNoIVeCoMcn7RPSy2bDhnmB4rQ==}
 
-  '@fontsource/fira-code@5.0.17':
-    resolution: {integrity: sha512-Ai0qE5PWvm6ETny7ToAitwdhYtO3YrNIHoa0arPquXxpnlRSB+OsJfhKnfgDKm6WMmCnxKOfsIslbVw5PqQvvQ==}
+  '@fontsource/fira-code@5.0.18':
+    resolution: {integrity: sha512-DuH/ewp/2sSYoJw7PxB1VuCyrxo7OCEWeML7sN5yNfP8gTleIktZl/dTopcPOHv1WwDUcqRG1veRoEgfEeYfqQ==}
 
-  '@fontsource/schoolbell@5.0.8':
-    resolution: {integrity: sha512-pBwdwWJd+mWLNLPKEiM8JTljXUYmwrYDNilOEUrwmYZpKKm36OIse2QHcx6fV2n5nNmDipRQJOYf3WxY96ToXQ==}
+  '@fontsource/schoolbell@5.0.12':
+    resolution: {integrity: sha512-ul36BWwkiE1V5lRGLwiO6gPmZt/e8B4xkScK3QmfUJj9k8w1m+rWBHiwfpYlv+AZ8d5z4/ge1uKPa0QS4//gmg==}
 
   '@iconify-json/gg@1.1.9':
     resolution: {integrity: sha512-gj4XlLoYR645g4WWMzv2+E5EBIbqnyOLlKL+9MPjb05fSDqYb6BRG2ICn68hIWOtcMS/UPNJQ5M8/Y2FgWD72g==}
@@ -3344,15 +3344,15 @@ snapshots:
       mdast-util-find-and-replace: 1.1.1
       unist-util-visit: 2.0.3
 
-  '@fontsource-variable/inter@5.0.17': {}
+  '@fontsource-variable/inter@5.0.18': {}
 
-  '@fontsource-variable/overpass@5.0.18': {}
+  '@fontsource-variable/overpass@5.0.19': {}
 
-  '@fontsource/crimson-pro@5.0.17': {}
+  '@fontsource/crimson-pro@5.0.18': {}
 
-  '@fontsource/fira-code@5.0.17': {}
+  '@fontsource/fira-code@5.0.18': {}
 
-  '@fontsource/schoolbell@5.0.8': {}
+  '@fontsource/schoolbell@5.0.12': {}
 
   '@iconify-json/gg@1.1.9':
     dependencies:
