@@ -3,8 +3,7 @@
   "version": "0.3.0",
   "private": true,
   "engines": {
-    "node": "^20",
-    "pnpm": "^9"
+    "node": "^20"
   },
   "scripts": {
     "dev": "astro dev",
@@ -20,7 +19,7 @@
     "src/**/*.{ts,astro,css}": "pnpm lint-fmt"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "10.1.0",
+    "@astrojs/cloudflare": "~10.1.0",
     "@astrojs/mdx": "^2.3.1",
     "@astrojs/rss": "^4.0.5",
     "@astrojs/sitemap": "^3.1.4",

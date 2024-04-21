@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       '@astrojs/cloudflare':
-        specifier: 10.1.0
+        specifier: ~10.1.0
         version: 10.1.0(astro@4.6.3(@types/node@20.12.7)(sass@1.75.0)(typescript@5.4.5))
       '@astrojs/mdx':
         specifier: ^2.3.1
