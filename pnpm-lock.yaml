@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@astrojs/cloudflare':
-        specifier: ^10.2.0
-        version: 10.2.0(astro@4.6.3(@types/node@20.12.7)(sass@1.75.0)(typescript@5.4.5))
+        specifier: ^10.1.0
+        version: 10.1.0(astro@4.6.3(@types/node@20.12.7)(sass@1.75.0)(typescript@5.4.5))
       '@astrojs/mdx':
         specifier: ^2.3.1
         version: 2.3.1(astro@4.6.3(@types/node@20.12.7)(sass@1.75.0)(typescript@5.4.5))
@@ -100,8 +100,8 @@ packages:
   '@antfu/utils@0.7.7':
     resolution: {integrity: sha512-gFPqTG7otEJ8uP6wrhDv6mqwGWYZKNvAcCq6u9hOj0c+IKCEsY4L1oC9trPq2SaWIzAfHvqfBDxF591JkMf+kg==}
 
-  '@astrojs/cloudflare@10.2.0':
-    resolution: {integrity: sha512-Mtu28fL0aj9P96ub8UeRyOtNfjMYdj68aEuM8TouFEDYung7qK2mJaeeamp4muc/gDeEUGiQ0lZcKkKXGl2vqw==}
+  '@astrojs/cloudflare@10.1.0':
+    resolution: {integrity: sha512-26+mkkMNQ7lHQ9wEwPxNS/zUEZj/emYkHTmlmvgzkEq9J/vFI5QVtTur2R/ZIZ8SimpLqZJtsn584716Jqq1Nw==}
     peerDependencies:
       astro: ^4.2.0
 
@@ -2821,7 +2821,7 @@ snapshots:
 
   '@antfu/utils@0.7.7': {}
 
-  '@astrojs/cloudflare@10.2.0(astro@4.6.3(@types/node@20.12.7)(sass@1.75.0)(typescript@5.4.5))':
+  '@astrojs/cloudflare@10.1.0(astro@4.6.3(@types/node@20.12.7)(sass@1.75.0)(typescript@5.4.5))':
     dependencies:
       '@astrojs/internal-helpers': 0.3.0
       '@astrojs/underscore-redirects': 0.3.3
