@@ -23,9 +23,19 @@ const links = [
 	<ul>
 		{links.map(link => {
 			if (link.external) {
-				return	<li><a href={link.href} target="_blank" rel="noopener noreferrer">{link.label} <GgExternal /></a></li>
+				return	( 
+          <li>
+            <a href={link.href} title={link.label} target="_blank" rel="noopener noreferrer">
+              {link.label} <GgExternal />
+            </a>
+          </li>
+        )
 			}
-			return	<li><a href={link.href}>{link.label}</a></li>
+			return (
+        <li>
+          <a href={link.href} title={link.label}>{link.label}</a>
+        </li>
+      )
 		})}
 	</ul>
 	<p>© 2021-present Kalwabed Rizki. All rights reserved</p>
