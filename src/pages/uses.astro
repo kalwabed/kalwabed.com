@@ -32,7 +32,8 @@ const utils = [
 	},
 	{
 		name: "Yadm",
-		label: "manage my dotfile.",
+		label:
+			"manage my <a href='https://github.com/kalwabed/dotfiles' title='My dotfiles'>dotfiles</a>.",
 		href: "https://yadm.io",
 	},
 	{
@@ -175,19 +176,18 @@ const utils = [
           href="https://hyprland.org">Hyprland</a
         > as a window manager, is my favorite combination at the moment. Previously
         I have been using Manjaro KDE for years.
+        Here's my <a href="https://github.com/kalwabed/dotfiles" title="My dotfiles">
+          dotfiles
+        </a>.
       </li>
       {
         utils.map((util) => (
           <li>
-            <a href={util.href} title={util.name}>{util.name}</a>: {util.label}
+            <a href={util.href} title={util.name}>{util.name}</a>:
+            <span set:html={util.label} />
           </li>
         ))
       }
-      <li>
-        <a href="https://github.com/kalwabed/dotfiles" title="My dotfiles">
-          My dotfiles
-        </a>
-      </li>
     </ul>
 
     <h2>Hardware</h2>
