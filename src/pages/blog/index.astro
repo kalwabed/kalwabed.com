@@ -8,7 +8,9 @@ const sortedBlog = await getSortedPosts();
 ---
 
 <DefaultLayout title="Blog" desc="Sometimes I write something about technical world and put it here" ogImage="blog.jpg">
-  <SectionTitle>Blog</SectionTitle>
+  <SectionTitle title="Blog">
+    It's a place where I put my lessons learned—mostly from my own experiences—that I want to share.
+  </SectionTitle>
   <div class="writing-list">
     {sortedBlog.map(blog => (
       <BlogCard data={{...blog.data, slug: blog.slug}} />

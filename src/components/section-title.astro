@@ -1,7 +1,17 @@
+---
+export interface Props {
+	title: string;
+}
+const props = Astro.props;
+---
+
 <section>
   <h1>
-    <slot />
+    {props.title}
   </h1>
+  <p>
+    <slot />
+  </p>
 </section>
 
 <style lang="scss">
@@ -18,14 +28,24 @@
     @include br.tablet {
       margin-top: 69px;
       margin-bottom: 49px;
+      text-align: center;
+      max-width: 75%;
     }
   }
 
   h1 {
     font-size: 2.29rem;
+    line-height: 1.625;
+    text-wrap: balance;
+  }
 
+  p {
+    color: var(--fc-subtle);
+    text-wrap: balance;
+    font-size: 14px;
+    
     @include br.tablet {
-      text-align: center;
+      font-size: 16px;
     }
   }
 </style>
