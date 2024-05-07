@@ -7,19 +7,26 @@ import { getSortedPosts } from "~utils/fetcher";
 const sortedBlog = await getSortedPosts();
 ---
 
-<DefaultLayout title="Blog" desc="Sometimes I write something about technical world and put it here" ogImage="blog.jpg">
+<DefaultLayout
+  title="Blog"
+  desc="Sometimes I write something about technical world and put it here"
+  ogImage="blog.jpg"
+>
   <SectionTitle title="Blog">
-    It's a place where I put my lessons learned—mostly from my own experiences—that I want to share.
+    It's a place where I put my lessons learned—mostly from my own
+    experiences—that I want to share.
   </SectionTitle>
   <div class="writing-list">
-    {sortedBlog.map(blog => (
-      <BlogCard data={{...blog.data, slug: blog.slug}} />
-    ))}
+    {
+      sortedBlog.map((blog) => (
+        <BlogCard data={{ ...blog.data, slug: blog.slug }} />
+      ))
+    }
   </div>
 </DefaultLayout>
 
 <style lang="scss">
-  @use '../../styles/breakpoints' as br;
+  @use "../../styles/breakpoints" as br;
 
   .writing-list {
     max-width: var(--over-mw);

@@ -12,55 +12,55 @@ import LogosTailwindIcon from "~icons/logos/tailwindcss-icon";
 import LogosVue from "~icons/logos/vue";
 
 export const techList: Record<
-	string,
-	{ label?: string; Logo: typeof LogosNextjsIcon }
+  string,
+  { label?: string; Logo: typeof LogosNextjsIcon }
 > = {
-	nextjs: {
-		label: "Next.js",
-		Logo: LogosNextjsIcon,
-	},
-	svelte: {
-		label: "Svelte",
-		Logo: LogosSvelteIcon,
-	},
-	react: {
-		label: "React",
-		Logo: LogosReact,
-	},
-	express: {
-		label: "Express",
-		Logo: LogosExpress,
-	},
-	bootstrap: {
-		label: "Bootstrap",
-		Logo: LogosBootstrap,
-	},
-	mongodb: {
-		label: "Mongo DB",
-		Logo: LogosMongodbIcon,
-	},
-	tailwind: {
-		label: "Tailwind CSS",
-		Logo: LogosTailwindIcon,
-	},
-	firebase: {
-		label: "Firebase",
-		Logo: LogosFirebase,
-	},
-	astro: {
-		label: "Astro",
-		Logo: LogoAstroIcon,
-	},
-	vue: {
-		label: "Vue",
-		Logo: LogosVue,
-	},
-	nuxtjs: {
-		label: "Nuxt.js",
-		Logo: LogosNuxtIcon,
-	},
-	supabase: {
-		label: "Supabase",
-		Logo: LogosSupabaseIcon,
-	},
+  nextjs: {
+    label: "Next.js",
+    Logo: LogosNextjsIcon,
+  },
+  svelte: {
+    label: "Svelte",
+    Logo: LogosSvelteIcon,
+  },
+  react: {
+    label: "React",
+    Logo: LogosReact,
+  },
+  express: {
+    label: "Express",
+    Logo: LogosExpress,
+  },
+  bootstrap: {
+    label: "Bootstrap",
+    Logo: LogosBootstrap,
+  },
+  mongodb: {
+    label: "Mongo DB",
+    Logo: LogosMongodbIcon,
+  },
+  tailwind: {
+    label: "Tailwind CSS",
+    Logo: LogosTailwindIcon,
+  },
+  firebase: {
+    label: "Firebase",
+    Logo: LogosFirebase,
+  },
+  astro: {
+    label: "Astro",
+    Logo: LogoAstroIcon,
+  },
+  vue: {
+    label: "Vue",
+    Logo: LogosVue,
+  },
+  nuxtjs: {
+    label: "Nuxt.js",
+    Logo: LogosNuxtIcon,
+  },
+  supabase: {
+    label: "Supabase",
+    Logo: LogosSupabaseIcon,
+  },
 };

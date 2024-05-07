@@ -1,6 +1,6 @@
 ---
 export interface Props {
-	title: string;
+  title: string;
 }
 const props = Astro.props;
 ---
@@ -15,7 +15,7 @@ const props = Astro.props;
 </section>
 
 <style lang="scss">
-  @use '../styles/breakpoints' as br;
+  @use "../styles/breakpoints" as br;
 
   section {
     margin: {
@@ -43,7 +43,7 @@ const props = Astro.props;
     color: var(--fc-subtle);
     text-wrap: balance;
     font-size: 14px;
-    
+
     @include br.tablet {
       font-size: 16px;
     }

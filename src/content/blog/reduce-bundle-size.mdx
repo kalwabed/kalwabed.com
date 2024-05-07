@@ -18,15 +18,15 @@ module.exports = {
     // Replace React with Preact only in client production build
     if (!dev && !isServer) {
       Object.assign(config.resolve.alias, {
-        react: 'preact/compat',
-        'react-dom/test-utils': 'preact/test-utils',
-        'react-dom': 'preact/compat'
-      })
+        react: "preact/compat",
+        "react-dom/test-utils": "preact/test-utils",
+        "react-dom": "preact/compat",
+      });
     }
 
-    return config
-  }
-}
+    return config;
+  },
+};
 ```
 
 We will replace React with Preact only when building the client on the production side, which of course reduces the bundle size that users have to download by up to 30%!

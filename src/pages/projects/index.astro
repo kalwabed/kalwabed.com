@@ -7,19 +7,27 @@ import { getSortedProjects } from "~utils/fetcher";
 const projects = await getSortedProjects();
 ---
 
-<DefaultLayout title="Projects" desc="Projects that I managed to build" ogImage="projects.jpg">
+<DefaultLayout
+  title="Projects"
+  desc="Projects that I managed to build"
+  ogImage="projects.jpg"
+>
   <SectionTitle title="Projects">
-    List of traces and stories of the projects I've worked on that I can document. Most of the ones that aren't documented are still in my GitHub repository.
+    List of traces and stories of the projects I've worked on that I can
+    document. Most of the ones that aren't documented are still in my GitHub
+    repository.
   </SectionTitle>
   <div class="project-list">
-    {projects.map(project => (
-      <ProjectCard project={{...project.data, slug: project.slug}} />
-    ))}
+    {
+      projects.map((project) => (
+        <ProjectCard project={{ ...project.data, slug: project.slug }} />
+      ))
+    }
   </div>
 </DefaultLayout>
 
 <style lang="scss">
-  @use '../../styles/breakpoints' as br;
+  @use "../../styles/breakpoints" as br;
 
   .project-list {
     max-width: var(--over-mw);

@@ -11,11 +11,11 @@ import { techList } from "~utils/tech-logo";
 import { removeHttp } from "~utils/url";
 
 export async function getStaticPaths() {
-	const projects = await getCollection("projects");
-	return projects.map((project) => ({
-		params: { slug: project.slug },
-		props: { entry: project },
-	}));
+  const projects = await getCollection("projects");
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { entry: project },
+  }));
 }
 
 const { entry } = Astro.props;

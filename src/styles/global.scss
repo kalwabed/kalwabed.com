@@ -1,10 +1,10 @@
 @use "./vars";
 @use "./breakpoints" as br;
 
-@import '@fontsource-variable/overpass';
-@import '@fontsource/schoolbell';
-@import '@fontsource/fira-code/400.css';
-@import '@fontsource/fira-code/500.css';
+@import "@fontsource-variable/overpass";
+@import "@fontsource/schoolbell";
+@import "@fontsource/fira-code/400.css";
+@import "@fontsource/fira-code/500.css";
 
 html,
 body,
@@ -23,11 +23,12 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: var(--font-heading), Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: var(--font-heading), Cambria, Cochin, Georgia, Times,
+    "Times New Roman", serif;
 }
 
 code {
-  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  font-family: "Fira Code", "Courier New", Courier, monospace;
 }
 
 .container {

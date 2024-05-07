@@ -1,6 +1,6 @@
 ---
-title: 'Nextwind: Next.js and Tailwindcss template'
-summary: 'The story behind the creation of Nextwind and kawari.space'
+title: "Nextwind: Next.js and Tailwindcss template"
+summary: "The story behind the creation of Nextwind and kawari.space"
 publishDate: 2020-10-22
 ogImage: nextwind.jpg
 ---
