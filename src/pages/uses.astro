@@ -5,100 +5,101 @@ import SectionTitle from "~/components/section-title.astro";
 import DefaultLayout from "~/layouts/default.astro";
 
 const utils = [
-	{
-		name: "Obsidian",
-		label: "my home for journaling and taking notes.",
-		href: "https://obsidian.md",
-	},
-	{
-		name: "Gitui",
-		label: "give me better Git terminal visualization support.",
-		href: "https://github.com/extrawurst/gitui",
-	},
-	{
-		name: "Zellij",
-		label: "multi-workspace terminal for better access across tasks.",
-		href: "https://zellij.dev",
-	},
-	{
-		name: "Starship",
-		label: "gives me a new, cooler looking terminal experience.",
-		href: "https://starship.rs",
-	},
-	{
-		name: "Oh My ZSH",
-		label: "makes your terminal easier.",
-		href: "https://ohmyz.sh",
-	},
-	{
-		name: "Yadm",
-		label:
-			"manage my <a href='https://github.com/kalwabed/dotfiles' title='My dotfiles'>dotfiles</a>.",
-		href: "https://yadm.io",
-	},
-	{
-		name: "atuin",
-		label: "shell history with ease.",
-		href: "https://atuin.sh",
-	},
-	{
-		name: "broot",
-		label: "directory overview but prettier.",
-		href: "https://dystroy.org/broot",
-	},
-	{
-		name: "zoxide",
-		label: "a smarter cd command.",
-		href: "https://github.com/ajeetdsouza/zoxide",
-	},
-	{
-		name: "bat",
-		label: "a cat(1) clone with wings.",
-		href: "https://github.com/sharkdp/bat",
-	},
-	{
-		name: "fzf",
-		label: "fast fuzzy finder.",
-		href: "https://github.com/junegunn/fzf",
-	},
-	{
-		name: "eza",
-		label: "a modern, maintained replacement for ls.",
-		href: "https://eza.rocks",
-	},
-	{
-		name: "fastfetch",
-		label: "like neofetch, but much faster because written mostly in C.",
-		href: "https://github.com/fastfetch-cli/fastfetch",
-	},
-	{
-		name: "fd",
-		label: "a simple, fast and user-friendly alternative to 'find'.",
-		href: "https://github.com/sharkdp/fd",
-	},
-	{
-		name: "fzf-tab",
-		label: "replace zsh's default completion selection menu with fzf!",
-		href: "https://github.com/Aloxaf/fzf-tab",
-	},
-	{
-		name: "delta",
-		label: "a syntax-highlighting pager for git, diff, and grep output.",
-		href: "https://github.com/dandavison/delta",
-	},
-	{
-		name: "yazi",
-		label:
-			"blazing fast terminal file manager written in Rust, based on async I/O. ",
-		href: "https://github.com/sxyazi/yazi",
-	},
+  {
+    name: "Obsidian",
+    label: "my home for journaling and taking notes.",
+    href: "https://obsidian.md",
+  },
+  {
+    name: "Gitui",
+    label: "give me better Git terminal visualization support.",
+    href: "https://github.com/extrawurst/gitui",
+  },
+  {
+    name: "Zellij",
+    label: "multi-workspace terminal for better access across tasks.",
+    href: "https://zellij.dev",
+  },
+  {
+    name: "Starship",
+    label: "gives me a new, cooler looking terminal experience.",
+    href: "https://starship.rs",
+  },
+  {
+    name: "Oh My ZSH",
+    label: "makes your terminal easier.",
+    href: "https://ohmyz.sh",
+  },
+  {
+    name: "Yadm",
+    label:
+      "manage my <a href='https://github.com/kalwabed/dotfiles' title='My dotfiles'>dotfiles</a>.",
+    href: "https://yadm.io",
+  },
+  {
+    name: "atuin",
+    label: "shell history with ease.",
+    href: "https://atuin.sh",
+  },
+  {
+    name: "broot",
+    label: "directory overview but prettier.",
+    href: "https://dystroy.org/broot",
+  },
+  {
+    name: "zoxide",
+    label: "a smarter cd command.",
+    href: "https://github.com/ajeetdsouza/zoxide",
+  },
+  {
+    name: "bat",
+    label: "a cat(1) clone with wings.",
+    href: "https://github.com/sharkdp/bat",
+  },
+  {
+    name: "fzf",
+    label: "fast fuzzy finder.",
+    href: "https://github.com/junegunn/fzf",
+  },
+  {
+    name: "eza",
+    label: "a modern, maintained replacement for ls.",
+    href: "https://eza.rocks",
+  },
+  {
+    name: "fastfetch",
+    label: "like neofetch, but much faster because written mostly in C.",
+    href: "https://github.com/fastfetch-cli/fastfetch",
+  },
+  {
+    name: "fd",
+    label: "a simple, fast and user-friendly alternative to 'find'.",
+    href: "https://github.com/sharkdp/fd",
+  },
+  {
+    name: "fzf-tab",
+    label: "replace zsh's default completion selection menu with fzf!",
+    href: "https://github.com/Aloxaf/fzf-tab",
+  },
+  {
+    name: "delta",
+    label: "a syntax-highlighting pager for git, diff, and grep output.",
+    href: "https://github.com/dandavison/delta",
+  },
+  {
+    name: "yazi",
+    label:
+      "blazing fast terminal file manager written in Rust, based on async I/O. ",
+    href: "https://github.com/sxyazi/yazi",
+  },
 ];
 ---
 
 <DefaultLayout title="Uses" desc="What Kalwabed uses" ogImage="uses.jpg">
-    <SectionTitle title="Uses">
-      Here's a quick overview of the tech and tools I use as a developer on a daily basis.
-    </SectionTitle>
+  <SectionTitle title="Uses">
+    Here's a quick overview of the tech and tools I use as a developer on a
+    daily basis.
+  </SectionTitle>
 
   <div class="container">
     <h2>Languages and framework</h2>
@@ -127,8 +128,10 @@ const utils = [
     <h2>Code tools</h2>
     <ul>
       <li>
-        <a href="https://neovim.io">Neovim</a>: my current favorite
-        terminal editor. It offers more flexibility and ergonomic, via <a href="https://www.lazyvim.org">LazyVim</a>.
+        <a href="https://neovim.io">Neovim</a>: my current favorite terminal
+        editor. It offers more flexibility and ergonomic, via <a
+          href="https://www.lazyvim.org">LazyVim</a
+        >.
       </li>
       <li>
         <a href="https://helix-editor.com">Helix</a>: my previous favorite
@@ -175,15 +178,20 @@ const utils = [
         previously using <a href="https://endeavouros.com">EndeavourOS</a>. <a
           href="https://hyprland.org">Hyprland</a
         > as a window manager, is my favorite combination at the moment. Previously
-        I have been using Manjaro KDE for years.
-        Here's my <a href="https://github.com/kalwabed/dotfiles" title="My dotfiles">
+        I have been using Manjaro KDE for years. Here's my <a
+          href="https://github.com/kalwabed/dotfiles"
+          title="My dotfiles"
+        >
           dotfiles
         </a>.
       </li>
       {
         utils.map((util) => (
           <li>
-            <a href={util.href} title={util.name}>{util.name}</a>:
+            <a href={util.href} title={util.name}>
+              {util.name}
+            </a>
+            :
             <span set:html={util.label} />
           </li>
         ))

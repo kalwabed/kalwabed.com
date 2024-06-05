@@ -6,21 +6,29 @@ import Image from "~components/mdx/image.astro";
 import { formatDate } from "~utils/date";
 
 export async function getStaticPaths() {
-	const allBlogPosts = await getCollection("blog");
-	return allBlogPosts.map((blog) => ({
-		params: { slug: blog.slug },
-		props: { entry: blog },
-	}));
+  const allBlogPosts = await getCollection("blog");
+  return allBlogPosts.map((blog) => ({
+    params: { slug: blog.slug },
+    props: { entry: blog },
+  }));
 }
 
 const { entry } = Astro.props;
 const { Content, remarkPluginFrontmatter } = await entry.render();
 ---
 
-<DefaultLayout title={entry.data.title} desc={entry.data.summary} ogImage={entry.data.ogImage}>
+<DefaultLayout
+  title={entry.data.title}
+  desc={entry.data.summary}
+  ogImage={entry.data.ogImage}
+>
   <article class="container blog">
     <header class="meta">
-      <p>Kalwabed Rizki, {formatDate(entry.data.publishDate)} <span>—</span> {remarkPluginFrontmatter.minutesRead}</p>
+      <p>
+        Kalwabed Rizki, {formatDate(entry.data.publishDate)}
+        <span>—</span>
+        {remarkPluginFrontmatter.minutesRead}
+      </p>
       <h1>{entry.data.title}</h1>
     </header>
     <main class="prose">
@@ -30,26 +38,26 @@ const { Content, remarkPluginFrontmatter } = await entry.render();
 </DefaultLayout>
 
 <style is:global lang="scss">
-@use '../../styles/breakpoints' as br;
-@use '../../styles/typography';
+  @use "../../styles/breakpoints" as br;
+  @use "../../styles/typography";
 
-.blog {
-  margin-top: 2rem;
+  .blog {
+    margin-top: 2rem;
 
-  @include br.desktop {
-    margin-top: 5rem;
-  }
-
-  .meta {
-    margin-bottom: 4rem;
-
-    p {
-      color: var(--fc-subtle);
+    @include br.desktop {
+      margin-top: 5rem;
     }
 
-    h1 {
-      text-wrap: balance;
+    .meta {
+      margin-bottom: 4rem;
+
+      p {
+        color: var(--fc-subtle);
+      }
+
+      h1 {
+        text-wrap: balance;
+      }
     }
   }
-}
 </style>

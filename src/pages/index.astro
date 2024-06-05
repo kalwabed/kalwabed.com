@@ -10,7 +10,7 @@ const sortedBlog = await getSortedPosts();
 const sortedProjects = await getSortedProjects();
 
 const featuredProject = sortedProjects.find(
-	(project) => project.data.isFeatured,
+  (project) => project.data.isFeatured,
 );
 const latestPosts = sortedBlog.slice(0, 3);
 ---
@@ -19,18 +19,22 @@ const latestPosts = sortedBlog.slice(0, 3);
   <Hero />
   <SectionHead line section="blog" />
   <div class="container">
-    {latestPosts.map(blog => (
-      <BlogCard data={{...blog.data, slug: blog.slug}} />
-    ))}
+    {
+      latestPosts.map((blog) => (
+        <BlogCard data={{ ...blog.data, slug: blog.slug }} />
+      ))
+    }
   </div>
   <SectionHead section="project" />
   <div class="container">
-    <FeaturedProject project={{...featuredProject!.data, slug: featuredProject!.slug}} />
+    <FeaturedProject
+      project={{ ...featuredProject!.data, slug: featuredProject!.slug }}
+    />
   </div>
 </DefaultLayout>
 
 <style lang="scss">
-.container {
-  margin-top: 18px;
-}
+  .container {
+    margin-top: 18px;
+  }
 </style>

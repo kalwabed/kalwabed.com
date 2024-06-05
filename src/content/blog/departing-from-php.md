@@ -1,6 +1,6 @@
 ---
-title: 'Departing from PHP'
-summary: 'Been a PHP developer'
+title: "Departing from PHP"
+summary: "Been a PHP developer"
 publishDate: 2020-10-21
 ogImage: departing-from-php.jpg
 ---

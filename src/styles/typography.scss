@@ -1,77 +1,76 @@
-@use 'breakpoints' as br;
+@use "breakpoints" as br;
 
 .prose {
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-body);
+    line-height: 1.625;
 
-	h2,
-	h3,
-	h4,
-	h5 {
-		font-family: var(--font-body);
-		line-height: 1.625;
+    margin: {
+      top: 2.5rem;
+      bottom: 0.3rem;
+    }
+  }
 
-		margin: {
-			top: 2.5rem;
-			bottom: .3rem;
-		}
-	}
+  p {
+    color: var(--fc-subtle);
+    margin-bottom: 1rem;
+  }
 
-	p {
-		color: var(--fc-subtle);
-		margin-bottom: 1rem;
-	}
+  li {
+    color: var(--fc-subtle);
+    padding-left: 1rem;
+    margin: 0.5rem 0;
 
-	li {
-		color: var(--fc-subtle);
-		padding-left: 1rem;
-		margin: .5rem 0;
+    @include br.tablet {
+      padding-left: 0;
+    }
+  }
 
-		@include br.tablet {
-			padding-left: 0;
-		}
-	}
+  :not(pre) code {
+    color: var(--iris-12);
+    font-weight: 500;
 
-	:not(pre) code {
-		color: var(--iris-12);
-		font-weight: 500;
+    &::before {
+      content: "`";
+    }
 
-		&::before {
-			content: "`";
-		}
+    &::after {
+      content: "`";
+    }
+  }
 
-		&::after {
-			content: "`";
-		}
-	}
+  blockquote > p:last-of-type {
+    margin-bottom: 0;
+  }
 
-	blockquote>p:last-of-type {
-		margin-bottom: 0;
-	}
+  ul,
+  ol {
+    margin: 1rem 0;
+    padding-left: 1rem;
+  }
 
-	ul,
-	ol {
-		margin: 1rem 0;
-		padding-left: 1rem;
-	}
+  pre {
+    overflow-x: auto;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin-bottom: 1.75rem;
+    padding: 0.75rem;
+    border-radius: 0.2rem;
+    border: 1px solid var(--slate-6);
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 
-	pre {
-		overflow-x: auto;
-		font-size: 0.875rem;
-		line-height: 1.25rem;
-		margin-bottom: 1.75rem;
-		padding: 0.75rem;
-		border-radius: .2rem;
-		border: 1px solid var(--slate-6);
-		-ms-overflow-style: none;
-		/* IE and Edge */
-		scrollbar-width: none;
-		/* Firefox */
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
-		&::-webkit-scrollbar {
-			display: none;
-		}
-
-		code {
-			background: transparent;
-		}
-	}
+    code {
+      background: transparent;
+    }
+  }
 }

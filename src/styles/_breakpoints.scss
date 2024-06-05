@@ -1,4 +1,4 @@
-@use 'vars';
+@use "vars";
 
 @mixin tablet {
   @media (min-width: #{vars.$tablet-width}) {

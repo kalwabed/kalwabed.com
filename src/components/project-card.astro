@@ -3,89 +3,93 @@ import { Image } from "astro:assets";
 import GgExternal from "~icons/gg/external";
 
 export interface Props {
-	project: {
-		title: string;
-		releaseDate: Date;
-		summary: string;
-		slug: string;
-		demoUrl?: string;
-		faviconPath?: string;
-	};
+  project: {
+    title: string;
+    releaseDate: Date;
+    summary: string;
+    slug: string;
+    demoUrl?: string;
+    faviconPath?: string;
+  };
 }
 
 const {
-	project: { faviconPath, releaseDate, title, slug, summary, demoUrl },
+  project: { faviconPath, releaseDate, title, slug, summary, demoUrl },
 } = Astro.props;
 
 const favicon = `${demoUrl}/${faviconPath}`;
 ---
 
 <section class="wrapper">
-	<div class="icon-year">
-		<Image src={favicon} alt={`${title} favicon`} width={22} height={22}  />
-		<b>{new Date(releaseDate).getFullYear()}</b>
-	</div>
-	<a class="link-title" href={`/projects/${slug}`}>{title}</a>
-	<p>{summary}</p>
-	<div class="links">
-		<a href={`/projects/${slug}`}>Write-up</a>
-		{demoUrl ? (
-			<a href={demoUrl} target="_blank" rel="noopener noreferrer">Demo <GgExternal /></a>
-		): null}
-	</div>
+  <div class="icon-year">
+    <Image src={favicon} alt={`${title} favicon`} width={22} height={22} />
+    <b>{new Date(releaseDate).getFullYear()}</b>
+  </div>
+  <a class="link-title" href={`/projects/${slug}`}>{title}</a>
+  <p>{summary}</p>
+  <div class="links">
+    <a href={`/projects/${slug}`}>Write-up</a>
+    {
+      demoUrl ? (
+        <a href={demoUrl} target="_blank" rel="noopener noreferrer">
+          Demo <GgExternal />
+        </a>
+      ) : null
+    }
+  </div>
 </section>
 
 <style lang="scss">
-	@use '../styles/breakpoints' as br;
-	$small: 0.75rem;
+  @use "../styles/breakpoints" as br;
+  $small: 0.75rem;
 
-	.wrapper {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 
-		@include br.desktop {
-			max-width: 20rem;
-		}
-	}
-	
-	.link-title {
-		font-size: 1.2rem;
-		font-weight: 600;
-		margin-top: .22rem;
-	}
+    @include br.desktop {
+      max-width: 20rem;
+    }
+  }
 
-	p {
-		color: var(--fc-subtle);
-	}
+  .link-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 0.22rem;
+  }
 
-	.icon-year {
-		display: inline-flex;
-		gap: 8px;
-		align-items: center;
+  p {
+    color: var(--fc-subtle);
+  }
 
-		& b {
-			font-size: $small;
-		}
-	}
+  .icon-year {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
 
-	.links {
-		display: flex;
-		gap: 1rem;
-		align-items: center;
-		margin-top: 1rem;
-	}
+    & b {
+      font-size: $small;
+    }
+  }
 
-	a {
-		color: var(--fc-primary);
-		text-decoration: none;
-		display: inline-flex;
-		align-items: flex-start;
-		gap: 2px;
-		font-size: $small;
+  .links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1rem;
+  }
 
-		&:hover {
-			text-decoration: underline;
-		}
-	}
+  a {
+    color: var(--fc-primary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 2px;
+    font-size: $small;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 </style>

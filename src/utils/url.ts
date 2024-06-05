@@ -1,6 +1,6 @@
 export function removeHttp(url?: string) {
-	if (!url) return "";
+  if (!url) return "";
 
-	const regex = /^(?:https?:\/\/)?(?:www\.)?/i;
-	return url.replace(regex, "");
+  const regex = /^(?:https?:\/\/)?(?:www\.)?/i;
+  return url.replace(regex, "");
 }
