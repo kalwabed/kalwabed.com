@@ -19,8 +19,8 @@
     "src/**/*.{ts,astro,css}": "pnpm lint-fmt"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "~10.2.6",
-    "@astrojs/mdx": "^3.0.1",
+    "@astrojs/cloudflare": "~10.3.0",
+    "@astrojs/mdx": "^3.1.0",
     "@astrojs/rss": "^4.0.6",
     "@astrojs/sitemap": "^3.1.5",
     "@fontsource-variable/inter": "^5.0.18",
@@ -28,7 +28,7 @@
     "@fontsource/crimson-pro": "^5.0.18",
     "@fontsource/fira-code": "^5.0.18",
     "@fontsource/schoolbell": "^5.0.12",
-    "astro": "^4.9.3",
+    "astro": "^4.10.1",
     "autoprefixer": "^10.4.19",
     "dayjs": "^1.11.11",
     "gardevoir": "^1.0.0",
@@ -39,7 +39,7 @@
   "devDependencies": {
     "@fec/remark-a11y-emoji": "^4.0.2",
     "@iconify-json/gg": "^1.1.9",
-    "@iconify-json/logos": "^1.1.42",
+    "@iconify-json/logos": "^1.1.43",
     "@iconify-json/ph": "^1.1.13",
     "lint-staged": "^15.2.5",
     "prettier": "^3.3.1",
