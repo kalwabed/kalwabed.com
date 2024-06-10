@@ -28,7 +28,7 @@
     "@fontsource/crimson-pro": "^5.0.18",
     "@fontsource/fira-code": "^5.0.18",
     "@fontsource/schoolbell": "^5.0.12",
-    "astro": "^4.9.3",
+    "astro": "^4.10.1",
     "autoprefixer": "^10.4.19",
     "dayjs": "^1.11.11",
     "gardevoir": "^1.0.0",
