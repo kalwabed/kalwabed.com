@@ -14,6 +14,7 @@ interface Bookmark {
 
 export const prerender = false;
 const url = "https://mamarks.klwbd.workers.dev";
+// @ts-ignore-error I know what I'm doing
 const runtime: { env: { BOOKMARK_TOKEN: string } } = Astro.locals.runtime; // for Cloudflare env binding.
 const bookmarkToken =
   import.meta.env.BOOKMARK_TOKEN ?? runtime.env.BOOKMARK_TOKEN;
