@@ -11,9 +11,6 @@ import { remarkReadingTime } from "./remark-reading-time.mjs";
 export default defineConfig({
   site: "https://www.kalwabed.com",
   output: "hybrid",
-  image: {
-    service: squooshImageService(),
-  },
   markdown: {
     remarkPlugins: [a11yEmoji, remarkReadingTime],
     shikiConfig: {
@@ -34,5 +31,7 @@ export default defineConfig({
     ],
   },
   integrations: [mdx(), sitemap()],
-  adapter: cloudflare(),
+  adapter: cloudflare({
+    imageService: "compile",
+  }),
 });
