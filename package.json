@@ -23,7 +23,7 @@
     "@astrojs/mdx": "^3.1.2",
     "@astrojs/rss": "^4.0.7",
     "@astrojs/sitemap": "^3.1.6",
-    "@fontsource-variable/inter": "^5.0.18",
+    "@fontsource-variable/inter": "^5.0.19",
     "@fontsource-variable/overpass": "^5.0.19",
     "@fontsource/crimson-pro": "^5.0.18",
     "@fontsource/fira-code": "^5.0.18",
