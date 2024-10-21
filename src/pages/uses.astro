@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import desktop from "~/assets/desktop.png";
+import desktop from "~/assets/2024-10.png";
 import SectionTitle from "~/components/section-title.astro";
 import DefaultLayout from "~/layouts/default.astro";
 
@@ -11,9 +11,9 @@ const utils = [
     href: "https://obsidian.md",
   },
   {
-    name: "Gitui",
+    name: "Lazygit",
     label: "give me better Git terminal visualization support.",
-    href: "https://github.com/extrawurst/gitui",
+    href: "https://github.com/jesseduffield/lazygit",
   },
   {
     name: "Zellij",
@@ -26,15 +26,15 @@ const utils = [
     href: "https://starship.rs",
   },
   {
-    name: "Oh My ZSH",
+    name: "Fish",
     label: "makes your terminal easier.",
-    href: "https://ohmyz.sh",
+    href: "https://fishshell.com/",
   },
   {
-    name: "Yadm",
+    name: "GNU Stow",
     label:
-      "manage my <a href='https://github.com/kalwabed/dotfiles' title='My dotfiles'>dotfiles</a>.",
-    href: "https://yadm.io",
+      "manage my <a href='https://github.com/kalwabed/dotfiles-stow' title='My dotfiles'>dotfiles</a>.",
+    href: "https://www.gnu.org/software/stow/",
   },
   {
     name: "atuin",
@@ -77,14 +77,9 @@ const utils = [
     href: "https://github.com/sharkdp/fd",
   },
   {
-    name: "fzf-tab",
-    label: "replace zsh's default completion selection menu with fzf!",
-    href: "https://github.com/Aloxaf/fzf-tab",
-  },
-  {
-    name: "delta",
-    label: "a syntax-highlighting pager for git, diff, and grep output.",
-    href: "https://github.com/dandavison/delta",
+    name: "fisher",
+    label: "plugin manager for fish.",
+    href: "https://github.com/jorgebucaran/fisher",
   },
   {
     name: "yazi",
@@ -140,20 +135,23 @@ const utils = [
         > user for a long time. But this change has really allowed me to move faster.
       </li>
       <li>
-        Font: <a href="https://github.com/tonsky/FiraCode">Fira Code</a>. My
-        favorite dev font since I first encountered it.
+        <a href="https://github.com/tonsky/FiraCode">Fira Code</a>: my favorite
+        dev font since I first encountered it. And now I switched to <a
+          href="https://github.com/be5invis/Iosevka">Iosevka</a
+        > for good reason.
       </li>
       <li>
-        <a href="https://vivaldi.com">Vivaldi</a>: I’m also a fan of <a
+        <a href="https://zen-browser.app/">Zen</a>: I’m also a fan of <a
           href="https://brave.com">Brave</a
-        >, but Vivaldi is a great browser because it's the same Chromium-based,
-        but with all the customization and utilization I need. I use <a
-          href="https://librewolf.net">Librewolf</a
-        > if I want to test in Firefox.
+        >, but Zen is a great browser because it's open-source and
+        firefox-based, but with all the customization and utilization I need.
       </li>
       <li>
-        <a href="https://sw.kovidgoyal.net/kitty">Kitty</a>: my favorite
-        feature-rich terminal since I migrated to Hyprland.
+        <a href="https://sw.kovidgoyal.net/kitty">Kitty</a>: my previous
+        favorite feature-rich terminal since I migrated to Hyprland. And now I
+        see myself getting comfortable with <a
+          href="https://wezfurlong.org/wezterm/">Wezterm</a
+        >.
       </li>
       <li>
         <a href="https://cloudflare.com">Cloudflare</a>: I’m also a fan of <a
@@ -170,7 +168,9 @@ const utils = [
     <h2>Productivity & utility</h2>
     <figure>
       <Image src={desktop} alt="My desktop" />
-      <figcaption>My desktop opening NeoVim and fastfetch</figcaption>
+      <figcaption>
+        My gruvbox themed desktop opening Neovim and fastfetch
+      </figcaption>
     </figure>
     <ul>
       <li>
@@ -179,7 +179,7 @@ const utils = [
           href="https://hyprland.org">Hyprland</a
         > as a window manager, is my favorite combination at the moment. Previously
         I have been using Manjaro KDE for years. Here's my <a
-          href="https://github.com/kalwabed/dotfiles"
+          href="https://github.com/kalwabed/dotfiles-stow"
           title="My dotfiles"
         >
           dotfiles
@@ -220,6 +220,11 @@ const utils = [
         >: Gaming monitor, but I use it on Linux, which I rarely use for gaming
         lol. I'm very happy with the performance and quality. Sharp, lots of
         features, no issues so far.
+      </li>
+      <li>
+        <a href="https://www.boardsource.xyz/products/lily58">Lily58</a>: split
+        keyboard, I forced myself to get used to this kind of keyboard model. So
+        far I'm very happy, I just need time to get used to it.
       </li>
     </ul>
   </div>
