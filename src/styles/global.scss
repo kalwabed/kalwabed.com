@@ -1,10 +1,9 @@
 @use "./vars";
 @use "./breakpoints" as br;
 
-@import "@fontsource-variable/overpass";
-@import "@fontsource/schoolbell";
-@import "@fontsource/fira-code/400.css";
-@import "@fontsource/fira-code/500.css";
+@use "@fontsource-variable/overpass";
+@use "@fontsource/schoolbell";
+@use "@fontsource/fira-code";
 
 html,
 body,
