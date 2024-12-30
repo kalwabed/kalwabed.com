@@ -43,6 +43,12 @@ const _title = title ? `${title} | Kalwabed Rizki` : defaultTitle;
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Kalwabed Rizki personal blog"
+      href={new URL("rss.xml", Astro.site)}
+    />
 
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="canonical" href={Astro.url} />
