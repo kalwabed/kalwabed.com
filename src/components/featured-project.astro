@@ -19,7 +19,11 @@ const {
 const coverImage = getDynamicImage(imageCover);
 ---
 
-<Image src={coverImage()} alt={`${title} cover`} />
+<Image
+  transition:name="project-banner"
+  src={coverImage()}
+  alt={`${title} cover`}
+/>
 <a class="parent-link" href={`/projects/${slug}`}>
   <h3>{title}</h3>
   <p>{summary}</p>

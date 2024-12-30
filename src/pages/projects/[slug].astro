@@ -46,6 +46,7 @@ const projectCover = getDynamicImage(entry.data.imageCover);
       </div>
       <div class="project-side">
         <Image
+          transition:name="project-banner"
           src={projectCover()}
           class="cover"
           alt={`${entry.data.title} cover`}
