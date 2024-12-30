@@ -21,14 +21,14 @@ const latestPosts = sortedBlog.slice(0, 3);
   <div class="container">
     {
       latestPosts.map((blog) => (
-        <BlogCard data={{ ...blog.data, slug: blog.slug }} />
+        <BlogCard data={{ ...blog.data, slug: blog.id }} />
       ))
     }
   </div>
   <SectionHead section="project" />
   <div class="container">
     <FeaturedProject
-      project={{ ...featuredProject!.data, slug: featuredProject!.slug }}
+      project={{ ...featuredProject!.data, slug: featuredProject!.id }}
     />
   </div>
 </DefaultLayout>

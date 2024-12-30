@@ -1,5 +1,5 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "extends": "astro/tsconfigs/base",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
@@ -7,7 +7,9 @@
     },
     "incremental": true,
     "types": ["unplugin-icons/types/astro"],
-    "allowJs": true
+    "allowJs": true,
+    "strictNullChecks": true
   },
-  "exclude": ["node_modules"]
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["node_modules", "dist"]
 }

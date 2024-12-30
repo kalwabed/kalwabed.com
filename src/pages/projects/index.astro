@@ -20,7 +20,7 @@ const projects = await getSortedProjects();
   <div class="project-list">
     {
       projects.map((project) => (
-        <ProjectCard project={{ ...project.data, slug: project.slug }} />
+        <ProjectCard project={{ ...project.data, slug: project.id }} />
       ))
     }
   </div>
