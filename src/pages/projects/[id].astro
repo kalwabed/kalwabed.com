@@ -14,16 +14,14 @@ import { removeHttp } from "~utils/url";
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
   return projects.map((project) => ({
-    params: { slug: project.id },
+    params: { id: project.id },
     props: { entry: project },
   }));
 }
 
 const { entry } = Astro.props;
 const { Content } = await render(entry);
-
 const favicon = `${entry.data.demoUrl}/${entry.data.faviconPath}`;
-
 const projectCover = getDynamicImage(entry.data.imageCover);
 ---
 
@@ -46,6 +44,7 @@ const projectCover = getDynamicImage(entry.data.imageCover);
       </div>
       <div class="project-side">
         <Image
+          transition:name="project-banner"
           src={projectCover()}
           class="cover"
           alt={`${entry.data.title} cover`}
