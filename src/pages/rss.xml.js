@@ -12,7 +12,7 @@ export async function GET(context) {
       title: post.data.title,
       pubDate: new Date(post.data.publishDate).toISOString(),
       description: post.data.summary,
-      link: `/blog/${post.slug}`,
+      link: `/blog/${post.id}`,
     })),
   });
 }

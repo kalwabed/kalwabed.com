@@ -12,7 +12,9 @@ interface Bookmark {
   updated_at: number;
 }
 
+// on-demand rendering
 export const prerender = false;
+
 const url = "https://mamarks.klwbd.workers.dev";
 // @ts-ignore-error I know what I'm doing
 const runtime: { env: { BOOKMARK_TOKEN: string } } = Astro.locals.runtime; // for Cloudflare env binding.

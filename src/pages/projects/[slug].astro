@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { render } from "astro:content";
 import { getCollection } from "astro:content";
 import DefaultLayout from "~/layouts/default.astro";
 import Blockquote from "~components/mdx/blockquote.astro";
@@ -13,13 +14,13 @@ import { removeHttp } from "~utils/url";
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
   return projects.map((project) => ({
-    params: { slug: project.slug },
+    params: { slug: project.id },
     props: { entry: project },
   }));
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 
 const favicon = `${entry.data.demoUrl}/${entry.data.faviconPath}`;
 

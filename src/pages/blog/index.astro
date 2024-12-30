@@ -19,7 +19,7 @@ const sortedBlog = await getSortedPosts();
   <div class="writing-list">
     {
       sortedBlog.map((blog) => (
-        <BlogCard data={{ ...blog.data, slug: blog.slug }} />
+        <BlogCard data={{ ...blog.data, slug: blog.id }} />
       ))
     }
   </div>
