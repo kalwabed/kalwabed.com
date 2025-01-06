@@ -21,7 +21,7 @@
   "dependencies": {
     "@astrojs/cloudflare": "~12.1.0",
     "@astrojs/mdx": "^4.0.3",
-    "@astrojs/rss": "^4.0.10",
+    "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.2.1",
     "@fontsource-variable/inter": "^5.1.1",
     "@fontsource-variable/overpass": "^5.1.2",
