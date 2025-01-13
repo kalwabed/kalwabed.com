@@ -47,6 +47,6 @@
     "sharp": "^0.33.5",
     "simple-git-hooks": "^2.11.1",
     "typescript": "^5.7.2",
-    "unplugin-icons": "^0.22.0"
+    "unplugin-icons": "^22.0.0"
   }
 }
