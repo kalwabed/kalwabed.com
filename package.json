@@ -18,23 +18,32 @@
   "lint-staged": {
     "src/**/*.{ts,astro,css}": "pnpm lint-fmt"
   },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp",
+      "esbuild",
+      "@parcel/watcher",
+      "simple-git-hooks",
+      "workerd"
+    ]
+  },
   "dependencies": {
-    "@astrojs/cloudflare": "~12.1.0",
-    "@astrojs/mdx": "^4.0.3",
-    "@astrojs/rss": "^4.0.10",
+    "@astrojs/cloudflare": "~12.2.0",
+    "@astrojs/mdx": "^4.0.5",
+    "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.2.1",
     "@fontsource-variable/inter": "^5.1.1",
     "@fontsource-variable/overpass": "^5.1.2",
     "@fontsource/crimson-pro": "^5.1.1",
     "@fontsource/fira-code": "^5.1.1",
     "@fontsource/schoolbell": "^5.1.1",
-    "astro": "^5.1.1",
+    "astro": "^5.1.6",
     "autoprefixer": "^10.4.20",
     "dayjs": "^1.11.13",
     "gardevoir": "^1.0.0",
     "mdast-util-to-string": "^4.0.0",
     "reading-time": "^1.5.0",
-    "sass": "^1.83.0"
+    "sass": "^1.83.4"
   },
   "devDependencies": {
     "@fec/remark-a11y-emoji": "^4.0.2",
@@ -46,7 +55,7 @@
     "prettier-plugin-astro": "^0.14.1",
     "sharp": "^0.33.5",
     "simple-git-hooks": "^2.11.1",
-    "typescript": "^5.7.2",
-    "unplugin-icons": "^0.22.0"
+    "typescript": "^5.7.3",
+    "unplugin-icons": "^22.0.0"
   }
 }
