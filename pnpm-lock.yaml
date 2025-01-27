@@ -10,10 +10,10 @@ importers:
     dependencies:
       '@astrojs/cloudflare':
         specifier: ~12.2.0
-        version: 12.2.0(astro@5.1.6(rollup@4.30.1)(sass@1.83.4)(typescript@5.7.3)(yaml@2.6.1))(sass@1.83.4)(yaml@2.6.1)
+        version: 12.2.0(astro@5.1.6(rollup@4.30.1)(sass@1.83.4)(typescript@5.7.3)(yaml@2.7.0))(sass@1.83.4)(yaml@2.7.0)
       '@astrojs/mdx':
         specifier: ^4.0.5
-        version: 4.0.5(astro@5.1.6(rollup@4.30.1)(sass@1.83.4)(typescript@5.7.3)(yaml@2.6.1))
+        version: 4.0.5(astro@5.1.6(rollup@4.30.1)(sass@1.83.4)(typescript@5.7.3)(yaml@2.7.0))
       '@astrojs/rss':
         specifier: ^4.0.11
         version: 4.0.11
@@ -37,7 +37,7 @@ importers:
         version: 5.1.1
       astro:
         specifier: ^5.1.6
-        version: 5.1.6(rollup@4.30.1)(sass@1.83.4)(typescript@5.7.3)(yaml@2.6.1)
+        version: 5.1.6(rollup@4.30.1)(sass@1.83.4)(typescript@5.7.3)(yaml@2.7.0)
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.5.1)
@@ -70,8 +70,8 @@ importers:
         specifier: ^1.2.2
         version: 1.2.2
       lint-staged:
-        specifier: ^15.3.0
-        version: 15.3.0
+        specifier: ^15.4.3
+        version: 15.4.3
       prettier:
         specifier: ^3.4.2
         version: 3.4.2
@@ -1235,8 +1235,8 @@ packages:
   comma-separated-tokens@2.0.3:
     resolution: {integrity: sha512-Fu4hJdvzeylCfQPp9SGWidpzrMs7tTrlu6Vb8XGaRGck8QSNZJJp538Wrb60Lax4fPwR64ViY468OIUTbRlGZg==}
 
-  commander@12.1.0:
-    resolution: {integrity: sha512-Vw8qHK3bZM9y/P10u3Vib8o/DdkvA2OtPtZvD871QKjy74Wj1WSKFILMPRPSdUSx5RFK1arlJzEtA4PkFgnbuA==}
+  commander@13.1.0:
+    resolution: {integrity: sha512-/rFeCpNJQbhSZjGVwO9RFV3xPqbnERS8MmIQzCtD/zl6gpJuV/bMLuN92oG3F7d8oDEHHRrujSXNUr8fpjntKw==}
     engines: {node: '>=18'}
 
   common-ancestor-path@1.0.1:
@@ -1661,8 +1661,8 @@ packages:
     resolution: {integrity: sha512-/vlFKAoH5Cgt3Ie+JLhRbwOsCQePABiU3tJ1egGvyQ+33R/vcwM2Zl2QR/LzjsBeItPt3oSVXapn+m4nQDvpzw==}
     engines: {node: '>=14'}
 
-  lint-staged@15.3.0:
-    resolution: {integrity: sha512-vHFahytLoF2enJklgtOtCtIjZrKD/LoxlaUusd5nh7dWv/dkKQJY74ndFSzxCdv7g0ueGg1ORgTSt4Y9LPZn9A==}
+  lint-staged@15.4.3:
+    resolution: {integrity: sha512-FoH1vOeouNh1pw+90S+cnuoFwRfUD9ijY2GKy5h7HS3OR7JVir2N2xrsa0+Twc1B7cW72L+88geG5cW4wIhn7g==}
     engines: {node: '>=18.12.0'}
     hasBin: true
 
@@ -2603,6 +2603,7 @@ packages:
   wrangler@3.102.0:
     resolution: {integrity: sha512-Za4DstbS3+/hu+///K/4dFFeV6XbPBAGp7NCnVajchxRTwEPTdbO5eezH0HLJPMHK6G/0yIzyhlEMnyg4YzHAA==}
     engines: {node: '>=16.17.0'}
+    deprecated: Downgrade to 3.99.0
     hasBin: true
     peerDependencies:
       '@cloudflare/workers-types': ^4.20241230.0
@@ -2629,8 +2630,8 @@ packages:
   xxhash-wasm@1.1.0:
     resolution: {integrity: sha512-147y/6YNh+tlp6nd/2pWq38i9h6mz/EuQ6njIrmW8D1BS5nCqs0P6DG+m6zTGnNz5I+uhZ0SHxBs9BsPrwcKDA==}
 
-  yaml@2.6.1:
-    resolution: {integrity: sha512-7r0XPzioN/Q9kXBro/XPnA6kznR73DHq+GXh5ON7ZozRO6aMjbmiBuKste2wslTFkC5d1dw0GooOCepZXJ2SAg==}
+  yaml@2.7.0:
+    resolution: {integrity: sha512-+hSoy/QHluxmC9kCIJyL/uyFmLmc+e5CFR5Wa+bpIhIj85LVb9ZH2nVnqrHoSvKogwODv0ClqZkmiSSaIH5LTA==}
     engines: {node: '>= 14'}
     hasBin: true
 
@@ -2684,18 +2685,18 @@ snapshots:
 
   '@antfu/utils@0.7.10': {}
 
-  '@astrojs/cloudflare@12.2.0(astro@5.1.6(rollup@4.30.1)(sass@1.83.4)(typescript@5.7.3)(yaml@2.6.1))(sass@1.83.4)(yaml@2.6.1)':
+  '@astrojs/cloudflare@12.2.0(astro@5.1.6(rollup@4.30.1)(sass@1.83.4)(typescript@5.7.3)(yaml@2.7.0))(sass@1.83.4)(yaml@2.7.0)':
     dependencies:
       '@astrojs/internal-helpers': 0.4.2
       '@astrojs/underscore-redirects': 0.6.0
       '@cloudflare/workers-types': 4.20250109.0
-      astro: 5.1.6(rollup@4.30.1)(sass@1.83.4)(typescript@5.7.3)(yaml@2.6.1)
+      astro: 5.1.6(rollup@4.30.1)(sass@1.83.4)(typescript@5.7.3)(yaml@2.7.0)
       esbuild: 0.24.2
       estree-walker: 3.0.3
       magic-string: 0.30.17
       miniflare: 3.20241230.2
       tiny-glob: 0.2.9
-      vite: 6.0.7(sass@1.83.4)(yaml@2.6.1)
+      vite: 6.0.7(sass@1.83.4)(yaml@2.7.0)
       wrangler: 3.102.0(@cloudflare/workers-types@4.20250109.0)
     transitivePeerDependencies:
       - '@types/node'
@@ -2741,12 +2742,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.0.5(astro@5.1.6(rollup@4.30.1)(sass@1.83.4)(typescript@5.7.3)(yaml@2.6.1))':
+  '@astrojs/mdx@4.0.5(astro@5.1.6(rollup@4.30.1)(sass@1.83.4)(typescript@5.7.3)(yaml@2.7.0))':
     dependencies:
       '@astrojs/markdown-remark': 6.0.1
       '@mdx-js/mdx': 3.1.0(acorn@8.14.0)
       acorn: 8.14.0
-      astro: 5.1.6(rollup@4.30.1)(sass@1.83.4)(typescript@5.7.3)(yaml@2.6.1)
+      astro: 5.1.6(rollup@4.30.1)(sass@1.83.4)(typescript@5.7.3)(yaml@2.7.0)
       es-module-lexer: 1.6.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.4
@@ -3478,7 +3479,7 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro@5.1.6(rollup@4.30.1)(sass@1.83.4)(typescript@5.7.3)(yaml@2.6.1):
+  astro@5.1.6(rollup@4.30.1)(sass@1.83.4)(typescript@5.7.3)(yaml@2.7.0):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.2
@@ -3530,8 +3531,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.14.4
       vfile: 6.0.3
-      vite: 6.0.7(sass@1.83.4)(yaml@2.6.1)
-      vitefu: 1.0.5(vite@6.0.7(sass@1.83.4)(yaml@2.6.1))
+      vite: 6.0.7(sass@1.83.4)(yaml@2.7.0)
+      vitefu: 1.0.5(vite@6.0.7(sass@1.83.4)(yaml@2.7.0))
       which-pm: 3.0.0
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
@@ -3693,7 +3694,7 @@ snapshots:
 
   comma-separated-tokens@2.0.3: {}
 
-  commander@12.1.0: {}
+  commander@13.1.0: {}
 
   common-ancestor-path@1.0.1: {}
 
@@ -4217,10 +4218,10 @@ snapshots:
 
   lilconfig@3.1.3: {}
 
-  lint-staged@15.3.0:
+  lint-staged@15.4.3:
     dependencies:
       chalk: 5.4.1
-      commander: 12.1.0
+      commander: 13.1.0
       debug: 4.4.0
       execa: 8.0.1
       lilconfig: 3.1.3
@@ -4228,7 +4229,7 @@ snapshots:
       micromatch: 4.0.8
       pidtree: 0.6.0
       string-argv: 0.3.2
-      yaml: 2.6.1
+      yaml: 2.7.0
     transitivePeerDependencies:
       - supports-color
 
@@ -5461,7 +5462,7 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite@6.0.7(sass@1.83.4)(yaml@2.6.1):
+  vite@6.0.7(sass@1.83.4)(yaml@2.7.0):
     dependencies:
       esbuild: 0.24.2
       postcss: 8.5.1
@@ -5469,11 +5470,11 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
       sass: 1.83.4
-      yaml: 2.6.1
+      yaml: 2.7.0
 
-  vitefu@1.0.5(vite@6.0.7(sass@1.83.4)(yaml@2.6.1)):
+  vitefu@1.0.5(vite@6.0.7(sass@1.83.4)(yaml@2.7.0)):
     optionalDependencies:
-      vite: 6.0.7(sass@1.83.4)(yaml@2.6.1)
+      vite: 6.0.7(sass@1.83.4)(yaml@2.7.0)
 
   web-namespaces@2.0.1: {}
 
@@ -5530,7 +5531,7 @@ snapshots:
 
   xxhash-wasm@1.1.0: {}
 
-  yaml@2.6.1: {}
+  yaml@2.7.0: {}
 
   yargs-parser@21.1.1: {}
 
