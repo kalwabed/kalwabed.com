@@ -3,8 +3,10 @@
   "version": "0.3.0",
   "private": true,
   "engines": {
-    "node": "^22"
+    "node": "^22",
+    "pnpm": "10"
   },
+  "packageManager": "pnpm@10.1.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
