@@ -10,10 +10,10 @@ importers:
     dependencies:
       '@astrojs/cloudflare':
         specifier: ~12.2.1
-        version: 12.2.1(astro@5.2.5(rollup@4.34.6)(sass@1.84.0)(typescript@5.7.3)(yaml@2.7.0))(sass@1.84.0)(yaml@2.7.0)
+        version: 12.2.1(astro@5.2.5(rollup@4.34.6)(sass@1.85.0)(typescript@5.7.3)(yaml@2.7.0))(sass@1.85.0)(yaml@2.7.0)
       '@astrojs/mdx':
         specifier: ^4.0.8
-        version: 4.0.8(astro@5.2.5(rollup@4.34.6)(sass@1.84.0)(typescript@5.7.3)(yaml@2.7.0))
+        version: 4.0.8(astro@5.2.5(rollup@4.34.6)(sass@1.85.0)(typescript@5.7.3)(yaml@2.7.0))
       '@astrojs/rss':
         specifier: ^4.0.11
         version: 4.0.11
@@ -37,7 +37,7 @@ importers:
         version: 5.1.1
       astro:
         specifier: ^5.2.5
-        version: 5.2.5(rollup@4.34.6)(sass@1.84.0)(typescript@5.7.3)(yaml@2.7.0)
+        version: 5.2.5(rollup@4.34.6)(sass@1.85.0)(typescript@5.7.3)(yaml@2.7.0)
       autoprefixer:
         specifier: ^10.4.20
         version: 10.4.20(postcss@8.5.1)
@@ -54,8 +54,8 @@ importers:
         specifier: ^1.5.0
         version: 1.5.0
       sass:
-        specifier: ^1.84.0
-        version: 1.84.0
+        specifier: ^1.85.0
+        version: 1.85.0
     devDependencies:
       '@fec/remark-a11y-emoji':
         specifier: ^4.0.2
@@ -2063,8 +2063,8 @@ packages:
     resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
     engines: {node: '>=8.10.0'}
 
-  readdirp@4.1.1:
-    resolution: {integrity: sha512-h80JrZu/MHUZCyHu5ciuoI0+WxsCxzxJTILn6Fs8rxSnFPh+UVHYfeIxK1nVGugMqkfC4vJcBOYbkfkwYK0+gw==}
+  readdirp@4.1.2:
+    resolution: {integrity: sha512-GDhwkLfywWL2s6vEjyhri+eXmfH6j1L7JE27WhqLeYzoh/A3DBaYGEj2H/HFZCn/kMfim73FXxEJTw06WtxQwg==}
     engines: {node: '>= 14.18.0'}
 
   reading-time@1.5.0:
@@ -2177,8 +2177,8 @@ packages:
   sass-formatter@0.7.9:
     resolution: {integrity: sha512-CWZ8XiSim+fJVG0cFLStwDvft1VI7uvXdCNJYXhDvowiv+DsbD1nXLiQ4zrE5UBvj5DWZJ93cwN0NX5PMsr1Pw==}
 
-  sass@1.84.0:
-    resolution: {integrity: sha512-XDAbhEPJRxi7H0SxrnOpiXFQoUJHwkR2u3Zc4el+fK/Tt5Hpzw5kkQ59qVDfvdaUq6gCrEZIbySFBM2T9DNKHg==}
+  sass@1.85.0:
+    resolution: {integrity: sha512-3ToiC1xZ1Y8aU7+CkgCI/tqyuPXEmYGJXO7H4uqp0xkLXUqp88rQQ4j1HmP37xSJLbCJPaIiv+cT1y+grssrww==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -2713,18 +2713,18 @@ snapshots:
 
   '@antfu/utils@0.7.10': {}
 
-  '@astrojs/cloudflare@12.2.1(astro@5.2.5(rollup@4.34.6)(sass@1.84.0)(typescript@5.7.3)(yaml@2.7.0))(sass@1.84.0)(yaml@2.7.0)':
+  '@astrojs/cloudflare@12.2.1(astro@5.2.5(rollup@4.34.6)(sass@1.85.0)(typescript@5.7.3)(yaml@2.7.0))(sass@1.85.0)(yaml@2.7.0)':
     dependencies:
       '@astrojs/internal-helpers': 0.4.2
       '@astrojs/underscore-redirects': 0.6.0
       '@cloudflare/workers-types': 4.20250124.3
-      astro: 5.2.5(rollup@4.34.6)(sass@1.84.0)(typescript@5.7.3)(yaml@2.7.0)
+      astro: 5.2.5(rollup@4.34.6)(sass@1.85.0)(typescript@5.7.3)(yaml@2.7.0)
       esbuild: 0.24.2
       estree-walker: 3.0.3
       magic-string: 0.30.17
       miniflare: 3.20250124.0
       tiny-glob: 0.2.9
-      vite: 6.0.11(sass@1.84.0)(yaml@2.7.0)
+      vite: 6.0.11(sass@1.85.0)(yaml@2.7.0)
       wrangler: 3.105.1(@cloudflare/workers-types@4.20250124.3)
     transitivePeerDependencies:
       - '@types/node'
@@ -2775,12 +2775,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.0.8(astro@5.2.5(rollup@4.34.6)(sass@1.84.0)(typescript@5.7.3)(yaml@2.7.0))':
+  '@astrojs/mdx@4.0.8(astro@5.2.5(rollup@4.34.6)(sass@1.85.0)(typescript@5.7.3)(yaml@2.7.0))':
     dependencies:
       '@astrojs/markdown-remark': 6.1.0
       '@mdx-js/mdx': 3.1.0(acorn@8.14.0)
       acorn: 8.14.0
-      astro: 5.2.5(rollup@4.34.6)(sass@1.84.0)(typescript@5.7.3)(yaml@2.7.0)
+      astro: 5.2.5(rollup@4.34.6)(sass@1.85.0)(typescript@5.7.3)(yaml@2.7.0)
       es-module-lexer: 1.6.0
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.4
@@ -3533,7 +3533,7 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro@5.2.5(rollup@4.34.6)(sass@1.84.0)(typescript@5.7.3)(yaml@2.7.0):
+  astro@5.2.5(rollup@4.34.6)(sass@1.85.0)(typescript@5.7.3)(yaml@2.7.0):
     dependencies:
       '@astrojs/compiler': 2.10.4
       '@astrojs/internal-helpers': 0.5.1
@@ -3585,8 +3585,8 @@ snapshots:
       unist-util-visit: 5.0.0
       unstorage: 1.14.4
       vfile: 6.0.3
-      vite: 6.1.0(sass@1.84.0)(yaml@2.7.0)
-      vitefu: 1.0.5(vite@6.1.0(sass@1.84.0)(yaml@2.7.0))
+      vite: 6.1.0(sass@1.85.0)(yaml@2.7.0)
+      vitefu: 1.0.5(vite@6.1.0(sass@1.85.0)(yaml@2.7.0))
       which-pm: 3.0.1
       xxhash-wasm: 1.1.0
       yargs-parser: 21.1.1
@@ -3709,7 +3709,7 @@ snapshots:
 
   chokidar@4.0.3:
     dependencies:
-      readdirp: 4.1.1
+      readdirp: 4.1.2
 
   ci-info@4.1.0: {}
 
@@ -4968,7 +4968,7 @@ snapshots:
     dependencies:
       picomatch: 2.3.1
 
-  readdirp@4.1.1: {}
+  readdirp@4.1.2: {}
 
   reading-time@1.5.0: {}
 
@@ -5202,7 +5202,7 @@ snapshots:
     dependencies:
       suf-log: 2.5.3
 
-  sass@1.84.0:
+  sass@1.85.0:
     dependencies:
       chokidar: 4.0.3
       immutable: 5.0.3
@@ -5522,29 +5522,29 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.2
 
-  vite@6.0.11(sass@1.84.0)(yaml@2.7.0):
+  vite@6.0.11(sass@1.85.0)(yaml@2.7.0):
     dependencies:
       esbuild: 0.24.2
       postcss: 8.5.1
       rollup: 4.32.0
     optionalDependencies:
       fsevents: 2.3.3
-      sass: 1.84.0
+      sass: 1.85.0
       yaml: 2.7.0
 
-  vite@6.1.0(sass@1.84.0)(yaml@2.7.0):
+  vite@6.1.0(sass@1.85.0)(yaml@2.7.0):
     dependencies:
       esbuild: 0.24.2
       postcss: 8.5.1
       rollup: 4.34.6
     optionalDependencies:
       fsevents: 2.3.3
-      sass: 1.84.0
+      sass: 1.85.0
       yaml: 2.7.0
 
-  vitefu@1.0.5(vite@6.1.0(sass@1.84.0)(yaml@2.7.0)):
+  vitefu@1.0.5(vite@6.1.0(sass@1.85.0)(yaml@2.7.0)):
     optionalDependencies:
-      vite: 6.1.0(sass@1.84.0)(yaml@2.7.0)
+      vite: 6.1.0(sass@1.85.0)(yaml@2.7.0)
 
   web-namespaces@2.0.1: {}
 

@@ -45,7 +45,7 @@
     "gardevoir": "^1.0.0",
     "mdast-util-to-string": "^4.0.0",
     "reading-time": "^1.5.0",
-    "sass": "^1.84.0"
+    "sass": "^1.85.0"
   },
   "devDependencies": {
     "@fec/remark-a11y-emoji": "^4.0.2",
