@@ -14,7 +14,7 @@ const { data } = Astro.props;
 const { slug, title, summary, publishDate } = data;
 ---
 
-<a href={`/blog/${slug}`}>
+<a transition:name={slug} href={`/blog/${slug}`}>
   <h3>{title}</h3>
   <p>{summary}</p>
   <small>{dayjs(publishDate).format("MMM DD, YYYY")}</small>
