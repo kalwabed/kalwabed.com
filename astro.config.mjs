@@ -2,7 +2,7 @@ import cloudflare from "@astrojs/cloudflare";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import a11yEmoji from "@fec/remark-a11y-emoji";
-import { defineConfig, fontProviders } from "astro/config";
+import { defineConfig, envField, fontProviders } from "astro/config";
 import autoprefixer from "autoprefixer";
 import Icons from "unplugin-icons/vite";
 import { remarkReadingTime } from "./remark-reading-time.mjs";
@@ -33,6 +33,12 @@ export default defineConfig({
   adapter: cloudflare({
     imageService: "compile",
   }),
+  env: {
+    schema: {
+      BOOKMARK_TOKEN: envField.string({ context: "server", access: "secret" }),
+      BOOKMARK_URL: envField.string({ context: "server", access: "secret" }),
+    },
+  },
   experimental: {
     fonts: [
       {
