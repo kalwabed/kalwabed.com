@@ -61,6 +61,10 @@ export const techList: Record<
     label: "Nuxt.js",
     Logo: LogosNuxtIcon,
   },
+  "nuxt-ui": {
+    label: "Nuxt UI",
+    Logo: LogosNuxtIcon,
+  },
   supabase: {
     label: "Supabase",
     Logo: LogosSupabaseIcon,
