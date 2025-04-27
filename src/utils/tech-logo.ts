@@ -10,6 +10,8 @@ import LogosSupabaseIcon from "~icons/logos/supabase-icon";
 import LogosSvelteIcon from "~icons/logos/svelte-icon";
 import LogosTailwindIcon from "~icons/logos/tailwindcss-icon";
 import LogosVue from "~icons/logos/vue";
+import LogosQwik from "~icons/logos/qwik-icon";
+import LogosCssModule from "~icons/logos/css-3-official";
 
 export const techList: Record<
   string,
@@ -62,5 +64,13 @@ export const techList: Record<
   supabase: {
     label: "Supabase",
     Logo: LogosSupabaseIcon,
+  },
+  qwik: {
+    label: "Qwik",
+    Logo: LogosQwik,
+  },
+  "css module": {
+    label: "CSS Module",
+    Logo: LogosCssModule,
   },
 };
