@@ -1,10 +1,6 @@
 @use "./vars";
 @use "./breakpoints" as br;
 
-@use "@fontsource-variable/overpass";
-@use "@fontsource/schoolbell";
-@use "@fontsource/fira-code";
-
 html,
 body,
 #root {
@@ -28,7 +24,7 @@ h5 {
 }
 
 code {
-  font-family: "Fira Code", "Courier New", Courier, monospace;
+  font-family: var(--font-mono);
 }
 
 .container {

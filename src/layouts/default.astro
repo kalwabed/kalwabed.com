@@ -1,4 +1,5 @@
 ---
+import { Font } from "astro:assets";
 import { ClientRouter } from "astro:transitions";
 import "gardevoir/dist/index.min.css";
 import Navbar from "~/components/navbar.astro";
@@ -14,7 +15,7 @@ export interface Props {
 
 const defaultTitle = "Kalwabed Rizki - Software engineer";
 const defaultDescription =
-  "Fullstack web engineer based in Yogyakarta, Indonesia.";
+  "Fullstack web engineer based in Yogyakarta, Indonesia. Focusing on building the web things. Interested in modern software development architecture.";
 const defaultOgImg = "default.jpg";
 const defaultKeywords = [
   "kalwabed",
@@ -72,6 +73,9 @@ const _title = title ? `${title} | Kalwabed Rizki` : defaultTitle;
     <meta property="twitter:description" content={desc} />
     <meta property="twitter:image" content={`/og/${ogImage}`} />
     <title>{_title}</title>
+    <Font cssVariable="--font-body" preload />
+    <Font cssVariable="--font-heading" preload />
+    <Font cssVariable="--font-mono" />
     <ClientRouter />
   </head>
   <body>

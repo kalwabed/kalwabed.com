@@ -1,6 +1,7 @@
 ---
 import DefaultLayout from "~/layouts/default.astro";
 import SectionTitle from "~components/section-title.astro";
+import { BOOKMARK_TOKEN, BOOKMARK_URL } from "astro:env/server";
 
 interface Bookmark {
   id: string;
@@ -12,21 +13,18 @@ interface Bookmark {
   updated_at: number;
 }
 
-// on-demand rendering
+// on-demand rendering: https://docs.astro.build/en/guides/on-demand-rendering/
 export const prerender = false;
 
-const url = "https://mamarks.klwbd.workers.dev";
-// @ts-ignore-error I know what I'm doing
-const runtime: { env: { BOOKMARK_TOKEN: string } } = Astro.locals.runtime; // for Cloudflare env binding.
-const bookmarkToken =
-  import.meta.env.BOOKMARK_TOKEN ?? runtime.env.BOOKMARK_TOKEN;
-const bookmarkRes = await fetch(url, { headers: { "x-token": bookmarkToken } });
+const bookmarkRes = await fetch(BOOKMARK_URL, {
+  headers: { "x-token": BOOKMARK_TOKEN },
+});
 const bookmarks: { data: Bookmark[] } = await bookmarkRes.json();
 ---
 
 <DefaultLayout
   title="Bookmarks - My reading list"
-  desc="Kalwabed public personal bookmarks."
+  desc="Kalwabed public personal bookmarks. I like to surf the Internet. Sometimes I find interesting stuff to read. Mostly about programming and life."
 >
   <SectionTitle title="My reading list">
     I like to surf the Internet. Sometimes I find interesting stuff to read.
