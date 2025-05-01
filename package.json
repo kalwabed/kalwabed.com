@@ -30,11 +30,11 @@
     ]
   },
   "dependencies": {
-    "@astrojs/cloudflare": "~12.5.1",
-    "@astrojs/mdx": "^4.2.5",
+    "@astrojs/cloudflare": "~12.5.2",
+    "@astrojs/mdx": "^4.2.6",
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.3.1",
-    "astro": "^5.7.5",
+    "astro": "^5.7.10",
     "autoprefixer": "^10.4.21",
     "dayjs": "^1.11.13",
     "gardevoir": "^1.0.0",
