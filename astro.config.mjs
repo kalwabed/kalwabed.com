@@ -39,6 +39,10 @@ export default defineConfig({
       BOOKMARK_URL: envField.string({ context: "server", access: "secret" }),
     },
   },
+  image: {
+    layout: "constrained",
+    responsiveStyles: true,
+  },
   experimental: {
     fonts: [
       {
