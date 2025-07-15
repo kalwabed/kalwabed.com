@@ -6,7 +6,7 @@
     "node": "^22",
     "pnpm": "10"
   },
-  "packageManager": "pnpm@10.7.0",
+  "packageManager": "pnpm@10.12.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -30,27 +30,27 @@
     ]
   },
   "dependencies": {
-    "@astrojs/cloudflare": "~12.5.2",
-    "@astrojs/mdx": "^4.2.6",
-    "@astrojs/rss": "^4.0.11",
-    "@astrojs/sitemap": "^3.3.1",
-    "astro": "^5.7.10",
+    "@astrojs/cloudflare": "~12.6.0",
+    "@astrojs/mdx": "^4.3.0",
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/sitemap": "^3.4.1",
+    "astro": "^5.11.1",
     "autoprefixer": "^10.4.21",
     "dayjs": "^1.11.13",
     "gardevoir": "^1.0.0",
     "mdast-util-to-string": "^4.0.0",
     "reading-time": "^1.5.0",
-    "sass": "^1.87.0"
+    "sass": "^1.89.2"
   },
   "devDependencies": {
     "@fec/remark-a11y-emoji": "^4.0.2",
     "@iconify-json/gg": "^1.2.2",
     "@iconify-json/logos": "^1.2.4",
     "@iconify-json/ph": "^1.2.2",
-    "lint-staged": "^15.5.1",
-    "prettier": "^3.5.3",
+    "lint-staged": "^16.1.2",
+    "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
-    "sharp": "^0.34.1",
+    "sharp": "^0.34.3",
     "simple-git-hooks": "^2.13.0",
     "typescript": "^5.8.3",
     "unplugin-icons": "^22.1.0"
