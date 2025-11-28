@@ -48,7 +48,7 @@
     "@iconify-json/logos": "^1.2.10",
     "@iconify-json/ph": "^1.2.2",
     "lint-staged": "^16.2.7",
-    "prettier": "^3.7.1",
+    "prettier": "^3.7.2",
     "prettier-plugin-astro": "^0.14.1",
     "sharp": "^0.34.5",
     "simple-git-hooks": "^2.13.1",
