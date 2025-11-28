@@ -30,29 +30,29 @@
     ]
   },
   "dependencies": {
-    "@astrojs/cloudflare": "~12.6.9",
-    "@astrojs/mdx": "^4.3.6",
-    "@astrojs/rss": "^4.0.12",
+    "@astrojs/cloudflare": "~12.6.12",
+    "@astrojs/mdx": "^4.3.12",
+    "@astrojs/rss": "^4.0.14",
     "@astrojs/sitemap": "^3.6.0",
-    "astro": "^5.14.0",
-    "autoprefixer": "^10.4.21",
-    "dayjs": "^1.11.18",
+    "astro": "^5.16.2",
+    "autoprefixer": "^10.4.22",
+    "dayjs": "^1.11.19",
     "gardevoir": "^1.0.0",
     "mdast-util-to-string": "^4.0.0",
     "reading-time": "^1.5.0",
-    "sass": "^1.93.2"
+    "sass": "^1.94.2"
   },
   "devDependencies": {
     "@fec/remark-a11y-emoji": "^4.0.2",
     "@iconify-json/gg": "^1.2.2",
-    "@iconify-json/logos": "^1.2.9",
+    "@iconify-json/logos": "^1.2.10",
     "@iconify-json/ph": "^1.2.2",
-    "lint-staged": "^16.2.1",
-    "prettier": "^3.6.2",
+    "lint-staged": "^16.2.7",
+    "prettier": "^3.7.1",
     "prettier-plugin-astro": "^0.14.1",
-    "sharp": "^0.34.4",
+    "sharp": "^0.34.5",
     "simple-git-hooks": "^2.13.1",
-    "typescript": "^5.9.2",
-    "unplugin-icons": "^22.3.0"
+    "typescript": "^5.9.3",
+    "unplugin-icons": "^22.5.0"
   }
 }
