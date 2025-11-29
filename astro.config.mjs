@@ -44,6 +44,7 @@ export default defineConfig({
     responsiveStyles: true,
   },
   experimental: {
+    svgo: true,
     fonts: [
       {
         provider: fontProviders.bunny(),
