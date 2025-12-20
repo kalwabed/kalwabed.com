@@ -2,11 +2,6 @@
   "name": "kalwabed.com",
   "version": "0.3.0",
   "private": true,
-  "engines": {
-    "node": "^22",
-    "pnpm": "10"
-  },
-  "packageManager": "pnpm@10.12.0",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -31,16 +26,16 @@
   },
   "dependencies": {
     "@astrojs/cloudflare": "~12.6.12",
-    "@astrojs/mdx": "^4.3.12",
+    "@astrojs/mdx": "^4.3.13",
     "@astrojs/rss": "^4.0.14",
     "@astrojs/sitemap": "^3.6.0",
-    "astro": "^5.16.2",
+    "astro": "^5.16.5",
     "autoprefixer": "^10.4.22",
     "dayjs": "^1.11.19",
     "gardevoir": "^1.0.0",
     "mdast-util-to-string": "^4.0.0",
     "reading-time": "^1.5.0",
-    "sass": "^1.94.2"
+    "sass": "^1.96.0"
   },
   "devDependencies": {
     "@fec/remark-a11y-emoji": "^4.0.2",
@@ -48,7 +43,7 @@
     "@iconify-json/logos": "^1.2.10",
     "@iconify-json/ph": "^1.2.2",
     "lint-staged": "^16.2.7",
-    "prettier": "^3.7.2",
+    "prettier": "^3.7.4",
     "prettier-plugin-astro": "^0.14.1",
     "sharp": "^0.34.5",
     "simple-git-hooks": "^2.13.1",
